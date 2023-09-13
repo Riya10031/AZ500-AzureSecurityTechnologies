@@ -49,6 +49,9 @@ In this task, you will create an Allowed Locations policy assignment and specify
 
 1. On the **Allowed locations** blade, click on **Assign**.
 
+   
+   ![](../Labs/images/az-500(1).png)
+
 1. On the **Basics** tab of the **Allowed locations** blade, click on the Ellipsis (...) button next to the **Scope** text box and, on the **Scope** blade, specify the following settings:
 
    |Setting|Value|
@@ -57,6 +60,8 @@ In this task, you will create an Allowed Locations policy assignment and specify
    |Resource group|**AZ500LAB02-<inject key="DeploymentID" enableCopy="false"/>**|
 
 1. Click on **Select**.
+
+    ![](../Labs/images/az-500(2).png)
 
 1. On the **Allowed locations** blade, on the **Basics** tab, specify the following settings (leave others with their default values):
 
@@ -68,7 +73,9 @@ In this task, you will create an Allowed Locations policy assignment and specify
 
 1. Click on **Parameters** tab.
 
-1. On the **Parameters** tab of the **Allowed locations** blade, in the **Allowed locations** drop-down list, select **UK South** as the only allowed location. 
+1. On the **Parameters** tab of the **Allowed locations** blade, in the **Allowed locations** drop-down list, select **UK South** as the only allowed location.
+
+   ![](../Labs/images/az-500(3).png)
 
    >**Note**: You can select more than one location. If the policy required a different set of parameters, this tab would provide those selections. 
 
@@ -98,11 +105,15 @@ In this task, you will test the Allowed Locations policy assignment.
 
 1. Click on **Review + create**. 
 
+   ![](../Labs/images/az-500(4).png)
+ 
 1. Click on **Create**. 
 
     > **Note**: You will receice **Deployment Failed** notification. This is the expected output since we are allowing to create resources only in the (Europe) UK South and restricting other regions using Azurepolicy.
 
 1. Perform Previous **1-3** steps again of task 2 and create **virtual network** again, This time in the **Region** drop-down list, select **(Europe) UK South**.
+
+   ![](../Labs/images/az-500(5).png)
 
 1. Click on **Review + create**, verify that validation passed, click on **Create**, and verify that the virtual network was created successfully. 
 
