@@ -44,11 +44,13 @@ In this task, you will create a storage account for the lab.
 1. Now enter the following password and click on **Sign in**.
    * Password: <inject key="AzureAdUserPassword"></inject>
 
-1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **PowerShell**. If you do not see this option, skip the step.  
+1. Once you have signed in close all the notifications and use the **Cloud Shell** button **[\>_]** to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **PowerShell**. If you do not see this option, skip the step.  
 
+   ![](../Labs/cloudshell1.1.png)
+   
 1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **show advanced settings**. Please make sure you have selected your resource group **AZ500LAB03-<inject key="DeploymentID" enableCopy="false"/>** and enter **storage<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account name** and enter **fileshare<inject key="DeploymentID" enableCopy="false"/>** For the **File share name**, then click on **Create Storage**.
 
-	 >**Note**: It might take about a minute for the Cloud Shell pane to show up.
+   >**Note**: It might take about a minute for the Cloud Shell pane to show up.
 
 1. Ensure **PowerShell** is selected in the drop-down menu in the upper-left corner of the Cloud Shell pane.
 
@@ -163,12 +165,12 @@ In this task, you will test the Delete lock. You should be able to modify the st
 
    > **Results:** In this exercise, you learned to use Resource Manager locks to protect resources from modification and accidental deletion.
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
+	> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+	>- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+	>- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+	>- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+	>- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+	
 ## Review
 
 In this lab, you have:
