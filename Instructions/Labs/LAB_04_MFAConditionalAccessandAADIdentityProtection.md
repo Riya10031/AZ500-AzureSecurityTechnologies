@@ -65,17 +65,21 @@ In this task, you will create a new Azure AD tenant.
 
 In this task, you will sign up for the Azure AD Premium P2 free trial. 
 
-1. In the Azure portal, in the toolbar, click on the **Directories + subscriptions** icon, located to the right of the Cloud Shell icon. 
+1. In the Azure portal, in the toolbar, click on the **Directories + subscriptions** icon, located to the right of the Cloud Shell icon.
 
-2. In the **Directories + subscriptions** blade, click on the newly created tenant, **AdatumLab500-04** and click on the **Switch** button to set it as the current directory.
+   ![image](../images/lab4.1.png)
+
+3. In the **Directories + subscriptions** blade, click on the newly created tenant, **AdatumLab500-04** and click on the **Switch** button to set it as the current directory.
 
     >**Note**: You may need to refresh the browser window if the **AdatumLab500-04** entry does not appear in the **Directories + subscriptions** filter list.
 
-3. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Azure Active Directory** and press the **Enter** key. On the **AdatumLab500-04** blade, in the **Manage** section, click on **Licenses**.
+4. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Azure Active Directory** and press the **Enter** key. On the **AdatumLab500-04** blade, in the **Manage** section, click on **Licenses**.
 
-4. On the **Licenses \| Overview** blade, in the **Manage** section, click on **All products** and then click on **+ Try / Buy**.
+5. On the **Licenses \| Overview** blade, in the **Manage** section, click on **All products** and then click on **+ Try / Buy**.
 
-5. On the **Activate** blade, in the **Azure AD Premium P2** section, click on **Free Trial** and then click on **Activate**.
+7. On the **Activate** blade, in the **Azure AD Premium P2** section, click on **Free Trial** and then click on **Activate**.
+
+     ![image](../images/lab4-2.png)
 
 
 #### Task 3: Create Azure AD users and groups
@@ -88,14 +92,19 @@ In this task, you will create three users: aaduser1 (Global Admin), aaduser2 (us
 
 1. On the **New user** blade, ensure that the **Create user** option is selected, specify the following settings (leave all others with their default values) and click on **Create**:
 
-   |Setting|Value|
+  |Setting|Value|
    |---|---|
-   |User name|**aaduser1**|
-   |Name|**aaduser1**|
-   |Password|ensure that the option **Auto-generate password** is selected and click on **Show Password**|
-   |Groups|**0 groups selected**|
-   |Roles|click on **User**, then click on **Global administrator**, and click on **Select**|
-   |Usage Location|**United States**|  
+   |User principal name|**aaduser1**|
+   |Display Name|**aaduser1**|
+   |Password|Ensure that the option **Auto-generate password** is selected then Copy to clipboard and Save the password|
+   
+   ![image](../images/lab4-3.png)
+
+   Then Select **Next:Properties**. In the **Usage Location** select **United States**.Select **Next:Assignments**. Select **Add role**. Search **Global administrator**, and click **Select**. <br>
+   Then. Select **Review+create** and **Create**.
+
+   ![image](../images/lab4-4.png)
+
 
     >**Note**: Record the full user name. You can copy its value by clicking the **Copy to clipboard** button on the right hand side of the drop-down list displaying the domain name. 
 
@@ -107,11 +116,11 @@ In this task, you will create three users: aaduser1 (Global Admin), aaduser2 (us
 
    |Setting|Value|
    |---|---|
-   |User name|**aaduser2**|
-   |Name|**aaduser2**|
-   |Password|ensure that the option **Auto-generate password** is selected and click on **Show Password**|
-   |Groups|**0 groups selected**|
-   |Usage Location|**United States**|  
+   |User principal name|**aaduser2**|
+   |Display Name|**aaduser2**|
+   |Password|Ensure that the option **Auto-generate password** is selected then Copy to clipboard and Save the password|
+   
+   Then Select **Next:Properties**. In the **Usage Location** select **United States**.Then. Select **Review+create** and **Create**.
 
     >**Note**: Record the full user name and the password.
 
@@ -121,15 +130,13 @@ In this task, you will create three users: aaduser1 (Global Admin), aaduser2 (us
 
    |Setting|Value|
    |---|---|
-   |User name|**aaduser3**|
-   |Name|**aaduser3**|
-   |Password|ensure that the option **Auto-generate password** is selected and click on **Show Password**|
-   |Groups|**0 groups selected**|
-   |Usage Location|**United States**|  
+   |User principal name|**aaduser3**|
+   |Display Name|**aaduser3**|
+   |Password|Ensure that the option **Auto-generate password** is selected then Copy to clipboard and Save the password|
+   
+   Then Select **Next:Properties**. In the **Usage Location** select **United States**.Then. Select **Review+create** and **Create**.
 
     >**Note**: Record the full user name and the password.
-
-1. On the **New user** blade, click on **Create**.
 
     >**Note**: At this point, you should have three new users listed on the **Users** page. 
 	
@@ -271,7 +278,7 @@ In this task, you will review conditional access policy settings and create a po
 	
    - Under Users, click on **0 Users or groups selected**. On the right side under Include >> Select users and groups checkbox >> enable **Users and groups** checkbox >> on the **Select** blade, click on **aaduser2**, and click on **Select**.
 	
-   - Under **Cloud apps or actions**, click on **No cloud apps, actions, or authentication contexts selected**. On the right side under Include >> click on **Select apps** checkbox >> under Select, click on None >> on the **Select** blade, click on **Microsoft Azure Management**, and click on **Select**.
+   - Under **Target Resources**, click on **No target resources selected**. On the right side under Include >> click on **Select apps** checkbox >> under Select, click on None >> on the **Select** blade, click on **Microsoft Azure Management**, and click on **Select**.
     
    >**Note**: Review the warning that this policy impacts access to the Azure Portal.
 	
