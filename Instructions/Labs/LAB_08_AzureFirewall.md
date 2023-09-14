@@ -11,13 +11,13 @@ You have been asked to install Azure Firewall. This will help your organization 
 - Firewall Application rules that only allow outbound traffic to www.bing.com. 
 - Firewall Network rules that allow external DNS server lookups.
 
-> For all the resources in this lab, we are using the **East US** region. Verify with your instructor this is the region to use for class. 
+   > For all the resources in this lab, we are using the **East US** region. Verify with your instructor this is the region to use for class. 
 
 ## Lab objectives
 
 In this lab, you will complete the following exercise:
 
-- Exercise 1: Deploy and test an Azure Firewall
+ - Exercise 1: Deploy and test an Azure Firewall
 
 ## Estimated timing: 40 minutes
 
@@ -129,6 +129,8 @@ In this task, you will create a default route for the **Workload-SN** subnet. Th
 
 1. On the **Firewall-route** blade, in the **Settings** section, click **Subnets** and then, on the **Firewall-route \| Subnets** blade, click **+ Associate**.
 
+     ![](../Labs/AZ-500-subnet.png)
+
 1. On the **Associate subnet** blade, specify the following settings:
 
    |Setting|Value|
@@ -184,6 +186,8 @@ In this task you will create an application rule that allows outbound access to 
    |Protocol port|**http:80, https:443**|
    |Target FQDNS|**www.bing.com**|
 
+   ![](../Labs/az-500-target.png)
+
 1. Click **Add** to add the Target FQDNs-based application rule.
 
     >**Note**: Azure Firewall includes a built-in rule collection for infrastructure FQDNs that are allowed by default. These FQDNs are specific for the platform and can't be used for other purposes. 
@@ -231,6 +235,8 @@ In this task, you will configure the primary and secondary DNS addresses for the
 1. On the **Srv-Work** blade, in the **Settings** section, click **Networking**.
 
 1. On the **Srv-Work \| Networking** blade, click the link next to the **Network interface** entry.
+
+   ![](../Labs/AZ-500-NIC.png)
 
 1. On the network interface blade, in the **Settings** section, click **DNS servers**, select the **Custom** option, add the two DNS servers referenced in the network rule: **209.244.0.3** and **209.244.0.4**, and click **Save** to save the change.
 
@@ -290,13 +296,13 @@ In this task, you will test the firewall to confirm that it works as expected.
 
 1. Terminate both Remote Desktop sessions.
 
-> **Result:** You have successfully configured and tested the Azure Firewall.
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+	> **Result:** You have successfully configured and tested the Azure Firewall.
+	
+	> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+	>- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+	>- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+	>- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+	>- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Review
 
