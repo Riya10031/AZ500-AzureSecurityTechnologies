@@ -54,13 +54,14 @@ In this task, you will identify a DNS name for your Azure VM deployment.
     >**Note**: To identify Azure regions where you can provision Azure VMs, refer to [**https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
 
 4. Verify that the command returned **True**. If not, rerun the same command with a different value of the `<custom-label>` until the command returns **True**.
-    ![](.../Labs/images/true.png)
 
-5. Record the value of the `<custom-label>` that resulted in the successful outcome. You will need it for the next task.
+   ![](Instructions/images/true.png)
+
+6. Record the value of the `<custom-label>` that resulted in the successful outcome. You will need it for the next task.
  
     ![](.../Labs/images/record.png)
 
-6. Close the Cloud Shell.
+7. Close the Cloud Shell.
 
 #### Task 2: Use an ARM template to deploy an Azure VM hosting an Active Directory domain controller
 
