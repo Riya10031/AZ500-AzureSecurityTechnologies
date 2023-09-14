@@ -41,9 +41,10 @@ In this exercise, you will complete the following tasks:
 
 In this task, you will use a template to deploy the lab infrastructure. 
 
-1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Deploy a custom template** and hit **Enter** key.
+1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Deploy a custom template** and **Select** it.
 
 1. On the **Custom deployment** blade, click the **Build your own template in the editor** option.
+    ![](../Labs/images/CUS.png)
 
 1. On the **Edit template** blade, click **Load file**, locate the **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\\11\\azuredeploy.json** file and click **Open**.
 
@@ -65,20 +66,21 @@ In this task, you will use a template to deploy the lab infrastructure.
 
 #### Task 2: Configure Advanced Data Protection
 
-1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Resource groups** and press the **Enter** key.
+1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Resource groups** and **Select** it
 
 2. On the **Resource groups** blade, in the list of resource group, click the **AZ500LAB11** entry.
 
 3. On the **AZ500LAB11** blade, click the entry representing the newly created SQL Server.
 
 4. On the SQL server blade, in the **Security** section, click **Microsoft Defender for Cloud**, select **Enable Microsoft Defender for SQL**.
+   ![](../Labs/images/microsoftdefenersql.png)
       >**Note**: Wait until notification indicates Azure Defender for SQL has been successfully enabled.
 
-5. On the SQL server blade, under the **Security** section and within the **Microsoft Defender for Cloud** page, notice the **Enablement Status: Enabled at the server-level (Configure)** parameter, click **(configure)**. 
+6. On the SQL server blade, under the **Security** section and within the **Microsoft Defender for Cloud** page, notice the **Enablement Status: Enabled at the server-level (Configure)** parameter, click **(configure)**. 
     
-6. On the **Server Settings** blade, review the information about pricing and the trial period, **VULNERABILITY ASSESSMENT SETTINGS** and **ADVANCED THREAT PROTECTION SETTINGS**.
+7. On the **Server Settings** blade, review the information about pricing and the trial period, **VULNERABILITY ASSESSMENT SETTINGS** and **ADVANCED THREAT PROTECTION SETTINGS**.
 
-7. Back to **Microsoft Defender for Cloud** blade, review **Recommendations** and **Security incidents and alerts**.
+8. Back to **Microsoft Defender for Cloud** blade, review **Recommendations** and **Security incidents and alerts**.
 
       >**Note**: It may take 10-15 minutes for recommendations to appear on the **Microsoft Defender for Cloud** blade. Rather than waiting, proceed to the next task but consider returning to this blade once you complete all the remaining tasks.
 
@@ -97,20 +99,21 @@ In this task, you will discover and classify information in SQL database for GPD
     >**Note**: The classification engine scans your database for columns containing potentially sensitive data and provides a list of recommended column classifications.
 
 5. Click the text message **15 columns with classification recommendations** displayed on blue bar at the top of the blade.
+    ![](../Labs/images/bluebar.png)
 
-6. Review the listed columns and the recommended sensitivity label. 
+7. Review the listed columns and the recommended sensitivity label. 
 
-7. Enable the **Select all** checkbox and then click **Accept Selected Recommendations**.
+8. Enable the **Select all** checkbox and then click **Accept Selected Recommendations**.
 
     >**Note**: Alternatively, you could select only certain columns and dismiss others. 
 
     >**Note**: You have the option to change the information type and sensitivity label. 
 
-8. Once you have completed your review click **Save**. 
+9. Once you have completed your review click **Save**. 
 
     >**Note**: This will complete the classification and persistently label the database columns with the new classification metadata. 
 
-9. Back on the **Data Discovery & Classification** blade **Overview** tab, note that it has been updated to account for the latest classification information. 
+10. Back on the **Data Discovery & Classification** blade **Overview** tab, note that it has been updated to account for the latest classification information. 
 
 #### Task 4 : Configure auditing 
 
@@ -119,24 +122,26 @@ In this task, you will first configure server level auditing and then configure 
 1. In the Azure portal, navigate back to the SQL Server blade.
 
 2. On the SQL Server blade, in the **Security** section, click **Auditing**.
+    ![](../Labs/images/auditing.png)
 
     >**Note**: This is server level auditing. The default auditing settings include all the queries and stored procedures executed against the database, as well as successful and failed logins.
 
-3. Set the **Enable Azure SQL Auditing** switch to **ON** to enable auditing. 
+4. Set the **Enable Azure SQL Auditing** switch to **ON** to enable auditing. 
 
-4. Select the **Storage** checkbox and entry boxes for **Subscription** and **Storage Account** will display.	
+5. Select the **Storage** checkbox and entry boxes for **Subscription** and **Storage Account** will display.	
 
-5. Choose your **Subscription** from the dropdown list.	
+6. Choose your **Subscription** from the dropdown list.	
 
-6. Click **Storage account** and choose **Create new**.	
+7. Click **Storage account** and choose **Create new**.	
 
-7. On the **Create storage account** blade, in the **Name** box, type a globally unique name consisting of between 3 and 24 lower case letters and digits, click **OK**. 
+8. On the **Create storage account** blade, in the **Name** box, type a globally unique name consisting of between 3 and 24 lower case letters and digits, click **OK**. 
 
 9. On the server blade, in the **Settings** section, click **SQL Databases**.
 
 10. In the list of databases, select the **AZ500LabDb** entry. 
 
-11. On the **AZ500LabDb** SQL database blade, in the **Security** section, click **Auditing**. 
+11. On the **AZ500LabDb** SQL database blade, in the **Security** section, click **Auditing**.
+     ![](../Labs/images/savedb.png)
 
     >**Note**: This is database level auditing. Server-level auditing is already enabled. 
   
@@ -144,9 +149,9 @@ In this task, you will first configure server level auditing and then configure 
 
     >**Note**: If storage-based auditing is enabled on the server, it will always apply to the database, regardless of the database settings.
 
-12. Click **View Audit Logs**.
+13. Click **View Audit Logs**.
 
-13. On the **Audit records** blade, note that you can switch between Server audit and Database audit. 
+14. On the **Audit records** blade, note that you can switch between Server audit and Database audit. 
 
     >**Note**: Since this SQL server and database were created recently, it is unlikely that any events will be available at this point. 
 
