@@ -130,6 +130,8 @@ In this task, you will create a new Azure AD tenant to use in this lab.
 
 5. Click **Review + create** and then click **Create**.
 
+    >**Note**: Kindly fill **Captcha** and select submit on **Help us prove you're not a robot**.
+    
     >**Note**: Wait for the new tenant to be created. Use the **Notification** icon to monitor the deployment status. 
 
 #### Task 2: Add a custom DNS name to the new Azure AD tenant
@@ -169,26 +171,27 @@ In this task, you will add a new Azure AD user and assign them to the Global Adm
    |User principal name|**syncadmin**|
    |Display Name|**syncadmin**|
    |Password|Ensure that the option **Auto-generate password** is selected and Save the password|
+
+   >**Note**: Record the full user name. You can copy its value by clicking the **Copy to clipboard** button on the right hand side. 
+
+   >**Note**: Record the user's password. You will need this later in this lab.
    
-   Then Select **Next:Properties**. In the **Usage Location** select **United States** <br>
-   Select **Next:Assignments**. Select **Add role**. Search **Global administrator**, and click **Select**. <br>
-   Then. Select **Review+create**
+4. Select **Next:Properties>**, in the **Usage Location** select **United States** <br>
+   Select **Next:Assignments>**, select **Add role** and Search **Global administrator**, click **Select**. <br>
 
-    >**Note**: Record the full user name. You can copy its value by clicking the **Copy to clipboard** button on the right hand side of the drop-down list displaying the domain name. 
-
-    >**Note**: Record the user's password. You will need this later in this lab. 
+5. Select **Review + Create**
 
     >**Note**: An Azure AD user with the Global Administrator role is required in order to implement Azure AD Connect.
 
-5. Open an InPrivate browser window.
+6. Open an InPrivate browser window.
 
-6. Navigate to the Azure portal and sign in using the **syncadmin** user account. When prompted, change the password you recorded earlier in this task to **Pa55w.rd1234**.
+7. Navigate to the Azure portal and sign in using the **syncadmin** user account and passwors. When prompted, change the password you recorded earlier in this task to **Pa55w.rd1234**.
 
     >**Note**: To sign in you will need to provide a fully qualified name of the **syncadmin** user account, including the Azure AD tenant DNS domain name, which you recorded earlier in this task. This user name is in the format syncadmin@`<your_tenant_name>`.onmicrosoft.com, where `<your_tenant_name>` is the placeholder representing your unique Azure AD tenant name. 
 
-7. Sign out as **syncadmin** and close the InPrivate browser window.
+8. Sign out as **syncadmin** and close the InPrivate browser window.
 
-> **Result**: After you completed this exercise, you have created an Azure AD tenant, added a custom DNS name to the new Azure AD tenant, and created an Azure AD user with the Global Administrator role.
+   > **Result**: After you completed this exercise, you have created an Azure AD tenant, added a custom DNS name to the new Azure AD tenant, and created an Azure AD user with the Global Administrator role.
 
 ### Exercise 3: Synchronize Active Directory forest with an Azure Active Directory tenant
 
@@ -208,7 +211,9 @@ In this task, you will connect to the Azure VM running AD DS domain controller a
 
 1. In the Azure portal, set the **Directory + subscription** filter to the Azure AD tenant associated with the Azure subscription into which you deployed the Azure VM in the first exercise of this lab.
 
-2. Search for **Load Balancer** in the Azure portal and select it. Then Select the load balancer present in the portal. From the **Settings** tab select **Frontend IP configuration** and Copy the IpAddress which we will using to login into adVM. Search for Remote Desktop Connection in the windows Search bar and Select it. Provide the IPAddress that was copied before.
+2. Search for **Load Balancer** in the Azure portal and select it. Then Select the listed load balancer present in the portal. From the **Settings** tab select **Frontend IP configuration** and Copy the IpAddress which we will using to login into adVM.
+
+3. Search for Remote Desktop Connection in the windows Search bar and Select it. Provide the IPAddress that was copied before.
 When prompted to authenticate, provide the following credentials:
 
    |Setting|Value|
@@ -220,21 +225,23 @@ When prompted to authenticate, provide the following credentials:
 
     >**Note**: The following steps are performed in the Remote Desktop session to the **adVM** Azure VM. 
 
-3. In **Server Manager**, click **Local Server** and then click **IE Enhanced Security Configuration**.
+4. In **Server Manager**, click **Local Server** and then click **IE Enhanced Security Configuration**.
 
-4. In the **Internet Explorer Enhanced Security Configuration** dialog box, set both options to **Off** and click **OK**.
+5. In the **Internet Explorer Enhanced Security Configuration** dialog box, set both options to **Off** and click **OK**.
 
-5. In **Server Manager**, click **Tools** and, in the drop-down menu, click **Active Directory Administrative Center**.
+6. In **Server Manager**, click **Tools** and, in the drop-down menu, click **Active Directory Administrative Center**.
 
-6. In **Active Directory Administrative Center**, click **adatum (local)**, in the **Tasks** pane, under the domain name **adatum (local)** click **New**, and, in the cascading menu, click **Organizational Unit**.
+7. In **Active Directory Administrative Center**, click **adatum (local)**, in the **Tasks** pane, under the domain name **adatum (local)** click **New**, and, in the cascading menu, click **Organizational Unit**.
 
-7. In the **Create Organizational Unit** window, in the **Name** text box, type **ToSync** and click **OK**.
+   ![](../Labs/images/lab6-500-6.png)
 
-8. Double-click the newly created **ToSync** organizational unit such that its content appears in the details pane of the Active Directory Administrative Center console. 
+8. In the **Create Organizational Unit** window, in the **Name** text box, type **ToSync** and click **OK**.
 
-9. In the **Tasks** pane, within the **ToSync** section, click **New**, and, in the cascading menu, click **User**.
+9. Double-click the newly created **ToSync** organizational unit such that its content appears in the details pane of the Active Directory Administrative Center console. 
 
-10. In the **Create User** window, create a new user account with the following settings (leave others with their existing values) and click **OK**:
+10. In the **Tasks** pane, within the **ToSync** section, click **New**, and, in the cascading menu, click **User**.
+
+11. In the **Create User** window, create a new user account with the following settings (leave others with their existing values) and click **OK**:
 
     |Setting|Value|
     |---|---|
@@ -307,15 +314,17 @@ In this task, you will install AD Connect on the virtual machine.
 
 In this task, you will verify that directory synchronization is working. 
 
-1. Within the Remote Desktop session to **adVM**, in the Microsoft Edge window displaying the Azure portal, navigate to the **Users - All users (Preview)** blade of the Adatum Lab Azure AD tenant.
+1. Within the Remote Desktop session to **adVM**, in the Microsoft Edge window displaying the Azure portal, navigate to the **Users** blade of the Adatum Lab Azure AD tenant.
 
-2. On the **Users \| All users** blade, note that the list of user objects includes the **aduser1** account. 
+2. On the **Users** blade, note that the list of user objects includes the **aduser1** account. 
 
     >**Note**: You might have to wait a few minutes and select **Refresh** for the **aduser1** user account to appear.
 
-3. Select the **aduser1** account and, in the **Profile > Identity** section, note that the **Source** attribute is set to **Windows Server AD**.
+3. On the **aduser1** overview blade select **Properties** tab.
 
-4. On the **aduser1 \| Profile** blade, in the **Job info** section, note that the **Department** attribute is not set.
+    ![](../Labs/images/pro.png)
+
+4. On the **aduser1** blade, in the **Job info** section, note that the **Department** attribute is not set.
 
 5. Within the Remote Desktop session to **adVM**, switch to **Active Directory Administrative Center**, select the **aduser1** entry in the list of objects in the **ToSync** OU, and, in the **Tasks** pane, in the **aduser1** section, select **Properties**.
 
