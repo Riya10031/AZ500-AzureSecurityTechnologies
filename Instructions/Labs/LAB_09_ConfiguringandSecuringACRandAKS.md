@@ -30,7 +30,6 @@ In this lab, you will complete the following exercise:
 
 ### Exercise 1: Configuring and Securing ACR and AKS
 
-
 > For all the resources in this lab, we are using the **East (US)** region. Verify with your instructor this is region to use for you class. 
 
 In this exercise, you will complete the following tasks:
@@ -50,6 +49,10 @@ In this task, you will create a resource group for the lab an an Azure Container
 
 1. In the Azure portal, open the Cloud Shell by clicking the first icon in the top right of the Azure Portal. If prompted, click **Bash** and **Create storage**.
 
+   ![](../images/lab9-1.png)
+   
+   ![](../images/lab9-(1).png)
+   
 1. Ensure **Bash** is selected in the drop-down menu in the upper-left corner of the Cloud Shell pane.
 
 1. In the Bash session within the Cloud Shell pane, run the following to create a new resource group for this lab:
@@ -226,6 +229,8 @@ In this task,  you will download the Manifest files, edit the YAML file, and app
 
     >**Note**: Record the Azure Container Registry instance name. You will need it later in this task.
 
+    ![](../images/lab9-3.png)
+ 
 1. In the Bash session within the Cloud Shell pane, run the following to open the nginxexternal.yaml file, so you can edit its content. 
 
     ```sh
@@ -236,6 +241,8 @@ In this task,  you will download the Manifest files, edit the YAML file, and app
 
 1. In the editor pane, scroll down to **line 24** and replace the **`<ACRUniquename>`** placeholder with the ACR name.
 
+    ![](../images/lab9-4.png)
+   
 1. Now to save this edited yaml file, perform **CTRL + S** and then **CTRL + Q** to exit. 
 
 1. In the Bash session within the Cloud Shell pane, run the following to apply the change to the cluster:
@@ -246,11 +253,8 @@ In this task,  you will download the Manifest files, edit the YAML file, and app
 
 1. In the Bash session within the Cloud Shell pane, review the output of the command you run in the previous task to verify that the deployment and the corresponding service have been created. 
 
-    ```
-    deployment.apps/nginxexternal created
-    service/nginxexternal created
-    ```
-
+  ![](../images/lab9-6.png)
+  
 #### Task 6: Verify the you can access an external AKS-hosted service
 
 In this task, verify the container can be accessed externally using the public IP address.
@@ -262,6 +266,8 @@ In this task, verify the container can be accessed externally using the public I
     ```
 
 1. In the Bash session within the Cloud Shell pane, review the output and record the value in the External-IP column. You will need it in the next step. 
+
+    ![](../images/lab9-5.png)
 
 1. Open a new broswer and browse to the IP address you identified in the previous step.
 
@@ -291,10 +297,7 @@ In this task, you will deploy the internal facing service on the AKS.
 
 1.  In the Bash session within the Cloud Shell pane, review the output to verify your deployment and the service have been created:
 
-    ```
-    deployment.apps/nginxinternal created
-    service/nginxinternal created
-    ```
+    ![](../images/lab9-6.png)
 
 1. In the Bash session within the Cloud Shell pane, run the following to retrieve information about the nginxinternal service including name, type, IP addresses, and ports. 
 
