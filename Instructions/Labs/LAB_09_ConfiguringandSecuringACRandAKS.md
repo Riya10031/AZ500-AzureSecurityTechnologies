@@ -134,7 +134,7 @@ In this task, you will create an Azure Kubernetes service and review the deploye
     |Region|**(US) East US**|
     |Availability zones |**None**|
 
-1. Click **Next: Node Pools >** and, on the **Node Pools** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
+1. Click **Next: Node Pools >**, on the **Node Pools** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 
     |Setting|Value|
     |----|----|
