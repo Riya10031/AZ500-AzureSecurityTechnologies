@@ -205,7 +205,7 @@ In this task, you will connect to the Azure VM running AD DS domain controller a
 
 1. In the Azure portal, set the **Directory + subscription** filter to the Azure AD tenant associated with the Azure subscription into which you deployed the Azure VM in the first exercise of this lab.
 
-5. Search for **Load Balancer** in the Azure portal and select it. Then Select the load balancer present in the portal. From the **Settings** tab select **Frontend IP configuration** and Copy the IpAddress which we will using to login into adVM. Search for Remote Desktop Connection in the windows Search bar and Select it. Provide the IPAddress that was copied before.
+2. Search for **Load Balancer** in the Azure portal and select it. Then Select the load balancer present in the portal. From the **Settings** tab select **Frontend IP configuration** and Copy the IpAddress which we will using to login into adVM. Search for Remote Desktop Connection in the windows Search bar and Select it. Provide the IPAddress that was copied before.
 When prompted to authenticate, provide the following credentials:
 
    |Setting|Value|
@@ -217,30 +217,30 @@ When prompted to authenticate, provide the following credentials:
 
     >**Note**: The following steps are performed in the Remote Desktop session to the **adVM** Azure VM. 
 
-6. In **Server Manager**, click **Local Server** and then click **IE Enhanced Security Configuration**.
+3. In **Server Manager**, click **Local Server** and then click **IE Enhanced Security Configuration**.
 
-7. In the **Internet Explorer Enhanced Security Configuration** dialog box, set both options to **Off** and click **OK**.
+4. In the **Internet Explorer Enhanced Security Configuration** dialog box, set both options to **Off** and click **OK**.
 
-8. In **Server Manager**, click **Tools** and, in the drop-down menu, click **Active Directory Administrative Center**.
+5. In **Server Manager**, click **Tools** and, in the drop-down menu, click **Active Directory Administrative Center**.
 
-9. In **Active Directory Administrative Center**, click **adatum (local)**, in the **Tasks** pane, under the domain name **adatum (local)** click **New**, and, in the cascading menu, click **Organizational Unit**.
+6. In **Active Directory Administrative Center**, click **adatum (local)**, in the **Tasks** pane, under the domain name **adatum (local)** click **New**, and, in the cascading menu, click **Organizational Unit**.
 
-10. In the **Create Organizational Unit** window, in the **Name** text box, type **ToSync** and click **OK**.
+7. In the **Create Organizational Unit** window, in the **Name** text box, type **ToSync** and click **OK**.
 
-11. Double-click the newly created **ToSync** organizational unit such that its content appears in the details pane of the Active Directory Administrative Center console. 
+8. Double-click the newly created **ToSync** organizational unit such that its content appears in the details pane of the Active Directory Administrative Center console. 
 
-12. In the **Tasks** pane, within the **ToSync** section, click **New**, and, in the cascading menu, click **User**.
+9. In the **Tasks** pane, within the **ToSync** section, click **New**, and, in the cascading menu, click **User**.
 
-13. In the **Create User** window, create a new user account with the following settings (leave others with their existing values) and click **OK**:
+10. In the **Create User** window, create a new user account with the following settings (leave others with their existing values) and click **OK**:
 
-   |Setting|Value|
-   |---|---|
-   |Full Name|**aduser1**|
-   |User UPN logon|**aduser1**|
-   |User SamAccountName logon|**aduser1**|
-   |Password|**Pa55w.rd1234**|
-   |Confirm Password|**Pa55w.rd1234**|
-   |Other password options|**Password never expires**|
+    |Setting|Value|
+    |---|---|
+    |Full Name|**aduser1**|
+    |User UPN logon|**aduser1**|
+    |User SamAccountName logon|**aduser1**|
+    |Password|**Pa55w.rd1234**|
+    |Confirm Password|**Pa55w.rd1234**|
+    |Other password options|**Password never expires**|
 
 #### Task 2: Install Azure AD Connect
 
@@ -275,10 +275,10 @@ In this task, you will install AD Connect on the virtual machine.
 
 14. In the **AD forest account** window, ensure that the option to **Create new AD account** is selected, specify the following credentials, and click **OK**:
 
-   |Setting|Value|
-   |---|---|
-   |User Name|**ADATUM\\Student**|
-   |Password|**Pa55w.rd1234**|
+    |Setting|Value|
+    |---|---|
+    |User Name|**ADATUM\\Student**|
+    |Password|**Pa55w.rd1234**|
 
 14. Back on the **Connect your directories** page, ensure that the **adatum.com** entry appears as a configured directory and click **Next**
 
