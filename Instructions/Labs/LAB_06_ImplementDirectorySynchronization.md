@@ -54,8 +54,11 @@ In this task, you will identify a DNS name for your Azure VM deployment.
     >**Note**: To identify Azure regions where you can provision Azure VMs, refer to [**https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
 
 4. Verify that the command returned **True**. If not, rerun the same command with a different value of the `<custom-label>` until the command returns **True**.
+   true.png
 
 5. Record the value of the `<custom-label>` that resulted in the successful outcome. You will need it for the next task.
+ 
+   record.png
 
 6. Close the Cloud Shell.
 
@@ -66,13 +69,14 @@ In this task, you will deploy an Azure VM that will host an Active Directory dom
 1. Open another browser tab in the same browser window and navigate to the [https://github.com/Azure/azure-quickstart-templates/tree/master/application-workloads/active-directory/active-directory-new-domain](https://github.com/Azure/azure-quickstart-templates/tree/master/application-workloads/active-directory/active-directory-new-domain). 
 
 2. Within the GitHub page that shows up, on the **Create an Azure VM with a new AD Forest** section, click **Deploy to Azure**. This will automatically redirect the browser to the **Create an Azure VM with a new AD Forest** blade in the Azure portal.
+    lab6-500-2.png
+   
+4. On the **Create an Azure VM with a new AD Forest** blade, click **Edit parameters**.
 
-3. On the **Create an Azure VM with a new AD Forest** blade, click **Edit parameters**.
-
-4. On the **Edit parameters** blade, click **Load file**, in the **Open** dialog box, Navigate to **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\06\\active-directory-new-domain\\azuredeploy.parameters.json**, click **Open**, and then click **Save**. 
+5. On the **Edit parameters** blade, click **Load file**, in the **Open** dialog box, Navigate to **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\06\\active-directory-new-domain\\azuredeploy.parameters.json**, click **Open**, and then click **Save**. 
 
 
-5. On the **Create an Azure VM with a new AD Forest** blade, specify the following settings (leave others with their existing values):
+6. On the **Create an Azure VM with a new AD Forest** blade, specify the following settings (leave others with their existing values):
 
    |Setting|Value|
    |---|---|
@@ -85,7 +89,7 @@ In this task, you will deploy an Azure VM that will host an Active Directory dom
    |Dns Prefix|the DNS hostname you identified in the previous task|
    |VM Size|**Standard_D2s_v3**|
 
-6. On the **Create an Azure VM with a new AD Forest** blade, click **Review + create**, and then click **Create**.
+7. On the **Create an Azure VM with a new AD Forest** blade, click **Review + create**, and then click **Create**.
 
     >**Note**: Do not wait for the deployment to complete but instead proceed to the next exercise. The deployment might take about 15 minutes. You will use the virtual machine deployed in this task in the third exercise of this lab.
 
