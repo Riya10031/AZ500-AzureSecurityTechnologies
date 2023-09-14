@@ -21,7 +21,7 @@ In this lab, you will complete the following exercise:
 
 ![](../Labs/Lab-Scenario-Preview/media/AZ-500-LSP-Mod-3-3.png)
 
-## Estimated timing: 45 minutes
+## Estimated timing: 60 minutes
 
 ### Exercise 1: Service endpoints and security storage
 
@@ -45,7 +45,7 @@ In this task, you will create a virtual network.
 
 1. On the **Virtual Networks** blade, click **+ Create**.
 
-1. On the **Basics** tab of the **Create virtual network** blade, specify the following settings (leave others with their default values) and click **Next: IP Addresses**:
+1. On the **Basics** tab of the **Create virtual network** blade, specify the following settings (leave others with their default values) and click **Next** and go to **IP addresses** tab:
 
     |Setting|Value|
     |---|---|
@@ -131,11 +131,13 @@ In this task, you will create a network security group with two outbound securit
     |Priority|**1000**|
     |Name|**Allow-Storage-All**|
 
+![image](../images/lab12-1.png)
+
 1. On the **Add outbound security rule** blade, click **Add** to create the new outbound rule. 
 
 1. On the **myNsgPrivate** blade, in the **Settings** section, click **Outbound security rules**, and then click **+ Add**.
 
-1. On the **Add inbound security rule** blade, specify the following settings to explicitly deny outbound traffic to Internet (leave all other values with their default settings): 
+1. On the **Add outbound security rule** blade, specify the following settings to explicitly deny outbound traffic to Internet (leave all other values with their default settings): 
 
     |Setting|Value|
     |---|---|
@@ -150,6 +152,9 @@ In this task, you will create a network security group with two outbound securit
     |Priority|**1100**|
     |Name|**Deny-Internet-All**|
 
+![image](../images/lab12-2.png)
+   
+1. On the **Add outbound security rule** blade, click **Add** to create the new outbound rule. 
 
 1. On the **myNsgPrivate** blade, in the **Settings** section, click **Inbound security rules** and then click **+ Add**.
 
@@ -166,6 +171,8 @@ In this task, you will create a network security group with two outbound securit
     |Action|**Allow**|
     |Priority|**1200**|                                                    
     |Name|**Allow-RDP-All**|
+
+![image](../images/lab12-3.png)
 
 1. On the **Add inbound security rule** blade, click **Add** to create the new inbound rule. 
 
@@ -249,7 +256,7 @@ In this task, you will create a storage account with a file share and obtain the
     
     >**Note**: **DeploymentID** can be found under the **Environment Details** tab.
 
-4. On the **Basics** tab of the **Create storage account** blade, click **Review + Create** and wait for the validation process to complete, and then click **Create**.
+4. On the **Basics** tab of the **Create storage account** blade, click **Review** and wait for the validation process to complete, and then click **Create**.
 
     >**Note**: Wait for the Storage account to be created. This should take about 2 minutes.
 
@@ -267,7 +274,7 @@ In this task, you will create a storage account with a file share and obtain the
     |---|---|
     |Name|**my-file-share**|
 
-10. On the **New file share** blade, click **Create**.
+10. On the **New file share** blade, click **Review + create** and **Create**.
 
     >**Note**: Now, retrieve and record the PowerShell script that creates a drive mapping to the Azure file share. 
 
@@ -277,11 +284,15 @@ In this task, you will create a storage account with a file share and obtain the
 
 13. On the **Connect** blade, on the **Windows** tab, click on **Show Script** and copy the PowerShell script that creates a Z drive mapping to the file share. 
 
-    >**Note**: Record this script. You will need this in a later in this lab in order to map the file share from the Azure virtual machine on the **Private** subnet.
+![image](../images/lab12-4.png)
+
+ >**Note**: Record this script. You will need this in a later in this lab in order to map the file share from the Azure virtual machine on the **Private** subnet.
 
 14. Navigate back to the storage account blade, then in the **Security + networking** section, click **Networking**.
 	
 15. Under **Firewalls and virtual networks** blade, select the **Enabled from selected virtual networks and IP addresses** option and click the **+ Add existing virtual network** link. 
+
+![image](../images/lab12-5.png)
 
 16. On the **Add networks** blade, specify the following settings:
 
@@ -305,7 +316,7 @@ In this task, you will create two virtual machines one in the Private subnet and
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Virtual machines** and press the **Enter** key.
 
-2. On the **Virtual machines** blade, click **+ Create** and, in the dropdown list, click **+ Azure Virtual machine**.
+2. On the **Virtual machines** blade, click **+ Create** and, in the dropdown list, click **Azure Virtual machine**.
 
 3. On the **Basics** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
@@ -315,7 +326,7 @@ In this task, you will create two virtual machines one in the Private subnet and
     |Resource group|**AZ500LAB12**|
     |Virtual machine name|**myVmPrivate**|
     |Region|**(US)East US**|
-    |Image|**Windows Server 2022 Datacenter: Azure Edition - Gen 2**|
+    |Image|**Windows Server 2022 Datacenter: Azure Edition - x64 Gen 2**|
     |Username|**localadmin**|
     |Password|**Pa55w.rd1234**|
     |Public inbound ports|**None**|
@@ -339,7 +350,7 @@ In this task, you will create two virtual machines one in the Private subnet and
 
     >**Note**: The second virtual machine will be connected to the Public subnet.
 
-8. On the **Virtual machines** blade, click **+ Add** and, in the dropdown list, click **+ Azure Virtual machine**.
+8. On the **Virtual machines** blade, click **+ Create** and, in the dropdown list, click **Azure Virtual machine**.
 
 9. On the **Basics** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
@@ -349,7 +360,7 @@ In this task, you will create two virtual machines one in the Private subnet and
     |Resource group|**AZ500LAB12**|
     |Virtual machine name|**myVmPublic**|
     |Region|**(US)East US**|
-    |Image|**Windows Server 2022 Datacenter: Azure Edition - Gen 2**|
+    |Image|**Windows Server 2022 Datacenter: Azure Edition - x64 Gen 2**|
     |Username|**localadmin**|
     |Password|**Pa55w.rd1234**|
     |Public inbound ports|**None**|
@@ -381,14 +392,16 @@ In this task, you will connect to the myVMPrivate virtual machine via Remote Des
 
 2. On the **Virtual machines** blade, click the **myVMPrivate** entry.
 
-3. On the **myVMPrivate** blade, click **Connect** and, in the drop down menu, click **RDP**. 
+3. On the **myVMPrivate** blade, click **Connect** and, click **Select** from Native RDP.
 
-4. Click **Download RDP File** and use it to connect to the **myVMPrivate** Azure VM via Remote Desktop. When prompted to authenticate, provide the following credentials:
+4. Click **Download RDP File**. Select **keep** for permission to download RDP file and use it to connect to the **myVMPrivate** Azure VM via Remote Desktop. Open the RDP file and select **Connect**. When prompted to authenticate, provide the following credentials and click **Ok**:
 
     |Setting|Value|
     |---|---|
     |User name|**localadmin**|
     |Password|**Pa55w.rd1234**|
+
+In the pop that follows, click on **Yes**.
 
     >**Note**: Wait for the Remote Desktop session to open and Server Manager to load.
 
@@ -431,9 +444,9 @@ In this task, you will connect to the myVMPrivate virtual machine via Remote Des
 
 2. On the **Virtual machines** blade, click the **myVMPublic** entry.
 
-3. On the **myVMPublic** blade, click **Connect** and, in the drop down menu, click **RDP**. 
+3. On the **myVMPublic** blade, click **Connect** and, click **Select** from Native RDP.
 
-4. Click **Download RDP File** and use it to connect to the **myVMPublic** Azure VM via Remote Desktop. When prompted to authenticate, provide the following credentials:
+4. Click **Download RDP File** and select **keep** for permission to download RDP file and use it to connect to the **myVMPublic** Azure VM via Remote Desktop. Open the RDP file and select **Connect**. When prompted to authenticate, provide the following credentials and click **Ok**.
 
     |Setting|Value|
     |---|---|
