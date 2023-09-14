@@ -72,12 +72,12 @@ In this task, you will deploy an Azure VM that will host an Active Directory dom
 
    ![](../Labs/images/lab6-500-2.png)
    
-4. On the **Create an Azure VM with a new AD Forest** blade, click **Edit parameters**.
+3. On the **Create an Azure VM with a new AD Forest** blade, click **Edit parameters**.
 
-5. On the **Edit parameters** blade, click **Load file**, in the **Open** dialog box, Navigate to **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\06\\active-directory-new-domain\\azuredeploy.parameters.json**, click **Open**, and then click **Save**. 
+4. On the **Edit parameters** blade, click **Load file**, in the **Open** dialog box, Navigate to **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\06\\active-directory-new-domain\\azuredeploy.parameters.json**, click **Open**, and then click **Save**. 
 
 
-6. On the **Create an Azure VM with a new AD Forest** blade, specify the following settings (leave others with their existing values):
+5. On the **Create an Azure VM with a new AD Forest** blade, specify the following settings (leave others with their existing values):
 
    |Setting|Value|
    |---|---|
@@ -90,7 +90,7 @@ In this task, you will deploy an Azure VM that will host an Active Directory dom
    |Dns Prefix|the DNS hostname you identified in the previous task|
    |VM Size|**Standard_D2s_v3**|
 
-7. On the **Create an Azure VM with a new AD Forest** blade, click **Review + create**, and then click **Create**.
+6. On the **Create an Azure VM with a new AD Forest** blade, click **Review + create**, and then click **Create**.
 
     >**Note**: Do not wait for the deployment to complete but instead proceed to the next exercise. The deployment might take about 15 minutes. You will use the virtual machine deployed in this task in the third exercise of this lab.
 
@@ -132,7 +132,7 @@ In this task, you will create a new Azure AD tenant to use in this lab.
 
     >**Note**: Kindly fill **Captcha** and select submit on **Help us prove you're not a robot**.
     
-    >**Note**: Wait for the new tenant to be created. Use the **Notification** icon to monitor the deployment status. 
+    >**Note**: Wait for 2 minutes the new tenant to be created. Use the **Notification** icon to monitor the deployment status and do not wait for previous deployment to complete but instead proceed to the next exercise.
 
 #### Task 2: Add a custom DNS name to the new Azure AD tenant
 
@@ -290,25 +290,25 @@ In this task, you will install AD Connect on the virtual machine.
     |User Name|**ADATUM\\Student**|
     |Password|**Pa55w.rd1234**|
 
-14. Back on the **Connect your directories** page, ensure that the **adatum.com** entry appears as a configured directory and click **Next**
+15. Back on the **Connect your directories** page, ensure that the **adatum.com** entry appears as a configured directory and click **Next**
 
-15. On the **Azure AD sign-in configuration** page, note the warning stating **Users will not be able to sign-in to Azure AD with on-premises credentials if the UPN suffix does not match a verified domain name**, enable the checkbox **Continue without matching all UPN suffixes to verified domain**, and click **Next**.
+16. On the **Azure AD sign-in configuration** page, note the warning stating **Users will not be able to sign-in to Azure AD with on-premises credentials if the UPN suffix does not match a verified domain name**, enable the checkbox **Continue without matching all UPN suffixes to verified domain**, and click **Next**.
 
     >**Note**: As explained earlier, this is expected, since you could not verify the custom Azure AD DNS domain **adatum.com**.
 
-16. On the **Domain and OU filtering** page, click the option **Sync selected domains and OUs**, domain name **adatum.com** will be checked, expand the **adatum.com** to view the **ToSync**. Clear all checkboxes, click only the checkbox next to the **ToSync** OU, and click **Next**.
+17. On the **Domain and OU filtering** page, click the option **Sync selected domains and OUs**, domain name **adatum.com** will be checked, expand the **adatum.com** to view the **ToSync**. Clear all checkboxes, click only the checkbox next to the **ToSync** OU, and click **Next**.
 
-17. On the **Uniquely identifying your users** page, accept the default settings, and click **Next**.
+18. On the **Uniquely identifying your users** page, accept the default settings, and click **Next**.
 
-18. On the **Filter users and devices** page, accept the default settings, and click **Next**.
+19. On the **Filter users and devices** page, accept the default settings, and click **Next**.
 
-19. On the **Optional features** page, accept the default settings, and click **Next**.
+20. On the **Optional features** page, accept the default settings, and click **Next**.
 
-20. On the **Ready to configure** page, ensure that the **Start the synchronization process when configuration completes** checkbox is selected and click **Install**.
+21. On the **Ready to configure** page, ensure that the **Start the synchronization process when configuration completes** checkbox is selected and click **Install**.
 
     >**Note**: Installation should take about 2 minutes.
 
-21. Review the information on the **Configuration complete** page and click **Exit** to close the **Microsoft Azure Active Directory Connect** window.
+22. Review the information on the **Configuration complete** page and click **Exit** to close the **Microsoft Azure Active Directory Connect** window.
 
 #### Task 3: Verify directory synchronization
 
