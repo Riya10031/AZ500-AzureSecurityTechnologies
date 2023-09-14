@@ -39,7 +39,7 @@ In this exercise, you will complete the following tasks:
 
 In this task, you will identify a DNS name for your Azure VM deployment.
 
-1. In the Azure portal, open the Cloud Shell by clicking the first icon in the top right of the Azure Portal. If prompted, click **PowerShell** and **Create storage**.
+1. In the Azure portal, open the **Cloud Shell (1)** by clicking the first icon in the top right of the Azure Portal. If prompted, click **PowerShell (2)** and **Create storage (3)**.
 
     ![](../images/lab6-500-1.png)
    
