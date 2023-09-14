@@ -41,9 +41,13 @@ In this task, you will identify a DNS name for your Azure VM deployment.
 
 1. In the Azure portal, open the Cloud Shell by clicking the first icon in the top right of the Azure Portal. If prompted, click **PowerShell** and **Create storage**.
 
-2. Ensure **PowerShell** is selected in the drop-down menu in the upper-left corner of the Cloud Shell pane.
+    ![](../images/lab6-500-1.png)
+   
+    ![](../images/lab6-500-1-1.png)
 
-3. In the PowerShell session within the Cloud Shell pane, run the following to identify an available DNS name you can use for an Azure VM deployment in the next task of this exercise:
+3. Ensure **PowerShell** is selected in the drop-down menu in the upper-left corner of the Cloud Shell pane.
+
+4. In the PowerShell session within the Cloud Shell pane, run the following to identify an available DNS name you can use for an Azure VM deployment in the next task of this exercise:
 
     ```powershell
     Test-AzDnsAvailability -DomainNameLabel <custom-label> -Location '<location>'
@@ -53,13 +57,13 @@ In this task, you will identify a DNS name for your Azure VM deployment.
 
     >**Note**: To identify Azure regions where you can provision Azure VMs, refer to [**https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
 
-4. Verify that the command returned **True**. If not, rerun the same command with a different value of the `<custom-label>` until the command returns **True**.
+5. Verify that the command returned **True**. If not, rerun the same command with a different value of the `<custom-label>` until the command returns **True**.
 
-   ![](Instructions/images/true.png)
+   ![](../images/true.png)
 
 6. Record the value of the `<custom-label>` that resulted in the successful outcome. You will need it for the next task.
  
-    ![](.../Labs/images/record.png)
+    ![](../images/record.png)
 
 7. Close the Cloud Shell.
 
@@ -71,7 +75,7 @@ In this task, you will deploy an Azure VM that will host an Active Directory dom
 
 2. Within the GitHub page that shows up, on the **Create an Azure VM with a new AD Forest** section, click **Deploy to Azure**. This will automatically redirect the browser to the **Create an Azure VM with a new AD Forest** blade in the Azure portal.
 
-   ![](../Labs/images/lab6-500-2.png)
+   ![](../images/lab6-500-2.png)
    
 3. On the **Create an Azure VM with a new AD Forest** blade, click **Edit parameters**.
 
@@ -133,7 +137,7 @@ In this task, you will create a new Azure AD tenant to use in this lab.
 
     >**Note**: Kindly fill **Captcha** and select submit on **Help us prove you're not a robot**.
     
-    >**Note**: Wait for 2 minutes the new tenant to be created. Use the **Notification** icon to monitor the deployment status and do not wait for previous deployment to complete but instead proceed to the next exercise.
+    >**Note**: Wait for 2 minutes for new tenant to be created. Use the **Notification** icon to monitor the deployment status and please do not wait for previous exercise deployment to complete but instead proceed to the next exercise.
 
 #### Task 2: Add a custom DNS name to the new Azure AD tenant
 
@@ -214,7 +218,9 @@ In this task, you will connect to the Azure VM running AD DS domain controller a
 
 2. Search for **Load Balancer** in the Azure portal and select it. Then Select the listed load balancer present in the portal. From the **Settings** tab select **Frontend IP configuration** and Copy the IpAddress which we will using to login into adVM.
 
-3. Search for Remote Desktop Connection in the windows Search bar and Select it. Provide the IPAddress that was copied before.
+   ![](../images/load1.png)
+   
+4. Search for Remote Desktop Connection in the windows Search bar and Select it. Provide the IPAddress that was copied before.
 When prompted to authenticate, provide the following credentials:
 
    |Setting|Value|
@@ -226,23 +232,23 @@ When prompted to authenticate, provide the following credentials:
 
     >**Note**: The following steps are performed in the Remote Desktop session to the **adVM** Azure VM. 
 
-4. In **Server Manager**, click **Local Server** and then click **IE Enhanced Security Configuration**.
+5. In **Server Manager**, click **Local Server** and then click **IE Enhanced Security Configuration**.
 
-5. In the **Internet Explorer Enhanced Security Configuration** dialog box, set both options to **Off** and click **OK**.
+6. In the **Internet Explorer Enhanced Security Configuration** dialog box, set both options to **Off** and click **OK**.
 
-6. In **Server Manager**, click **Tools** and, in the drop-down menu, click **Active Directory Administrative Center**.
+7. In **Server Manager**, click **Tools** and, in the drop-down menu, click **Active Directory Administrative Center**.
 
-7. In **Active Directory Administrative Center**, click **adatum (local)**, in the **Tasks** pane, under the domain name **adatum (local)** click **New**, and, in the cascading menu, click **Organizational Unit**.
+8. In **Active Directory Administrative Center**, click **adatum (local)**, in the **Tasks** pane, under the domain name **adatum (local)** click **New**, and, in the cascading menu, click **Organizational Unit**.
 
-   ![](../Labs/images/lab6-500-6.png)
+   ![](../images/lab6-500-4.png)
 
-8. In the **Create Organizational Unit** window, in the **Name** text box, type **ToSync** and click **OK**.
+9. In the **Create Organizational Unit** window, in the **Name** text box, type **ToSync** and click **OK**.
 
-9. Double-click the newly created **ToSync** organizational unit such that its content appears in the details pane of the Active Directory Administrative Center console. 
+10. Double-click the newly created **ToSync** organizational unit such that its content appears in the details pane of the Active Directory Administrative Center console. 
 
-10. In the **Tasks** pane, within the **ToSync** section, click **New**, and, in the cascading menu, click **User**.
+11. In the **Tasks** pane, within the **ToSync** section, click **New**, and, in the cascading menu, click **User**.
 
-11. In the **Create User** window, create a new user account with the following settings (leave others with their existing values) and click **OK**:
+12. In the **Create User** window, create a new user account with the following settings (leave others with their existing values) and click **OK**:
 
     |Setting|Value|
     |---|---|
@@ -258,7 +264,8 @@ When prompted to authenticate, provide the following credentials:
 In this task, you will install AD Connect on the virtual machine. 
 
 1. Within the Remote Desktop session to **adVM**, use Microsoft Edge to navigate to the Azure portal at **https://portal.azure.com**, and sign in by using the **syncadmin** user account you created in the previous exercise. When prompted, specify the full user name you recorded and the **Pa55w.rd1234** password.
->Note:If Internet Explorer is not working, download and install the Microsoft Edge by using this link.[Microsoft Edge](https://mcas-proxyweb.mcas.ms/certificate-checker?login=false&originalUrl=https%3A%2F%2Fgo.microsoft.com.mcas.ms%2Ffwlink%2F%3Flinkid%3D2069324%26Channel%3DStable%26language%3Den) 
+
+   >**Note**:If Internet Explorer is not working, download and install the Microsoft Edge by using this link.[Microsoft Edge](https://mcas-proxyweb.mcas.ms/certificate-checker?login=false&originalUrl=https%3A%2F%2Fgo.microsoft.com.mcas.ms%2Ffwlink%2F%3Flinkid%3D2069324%26Channel%3DStable%26language%3Den) 
 
 2. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Azure Active Directory** and press the **Enter** key.
 
@@ -323,7 +330,7 @@ In this task, you will verify that directory synchronization is working.
 
 3. On the **aduser1** overview blade select **Properties** tab.
 
-    ![](../Labs/images/pro.png)
+    ![](../images/pro.png)
 
 4. On the **aduser1** blade, in the **Job info** section, note that the **Department** attribute is not set.
 
