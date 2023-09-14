@@ -139,13 +139,15 @@ In this task, you will add your custom DNS name to the new Azure AD tenant.
 
     >**Note**: You may need to refresh the browser window if the **AdatumSync** entry does not appear in the **Directories + subscriptions** filter list.
 
-3. On the **AdatumSync - Azure Active Directory** blade, in the **Manage** section, click **Custom domain names**.
+3. In the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Azure Active Directory** and press the **Enter** key.
+   
+4. On the **AdatumSync - Azure Active Directory** blade, in the **Manage** section, click **Custom domain names**.
 
-4. On the **AdatumSync \| Custom domain names** blade, click **+ Add custom domain**.
+5. On the **AdatumSync \| Custom domain names** blade, click **+ Add custom domain**.
 
-5. On the **Custom domain name** blade, in the **Custom domain name** text box, type **adatum.com** and click **Add Domain**.
+6. On the **Custom domain name** blade, in the **Custom domain name** text box, type **adatum.com** and click **Add Domain**.
 
-6. On the **adatum.com** blade, review the information necessary to perform verification of the Azure AD domain name and then select **Delete** twice.
+7. On the **adatum.com** blade, review the information necessary to perform verification of the Azure AD domain name and then select **Delete** twice.
 
     >**Note**: You will not be able to complete the validation process because you do not own the **adatum.com** DNS domain name. This will not prevent you from synchronizing the **adatum.com** AD DS domain with the Azure AD tenant. You will use for this purpose the initial DNS name of the Azure AD tenant (the name ending with the **onmicrosoft.com** suffix), which you identified in the previous task. However, keep in mind that, as a result, the DNS domain name of the AD DS domain and the DNS name of the Azure AD tenant will differ. This means that Adatum users will need to use different names when signing in to the AD DS domain and when signing in to Azure AD tenant.
 
@@ -157,7 +159,7 @@ In this task, you will add a new Azure AD user and assign them to the Global Adm
 
 2. On the **Users** blade, click **+ New User** and then from the drop-down list, select **Create new user**. 
 
-3. On the **New user** blade, ensure that the **Create user** option is selected, specify the following settings (leave all others with their default values) and click **Create**:
+3. On the **Create new user** blade, specify the following settings (leave all others with their default values) and click **Create**:
 
    |Setting|Value|
    |---|---|
