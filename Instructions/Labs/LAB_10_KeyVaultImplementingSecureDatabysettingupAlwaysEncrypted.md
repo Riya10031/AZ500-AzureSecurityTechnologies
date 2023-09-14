@@ -21,19 +21,19 @@ In this lab, you will complete the following exercises:
 - Exercise 3: Configure an Azure SQL database and a data-driven application
 - Exercise 4: Demonstrate the use of Azure Key Vault in encrypting the Azure SQL database
 
-## Estimated timing: 60 minutes
 
 ## Lab files:
 
-- **C:\\AllFiles\\AZ500-AzureSecurityTechnologies-prod\\Allfiles\\Labs\\10\\az-500-10_azuredeploy.json**
+- **C:\\AllFiles\\AZ500-AzureSecurityTechnologies-lab-files\\Allfiles\\Labs\\10\\az-500-10_azuredeploy.json**
 
-- **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\\10\\program.cs**
+- **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\\10\\program.cs**
 
-## Estimated timing: 60 minutes
 
 ## Architecture diagram
 
 ![](../Labs/Lab-Scenario-Preview/media/AZ-500-LSP-Mod-3-1.png)
+
+## Estimated timing: 60 minutes
 
 ### Exercise 1: Deploy the base infrastructure from an ARM template
 
@@ -49,7 +49,7 @@ In this task, you will deploy an Azure VM, which will automatically install Visu
 
 1. On the **Custom deployment** blade, click the **Build your own template in the editor** option.
 
-1. On the **Edit template** blade, click **Load file**, locate the **C:\\AllFiles\\AZ500-AzureSecurityTechnologies-prod\\Allfiles\\Labs\\10\\az-500-10_azuredeploy.json** file and click **Open**.
+1. On the **Edit template** blade, click **Load file**, locate the **C:\\AllFiles\\AZ500-AzureSecurityTechnologies-lab-files\\Allfiles\\Labs\\10\\az-500-10_azuredeploy.json** file and click **Open**.
 
 1. On the **Edit template** blade, click **Save**.
 
@@ -59,7 +59,7 @@ In this task, you will deploy an Azure VM, which will automatically install Visu
    |---|---|
    |Subscription|Let it be default|
    |Resource group|Select **AZ500LAB10-<inject key="DeploymentID" enableCopy="false"/>**|
-   |Location|**East US**|
+   |Location|Let it be default|
    |Admin Username|**Student**|
    |Admin Password|**Pa55w.rd1234**|
    
@@ -94,7 +94,9 @@ In this exercise, you will complete the following tasks:
 
 In this task, you will create an Azure Key Vault resource. You will also configure the Azure Key Vault permissions.
 
-1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **PowerShell**. If you do not see this option, skip the step.  
+1. Click on Cloud Shell and If you open  the Cloud Shell for the first time, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **PowerShell**. If you do not see this option, skip the step.  
+
+![image](../images/lab10-1.png)
 
 1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **show advanced settings**. Please make sure you have selected your resource group **AZ500LAB10-<inject key="DeploymentID" enableCopy="false"/>** and in **storage account** select Create new and enter **storage<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account name** and enter **fileshare<inject key="DeploymentID" enableCopy="false"/>** For the **File share name**, then click on **Create Storage**.
 
@@ -136,7 +138,7 @@ In this task, you will create an Azure Key Vault resource. You will also configu
     
 1. Now click on **Next** to reach to **Principal** tab.
     
-1. On the **Principal** blade, select your user account, and click **Select** and click on **Review + create** tab and then **Create**.
+1. On the **Principal** blade, select your user account, and click **Select** and click on **Next** tab and then **Create**.
 
 #### Task 2: Add a key to Key Vault
 
@@ -232,7 +234,7 @@ In this exercise, you will complete the following tasks:
 
 #### Task 1: Enable a client application to access the Azure SQL Database service
 
-In this task, you will enable a client application to access the Azure SQL Database service. This will be done by setting up the required authentication and acquiring the Application ID and Secret that you will need to authenticate your application. T
+In this task, you will enable a client application to access the Azure SQL Database service. This will be done by setting up the required authentication and acquiring the Application ID and Secret that you will need to authenticate your application.
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **App Registrations** and press the **Enter** key.
 
@@ -340,7 +342,7 @@ In this task, you will connect to the SQL Database with SQL Server Management St
 
     >**Note**: Record the server name. You will need the server name later in this task.
 
-1. On the **Firewall settings** blade, scroll down to **Rule Name**, click on **+ Add a firewall rule** and specify the following settings: 
+1. On the **Networking** blade, scroll down to **Firewall rules**, click on **+ Add a firewall rule** and specify the following settings: 
 
     |Setting|Value|
     |---|---|
@@ -348,13 +350,13 @@ In this task, you will connect to the SQL Database with SQL Server Management St
     |Start IP|the Public IP Address of the az500-10-vm1|
     |End IP|the Public IP Address of the az500-10-vm1|
 
-1. Click **Save** to save the change and close the confirmation pane. 
+1. Click **Ok** and **Save** to save the change and close the confirmation pane. 
 
     >**Note**: This modifies the server firewall settings, allowing connections to the medical database from the Azure VM's public IP address you deployed in this lab.
 
-1. Navigate back to the **az500-10-vm1** blade, click **Overview**, next click **Connect** and, in the drop-down menu, click **RDP**. 
+1. Navigate back to the **az500-10-vm1** blade, click **Overview**, next click **Connect** and, click **Select** from Native RDP. 
 
-1. Click **Download RDP File** and use it to connect to the **az500-10-vm1** Azure VM via Remote Desktop. When prompted to authenticate, provide the following credentials and click **Ok**. 
+1. Click **Download RDP File** and select **keep** for permission to download RDP file and use it to connect to the **az500-10-vm1** Azure VM via Remote Desktop. Open the RDP file and select **Connect**. When prompted to authenticate, provide the following credentials and click **Ok**. 
 
     |Setting|Value|
     |---|---|
@@ -367,7 +369,7 @@ In this task, you will connect to the SQL Database with SQL Server Management St
 
     >**Note**: The remaining steps in this lab are performed within the Remote Desktop session to the **az500-10-vm1** Azure VM. 
 
-1. Inside the Virtual Machine, Select the Windows Start button and type SSMS(1). Select Microsoft SQL Server Management Studio 19(2) from the list.
+1. Inside the Virtual Machine, Select the Windows Start button and type SSMS(1). Select SQL Server Management Studio 19 from the list.
 
 1. In the **Connect to Server** dialog box, specify the following settings: 
 
@@ -410,6 +412,8 @@ In this task, you will connect to the SQL Database with SQL Server Management St
 1. On the **Column Selection** page, select the **SSN** and **Birthdate** columns, set the **Encryption Type** of the **SSN** column to **Deterministic** and of the **Birthdate** column to **Randomized**, and click **Next**.
 
 1. On the **Master Key Configuration** page, select **Azure Key Vault**, click **Sign in**. When prompted, authenticate by using the same user account you used to provision the Azure Key Vault instance earlier in this lab, ensure that Key Vault appears in the **Select an Azure Key Vault** drop down list, and click **Next**.
+
+ >**Note**: Process may take upto 5 minutes.
 
 1. On the **Run Settings** page, click **Next**.
 	
@@ -460,7 +464,7 @@ You will create a Console application using Visual Studio to load data into the 
     Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory
     ```
 	
-9. Minimize the RDP session to your Azure virtual machine, then navigate to **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\10\program.cs**, open it in Notepad, and copy its content into Clipboard.
+9. Minimize the RDP session to your Azure virtual machine, then navigate to **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\10\program.cs**, open it in Notepad, and copy its content into Clipboard.
 
 10. Return to the RDP session, and in the Visual Studio console, in the **Solution Explorer** window, click **Program.cs** and replace its content with the code you copied into Clipboard.
 	
