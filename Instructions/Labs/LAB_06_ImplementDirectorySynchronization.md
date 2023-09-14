@@ -28,7 +28,6 @@ In this lab, you will complete the following exercises:
 
 ### Exercise 1: Deploy an Azure VM hosting an Active Directory domain controller
 
-### Estimated timing: 10 minutes
 
 In this exercise, you will complete the following tasks:
 
@@ -103,7 +102,6 @@ In this task, you will deploy an Azure VM that will host an Active Directory dom
 
 ### Exercise 2: Create and configure an Azure Active Directory tenant 
 
-### Estimated timing: 20 minutes
 
 In this exercise, you will complete the following tasks:
 
@@ -200,7 +198,6 @@ In this task, you will add a new Azure AD user and assign them to the Global Adm
 
 ### Exercise 3: Synchronize Active Directory forest with an Azure Active Directory tenant
 
-### Estimated timing: 20 minutes
 
 In this exercise, you will complete the following tasks:
 
