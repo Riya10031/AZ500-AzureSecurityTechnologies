@@ -250,7 +250,7 @@ When prompted to authenticate, provide the following credentials:
     |User SamAccountName logon|**aduser1**|
     |Password|**Pa55w.rd1234**|
     |Confirm Password|**Pa55w.rd1234**|
-    |Other password options|**Password never expires**|
+    |Select Other password options| Click **Password never expires**|
 
 #### Task 2: Install Azure AD Connect
 
