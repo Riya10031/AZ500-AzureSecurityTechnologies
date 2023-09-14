@@ -251,27 +251,29 @@ In this task, you will install AD Connect on the virtual machine.
 
 2. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Azure Active Directory** and press the **Enter** key.
 
-3. In the Azure portal, on the **AdatumSync \| Overview** blade, click **Azure AD Connect**.
+3. In the Azure portal, on the **AdatumSync \| Overview** blade, click **Go to Azure AD Connect** ( you need to scroll down to find the option).
 
-4. On the **AdatumSync \| Azure AD Connect \|Connect Sync** blade, click the **Download Azure AD Connect** link. You will be redirected to the **Microsoft Azure Active Directory Connect** download page.
+4. On the **AAD Connect \| Get started** blade, from left navigation pane select **Connect sync**.
 
-5. On the **Microsoft Azure Active Directory Connect** download page, click **Download**.
+5. On the **AdatumSync \| Azure AD Connect \|Connect Sync** blade, click the **Download Azure AD Connect** link. You will be redirected to the **Microsoft Azure Active Directory Connect** download page.
 
-6. When prompted, click **Run** or **Open the downloaded file** to start the **Microsoft Azure Active Directory Connect** wizard.
+6. On the **Microsoft Azure Active Directory Connect** download page, click **Download**.
 
-7. On the **Welcome to Azure AD Connect** page of the **Microsoft Azure Active Directory Connect** wizard, click the checkbox **I agree to the license terms and privacy notice** and click **Continue**.
+7. When prompted, click **Run** or **Open the downloaded file** to start the **Microsoft Azure Active Directory Connect** wizard.
 
-8. On the **Express Settings** page of the **Microsoft Azure Active Directory Connect** wizard, click the **Customize** option.
+8. On the **Welcome to Azure AD Connect** page of the **Microsoft Azure Active Directory Connect** wizard, click the checkbox **I agree to the license terms and privacy notice** and click **Continue**.
 
-9. On the **Install required components** page, leave all optional configuration options deselected and click **Install**.
+9. On the **Express Settings** page of the **Microsoft Azure Active Directory Connect** wizard, click the **Customize** option.
 
-10. On the **User sign-in** page, ensure that only the **Password Hash Synchronization** is enabled and click **Next**.
+10. On the **Install required components** page, leave all optional configuration options deselected and click **Install**.
 
-11. On the **Connect to Azure AD** page, authenticate by using the credentials of the **syncadmin** user account you created in the previous exercise and click **Next**. 
+11. On the **User sign-in** page, ensure that only the **Password Hash Synchronization** is enabled and click **Next**.
 
-12. On the **Connect your directories** page, click the **Add Directory** button to the right of the **adatum.com** forest entry.
+12. On the **Connect to Azure AD** page, authenticate by using the credentials of the **syncadmin** user account you created in the previous exercise and click **Next**. 
 
-13. In the **AD forest account** window, ensure that the option to **Create new AD account** is selected, specify the following credentials, and click **OK**:
+13. On the **Connect your directories** page, click the **Add Directory** button to the right of the **adatum.com** forest entry.
+
+14. In the **AD forest account** window, ensure that the option to **Create new AD account** is selected, specify the following credentials, and click **OK**:
 
    |Setting|Value|
    |---|---|
