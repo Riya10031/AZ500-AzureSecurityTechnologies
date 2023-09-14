@@ -23,11 +23,10 @@ In this lab, you will complete the following exercises:
 
 ![](../Labs/Lab-Scenario-Preview/media/AZ-500-LSP-Mod-1b-1.png)
 
-## Estimated timing: 85 minutes
+## Estimated timing: 60 minutes
 
 ### Exercise 1: Implement Azure MFA
 
-### Estimated timing: 30 minutes
 
 In this exercise, you will complete the following tasks
 
@@ -263,7 +262,6 @@ In this task, you will validate the MFA configuration by testing the sign in of 
 
 ### Exercise 2: Implement Azure AD Conditional Access Policies 
 
-### Estimated timing: 15 minutes
 
 In this exercise, you will complete the following tasks 
 
@@ -350,7 +348,6 @@ In this task, you will sign in to the Azure portal as **aaduser2** and verify MF
 
 ### Exercise 3: Implement Azure AD Identity Protection
 
-### Estimated timing: 30 minutes
 
 In this exercise, you will complete the following tasks 
 
