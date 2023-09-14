@@ -47,11 +47,12 @@ In this exercise, you will complete the following tasks:
 
 In this task, you will create a resource group for the lab an an Azure Container Registry.
 
-1. In the Azure portal, open the Cloud Shell by clicking the first icon in the top right of the Azure Portal. If prompted, click **Bash** and **Create storage**.
+1. In the Azure portal, open the **Cloud Shell (1)** by clicking the first icon in the top right of the Azure Portal. If prompted, click **Bash (2)** and **Create storage (3)**.
 
    ![](../images/lab9-1.png)
    
-   ![](../images/lab9-(1).png)
+
+   ![](../images/lab9-1-1.png)
    
 1. Ensure **Bash** is selected in the drop-down menu in the upper-left corner of the Cloud Shell pane.
 
