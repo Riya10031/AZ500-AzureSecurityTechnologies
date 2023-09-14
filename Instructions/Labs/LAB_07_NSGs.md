@@ -75,6 +75,7 @@ In this task, you will create an application security group.
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Application security groups** and press the **Enter** key.
 
 1. On the **Application security groups** blade, click **+ Create**.
+    ![](../Labs/images/asg.png)
 
 1. On the **Basics** tab of the **Create an application security group** blade, specify the following settings: 
 
@@ -109,6 +110,7 @@ In this task, you will create a network security group.
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Network security groups** and press the **Enter** key.
 
 1. On the **Network security groups** blade, click **+ Create**.
+   ![](../Labs/images/nsg.png)
 
 1. On the **Basics** tab of the **Create network security group** blade, specify the following settings: 
 
@@ -162,7 +164,8 @@ In this task, you will create a network security group.
     |Priority|**110**|                                                    
     |Name|**Allow-RDP-All**|
 
-1. On the **Add inbound security rule** blade, click **Add** to create the new inbound rule. 
+1. On the **Add inbound security rule** blade, click **Add** to create the new inbound rule.
+    ![](../Labs/images/nsglab-7.png)
 
 > Result: You have deployed a virtual network, network security with inbound security rules, and two application security groups. 
 
@@ -184,6 +187,7 @@ In this task, you will create a virtual machine to use as a web server.
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Virtual machines** and press the **Enter** key.
 
 1. On the **Virtual machines** blade, click **+ Create** and, in the dropdown list, click **+ Azure Virtual machine**.
+   ![](../Labs/images/lab7vm.png)
 
 1. On the **Basics** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
@@ -264,12 +268,14 @@ In this task, you will associate each virtual machine's network interface with t
 1. In the list of virtual machines, click the **myVmWeb** entry.
 
 1. On the **myVmWeb** blade, in the **Settings** section, click **Networking** and then, on the **myVmWeb \| Networking** blade, click the **Application security groups** tab.
+   ![](../Labs/images/myvm-asg1.png)
 
 1. Click **Configure the application security groups**, in the **Application security group** drop-down list, select **myAsgWebServers**, and then click **Save**.
 
 1. Navigate back to the **Virtual machines** blade and in the list of virtual machines, click the **myVMMgmt** entry.
 
 1. On the **myVMMgmt** blade, in the **Settings** section, click **Networking** and then, on the **myVMMgmt \| Networking** blade, click the **Application security groups** tab.
+   ![](../Labs/images/mng-asg.png)
 
 1. Click **Configure the application security groups**, in the **Application security group** drop-down list, select **myAsgMgmtServers**, and then click **Save**.
 
@@ -279,7 +285,7 @@ In this task, you will test the network traffic filters. You should be able to R
 
 1. Navigate back to the **myVMMgmt** virtual machine blade.
 
-1. On the **myVMMgmt** blade, click **Connect** and, in the drop down menu, click **RDP**. 
+1. On the **myVMMgmt** blade, click **Connect** and, in the drop down menu, click **RDP**.
 
 1. Click **Download RDP File** and use it to connect to the **myVMMgmt** Azure VM via Remote Desktop. When prompted to authenticate, provide the following credentials:
 
@@ -288,11 +294,14 @@ In this task, you will test the network traffic filters. You should be able to R
    |User name|**Student**|
    |Password|**Pa55w.rd1234**|
 
+   ![](../Labs/images/rdp-connect.png)
+
     >**Note**: Verify that the Remote Desktop connection was successful. At this point you have confirmed you can connect via Remote Desktop to myVMMgmt.
 
 1. In the Azure portal, navigate to the **myVMWeb** virtual machine blade.
 
 1. On the **myVmWeb** blade, in the **Operations** section, click **Run command** and then click **RunPowerShellScript**.
+    ![](../Labs/images/runcmd.png)
 
 1. On the **Run Command Script** pane, run the following to install the Web server role on **myVmWeb**:
 
