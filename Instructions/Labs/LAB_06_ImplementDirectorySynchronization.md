@@ -348,7 +348,7 @@ In this task, you will verify that directory synchronization is working.
     Start-ADSyncSyncCycle -PolicyType Delta
     ```
 
-9. Switch to the Microsoft Edge window displaying the **aduser1 \| Profile** blade, refresh the page and note that the **Department** property is set to **Sales**.
+9. Switch to the Microsoft Edge window displaying the **aduser1** blade, select **Properties** tab and refresh the page and note that the **Department** property is set to **Sales**.
 
     >**Note**: You might need to wait for another minute and refresh the page again if the **Department** attribute remains not set.
 
