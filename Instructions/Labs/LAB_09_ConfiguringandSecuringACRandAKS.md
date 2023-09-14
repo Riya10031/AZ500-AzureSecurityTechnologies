@@ -81,7 +81,9 @@ In this task, you will create a resource group for the lab an an Azure Container
     ```
 
     >**Note**: Record the name of the ACR. You will need it in the next task.
-
+    
+    ![](../images/lab9-(2).png)
+   
 #### Task 2: Create a Dockerfile, build a container and push it to Azure Container Registry
 
 In this task, you will create a Dockerfile, build an image from the Dockerfile, and deploy the image to the ACR. 
@@ -230,7 +232,7 @@ In this task,  you will download the Manifest files, edit the YAML file, and app
 
     >**Note**: Record the Azure Container Registry instance name. You will need it later in this task.
 
-    ![](../images/lab9-3.png)
+    ![](../images/lab9-(3).png)
  
 1. In the Bash session within the Cloud Shell pane, run the following to open the nginxexternal.yaml file, so you can edit its content. 
 
@@ -254,7 +256,7 @@ In this task,  you will download the Manifest files, edit the YAML file, and app
 
 1. In the Bash session within the Cloud Shell pane, review the output of the command you run in the previous task to verify that the deployment and the corresponding service have been created. 
 
-  ![](../images/lab9-6.png)
+   ![](../images/lab9-6.png)
   
 #### Task 6: Verify the you can access an external AKS-hosted service
 
