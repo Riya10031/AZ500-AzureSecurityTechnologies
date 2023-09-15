@@ -50,18 +50,18 @@ In this task, you will create an Allowed Locations policy assignment and specify
 1. On the **Allowed locations** blade, click on **Assign**.
 
    
-   ![](../Labs/images/az-500(1).png)
+   ![](../images/lab2-4.png)
 
 1. On the **Basics** tab of the **Allowed locations** blade, click on the Ellipsis (...) button next to the **Scope** text box and, on the **Scope** blade, specify the following settings:
 
    |Setting|Value|
    |---|---|
-   |Subscription|**CloudLabsAI.com SS - 042**|
-   |Resource group|**AZ500LAB02-<inject key="DeploymentID" enableCopy="false"/>**|
+   |Subscription|**CloudLabsAI.com DS - 079**|
+   |Resource group|**AZ500LAB02**|
 
 1. Click on **Select**.
 
-    ![](../Labs/images/az-500(2).png)
+    ![](../images/lab2-1.png)
 
 1. On the **Allowed locations** blade, on the **Basics** tab, specify the following settings (leave others with their default values):
 
@@ -75,7 +75,7 @@ In this task, you will create an Allowed Locations policy assignment and specify
 
 1. On the **Parameters** tab of the **Allowed locations** blade, in the **Allowed locations** drop-down list, select **UK South** as the only allowed location.
 
-   ![](../Labs/images/az-500(3).png)
+   ![](../images/lab2-5.png)
 
    >**Note**: You can select more than one location. If the policy required a different set of parameters, this tab would provide those selections. 
 
@@ -99,13 +99,13 @@ In this task, you will test the Allowed Locations policy assignment.
 
     |Setting|Value|
     |---|---|
-    |Resource group|**AZ500LAB02-<inject key="DeploymentID" enableCopy="false"/>**|
+    |Resource group|**AZ500LAB02**|
     |Name|**myVnet**|
     |Region|**(US) East US**|
 
 1. Click on **Review + create**. 
 
-   ![](../Labs/images/az-500(4).png)
+   ![](../images/lab2-2.1.png)
  
 1. Click on **Create**. 
 
@@ -113,7 +113,7 @@ In this task, you will test the Allowed Locations policy assignment.
 
 1. Perform Previous **1-3** steps again of task 2 and create **virtual network** again, This time in the **Region** drop-down list, select **(Europe) UK South**.
 
-   ![](../Labs/images/az-500(5).png)
+   ![](../images/lab2-3.png)
 
 1. Click on **Review + create**, verify that validation passed, click on **Create**, and verify that the virtual network was created successfully. 
 
