@@ -109,7 +109,7 @@ In this task, you will create a Dockerfile, build an image from the Dockerfile, 
 
 1. Close the Cloud Shell pane.
 
-1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Resource Group** and press the **Enter** key.
+1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Resource Group** and select it.
 
 1. navigate to the **AZ500Lab09** resource group and, in the list of resources, click the entry representing the Azure Container Registry instance you provisioned in the previous task.
 
@@ -224,7 +224,7 @@ In this task, you will grant the AKS cluster permission to access the ACR and ma
    ```sh
    az aks update -n $AKS_CLUSTER_NAME -g <$RESOURCE_GROUP_NAME> --attach-acr /subscriptions/<$subscriptionId>/resourceGroups/<$RESOURCE_GROUP_NAME>/providers/Microsoft.ContainerRegistry/registries/<contosotradersacr$deploymentid>
    ```
-    >**Note**: Kindly replace the Resource group <$RESOURCE_GROUP_NAME> with $RG_AKS and <$subscriptionId> with <inject key="SubscriptionID" enableCopy="false"/> <contosotradersacr$deploymentid> with **ACR Name** which you recorded earlier.
+    >**Note**: Kindly replace the Resource group <$RESOURCE_GROUP_NAME> with **$RG_AKS**, <$subscriptionId> with **<inject key="SubscriptionID" enableCopy="false"/>** and <contosotradersacr$deploymentid> with **ACR Name** which you recorded earlier.
 
 #### Task 5: Deploy an external service to AKS
 
