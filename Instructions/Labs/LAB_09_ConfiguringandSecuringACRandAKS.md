@@ -60,10 +60,7 @@ In this task, you will create a resource group for the lab an an Azure Container
 
     ```sh
     az group create --name AZ500LAB09 --location eastus
-    az network vnet create --resource-group AZ500LAB09 --name AZ500LAB09-vnet
-    --address-prefixes 10.0.0.0/16
-    --subnet-name default
-    --subnet-prefix 10.0.0.0/24
+    az network vnet create --resource-group AZ500LAB09 --name AZ500LAB09-vnet --address-prefixes 10.0.0.0/16 --subnet-name default --subnet-prefix 10.0.0.0/24
     ```
 
 1. In the Bash session within the Cloud Shell pane, run the following to verify the resource group was created:
