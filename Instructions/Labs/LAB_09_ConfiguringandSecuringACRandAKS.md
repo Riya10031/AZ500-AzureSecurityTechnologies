@@ -222,12 +222,9 @@ In this task, you will grant the AKS cluster permission to access the ACR and ma
 1. In the Bash session within the Cloud Shell pane, run the following to which allows the AKS cluster to pull container images from the specified ACR.
 
    ```sh
-   az aks update -n $AKS_CLUSTER_NAME -g <$RESOURCE_GROUP_NAME> --attach-acr 
-   /subscriptions/<$subscriptionId>/resourceGroups/<$RESOURCE_GROUP_NAME>
-   /providers/Microsoft.ContainerRegistry/registries/<contosotradersacr$deploymentid>
+   az aks update -n $AKS_CLUSTER_NAME -g <$RESOURCE_GROUP_NAME> --attach-acr /subscriptions/<$subscriptionId>/resourceGroups/<$RESOURCE_GROUP_NAME>/providers/Microsoft.ContainerRegistry/registries/<contosotradersacr$deploymentid>
    ```
-
-   >**Note**: Kindly replace the Resource group <$RESOURCE_GROUP_NAME> with $RG_AKS and <$subscriptionId> with <inject key="SubscriptionID" enableCopy="false"/> <contosotradersacr$deploymentid> with **ACR Name** which you recorded earlier.
+    >**Note**: Kindly replace the Resource group <$RESOURCE_GROUP_NAME> with $RG_AKS and <$subscriptionId> with <inject key="SubscriptionID" enableCopy="false"/> <contosotradersacr$deploymentid> with **ACR Name** which you recorded earlier.
 
 #### Task 5: Deploy an external service to AKS
 
@@ -235,6 +232,8 @@ In this task,  you will download the Manifest files, edit the YAML file, and app
 
 1. In the Bash session within the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload**, in the **Open** dialog box, naviate to the location where you downloaded the lab files, select **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\09\\nginxexternal.yaml** click **Open**. Next, select **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\09\\nginxinternal.yaml**, and click **Open**.
 
+    ![](../images/upload.png)
+   
 1. In the Bash session within the Cloud Shell pane, run the following to identify the name of the Azure Container Registry instance:
 
     ```sh
@@ -267,7 +266,7 @@ In this task,  you will download the Manifest files, edit the YAML file, and app
 
 1. In the Bash session within the Cloud Shell pane, review the output of the command you run in the previous task to verify that the deployment and the corresponding service have been created. 
 
-   ![](../images/lab9-6.png)
+   ![](../images/external.png)
   
 #### Task 6: Verify the you can access an external AKS-hosted service
 
@@ -281,12 +280,14 @@ In this task, verify the container can be accessed externally using the public I
 
 1. In the Bash session within the Cloud Shell pane, review the output and record the value in the External-IP column. You will need it in the next step. 
 
-    ![](../images/lab9-5.png)
+    ![](../images/externalip.png)
 
 1. Open a new broswer and browse to the IP address you identified in the previous step.
 
 1. Ensure the **Welcome to nginx!** page displays. 
 
+    ![](../images/nginx.png)
+  
 #### Task 7: Deploy an internal service to AKS
 
 In this task, you will deploy the internal facing service on the AKS. 
@@ -301,6 +302,8 @@ In this task, you will deploy the internal facing service on the AKS.
 
 1. In the editor pane, scroll down to the line containing the reference to the container image and replace the **`<ACRUniquename>`** placeholder with the ACR name.
 
+   ![](../images/internal.png)
+
 1. Now to save this edited yaml file, perform CTRL + S and then CTRL + Q to exit. 
 
 1. In the Bash session within the Cloud Shell pane, run the following to apply the change to the cluster:
@@ -311,7 +314,7 @@ In this task, you will deploy the internal facing service on the AKS.
 
 1.  In the Bash session within the Cloud Shell pane, review the output to verify your deployment and the service have been created:
 
-    ![](../images/lab9-6.png)
+    ![](../images/internal1.png)
 
 1. In the Bash session within the Cloud Shell pane, run the following to retrieve information about the nginxinternal service including name, type, IP addresses, and ports. 
 
@@ -339,7 +342,9 @@ In this task, you will use one of the pods running on the AKS cluster to access 
 
 1. In the listing of the pods, copy the first entry in the **NAME** column.
 
-    >**Note**: This is the pod you will use in the subsequent steps.
+   ![](../images/name.png)
+
+   >**Note**: This is the pod you will use in the subsequent steps.
 
 1. In the Bash session within the Cloud Shell pane, run the following to connect interactively to the first pod (replace the `<pod_name>` placeholder with the name you copied in the previous step):
 
