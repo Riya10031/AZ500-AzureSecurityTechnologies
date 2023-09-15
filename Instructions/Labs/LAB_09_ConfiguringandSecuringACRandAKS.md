@@ -225,10 +225,10 @@ In this task, you will grant the AKS cluster permission to access the ACR and ma
    ```sh
    az aks update -n $AKS_CLUSTER_NAME -g $RESOURCE_GROUP_NAME --attach-acr 
    /subscriptions/<$subscriptionId>/resourceGroups/<$RESOURCE_GROUP_NAME>
-   /providers/Microsoft.ContainerRegistry/registries/contosotradersacr$deploymentid
+   /providers/Microsoft.ContainerRegistry/registries/<contosotradersacr$deploymentid>
    ```
 
-   >**Note**: Kindly replace the <$subscriptionId> with <inject key="SubscriptionID" enableCopy="false"/> and Resource group <$RESOURCE_GROUP_NAME> with AZ500LAB09
+   >**Note**: Kindly replace the <$subscriptionId> with <inject key="SubscriptionID" enableCopy="false"/> and Resource group <$RESOURCE_GROUP_NAME> with $RG_AKS and <contosotradersacr$deploymentid> with **ACR Name** which you recorded earlier.
 
 
 #### Task 5: Deploy an external service to AKS
