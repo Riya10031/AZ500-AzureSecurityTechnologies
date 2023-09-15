@@ -226,13 +226,12 @@ In this task, you will grant the AKS cluster permission to access the ACR and ma
 1. In the Bash session within the Cloud Shell pane, run the following to which allows the AKS cluster to pull container images from the specified ACR.
 
    ```sh
-   az aks update -n $AKS_CLUSTER_NAME -g $RESOURCE_GROUP_NAME --attach-acr 
+   az aks update -n $AKS_CLUSTER_NAME -g <$RESOURCE_GROUP_NAME> --attach-acr 
    /subscriptions/<$subscriptionId>/resourceGroups/<$RESOURCE_GROUP_NAME>
    /providers/Microsoft.ContainerRegistry/registries/<contosotradersacr$deploymentid>
    ```
 
-   >**Note**: Kindly replace the <$subscriptionId> with <inject key="SubscriptionID" enableCopy="false"/> and Resource group <$RESOURCE_GROUP_NAME> with $RG_AKS and <contosotradersacr$deploymentid> with **ACR Name** which you recorded earlier.
-
+   >**Note**: Kindly replace the Resource group <$RESOURCE_GROUP_NAME> with $RG_AKS and <$subscriptionId> with <inject key="SubscriptionID" enableCopy="false"/> <contosotradersacr$deploymentid> with **ACR Name** which you recorded earlier.
 
 #### Task 5: Deploy an external service to AKS
 
