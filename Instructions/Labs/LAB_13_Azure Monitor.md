@@ -77,7 +77,7 @@ In this exercise, you will complete the following tasks:
 
 In this task, you will create a Log Analytics workspace. 
 
-1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Log Analytics workspaces** and press the **Enter** key.
+1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Log Analytics workspaces** and select it.
 
 1. On the **Log Analytics workspaces** blade, click **+ Create**.
 
@@ -100,7 +100,7 @@ In this task, you will enable the Log Analytics virtual machine extension. This 
 
 1. In the Azure portal, navigate back to the **Log Analytics workspaces** blade, and, in the list of workspaces, click the entry representing the workspace you created in the previous task.
 
-1. On the Log Analytics workspace blade, in the **classic** section, click the ** Virtual machines (deprecated)** entry.
+1. On the Log Analytics workspace blade, in the **classic** section, click the **Virtual machines (deprecated)** entry.
 
     >**Note**: For the agent to be successfully installed, the virtual machine must be running.
 
