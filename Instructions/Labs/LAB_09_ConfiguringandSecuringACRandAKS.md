@@ -228,7 +228,7 @@ In this task, you will grant the AKS cluster permission to access the ACR and ma
    /providers/Microsoft.ContainerRegistry/registries/contosotradersacr$deploymentid
    ```
 
-   >**Note**: Kindly replace the <$subscriptionId> with Sid and Resource group <$RESOURCE_GROUP_NAME> with AZ500LAB09
+   >**Note**: Kindly replace the <$subscriptionId> with <inject key="SubscriptionID" enableCopy="false"/> and Resource group <$RESOURCE_GROUP_NAME> with AZ500LAB09
 
 
 #### Task 5: Deploy an external service to AKS
