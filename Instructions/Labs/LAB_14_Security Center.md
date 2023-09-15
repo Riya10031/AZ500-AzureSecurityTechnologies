@@ -52,7 +52,9 @@ In this task, you will on-board and configure Microsoft Defender for Cloud.
 
 1. On the **Settings \| Azure Defender plans** blade, select **Enable all** and click **Save** to save any changes.
 
-1. On the **Settings \| Workflow automation** blade, click **+ Add workflow automation**.
+1. From left navigation pane under **Mangement** section, select **Workflow automation**.
+   
+1. On the **Microsoft Defender for Cloud \| Workflow automation** blade, click **+ Add workflow automation**.
 
 1. On the **Add workflow automation** blade, review the available settings and click **Cancel**.
 
@@ -63,7 +65,6 @@ In this task, you will on-board and configure Microsoft Defender for Cloud.
 1. Navigate back to the **Microsoft Defender for Cloud | Environment Settings** blade, expand your subscription, and click the entry representing the Log Analytics workspace you created in the previous lab.
 
 1. On the **Settings \| Defender plans** blade, ensure that **Enable all** is selected and click **Save**.
-
 
 #### Task 2: Review the Microsoft Defender for Cloud recommendation
 
