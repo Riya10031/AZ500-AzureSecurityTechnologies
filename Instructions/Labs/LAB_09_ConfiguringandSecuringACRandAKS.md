@@ -280,7 +280,7 @@ In this task, verify the container can be accessed externally using the public I
 
 1. In the Bash session within the Cloud Shell pane, review the output and record the value in the External-IP column. You will need it in the next step. 
 
-    ![](../images/externalip.png)
+    ![](../images/Externalip.png)
 
 1. Open a new broswer and browse to the IP address you identified in the previous step.
 
