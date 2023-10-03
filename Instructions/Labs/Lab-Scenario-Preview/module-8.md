@@ -17,7 +17,7 @@ You have been asked to install Azure Firewall. This will help your organization 
 
 In this lab, you will complete the following exercise:
 
-- Exercise 1: Deploy and test an Azure Firewall
+- Exercise 1: Deploy and test an Azure Firewall.
 
 ### Architecture Diagram
 
