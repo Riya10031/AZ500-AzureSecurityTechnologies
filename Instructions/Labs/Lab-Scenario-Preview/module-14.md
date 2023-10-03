@@ -15,7 +15,7 @@ You have been asked to create a proof of concept of Microsoft Defender for Cloud
 ### Objectives
 
 In this lab, you will complete the following exercise:
-- Exercise 1: Implement Microsoft Defender for Cloud
+- Exercise 1: Implement Microsoft Defender for Cloud.
 
 ### Architecture Diagram
 

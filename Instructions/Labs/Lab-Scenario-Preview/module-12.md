@@ -14,7 +14,7 @@ You have been asked to create a proof of concept to demonstrate securing Azure f
 ### Objectives
 
 In this lab, you will complete the following exercise:
-- Exercise 1: Service endpoints and security storage
+- Exercise 1: Service endpoints and security storage.
 
 ### Architecture Diagram
 

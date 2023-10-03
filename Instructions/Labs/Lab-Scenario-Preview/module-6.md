@@ -4,18 +4,18 @@
 
 ### Lab overview
 
-You have been asked to create a proof of concept demonstrating how to integrate the on-premises Active Directory Domain Services (AD DS) environment with an Azure Active Directory (Azure AD) tenant. Specifically, you want to:
-- Implement a single-domain AD DS forest by deploying an Azure VM hosting an AD DS domain controller
-- Create and configure an Azure AD tenant
-- Synchronize the AD DS forest with the Azure AD tenant
+You have been asked to create a proof of concept demonstrating how to integrate the on-premises Microsoft Entra ID Domain Services environment with a Microsoft Entra ID tenant. Specifically, you want to:
+- Implement a single-domain Microsoft Entra ID DS forest by deploying an Azure VM hosting an Microsoft Entra ID DS domain controller.
+- Create and configure an Microsoft Entra ID tenant.
+- Synchronize the Microsoft Entra ID DS forest with the Microsoft Entra ID tenant.
 
 > For all the resources in this lab, we are using the **East US** region. Verify with your instructor this is the region to use for class. 
 
 ### Objectives
 In this lab, you will complete the following exercises:
-- Exercise 1: Deploy an Azure VM hosting an Active Directory domain controller
-- Exercise 2: Create and configure an Azure Active Directory tenant
-- Exercise 3: Synchronize Active Directory forest with an Azure Active Directory tenant
+- Exercise 1: Deploy an Azure VM hosting an Microsoft Entra ID domain controller.
+- Exercise 2: Create and configure an Azure Microsoft Entra ID.
+- Exercise 3: Synchronize Active Directory forest with an Microsoft Entra ID tenant.
 
 ### Architecture Diagram
 

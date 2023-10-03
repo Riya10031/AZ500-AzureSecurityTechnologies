@@ -15,7 +15,7 @@ You have been asked to deploy a proof of concept with Azure Container Registry a
 ### Objectives
 
 In this lab, you will complete the following exercise:
-- Exercise 1: Configuring and Securing ACR and AKS
+- Exercise 1: Configuring and Securing ACR and AKS.
 
 ### Architecture Diagram
 

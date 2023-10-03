@@ -5,12 +5,12 @@
 ### Lab overview
 
 You have been asked to create a proof of concept showing how resource locks can be used to prevent accidental deletion or changes. Specifically, you need to:
-- create a ReadOnly lock
-- create a Delete lock
+- Create a ReadOnly lock.
+- Create a Delete lock.
  
 ### Objectives
 In this lab, you will complete the following exercise:
-- Exercise 1: Resource Manager Locks
+- Exercise 1: Resource Manager Locks.
 
 ### Architecture Diagram
 
