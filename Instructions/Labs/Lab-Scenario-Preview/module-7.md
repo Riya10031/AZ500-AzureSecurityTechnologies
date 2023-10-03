@@ -16,8 +16,8 @@ You have been asked to implement your organization's virtual networking infrastr
 ### Objectives
 
 In this lab, you will complete the following exercises:
-- Exercise 1: Create the virtual networking infrastructure
-- Exercise 2: Deploy virtual machines and test the network filters
+- Exercise 1: Create the virtual networking infrastructure.
+- Exercise 2: Deploy virtual machines and test the network filters.
 
 ### Architecture Diagram
 
