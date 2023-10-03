@@ -14,7 +14,7 @@ You have been asked to create a proof of concept for monitoring virtual machine 
 ### Objectives
 
 In this lab, you will complete the following exercise:
-- Exercise 1: Collect data from an Azure virtual machine with Azure Monitor
+- Exercise 1: Collect data from an Azure virtual machine with Azure Monitor.
 
 ### Architecture Diagram
 
