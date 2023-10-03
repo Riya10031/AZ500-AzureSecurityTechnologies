@@ -21,7 +21,7 @@ In this lab, you will complete the following exercises
 
 ## Architecture diagram
 
-![](../Labs/Lab-Scenario-Preview/media/AZ-500-LSP-Mod-1.png)
+![](../Labs/Lab-Scenario-Preview/media/AZ-500-LSP-Mod-1(1).png)
 
 ## Estimated timing: 40 minutes
 
