@@ -117,8 +117,12 @@ In this task, you will create a new Microsoft Entra ID tenant to use in this lab
 
 1. On the blade displaying **Overview** of your current Microsoft Entra ID tenant, click **Manage tenants**, and then on the next screen, click **+ Create**.
 
+    ![](../images/Az-500(i).png)
+
 1. On the **Basics** tab of the **Create a tenant** blade, ensure that the options **Microsoft Entra ID** are selected and click **Next: Configuration >**.
 
+    ![](../images/Az-500(ii).png)
+ 
 1. On the **Configuration** tab of the **Create a tenant** blade, specify the following settings:
 
    |Setting|Value|
@@ -127,12 +131,16 @@ In this task, you will create a new Microsoft Entra ID tenant to use in this lab
    |Initial domain name|a unique name consisting of a combination of letters and digits|
    |Country or region|**United States**|
 
+     ![](../images/az-500(iii).png)
+
     >**Note**: Record the initial domain name. You will need it later in this lab.
 
     >**Note**: The green check mark in the **Initial domain name** text box will indicate whether the domain name you typed in is valid and unique. (Record your initial domain name for later use).
 
 1. Click **Review + create** and then click **Create**.
 
+     ![](../images/Az-500(iv).png)
+ 
     >**Note**: Kindly fill **Captcha** and select submit on **Help us prove you're not a robot**.
     
     >**Note**: Wait for 2 minutes for new tenant to be created. Use the **Notification** icon to monitor the deployment status and please do not wait for previous exercise deployment to complete but instead proceed to the next exercise.
@@ -153,6 +161,8 @@ In this task, you will add your custom DNS name to the new Microsoft Entra ID te
 
 1. On the **AdatumSync \| Custom domain names** blade, click **+ Add custom domain**.
 
+    ![](../images/az-500(v).png)
+
 1. On the **Custom domain name** blade, in the **Custom domain name** text box, type **adatum.com** and click **Add Domain**.
 
 1. On the **adatum.com** blade, review the information necessary to perform verification of the Azure AD domain name and then select **Delete** twice.
@@ -165,7 +175,9 @@ In this task, you will add a new Microsoft Entra ID user and assign them to the 
 
 1. On the **AdatumSync** Azure AD tenant blade, in the **Manage** section, click **Users**.
 
-1. On the **Users** blade, click **+ New User** and then from the drop-down list, select **Create new user**. 
+1. On the **Users** blade, click **+ New User** and then from the drop-down list, select **Create new user**.
+
+    ![](../images/az-500(6).png)
 
 1. On the **Create new user** blade, specify the following settings (leave all others with their default values) and click **Create**:
 
@@ -180,7 +192,12 @@ In this task, you will add a new Microsoft Entra ID user and assign them to the 
    >**Note**: Record the user's password. You will need this later in this lab.
    
 1. Select **Next:Properties>**, in the **Usage Location** select **United States** <br>
+
+    ![](../images/az-500(7).png)
+
    Select **Next:Assignments>**, select **Add role** and Search **Global administrator**, click **Select**. <br>
+
+    ![](../images/az-500(8).png)
 
 1. Select **Review + Create** and then click **Create**
 
@@ -213,9 +230,11 @@ In this task, you will connect to the Azure VM running Microsoft Entra ID DS dom
 
 1. In the Azure portal, set the **Directory + subscription** filter to the Microsoft Entra ID tenant associated with the Azure subscription into which you deployed the Azure VM in the first exercise of this lab.
 
+    ![](../images/Az-500(9).png)
+
 1. Search for **Load Balancer** in the Azure portal and select it. Then Select the listed load balancer present in the portal. From the **Settings** tab select **Frontend IP configuration** and Copy the IpAddress which we will using to login into adVM.
 
-   ![](../images/load1.png)
+    ![](../images/load1.png)
    
 1. Search for Remote Desktop Connection in the windows Search bar and Select it. Provide the IPAddress that was copied before.
 When prompted to authenticate, provide the following credentials and When the Remote Desktop Connection dialog appears asking if you want to connect, select **Yes**.
@@ -231,19 +250,27 @@ When prompted to authenticate, provide the following credentials and When the Re
 
 1. In **Server Manager**, click **Local Server** and then click **IE Enhanced Security Configuration**.
 
+    ![](../images/az-500(10).png)
+
 1. In the **Internet Explorer Enhanced Security Configuration** dialog box, set both options to **Off** and click **OK**.
 
+    ![](../images/az-500(11).png)
+   
 1. In **Server Manager**, click **Tools** and, in the drop-down menu, click **Active Directory Administrative Center**.
 
 1. In **Active Directory Administrative Center**, click **adatum (local)**, in the **Tasks** pane, under the domain name **adatum (local)** click **New**, and, in the cascading menu, click **Organizational Unit**.
 
-   ![](../images/lab6-500-4.png)
+    ![](../images/lab6-500-4.png)
+
+    ![](../images/az-500(12).png)
 
 1. In the **Create Organizational Unit** window, in the **Name** text box, type **ToSync** and click **OK**.
 
 1. Double-click the newly created **ToSync** organizational unit such that its content appears in the details pane of the Active Directory Administrative Center console. 
 
 1. In the **Tasks** pane, within the **ToSync** section, click **New**, and, in the cascading menu, click **User**.
+
+    ![](../images/az-500(13).png)
 
 1. In the **Create User** window, create a new user account with the following settings (leave others with their existing values) and click **OK**:
 
@@ -268,15 +295,21 @@ In this task, you will install AD Connect on the virtual machine.
 
 1. In the Azure portal, on the **AdatumSync \| Overview** blade, click **Go to Microsoft Entra ID Connect** ( you need to scroll down to find the option).
 
+    ![](../images/az-500(14).png)
+
 1. On the **AAD Connect \| Get started** blade, from left navigation pane select **Connect sync**.
 
 1. On the **AdatumSync \| Azure AD Connect \|Connect Sync** blade, click the **Download Azure AD Connect** link. You will be redirected to the **Microsoft Azure Active Directory Connect** download page.
+
+    ![](../images/az-500(15).png)
 
 1. On the **Microsoft Azure Active Directory Connect** download page, click **Download**.
 
 1. When prompted, click **Run** or **Open the downloaded file** to start the **Microsoft Azure Active Directory Connect** wizard.
 
 1. On the **Welcome to Azure AD Connect** page of the **Microsoft Azure Active Directory Connect** wizard, click the checkbox **I agree to the license terms and privacy notice** and click **Continue**.
+
+    ![](../images/az-500(16).png)
 
 1. On the **Express Settings** page of the **Microsoft Azure Active Directory Connect** wizard, click the **Customize** option.
 
@@ -297,11 +330,15 @@ In this task, you will install AD Connect on the virtual machine.
 
 1. Back on the **Connect your directories** page, ensure that the **adatum.com** entry appears as a configured directory and click **Next**
 
+    ![](../images/az-500(17).png)
+  
 1. On the **Azure AD sign-in configuration** page, note the warning stating **Users will not be able to sign-in to Azure AD with on-premises credentials if the UPN suffix does not match a verified domain name**, enable the checkbox **Continue without matching all UPN suffixes to verified domain**, and click **Next**.
 
     >**Note**: As explained earlier, this is expected, since you could not verify the custom Azure AD DNS domain **adatum.com**.
 
 1. On the **Domain and OU filtering** page, click the option **Sync selected domains and OUs**, domain name **adatum.com** will be checked, expand the **adatum.com** to view the **ToSync**. Clear all checkboxes, click only the checkbox next to the **ToSync** OU, and click **Next**.
+
+    ![](../images/az-500(18).png)
 
 1. On the **Uniquely identifying your users** page, accept the default settings, and click **Next**.
 
