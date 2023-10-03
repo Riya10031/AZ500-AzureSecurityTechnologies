@@ -14,7 +14,7 @@ You have been asked to review security features for Azure SQL database. Specific
 ### Objectives
 
 In this lab, you will complete the following exercise:
-- Exercise 1: Implement SQL Database security features
+- Exercise 1: Implement SQL Database security features.
 
 ### Architecture Diagram
 
