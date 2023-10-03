@@ -47,10 +47,10 @@ In this task, you will create a new Microsoft Entra ID tenant.
 
 2. On the blade displaying **Overview** of your current Microsoft Entra ID tenant, click on **Manage tenants**, and then on the next screen, click on **+ Create**.
    
-   ![](../Labs/images/AZ-500-MED-1.png)
+![](../images/AZ-500-MED-1.png)
    
-4. On the **Basics** tab of the **Create a tenant** blade, ensure that the option **Microsoft Entra ID** is selected and click on **Next: Configuration >**.
-6. On the **Configuration** tab of the **Create a tenant** blade, specify the following settings:
+3. On the **Basics** tab of the **Create a tenant** blade, ensure that the option **Microsoft Entra ID** is selected and click on **Next: Configuration >**.
+4. On the **Configuration** tab of the **Create a tenant** blade, specify the following settings:
 
    |Setting|Value|
    |---|---|
@@ -60,10 +60,11 @@ In this task, you will create a new Microsoft Entra ID tenant.
 
     >**Note**: Record the initial domain name. You will need it later in this lab.
 
-7. Click on **Review + Create** and then click on **Create**.
+5. Click on **Review + Create** and then click on **Create**.
 
-8. Add Captcha code on **Help us prove you're not a robot** blade and then click on **Submit** button.
-   ![](../Labs/images/AZ-500-MED-2.png)
+6. Add Captcha code on **Help us prove you're not a robot** blade and then click on **Submit** button.
+
+![](../images/AZ-500-MED-2.png)
 
     >**Note**: Wait for the new tenant to be created. Use the **Notification** icon to monitor the deployment status. 
 
@@ -74,7 +75,8 @@ In this task, you will sign up for the Microsoft Entra ID Premium P2 free trial.
 1. In the Azure portal, in the toolbar, click on the **Directories + subscriptions** icon, located to the right of the Cloud Shell icon. 
 
 2. In the **Directories + subscriptions** blade, click on the newly created tenant, **AdatumLab500-04** and click on the **Switch** button to set it as the current directory.
-    ![](../Labs/images/az-500ss-1.7.0-1.png)
+
+![](../Labs/images/az-500ss-1.7.0-1.png)
 
     >**Note**: You may need to refresh the browser window if the **AdatumLab500-04** entry does not appear in the **Directories + subscriptions** filter list.
 
@@ -89,7 +91,8 @@ In this task, you will sign up for the Microsoft Entra ID Premium P2 free trial.
 1. Navigate back to the **AdatumLab500-04** Microsoft Entra ID blade and, in the **Manage** section, click on **Users**.
 
 1. On the **Users \| All users** blade, click on **+ New User** and then from the drop-down menu select **Create new user**
-    ![](../Labs/images/az-500ss1.8.0.png)
+
+![](../Labs/images/az-500ss1.8.0.png)
 
 1. On the **Create new user** blade, in **basics** tab specify the following settings (leave all others with their default values):
 
@@ -137,17 +140,20 @@ In this task, you will assign each user to the Microsoft Entra ID Premium P2 lic
 1. On the **Users \| All users** blade, click on the entry representing ODL_User <inject key="DeploymentID" enableCopy="false"/>. 
 
 1. On the blade displaying the properties of your user account, click on **Edit properties**.
-   ![](../Labs/images/az-500-ex1-task4(1)re.png)
+
+![](../Labs/images/az-500-ex1-task4(1)re.png)
    
 
 1. In the **Settings** section, in the **Usage location** drop-down list, select the **United States** entry and click on **Save**.
-   ![](../Labs/images/az-500-ex1-task4(2).png)
+
+![](../Labs/images/az-500-ex1-task4(2).png)
 
 
 1. Navigate back to the **AdatumLab500-04** Microsoft Entra ID blade and, in the **Manage** section, click on **Licenses**.
 
 1. On the **Licenses \| Overview** blade, click on **All products**, select the **Microsoft Entra ID P2** checkbox, and click on **+ Assign**.
-   ![](../Labs/images/az-500-ex1-task4(3).png)
+
+![](../Labs/images/az-500-ex1-task4(3).png)
 
 1. On the **Assign license** blade, click on **+ Add users and groups**.
 
@@ -164,20 +170,24 @@ In this task, you will make a user eligible for an Azure AD directory role.
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Azure AD Privileged Identity Management** and press the **Enter** key.
 
 1. On the **Azure AD Privileged Identity Management** blade, in the **Manage** section, click on **Azure AD roles**.
-   ![](../Labs/images/az-500task-5(1).png)
+
+![](../Labs/images/az-500task-5(1).png)
 
 1. On the **AdatumLab500-04 \| Quick start** blade, in the **Manage** section, click on **Roles**.
 
 1. On the **AdatumLab500-04 \| Roles** blade, click on **+ Add assignments**.
-    ![](../Labs/images/az-500task-5(2).png)
+
+![](../Labs/images/az-500task-5(2).png)
 
 1. On the **Add assignments** blade, in the **Select role** drop-down, select **Billing Administrator**.
-    ![](../Labs/images/az-500task-5(3).png)
+
+![](../Labs/images/az-500task-5(3).png)
 
 1. Click the **No member selected** link, on the **Select a member** blade, click on **aaduser2**, and then click on **Select**.
 
 1. Back on the **Add assignments** blade, click on **Next**.
-    ![](../Labs/images/az-500task-5(4)-1.png)
+
+![](../Labs/images/az-500task-5(4)-1.png)
 
 1. Ensure the **Assignment type** is set to **Eligible** and click on **Assign**.
  
@@ -186,7 +196,8 @@ In this task, you will make a user eligible for an Azure AD directory role.
 1. Back on the **AdatumLab500-04 \| Assignments** blade, note the tabs for **Eligible assignments**, **Active assignments**, and **Expired assignments**.
 
 1. Verify on the **Eligible assignments** tab that **aaduser2** is shown as a **Billing administrator**.
-    ![](../Labs/images/az-500task-5(5)-1.png) 
+
+![](../Labs/images/az-500task-5(5)-1.png) 
 
     >**Note**: During sign-in, aaduser2 will be eligible to use the Billing administrator role. 
 
@@ -197,22 +208,26 @@ In this task, you will make a user eligible for an Azure AD directory role.
 1. On the **AdatumLab500-04 \| Quick start** blade, in the **Manage** section, click on **Roles**.
 
 1. On the **AdatumLab500-04 \| Roles** blade, search and select the **Global reader** role entry.
-    ![](../Labs/images/az-500task6(1).png) 
+
+![](../Labs/images/az-500task6(1).png) 
 
 1. On the **Global Reader \| Assignments** blade, click on **Settings** icon in the toolbar of the blade and review configuration settings for the role, including Azure Multi-Factor Authentication requirements.
 
 1. Click on **Edit**.
-    ![](../Labs/images/az-500task6(2).png) 
+
+![](../Labs/images/az-500task6(2).png) 
 
 1. On the **Activation** tab, enable the **Require approval to activate** check box.
-    ![](../Labs/images/az-500task6(3).png) 
+
+![](../Labs/images/az-500task6(3).png) 
 
 1. Click **Select approvers(s)**, on the **Select a member** blade, click on **aaduser3**, and then click on **Select**.
 
 1. Click on **Next: Assignment**.
 
 1. Clear the **Allow permanent eligible assignment** check box, leaving all other settings with their default values.
-   ![](../Labs/images/az-500task6(4).png) 
+
+![](../Labs/images/az-500task6(4).png) 
 
 1. Click on **Next: Notification**.
 
@@ -221,12 +236,14 @@ In this task, you will make a user eligible for an Azure AD directory role.
     >**Note**: Anyone trying to use the Global Reader role will now need approval from aaduser3. 
 
 1. On the **Global Reader \| Assignments** blade, click on **+ Add assignments**.
-   ![](../Labs/images/az-500task6(5).png) 
+
+![](../Labs/images/az-500task6(5).png) 
 
 1. On the **Add assignments** blade, click on **No member selected**, on the **Select a member** blade, click on **aaduser2**, and then click on **Select**.
 
 1. Click on **Next >**.
-   ![](../Labs/images/az-500task6(6)-1.png) 
+
+![](../Labs/images/az-500task6(6)-1.png) 
 
 1. Ensure the **Assignment type** is **Eligible** and review the eligible duration settings.
 
@@ -241,7 +258,8 @@ In this task, you will make a user eligible for an Azure AD directory role.
 1. On the **AdatumLab500-04 \| Quick start** blade, in the **Manage** section, click on **Roles**.
 
 1. On the **AdatumLab500-04 \| Roles** blade, click on **+ Add assignments**.
-    ![](../Labs/images/az-500task-7(1).png)
+
+![](../Labs/images/az-500task-7(1).png)
    
 1. On the **Add assignments** blade, in the **Select role** drop-down, select **Security Administrator**.
    
@@ -249,7 +267,7 @@ In this task, you will make a user eligible for an Azure AD directory role.
 
 1. Click on **Next >**.
    
-    ![](../Labs/images/az-500task-7(2)-1.png) 
+![](../Labs/images/az-500task-7(2)-1.png) 
 
 1. Review the **Assignment type** settings is **Eligible** and click on **Assign**.
 
@@ -288,20 +306,21 @@ In this task, you will activate a role that does not require approval.
 
 1. You should see three **Eligible roles** for **aaduser2**: **Global Reader**, **Security Administrator**, and **Billing Administrator**.
    
-    ![](../Labs/images/az-500-ex-2(5).png)
+![](../Labs/images/az-500-ex-2(5).png)
 
 1. In the row displaying the **Billing Administrator** role entry, click on **Activate**.
-   ![](../Labs/images/az-500-ex-2(6).png)
+
+![](../Labs/images/az-500-ex-2(6).png)
 
 1. If needed, click the warning **Additional verification required. Click to continue** and follow the instructions to verify your identity.
 
    - In **Action Required** page, click on **Next**.
      
-     ![](../Labs/images/az-500ex-2(1)-1.png)
+![](../Labs/images/az-500ex-2(1)-1.png)
      
    - In **Keep your account secure** page, select the link **I want to set up a different method** and in Choose a different method, select phone option from the dropdown and click on **Confirm**.
      
-     ![](../Labs/images/az-500ex-2(2).png)
+![](../Labs/images/az-500ex-2(2).png)
      
    - In **Phone** page, please select your country and enter your phone number, make sure **Text me a code** is selected and click on **Next**.
    - Enter the code and click on **Next**.
@@ -323,10 +342,12 @@ In this task, you will activate a role that does not require approval.
     >**Note**: If you complete your administrator tasks early, you can deactivate a role manually.
 
 1.  In the list of **Active Assignments**, in the row representing the Billing Administrator role, click the **Deactivate** link.
-   ![](../Labs/images/az-500ex-2(3).png)
+
+![](../Labs/images/az-500ex-2(3).png)
 
 1.  On the **Deactivate - Billing Administrator** blade, click on **Deactivate** again to confirm.
-   ![](../Labs/images/az-500ex-2(4).png)
+
+![](../Labs/images/az-500ex-2(4).png)
 
    >**Note:** if it says **Deactivate role failed**, then you have to wait for 5 mins, and perform the step 11-12 again.
 
@@ -339,7 +360,8 @@ In this task, you will activate a role that requires approval.
 1. On the **Privileged Identity Management \| Quick start** blade, in the **Tasks** section, click on **My roles**.
 
 1. On the **My roles \| Microsoft Entra ID roles** blade, in the list of **Eligible assignments**, in the row displaying the **Global Reader** role, click on **Activate**.
-    ![](../Labs/images/az-500-ex-2-task2(3).png)
+
+![](../Labs/images/az-500-ex-2-task2(3).png)
 
 1. On the **Activate - Global Reader** blade, in the **Reason** text box, type a text providing justification for the activation, and then click on **Activate**.
 
@@ -421,7 +443,8 @@ In this task, you will reduce the risk associated with "stale" role assignments.
 1. On the **AdatumLab500-04 \| Quick start** blade, in the **Manage** section, click on **Access reviews**.
 
 1. On the **AdatumLab500-04 \| Access reviews** blade, click on **New**.
-    ![](../Labs/images/az-500-exe3(1).png)
+
+![](../Labs/images/az-500-exe3(1).png)
 
 1. On the **Create an access review** blade, specify the following settings (leave others with their default values): 
 
@@ -447,7 +470,7 @@ In this task, you will reduce the risk associated with "stale" role assignments.
 
 1. Click on **view** on **aaduser2** line to view a detailed audit log with entries representing PIM activities that involve that user.
     
-    ![](../Labs/images/az-500-exe3(2).png)
+![](../Labs/images/az-500-exe3(2).png)
 
 1. Navigate back to the **AdatumLab500-04 \| Access reviews** blade.
 
@@ -457,7 +480,7 @@ In this task, you will reduce the risk associated with "stale" role assignments.
 
 1. In the **Reason** text box, type a reason for approval and then click either **Approve** to maintain the current role membership or **Deny** to revoke it.
    
-   ![](../Labs/images/az-500-exe3(3).png) 
+![](../Labs/images/az-500-exe3(3).png) 
 
 1. Navigate back to the **Privileged Identity Management** blade and, in the **Manage** section, click on **Azure AD roles**.
 
@@ -475,7 +498,7 @@ In this task, you will review PIM alerts, summary information, and detailed audi
 
 1. On the **Alert settings** blade, review the preconfigured alerts and risk levels. Click on any of them for more detailed information.
     
-    ![](../Labs/images/az-500-exe3(5).png) 
+![](../Labs/images/az-500-exe3(5).png) 
 
 1. Return to the **AdatumLab500-04 \| Quick start** blade and click on **Overview**. 
 
