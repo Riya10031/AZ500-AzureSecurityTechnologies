@@ -49,7 +49,7 @@ In this task, you will create a user account for Joseph Price.
    |User principal name|**Joseph**|
    |Display name|**Joseph Price**|
 
-![](../images/task1-1.png)
+   ![](../images/task1-1.png)
 
 4. Click on the copy icon next to the **User principal name** to copy the full user.
 
@@ -59,7 +59,7 @@ In this task, you will create a user account for Joseph Price.
 
 7. Refresh the **Users \| All users** blade to verify the new user was created in your Microsoft Entra ID tenant.
 
-![](../images/task1-2.png)
+   ![](../images/task1-2.png)
 
 ### Task 2: Use the Azure portal to create a Senior Admins group and add the user account of Joseph Price to the group
 
@@ -77,7 +77,7 @@ In this task, you will create the *Senior Admins* group, add the user account of
    |Group name|**Senior Admins**|
    |Membership type|**Assigned**|
 
-![](../images/task2-1.png)
+   ![](../images/task2-1.png)
     
 4. Click on the **No owner selected** link, on the **Owners** blade, select **Joseph Price**, and click on **Select**.
 
@@ -85,9 +85,9 @@ In this task, you will create the *Senior Admins* group, add the user account of
 
 6. Back on the **New Group** blade, click on **Create**.
 
-![](../images/task2-2-1.png)
+   ![](../images/task2-2-1.png)
 
-> **Result:** You used the Azure Portal to create a user and a group, and assigned the user to the group. 
+   > **Result:** You used the Azure Portal to create a user and a group, and assigned the user to the group. 
 
 ## Exercise 2: Create a Junior Admins group containing the user account of Isabel Garcia as its member
 
@@ -104,7 +104,7 @@ In this task, you will create a user account for Isabel Garcia by using PowerShe
 
 1. Open the Cloud Shell by clicking the first icon in the top right of the Azure Portal. If prompted, select **PowerShell** and **Create storage**.
 
-![](../images/task2-3-1.png)
+   ![](../images/task2-3-1.png)
 
 2. Ensure **PowerShell** is selected in the drop-down menu in the upper-left corner of the Cloud Shell pane.
 
@@ -179,8 +179,7 @@ In this task, you will create the Junior Admins group and add the user account o
     Get-AzADGroupMember -GroupDisplayName "Junior Admins"
     ```
 
-> **Result:** You used PowerShell to create a user and a group account, and added the user account to the group account. 
-
+   > **Result:** You used PowerShell to create a user and a group account, and added the user account to the group account. 
 
 ## Exercise 3: Create a Service Desk group containing the user account of Dylan Williams as its member
 
@@ -257,7 +256,7 @@ In this task, you will create the Service Desk group and assign Dylan to the gro
 
 1. Close the Cloud Shell pane.
 
-> **Result:** Using Azure CLI you created a user and a group accounts, and added the user account to the group. 
+   > **Result:** Using Azure CLI you created a user and a group accounts, and added the user account to the group. 
 
 ## Exercise 4: Assign the Virtual Machine Contributor role to the Service Desk group
 
@@ -284,9 +283,9 @@ In this exercise, you will complete the following task:
    |Assign access to (Under Members Pane)|**User, group, or service principal**|
    |Members (+Select Members)|**Service Desk**|
 
-![](../images/e4-t1-1.png)
+   ![](../images/e4-t1-1.png)
 
-![](../images/e4-t1-2.png)
+   ![](../images/e4-t1-2.png)
 
 6. Click on **Review + assign** twice to create the role assignment.
 
@@ -294,7 +293,7 @@ In this exercise, you will complete the following task:
 
 8. On the **AZ500LAB01 \| Access control (IAM)** blade, click on the **Check access** button under check access, and then in the **Search by name or email address** text box, type **Dylan Williams**.
 
-![](../images/e4-t1-4.png)
+   ![](../images/e4-t1-4.png)
 
 9. In the list of search results, select the user account of Dylan Williams and, on the **Dylan Williams assignments - AZ500LAB01** blade, view the newly created assignment.
 
