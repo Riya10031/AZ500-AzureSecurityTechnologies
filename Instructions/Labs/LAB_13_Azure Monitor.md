@@ -1,5 +1,4 @@
-# Lab 13: Azure Monitor
-# Student lab manual
+# Lab 13 - Azure Monitor
 
 ## Lab scenario
 
@@ -14,27 +13,26 @@ You have been asked to create a proof of concept for monitoring virtual machine 
 ## Lab objectives
 
 In this lab, you will complete the following exercise:
+- Exercise 1: Collect data from an Azure virtual machine with Azure Monitor.
 
-- Exercise 1: Collect data from an Azure virtual machine with Azure Monitor
+## Estimated timing: 45 minutes
 
 ## Architecture diagram
 
 ![](../Labs/Lab-Scenario-Preview/media/AZ-500-LSP-Mod-4-1.png)
 
-## Estimated timing: 45 minutes
-
-### Exercise 1: Collect data from an Azure virtual machine with Azure Monitor
+## Exercise 1: Collect data from an Azure virtual machine with Azure Monitor
 
 
 In this exercise, you will complete the following tasks: 
 
-- Task 1: Deploy an Azure virtual machine 
-- Task 2: Create a Log Analytics workspace
-- Task 3: Enable the Log Analytics virtual machine extension
-- Task 4: Collect virtual machine event and performance data
-- Task 5: View and query collected data 
+- Task 1: Deploy an Azure virtual machine.
+- Task 2: Create a Log Analytics workspace.
+- Task 3: Enable the Log Analytics virtual machine extension.
+- Task 4: Collect virtual machine event and performance data.
+- Task 5: View and query collected data.
 
-#### Task 1: Deploy an Azure virtual machine
+### Task 1: Deploy an Azure virtual machine
 
 1. Sign-in to the Azure portal **`https://portal.azure.com/`**.
 
@@ -73,7 +71,7 @@ In this exercise, you will complete the following tasks:
 
 1. Close the Cloud Shell pane. 
 
-#### Task 2: Create a Log Analytics workspace
+### Task 2: Create a Log Analytics workspace
 
 In this task, you will create a Log Analytics workspace. 
 
@@ -94,7 +92,7 @@ In this task, you will create a Log Analytics workspace.
 
 1. On the **Review + create** tab of the **Create Log Analytics workspace** blade, click **Create**.
 
-#### Task 3: Enable the Log Analytics virtual machine extension
+### Task 3: Enable the Log Analytics virtual machine extension
 
 In this task, you will enable the Log Analytics virtual machine extension. This extension installs the Log Analytics agent on Windows and Linux virtual machines. This agent collects data from the virtual machine and transfers it to the Log Analytics workspace that you designate. Once the agent is installed it will be automatically upgraded ensuring you always have the latest features and fixes. 
 
@@ -112,34 +110,33 @@ In this task, you will enable the Log Analytics virtual machine extension. This 
 
     >**Note**: This may take a few minutes. The **Status** displayed on the **myVM** blade, will change from **Connecting** to **This workspace**. 
 
-#### Task 4: Collect virtual machine event and performance data
+### Task 4: Collect virtual machine event and performance data
 
 In this task, you will configure collection of the Windows System log and several common performance counters. You will also review other sources that are available.
 
 1. In the Azure portal, navigate back to the Log Analytics workspace you created earlier in this exercise.
 
-1. On the Log Analytics workspace blade, in the **Settings** section, click **Legacy agents management**.
+2. On the Log Analytics workspace blade, in the **Settings** section, click **Legacy agents management**.
 
-1. On the **Legacy agents management** blade, review the configurable settings including Windows Event Logs, Windows Performance Counters, Linux Performance Counters, IIS Logs, and Syslog. 
+3. On the **Legacy agents management** blade, review the configurable settings including Windows Event Logs, Windows Performance Counters, Linux Performance Counters, IIS Logs, and Syslog. 
 
-1. Under tab **Windows event logs**, click on **+ Add windows event log**, in the listing of event log types, select **System**.
+4. Under tab **Windows event logs**, click on **+ Add windows event log**, in the listing of event log types, select **System**.
 
     >**Note**: This is how you add event logs to the workspace. Other choices include, for example, **Hardware events** or **Key Management Service**.  
 
-1. Unselect the **Information** checkbox, leaving the **Error** and **Warning** check boxes selected.
+5. Unselect the **Information** checkbox, leaving the **Error** and **Warning** check boxes selected.
 
-1. Click **Windows Performance Counters**, click **+ Add performance counter**, review the listing of available performance counters, and add the following:
+6. Click **Windows Performance Counters**, click **+ Add performance counter**, review the listing of available performance counters, and add the following:
 
     - Memory(\*)\Available Memory Mbytes
     - Process(\*)\\% Processor Time
     - Event Tracing for Windows\Total Memory Usage --- Non-Paged Pool
     - Event Tracing for Windows\Total Memory Usage --- Paged Pool
-
-    >**Note**: The counters are added and configured with 60 second collection sample interval.
+>**Note**: The counters are added and configured with 60 second collection sample interval.
   
-1. Now click **Apply**.
+7. Now click **Apply**.
 
-#### Task 5: View and query collected data
+### Task 5: View and query collected data
 
 In this task, you will run a log search on your data collection. 
 
@@ -180,15 +177,15 @@ In this task, you will run a log search on your data collection.
 
 > **Results:** You used a Log Analytics workspace to configure data sources and query logs. 
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Review
+### Review
 
-In this lab, you have:
+In this lab, you have completed:
 
 - Deployed an Azure virtual machine.
 - Created a Log Analytics workspace.
@@ -196,4 +193,4 @@ In this lab, you have:
 - Collected virtual machine event and performance data.
 - Viewed and query collected data.
 
-## You have successfully completed the lab
+### You have successfully completed the lab
