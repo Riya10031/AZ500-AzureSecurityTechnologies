@@ -1,5 +1,4 @@
-# Lab 07: Network Security Groups and Application Security Groups
-# Student lab manual
+# Lab 07 - Network Security Groups and Application Security Groups
 
 ## Lab scenario
 
@@ -11,27 +10,26 @@ You have been asked to implement your organization's virtual networking infrastr
 - The Web Servers should display the IIS web page when accessed from the internet. 
 - Network security group rules should be used to control network access. 
 
-> For all the resources in this lab, we are using the **East US** region. Verify with your instructor this is the region to use for class. 
+  > For all the resources in this lab, we are using the **East US** region. Verify with your instructor this is the region to use for class. 
 
 ## Lab objectives
 
 In this lab, you will complete the following exercises:
 
-- Exercise 1: Create the virtual networking infrastructure
-- Exercise 2: Deploy virtual machines and test the network filters
+- Exercise 1: Create the virtual networking infrastructure.
+- Exercise 2: Deploy virtual machines and test the network filters.
 
+## Estimated timing: 45 minutes
 
 ## Architecture diagram
 
 ![](../Labs/Lab-Scenario-Preview/media/AZ-500-LSP-Mod-2-1.png)
 
-## Estimated timing: 45 minutes
+## Exercise 1: Create the virtual networking infrastructure
 
-### Exercise 1: Create the virtual networking infrastructure
+## Estimated timing: 20 minutes
 
-### Estimated timing: 20 minutes
-
-> For all the resources in this lab, we are using the **East (US)** region. Verify with your instructor this is region to use for you class. 
+   > For all the resources in this lab, we are using the **East (US)** region. Verify with your instructor this is region to use for you class. 
 
 In this exercise, you will complete the following tasks:
 
@@ -40,7 +38,7 @@ In this exercise, you will complete the following tasks:
 - Task 3: Create a network security group and associate it with the virtual network subnet.
 - Task 4: Create inbound NSG security rules to all traffic to web servers and RDP to the management servers.
 
-#### Task 1: Create a virtual network
+### Task 1: Create a virtual network
 
 In this task, you will create a virtual network to use with the network and application security groups. 
 
@@ -68,7 +66,7 @@ In this task, you will create a virtual network to use with the network and appl
 
 1. On the **Review + create** tab of the **Create virtual network** blade, click **Create**.
 
-#### Task 2: Create application security groups
+### Task 2: Create application security groups
 
 In this task, you will create an application security group.
 
@@ -103,7 +101,7 @@ In this task, you will create an application security group.
 
 1. Click **Review + create** and then click **Create**.
 
-#### Task 3: Create a network security group and associate the NSG to the subnet
+### Task 3: Create a network security group and associate the NSG to the subnet
 
 In this task, you will create a network security group. 
 
@@ -134,7 +132,7 @@ In this task, you will create a network security group.
     |Virtual network|**myVirtualNetwork**|
     |Subnet|**default**|
 
-#### Task 4: Create inbound NSG security rules to all traffic to web servers and RDP to the servers 
+### Task 4: Create inbound NSG security rules to all traffic to web servers and RDP to the servers 
 
 1. On the **myNsg** blade, in the **Settings** section, click **Inbound security rules**.
 
@@ -167,11 +165,11 @@ In this task, you will create a network security group.
 1. On the **Add inbound security rule** blade, click **Add** to create the new inbound rule.
     ![](../Labs/images/nsglab-7.png)
 
-> Result: You have deployed a virtual network, network security with inbound security rules, and two application security groups. 
+    > Result: You have deployed a virtual network, network security with inbound security rules, and two application security groups. 
 
-### Exercise 2: Deploy virtual machines and test network filters
+## Exercise 2: Deploy virtual machines and test network filters
 
-### Estimated timing: 25 minutes
+## Estimated timing: 25 minutes
 
 In this exercise, you will complete the following tasks:
 
@@ -180,7 +178,7 @@ In this exercise, you will complete the following tasks:
 - Task 3: Associate each virtual machines network interface to it's application security group.
 - Task 4: Test the network traffic filtering.
 
-#### Task 1: Create a virtual machine to use as a web server
+### Task 1: Create a virtual machine to use as a web server
 
 In this task, you will create a virtual machine to use as a web server.
 
@@ -220,7 +218,7 @@ In this task, you will create a virtual machine to use as a web server.
 
 1. Click **Review + create**, on the **Review + create** blade, ensure that validation was successful and click **Create**.
 
-#### Task 2: Create a virtual machine to use as a management server 
+### Task 2: Create a virtual machine to use as a management server 
 
 In this task, you will create a virtual machine to use as a management server.
 
@@ -259,7 +257,7 @@ In this task, you will create a virtual machine to use as a management server.
 
     >**Note**: Wait for both virtual machines to be provisioned before continuing. 
 
-#### Task 3: Associate each virtual machines network interface to its application security group
+### Task 3: Associate each virtual machines network interface to its application security group
 
 In this task, you will associate each virtual machine's network interface with the corresponding application security group. The myVMWeb virtual machine interface will be associated to the myAsgWebServers ASG. The myVMMgmt virtual machine interface will be associated to the myAsgMgmtServers ASG. 
 
@@ -279,7 +277,7 @@ In this task, you will associate each virtual machine's network interface with t
 
 1. Click **Configure the application security groups**, in the **Application security group** drop-down list, select **myAsgMgmtServers**, and then click **Save**.
 
-#### Task 4: Test the network traffic filtering
+### Task 4: Test the network traffic filtering
 
 In this task, you will test the network traffic filters. You should be able to RDP into the myVMMgmnt virtual machine. You should be able to connect from the internet to the myVMWeb virtual machine and view the default IIS web page.  
 
@@ -319,19 +317,19 @@ In this task, you will test the network traffic filters. You should be able to R
 
     >**Note**: The browser page should display the default IIS welcome page because port 80 is allowed inbound from the internet based on the setting of the **myAsgWebServers** application security group. The network interface of the myVMWeb Azure VM is associated with that application security group. 
 
-> **Result:** You have validated that the NSG and ASG configuration is working and traffic is being correctly managed.
+    > **Result:** You have validated that the NSG and ASG configuration is working and traffic is being correctly managed.
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Review
+### Review
 
-In this lab, you have:
+In this lab, you have completed:
 
 - Created the virtual networking infrastructure.
 - Deployed virtual machines and test the network filters.
 
-## You have successfully completed the lab
+### You have successfully completed the lab

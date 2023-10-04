@@ -1,9 +1,8 @@
-# Lab 10: Key Vault (Implementing Secure Data by setting up Always Encrypted)
-# Student lab manual
+# Lab 10 - Key Vault (Implementing Secure Data by setting up Always Encrypted)
 
 ## Lab scenario
 
-You have been asked to create a proof of concept application that makes use of the Azure SQL Database support for Always Encrypted functionality. All of the secrets and keys used in this scenario should be stored in Key Vault. The application should be registered in Azure Active Directory (Azure AD) in order to enhance its security posture. To accomplish these objectives, the proof of concept should include:
+You have been asked to create a proof of concept application that makes use of the Azure SQL Database support for Always Encrypted functionality. All of the secrets and keys used in this scenario should be stored in Key Vault. The application should be registered in Microsoft Entra ID in order to enhance its security posture. To accomplish these objectives, the proof of concept should include:
 
 - Creating an Azure Key Vault and storing keys and secrets in the vault.
 - Create a SQL Database and encrypting content of columns in database tables by using Always Encrypted.
@@ -16,32 +15,24 @@ To keep the focus on the security aspects of Azure, related to building this pro
 
 In this lab, you will complete the following exercises:
 
-- Exercise 1: Deploy the base infrastructure from an ARM template
-- Exercise 2: Configure the Key Vault resource with a key and a secret
-- Exercise 3: Configure an Azure SQL database and a data-driven application
-- Exercise 4: Demonstrate the use of Azure Key Vault in encrypting the Azure SQL database
+- Exercise 1: Deploy the base infrastructure from an ARM template.
+- Exercise 2: Configure the Key Vault resource with a key and a secret.
+- Exercise 3: Configure an Azure SQL database and a data-driven application.
+- Exercise 4: Demonstrate the use of Azure Key Vault in encrypting the Azure SQL database.
 
-
-## Lab files:
-
-- **C:\\AllFiles\\AZ500-AzureSecurityTechnologies-lab-files\\Allfiles\\Labs\\10\\az-500-10_azuredeploy.json**
-
-- **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\\10\\program.cs**
-
+## Estimated timing: 60 minutes
 
 ## Architecture diagram
 
 ![](../Labs/Lab-Scenario-Preview/media/AZ-500-LSP-Mod-3-1.png)
 
-## Estimated timing: 60 minutes
+## Exercise 1: Deploy the base infrastructure from an ARM template
 
-### Exercise 1: Deploy the base infrastructure from an ARM template
-
-In this exercise, you will complete the following tasks:
+In this exercise, you will complete the following task:
 
 - Task 1: Deploy an Azure VM and an Azure SQL database
 
-#### Task 1: Deploy an Azure VM and an Azure SQL database
+### Task 1: Deploy an Azure VM and an Azure SQL database
 
 In this task, you will deploy an Azure VM, which will automatically install Visual Studio 2019 and SQL Server Management Studio 2019 as part of the deployment.
 
@@ -73,24 +64,22 @@ In this task, you will deploy an Azure VM, which will automatically install Visu
 
     >**Note**: Do not wait for the ARM template deployment to be completed, continue on to the next exercise. The deployment might take upto **20-25 minutes**. 
     
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
-### Exercise 2: Configure the Key Vault resource with a key and a secret
-
->**Note**: For all the resources in this lab, we are using the **East (US)** region. Verify with your instructor this is region to use for you class. 
+## Exercise 2: Configure the Key Vault resource with a key and a secret
 
 In this exercise, you will complete the following tasks:
 
-- Task 1: Create and configure a Key Vault
-- Task 2: Add a key to the Key Vault
-- Task 3: Add a secret to the Key Vault
+- Task 1: Create and configure a Key Vault.
+- Task 2: Add a key to the Key Vault.
+- Task 3: Add a secret to the Key Vault.
 
-#### Task 1: Create and configure a Key Vault
+### Task 1: Create and configure a Key Vault
 
 In this task, you will create an Azure Key Vault resource. You will also configure the Azure Key Vault permissions.
 
@@ -140,7 +129,7 @@ In this task, you will create an Azure Key Vault resource. You will also configu
     
 1. On the **Principal** blade, select your user account, and click **Select** and click on **Next** tab and then **Create**.
 
-#### Task 2: Add a key to Key Vault
+### Task 2: Add a key to Key Vault
 
 In this task, you will add a key to the Key Vault and view information about the key. 
 
@@ -182,7 +171,7 @@ In this task, you will add a key to the Key Vault and view information about the
     >**Note**: You can reference any key by using the key identifier. To get the most current version, reference `https://<key_vault_name>.vault.azure.net/keys/MyLabKey` or get the specific version with: `https://<key_vault_name>.vault.azure.net/keys/MyLabKey/<key_version>`
 
 
-#### Task 3: Add a Secret to Key Vault
+### Task 3: Add a Secret to Key Vault
 
 1. Switch back to the Cloud Shell pane.
 
@@ -216,13 +205,13 @@ In this task, you will add a key to the Key Vault and view information about the
 
     >**Note**: To get the most current version of a secret, reference `https://<key_vault_name>.vault.azure.net/secrets/<secret_name>` or get a specific version, reference `https://<key_vault_name>.vault.azure.net/secrets/<secret_name>/<secret_version>`
     
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-### Exercise 3: Configure an Azure SQL database and a data-driven application
+## Exercise 3: Configure an Azure SQL database and a data-driven application
 
 In this exercise, you will complete the following tasks:
 
@@ -232,7 +221,7 @@ In this exercise, you will complete the following tasks:
 - Task 4: Log on to the Azure VM running Visual Studio 2019 and SQL Management Studio 2019
 - Task 5: Create a table in the SQL Database and select data columns for encryption
 
-#### Task 1: Enable a client application to access the Azure SQL Database service
+### Task 1: Enable a client application to access the Azure SQL Database service
 
 In this task, you will enable a client application to access the Azure SQL Database service. This will be done by setting up the required authentication and acquiring the Application ID and Secret that you will need to authenticate your application.
 
@@ -274,7 +263,7 @@ In this task, you will enable a client application to access the Azure SQL Datab
 
     >**Note**: Make sure to copy the value *before* you navigate away from the blade. Once you do, it is no longer possible to retrieve its clear text value.
 
-#### Task 2: Create a policy allowing the application access to the Key Vault.
+### Task 2: Create a policy allowing the application access to the Key Vault.
 
 In this task, you will grant the newly registered app permissions to access secrets stored in the Key Vault.
 
@@ -294,7 +283,7 @@ In this task, you will grant the newly registered app permissions to access secr
     $kvName
     ```
       
-  >**Note**: In the above code snippet, replace the **-[DeploymentID]** with **<inject key="DeploymentID" enableCopy="true"/>**.
+   >**Note**: In the above code snippet, replace the **-[DeploymentID]** with **<inject key="DeploymentID" enableCopy="true"/>**.
 
 1. In the PowerShell session within the Cloud Shell pane, run the following to grant permissions on the Key Vault to the application you registered in the previous task:
 
@@ -302,11 +291,11 @@ In this task, you will grant the newly registered app permissions to access secr
     Set-AZKeyVaultAccessPolicy -VaultName $kvName -ResourceGroupName AZ500LAB10-[DeploymentID] -ServicePrincipalName $applicationId -PermissionsToKeys get,wrapKey,unwrapKey,sign,verify,list
     ```
     
-     >**Note**: In the above code snippet, replace the **[DeploymentID]** with **<inject key="DeploymentID" enableCopy="true"/>**.
+    >**Note**: In the above code snippet, replace the **[DeploymentID]** with **<inject key="DeploymentID" enableCopy="true"/>**.
 
 1. Close the Cloud Shell pane. 
 
-#### Task 3: Retrieve SQL Azure database ADO.NET Connection String 
+### Task 3: Retrieve SQL Azure database ADO.NET Connection String 
 
 The ARM-template deployment in Exercise 1 provisioned an Azure SQL Server instance and an Azure SQL database named **medical**. You will update the empty database resource with a new table structure and select data columns for encryption
 
@@ -324,7 +313,7 @@ The ARM-template deployment in Exercise 1 provisioned an Azure SQL Server instan
 
     >**Note**: When you use the connection string, make sure to replace the `{your_password}` placeholder with **Pa55w.rd1234**.
 
-#### Task 4: Log on to the Azure VM running Visual Studio 2019 and SQL Management Studio 2019
+### Task 4: Log on to the Azure VM running Visual Studio 2019 and SQL Management Studio 2019
 
 In this task, you log on to the Azure VM, which deployment you initiated in Exercise 1. This Azure VM hosts Visual Studio 2019 and SQL Server Management Studio 2019.
 
@@ -334,7 +323,7 @@ In this task, you log on to the Azure VM, which deployment you initiated in Exer
 
 1. In the list of Virtual Machines shown, select the **az500-10-vm1** entry. On the **az500-10-vm1** blade, on the **Essentials** pane, take note of the **Public IP address**. You will use this later. 
 
-#### Task 5: Create a table in the SQL Database and select data columns for encryption
+### Task 5: Create a table in the SQL Database and select data columns for encryption
 
 In this task, you will connect to the SQL Database with SQL Server Management Studio and create a table. You will then encrypt two data columns using an autogenerated key from the Azure Key Vault. 
 
@@ -413,7 +402,7 @@ In this task, you will connect to the SQL Database with SQL Server Management St
 
 1. On the **Master Key Configuration** page, select **Azure Key Vault**, click **Sign in**. When prompted, authenticate by using the same user account you used to provision the Azure Key Vault instance earlier in this lab, ensure that Key Vault appears in the **Select an Azure Key Vault** drop down list, and click **Next**.
 
- >**Note**: Process may take upto 5 minutes.
+    >**Note**: Process may take upto 5 minutes.
 
 1. On the **Run Settings** page, click **Next**.
 	
@@ -427,11 +416,9 @@ In this task, you will connect to the SQL Database with SQL Server Management St
 
     >**Note**: The **Always Encrypted Keys** subnode contains the **Column Master Keys** and **Column Encryption Keys** subfolders.
 
-### Exercise 4: Demonstrate the use of Azure Key Vault in encrypting the Azure SQL database
+## Exercise 4: Demonstrate the use of Azure Key Vault in encrypting the Azure SQL database
 
-In this exercise, you will complete the following tasks:
-
-#### Task 1: Run a data-driven application to demonstrate the use of Azure Key Vault in encrypting the Azure SQL database
+### Task 1: Run a data-driven application to demonstrate the use of Azure Key Vault in encrypting the Azure SQL database
 
 You will create a Console application using Visual Studio to load data into the encrypted columns and then access that data securely using a connection string that accesses the key in the Key Vault.
 
@@ -497,21 +484,20 @@ You will create a Console application using Visual Studio to load data into the 
     >**Note**: Verify that the data returned by the query is not encrypted.
 
 20. To terminate the console app, press the Enter key
+ 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-    
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+### Review
 
-## Review
-
-In this lab, you have:
+In this lab, you have completed:
 
 - Deployed the base infrastructure from an ARM template.
 - Configured the Key Vault resource with a key and a secret.
 - Configured an Azure SQL database and a data-driven application.
 - Demonstrated the use of Azure Key Vault in encrypting the Azure SQL database.
 
-## You have successfully completed the lab
+### You have successfully completed the lab.

@@ -1,5 +1,4 @@
-# Lab 09: Configuring and Securing ACR and AKS
-# Student lab manual
+# Lab 09 - Configuring and Securing ACR and AKS
 
 ## Lab scenario
 
@@ -10,40 +9,36 @@ You have been asked to deploy a proof of concept with Azure Container Registry a
 - Configuring an Azure Kubernetes Service.
 - Securing and accessing container applications both internally and externally. 
 
-> For all the resources in this lab, we are using the **East US** region. Verify with your instructor this is the region to use for class. 
+   > For all the resources in this lab, we are using the **East US** region. Verify with your instructor this is the region to use for class. 
 
 ## Lab objectives
 
 In this lab, you will complete the following exercise:
 
-- Exercise 1: Configuring and Securing ACR and AKS
+- Exercise 1: Configuring and Securing ACR and AKS.
 
 ## Estimated timing: 45 minutes
 
-## Lab files:
-- **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\09\\nginxexternal.yaml**
-- **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\09\\nginxinternal.yaml**
-
 ## Architecture diagram
 
-![](../Labs/Lab-Scenario-Preview/media/AZ-500-LSP-Mod-2-3.png)
+![](../Labs/Lab-Scenario-Preview/media/AZ-500-LSP-Mod-2-3-1.png)
 
-### Exercise 1: Configuring and Securing ACR and AKS
+## Exercise 1: Configuring and Securing ACR and AKS
 
-> For all the resources in this lab, we are using the **East (US)** region. Verify with your instructor this is region to use for you class. 
+   > For all the resources in this lab, we are using the **East (US)** region. Verify with your instructor this is region to use for you class. 
 
 In this exercise, you will complete the following tasks:
 
-- Task 1: Create an Azure Container Registry
-- Task 2: Create a Dockerfile, build a container and push it to Azure Container Registry
-- Task 3: Create an Azure Kubernetes Service cluster
-- Task 4: Grant the AKS cluster permissions to access the ACR
-- Task 5: Deploy an external service to AKS
-- Task 6: Verify the you can access an external AKS-hosted service
-- Task 7: Deploy an internal service to AKS
-- Task 8: Verify the you can access an internal AKS-hosted service
+- Task 1: Create an Azure Container Registry.
+- Task 2: Create a Dockerfile, build a container and push it to Azure Container Registry.
+- Task 3: Create an Azure Kubernetes Service cluster.
+- Task 4: Grant the AKS cluster permissions to access the ACR.
+- Task 5: Deploy an external service to AKS.
+- Task 6: Verify the you can access an external AKS-hosted service.
+- Task 7: Deploy an internal service to AKS.
+- Task 8: Verify the you can access an internal AKS-hosted service.
 
-#### Task 1: Create an Azure Container Registry
+### Task 1: Create an Azure Container Registry
 
 In this task, you will create a resource group for the lab an an Azure Container Registry.
 
@@ -85,7 +80,7 @@ In this task, you will create a resource group for the lab an an Azure Container
     
     ![](../images/lab9-(2).png)
    
-#### Task 2: Create a Dockerfile, build a container and push it to Azure Container Registry
+### Task 2: Create a Dockerfile, build a container and push it to Azure Container Registry
 
 In this task, you will create a Dockerfile, build an image from the Dockerfile, and deploy the image to the ACR. 
 
@@ -123,7 +118,7 @@ In this task, you will create a Dockerfile, build an image from the Dockerfile, 
 
     >**Note**: The manifest includes the sha256 digest, manifest creation date, and platform entries. 
 
-#### Task 3: Create an Azure Kubernetes Service cluster
+### Task 3: Create an Azure Kubernetes Service cluster
 
 In this task, you will create an Azure Kubernetes service and review the deployed resources. 
 
@@ -190,7 +185,7 @@ In this task, you will create an Azure Kubernetes service and review the deploye
 
     >**Note**: Verify that the **Status** of the cluster node is listed as **Ready**.
 
-#### Task 4: Grant the AKS cluster permissions to access the ACR and manage its virtual network
+### Task 4: Grant the AKS cluster permissions to access the ACR and manage its virtual network
 
 In this task, you will grant the AKS cluster permission to access the ACR and manage its virtual network. 
 
@@ -226,7 +221,7 @@ In this task, you will grant the AKS cluster permission to access the ACR and ma
    ```
     >**Note**: Kindly replace the Resource group <$RESOURCE_GROUP_NAME> with **$RG_AKS**, <$subscriptionId> with **<inject key="SubscriptionID" enableCopy="false"/>** and <contosotradersacr$deploymentid> with **ACR Name** which you recorded earlier.
 
-#### Task 5: Deploy an external service to AKS
+### Task 5: Deploy an external service to AKS
 
 In this task,  you will download the Manifest files, edit the YAML file, and apply your changes to the cluster. 
 
@@ -254,7 +249,7 @@ In this task,  you will download the Manifest files, edit the YAML file, and app
 
 1. In the editor pane, scroll down to **line 24** and replace the **`<ACRUniquename>`** placeholder with the ACR name.
 
-    ![](../images/lab9-4.png)
+    ![](../images/lab9-4-1.png)
    
 1. Now to save this edited yaml file, perform **CTRL + S** and then **CTRL + Q** to exit. 
 
@@ -266,9 +261,9 @@ In this task,  you will download the Manifest files, edit the YAML file, and app
 
 1. In the Bash session within the Cloud Shell pane, review the output of the command you run in the previous task to verify that the deployment and the corresponding service have been created. 
 
-   ![](../images/external.png)
+   ![](../images/external-1.png)
   
-#### Task 6: Verify the you can access an external AKS-hosted service
+### Task 6: Verify the you can access an external AKS-hosted service
 
 In this task, verify the container can be accessed externally using the public IP address.
 
@@ -288,7 +283,7 @@ In this task, verify the container can be accessed externally using the public I
 
     ![](../images/nginx.png)
   
-#### Task 7: Deploy an internal service to AKS
+### Task 7: Deploy an internal service to AKS
 
 In this task, you will deploy the internal facing service on the AKS. 
 
@@ -314,7 +309,7 @@ In this task, you will deploy the internal facing service on the AKS.
 
 1.  In the Bash session within the Cloud Shell pane, review the output to verify your deployment and the service have been created:
 
-    ![](../images/internal1.png)
+    ![](../images/internal1-1.png)
 
 1. In the Bash session within the Cloud Shell pane, run the following to retrieve information about the nginxinternal service including name, type, IP addresses, and ports. 
 
@@ -330,7 +325,7 @@ In this task, you will deploy the internal facing service on the AKS.
 
     >**Note**: Alternatively you could use the CLUSTER-IP address.
 
-#### Task 8: Verify the you can access an internal AKS-hosted service
+### Task 8: Verify the you can access an internal AKS-hosted service
 
 In this task, you will use one of the pods running on the AKS cluster to access the internal service. 
 
@@ -360,17 +355,17 @@ In this task, you will use one of the pods running on the AKS cluster to access 
 
 1. Close the Cloud Shell pane.
 
-> **Result:** You have configured and secured ACR and AKS.
+   > **Result:** You have configured and secured ACR and AKS.
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Review
+### Review
 
-In this lab, you have:
+In this lab, you have completed:
 
 - Created an Azure Container Registry.
 - Created a Dockerfile, build a container and push it to Azure Container Registry.
@@ -381,5 +376,5 @@ In this lab, you have:
 - Deployed an internal service to AKS.
 - Verified the you can access an internal AKS-hosted service.
 
-## You have successfully completed the lab
+### You have successfully completed the lab
 

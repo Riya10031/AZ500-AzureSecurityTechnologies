@@ -1,5 +1,4 @@
-# Lab 11: Securing Azure SQL Database
-# Student lab manual
+# Lab 11 - Securing Azure SQL Database
 
 ## Lab scenario
 
@@ -19,25 +18,20 @@ In this lab, you will complete the following exercise:
 
 ## Estimated timing: 30 minutes
 
-## Lab files:
-
-- **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\\11\\azuredeploy.json**
-
 ## Architecture diagram
 
 ![](../Labs/Lab-Scenario-Preview/media/AZ-500-LSP-Mod-3-2.png)
 
-### Exercise 1: Implement SQL Database security features
-
+## Exercise 1: Implement SQL Database security features
 
 In this exercise, you will complete the following tasks:
 
-- Task 1: Deploy an Azure SQL Database
-- Task 2: Configure Advanced Data Protection
-- Task 3: Configure Data Classification
-- Task 4: Configure Auditing
+- Task 1: Deploy an Azure SQL Database.
+- Task 2: Configure Advanced Data Protection.
+- Task 3: Configure Data Classification.
+- Task 4: Configure Auditing.
 
-#### Task 1: Deploy an Azure SQL Database
+### Task 1: Deploy an Azure SQL Database
 
 In this task, you will use a template to deploy the lab infrastructure. 
 
@@ -64,7 +58,7 @@ In this task, you will use a template to deploy the lab infrastructure.
 
     >**Note**: Wait for the deployment to complete. It might take upto 5 minutes.
 
-#### Task 2: Configure Advanced Data Protection
+### Task 2: Configure Advanced Data Protection
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Resource groups** and **Select** it
 
@@ -73,7 +67,9 @@ In this task, you will use a template to deploy the lab infrastructure.
 3. On the **AZ500LAB11** blade, click the entry representing the newly created SQL Server.
 
 4. On the SQL server blade, in the **Security** section, click **Microsoft Defender for Cloud**, select **Enable Microsoft Defender for SQL**.
-   ![](../Labs/images/microsoftdefenersql.png)
+
+   ![](../Labs/images/microsoftdefenersql-1.png)
+
       >**Note**: Wait until notification indicates Azure Defender for SQL has been successfully enabled.
 
 6. On the SQL server blade, under the **Security** section and within the **Microsoft Defender for Cloud** page, notice the **Enablement Status: Enabled at the server-level (Configure)** parameter, click **(configure)**. 
@@ -84,7 +80,7 @@ In this task, you will use a template to deploy the lab infrastructure.
 
       >**Note**: It may take 10-15 minutes for recommendations to appear on the **Microsoft Defender for Cloud** blade. Rather than waiting, proceed to the next task but consider returning to this blade once you complete all the remaining tasks.
 
-#### Task 3: Configure Data Classification
+### Task 3: Configure Data Classification
 
 In this task, you will discover and classify information in SQL database for GPDR and data protection compliance.
 
@@ -115,7 +111,7 @@ In this task, you will discover and classify information in SQL database for GPD
 
 10. Back on the **Data Discovery & Classification** blade **Overview** tab, note that it has been updated to account for the latest classification information. 
 
-#### Task 4 : Configure auditing 
+### Task 4 : Configure auditing 
 
 In this task, you will first configure server level auditing and then configure database level auditing. 
 
@@ -155,21 +151,21 @@ In this task, you will first configure server level auditing and then configure 
 
     >**Note**: Since this SQL server and database were created recently, it is unlikely that any events will be available at this point. 
 
-> **Results:** You have created a SQL server and database, configured data classification, and auditing. 
+    > **Results:** You have created a SQL server and database, configured data classification, and auditing. 
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+     > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+     > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Review
+### Review
 
-In this lab, you have:
+In this lab, you have completed:
 
 - Deployed an Azure SQL Database.
 - Configured Advanced Data Protection.
 - Configured Data Classification.
 - Configured Auditing.
 
-## You have successfully completed the lab
+### You have successfully completed the lab
