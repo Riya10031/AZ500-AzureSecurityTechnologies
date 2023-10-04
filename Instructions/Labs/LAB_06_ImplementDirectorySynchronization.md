@@ -1,5 +1,4 @@
-# Lab 06: Implement Directory Synchronization
-# Student lab manual
+# Lab 06 - Implement Directory Synchronization
 
 ## Lab scenario
 
@@ -9,7 +8,7 @@ You have been asked to create a proof of concept demonstrating how to integrate 
 - Create and configure a Microsoft Entra ID tenant
 - Synchronize the AD DS forest with the Microsoft Entra ID tenant
 
-> For all the resources in this lab, we are using the **East US** region. Verify with your instructor this is the region to use for class. 
+    > For all the resources in this lab, we are using the **East US** region. Verify with your instructor this is the region to use for class. 
 
 ## Lab objectives
 
@@ -19,14 +18,13 @@ In this lab, you will complete the following exercises:
 - Exercise 2: Create and configure a Microsoft Entra ID tenant
 - Exercise 3: Synchronize Active Directory forest with a Microsoft Entra ID tenant
 
+## Estimated timing: 60 minutes
 
 ## Architecture diagram
 
 ![](../Labs/Lab-Scenario-Preview/media/AZ-500-LSP-Mod-1b-3.png)
 
-## Estimated timing: 60 minutes
-
-### Exercise 1: Deploy an Azure VM hosting a Microsoft Entra ID domain controller
+## Exercise 1: Deploy an Azure VM hosting a Microsoft Entra ID domain controller
 
 
 In this exercise, you will complete the following tasks:
@@ -34,7 +32,7 @@ In this exercise, you will complete the following tasks:
 - Task 1: Identify an available DNS name for an Azure VM deployment
 - Task 2: Use an ARM template to deploy an Azure VM hosting a Microsoft Entra ID domain controller
 
-#### Task 1: Identify an available DNS name for an Azure VM deployment
+### Task 1: Identify an available DNS name for an Azure VM deployment
 
 In this task, you will identify a DNS name for your Azure VM deployment.
 
@@ -66,7 +64,7 @@ In this task, you will identify a DNS name for your Azure VM deployment.
 
 1. Close the Cloud Shell.
 
-#### Task 2: Use an ARM template to deploy an Azure VM hosting a Microsoft Entra ID domain controller
+### Task 2: Use an ARM template to deploy an Azure VM hosting a Microsoft Entra ID domain controller
 
 In this task, you will deploy an Azure VM that will host a Microsoft Entra ID domain controller
 
@@ -98,10 +96,9 @@ In this task, you will deploy an Azure VM that will host a Microsoft Entra ID do
 
     >**Note**: Do not wait for the deployment to complete but instead proceed to the next exercise. The deployment might take about 15 minutes. You will use the virtual machine deployed in this task in the third exercise of this lab.
 
-> **Result**: After you completed this exercise, you have initiated deployment of an Azure VM that will host a Microsoft Entra ID domain controller by using an Azure Resource Manager template
+    > **Result**: After you completed this exercise, you have initiated deployment of an Azure VM that will host a Microsoft Entra ID domain controller by using an Azure Resource Manager template
 
-### Exercise 2: Create and configure a Microsoft Entra ID tenant 
-
+## Exercise 2: Create and configure a Microsoft Entra ID tenant 
 
 In this exercise, you will complete the following tasks:
 
@@ -109,7 +106,7 @@ In this exercise, you will complete the following tasks:
 - Task 2: Add a custom DNS name to the new Microsoft Entra ID tenant
 - Task 3: Create a Microsoft Entra ID user with the Global Administrator role
 
-#### Task 1: Create a Microsoft Entra ID tenant
+### Task 1: Create a Microsoft Entra ID tenant
 
 In this task, you will create a new Microsoft Entra ID tenant to use in this lab. 
 
@@ -131,7 +128,7 @@ In this task, you will create a new Microsoft Entra ID tenant to use in this lab
    |Initial domain name|a unique name consisting of a combination of letters and digits|
    |Country or region|**United States**|
 
-     ![](../images/az-500(iii).png)
+     ![](../images/az-500(iii)-1.png)
 
     >**Note**: Record the initial domain name. You will need it later in this lab.
 
@@ -145,7 +142,7 @@ In this task, you will create a new Microsoft Entra ID tenant to use in this lab
     
     >**Note**: Wait for 2 minutes for new tenant to be created. Use the **Notification** icon to monitor the deployment status and please do not wait for previous exercise deployment to complete but instead proceed to the next exercise.
 
-#### Task 2: Add a custom DNS name to the new Microsoft Entra ID tenant
+### Task 2: Add a custom DNS name to the new Microsoft Entra ID tenant
 
 In this task, you will add your custom DNS name to the new Microsoft Entra ID tenant. 
 
@@ -169,7 +166,7 @@ In this task, you will add your custom DNS name to the new Microsoft Entra ID te
 
     >**Note**: You will not be able to complete the validation process because you do not own the **adatum.com** DNS domain name. This will not prevent you from synchronizing the **adatum.com** Microsoft Entra ID DS domain with the Microsoft Entra ID tenant. You will use for this purpose the initial DNS name of the Microsoft Entra ID tenant (the name ending with the **onmicrosoft.com** suffix), which you identified in the previous task. However, keep in mind that, as a result, the DNS domain name of the Microsoft Entra ID DS domain and the DNS name of the Microsoft Entra ID tenant will differ. This means that Adatum users will need to use different names when signing in to the Microsoft Entra ID DS domain and when signing in to Microsoft Entra ID tenant.
 
-#### Task 3: Create a Microsoft Entra ID user with the Global Administrator role
+### Task 3: Create a Microsoft Entra ID user with the Global Administrator role
 
 In this task, you will add a new Microsoft Entra ID user and assign them to the Global Administrator role. 
 
@@ -191,15 +188,15 @@ In this task, you will add a new Microsoft Entra ID user and assign them to the 
 
    >**Note**: Record the user's password. You will need this later in this lab.
    
-1. Select **Next:Properties>**, in the **Usage Location** select **United States** <br>
+1. Select **Next:Properties>**. In the **Usage Location** select **United States**. <br>
 
     ![](../images/az-500(7).png)
 
-   Select **Next:Assignments>**, select **Add role** and Search **Global administrator**, click **Select**. <br>
+1. Select **Next:Assignments>** then select **Add role** and Search **Global administrator**, click **Select**. <br>
 
     ![](../images/az-500(8).png)
 
-1. Select **Review + Create** and then click **Create**
+1. Select **Review + Create** and then click **Create**.
 
     >**Note**: A Microsoft Entra ID user with the Global Administrator role is required in order to implement Microsoft Entra ID Connect.
 
@@ -213,7 +210,7 @@ In this task, you will add a new Microsoft Entra ID user and assign them to the 
 
    > **Result**: After you completed this exercise, you have created a Microsoft Entra ID tenant, added a custom DNS name to the new Microsoft Entra ID tenant, and created a Microsoft Entra ID user with the Global Administrator role.
 
-### Exercise 3: Synchronize Active Directory forest with an Microsoft Entra ID Directory tenant
+## Exercise 3: Synchronize Active Directory forest with an Microsoft Entra ID Directory tenant
 
 
 In this exercise, you will complete the following tasks:
@@ -222,11 +219,11 @@ In this exercise, you will complete the following tasks:
 - Task 2: Install Microsoft Entra ID Connect
 - Task 3: Verify directory synchronization
 
-#### Task 1: Prepare Microsoft Entra ID DS for directory synchronization
+### Task 1: Prepare Microsoft Entra ID DS for directory synchronization
 
-In this task, you will connect to the Azure VM running Microsoft Entra ID DS domain controller and create a directory synchronization account. 
+In this task, you will connect to the Azure VM running Microsoft Entra ID DS domain controller and create a directory synchronization account.
 
-   > Before you start this task, ensure that the template deployment you started in the first exercise of this lab has completed.
+   >**Note**: Before you start this task, ensure that the template deployment you started in the first exercise of this lab has completed.
 
 1. In the Azure portal, set the **Directory + subscription** filter to the Microsoft Entra ID tenant associated with the Azure subscription into which you deployed the Azure VM in the first exercise of this lab.
 
@@ -283,7 +280,7 @@ When prompted to authenticate, provide the following credentials and When the Re
     |Confirm Password|**Pa55w.rd1234**|
     |Select Other password options| Click **Password never expires**|
 
-#### Task 2: Install Microsoft Entra ID Connect
+### Task 2: Install Microsoft Entra ID Connect
 
 In this task, you will install AD Connect on the virtual machine. 
 
@@ -352,7 +349,7 @@ In this task, you will install AD Connect on the virtual machine.
 
 1. Review the information on the **Configuration complete** page and click **Exit** to close the **Microsoft Azure Active Directory Connect** window.
 
-#### Task 3: Verify directory synchronization
+### Task 3: Verify directory synchronization
 
 In this task, you will verify that directory synchronization is working. 
 
@@ -386,21 +383,20 @@ In this task, you will verify that directory synchronization is working.
 
     >**Note**: You might need to wait for another minute and refresh the page again if the **Department** attribute remains not set.
 
-> **Result**: After you completed this exercise, you have prepared AD DS for directory synchronization, installed Azure AD Connect, and verified directory synchronization.
+    > **Result**: After you completed this exercise, you have prepared AD DS for directory synchronization, installed Azure AD Connect, and verified directory synchronization.
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Review
 
-In this lab, you have:
+In this lab, you have completed:
 
 - Deployed an Azure VM hosting an Microsoft Entra ID domain controller.
 - Created and configure an Microsoft Entra ID Directory tenant
 - Synchronized Active Directory forest with an Microsoft Entra IDDirectory tenant
 
 ## You have successfully completed the lab
-
