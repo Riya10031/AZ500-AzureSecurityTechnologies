@@ -1,5 +1,4 @@
-# Lab 08: Azure Firewall
-# Student lab manual
+# Lab 08 - Azure Firewall
 
 ## Lab scenario
 
@@ -17,21 +16,15 @@ You have been asked to install Azure Firewall. This will help your organization 
 
 In this lab, you will complete the following exercise:
 
- - Exercise 1: Deploy and test an Azure Firewall
+ - Exercise 1: Deploy and test an Azure Firewall.
 
 ## Estimated timing: 40 minutes
-
-## Lab files:
-- **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\08\\template.json**
 
 ## Architecture diagram
 
 ![](../Labs/Lab-Scenario-Preview/media/AZ-500-LSP-Mod-2-2.png)
 
 ### Exercise 1: Deploy and test an Azure Firewall
-
-
-> For all the resources in this lab, we are using the **East (US)** region. Verify with your instructor this is region to use for you class. 
 
 In this exercise, you will complete the following tasks:
 
@@ -298,15 +291,14 @@ In this task, you will test the firewall to confirm that it works as expected.
 
 	> **Result:** You have successfully configured and tested the Azure Firewall.
 	
-	> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-	>- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-	>- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-	>- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-	>- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 ## Review
 
-In this lab, you have:
+In this lab, you have completed:
 
 - Used a template to deploy the lab environment. 
 - Deployed an Azure firewall.
