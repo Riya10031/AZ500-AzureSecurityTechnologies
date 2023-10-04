@@ -1,5 +1,4 @@
-# Lab 05: Microsoft Entra ID Privileged Identity Management
-# Student lab manual
+# Lab 05 - Microsoft Entra ID Privileged Identity Management
 
 ## Lab scenario
 
@@ -10,7 +9,7 @@ You have been asked to create a proof of concept that uses Azure Privileged Iden
 - Configure the Global Reader role activation to require an approval of the aaduser3 Microsoft Entra ID user
 - Configure an access review of the Global Reader role and review auditing capabilities.
 
-> For all the resources in this lab, we are using the **East US** region. Verify with your instructor this is the region to use for class. 
+    > For all the resources in this lab, we are using the **East US** region. Verify with your instructor this is the region to use for class. 
 
 ## Lab objectives
 
@@ -20,26 +19,24 @@ In this lab, you will complete the following exercises:
 - Exercise 2: Activate PIM roles with and without approval.
 - Exercise 3: Create an Access Review and review PIM auditing features.
 
+## Estimated timing: 40 minutes
+
 ## Architecture diagram
 
 ![](../Labs/Lab-Scenario-Preview/media/AZ-500-LSP-Mod-1b-2.png)
 
-## Estimated timing: 40 minutes
-
-### Exercise 1 - Configure PIM users and roles
-
+## Exercise 1 - Configure PIM users and roles
 
 In this exercise, you will complete the following tasks:
-
 - Task 1: Create a new Microsoft Entra ID tenant.
 - Task 2: Activate the Microsoft Entra ID Premium P2 trial.
 - Task 3: Create Microsoft Entra ID users and groups.
-- Task 4: Assign Microsoft Entra ID Premium P2 licenses to Microsoft Entra ID users
+- Task 4: Assign Microsoft Entra ID Premium P2 licenses to Microsoft Entra ID users.
 - Task 5: Make a user eligible for a role.
 - Task 6: Configure a role to require approval to activate and add an eligible member.
-- Task 7: Give a user permanent assignment to a role. 
+- Task 7: Give a user permanent assignment to a role.
 
-#### Task 1: Create a new Microsoft Entra ID tenant
+### Task 1: Create a new Microsoft Entra ID tenant
 
 In this task, you will create a new Microsoft Entra ID tenant. 
 
@@ -47,7 +44,7 @@ In this task, you will create a new Microsoft Entra ID tenant.
 
 2. On the blade displaying **Overview** of your current Microsoft Entra ID tenant, click on **Manage tenants**, and then on the next screen, click on **+ Create**.
    
-![](../images/AZ-500-MED-1.png)
+    ![](../images/AZ-500-MED-1.png)
    
 3. On the **Basics** tab of the **Create a tenant** blade, ensure that the option **Microsoft Entra ID** is selected and click on **Next: Configuration >**.
 4. On the **Configuration** tab of the **Create a tenant** blade, specify the following settings:
@@ -58,17 +55,17 @@ In this task, you will create a new Microsoft Entra ID tenant.
    |Initial domain name|a unique name consisting of a combination of letters and digits|
    |Country or region|**United States**|
 
->**Note**: Record the initial domain name. You will need it later in this lab.
+    >**Note**: Record the initial domain name. You will need it later in this lab.
 
 5. Click on **Review + Create** and then click on **Create**.
 
 6. Add Captcha code on **Help us prove you're not a robot** blade and then click on **Submit** button.
 
-![](../images/AZ-500-MED-2.png)
+    ![](../images/AZ-500-MED-2.png)
 
->**Note**: Wait for the new tenant to be created. Use the **Notification** icon to monitor the deployment status. 
+    >**Note**: Wait for the new tenant to be created. Use the **Notification** icon to monitor the deployment status. 
 
-#### Task 2: Activate Microsoft Entra ID Premium P2 trial
+### Task 2: Activate Microsoft Entra ID Premium P2 trial
 
 In this task, you will sign up for the Microsoft Entra ID Premium P2 free trial. 
 
@@ -76,9 +73,9 @@ In this task, you will sign up for the Microsoft Entra ID Premium P2 free trial.
 
 2. In the **Directories + subscriptions** blade, click on the newly created tenant, **AdatumLab500-04** and click on the **Switch** button to set it as the current directory.
 
-![](../Labs/images/az-500ss-1.7.0-1.png)
+    ![](../Labs/images/az-500ss-1.7.0-1.png)
 
->**Note**: You may need to refresh the browser window if the **AdatumLab500-04** entry does not appear in the **Directories + subscriptions** filter list.
+    >**Note**: You may need to refresh the browser window if the **AdatumLab500-04** entry does not appear in the **Directories + subscriptions** filter list.
 
 3. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Microsoft Entra ID** and press the **Enter** key. On the **AdatumLab500-04** blade, in the **Manage** section, click on **Licenses**.
 
@@ -86,13 +83,13 @@ In this task, you will sign up for the Microsoft Entra ID Premium P2 free trial.
 
 5. On the **Activate** blade, in the **Microsoft Entra ID P2** section, click on **Free Trial** and then click on **Activate**.
 
-#### Task 3: Create Microsoft Entra ID users
+### Task 3: Create Microsoft Entra ID users
 
 1. Navigate back to the **AdatumLab500-04** Microsoft Entra ID blade and, in the **Manage** section, click on **Users**.
 
 2. On the **Users \| All users** blade, click on **+ New User** and then from the drop-down menu select **Create new user**
 
-![](../Labs/images/az-500ss1.8.0.png)
+    ![](../Labs/images/az-500ss1.8.0.png)
 
 3. On the **Create new user** blade, in **basics** tab specify the following settings (leave all others with their default values):
 
@@ -133,7 +130,7 @@ In this task, you will sign up for the Microsoft Entra ID Premium P2 free trial.
 
     >**Note**: At this point, you should have three users listed on the **Users** page. 
 
-#### Task 4: Assign Microsoft Entra ID Premium P2 licenses to Microsoft Entra ID users
+### Task 4: Assign Microsoft Entra ID Premium P2 licenses to Microsoft Entra ID users
 
 In this task, you will assign each user to the Microsoft Entra ID Premium P2 license.
 
@@ -155,7 +152,7 @@ In this task, you will assign each user to the Microsoft Entra ID Premium P2 lic
 
     >**Note**: At this point, you assigned Microsoft Entra ID P2 license to all user accounts you will be using in this lab. Be sure to sign out and then sign back in. 
 
-#### Task 5: Make a user eligible for a role
+### Task 5: Make a user eligible for a role
 
 In this task, you will make a user eligible for an Azure AD directory role.
 
@@ -169,7 +166,7 @@ In this task, you will make a user eligible for an Azure AD directory role.
 
 5. On the **Add assignments** blade, in the **Select role** drop-down, select **Billing Administrator**.
 
-![](../Labs/images/az-500task-5(3).png)
+    ![](../Labs/images/az-500task-5(3).png)
 
 6. Click the **No member selected** link, on the **Select a member** blade, click on **aaduser2**, and then click on **Select**.
 
@@ -182,10 +179,10 @@ In this task, you will make a user eligible for an Azure AD directory role.
 10. Back on the **AdatumLab500-04 \| Assignments** blade, note the tabs for **Eligible assignments**, **Active assignments**, and **Expired assignments**.
 
 11. Verify on the **Eligible assignments** tab that **aaduser2** is shown as a **Billing administrator**.
-
+ 
     >**Note**: During sign-in, aaduser2 will be eligible to use the Billing administrator role. 
 
-#### Task 6: Configure a role to require approval to activate and add an eligible member
+### Task 6: Configure a role to require approval to activate and add an eligible member
 
 1. In the Azure Portal, navigate back to the **Azure AD Privileged Identity Management** blade and click on **Azure AD roles**.
 
@@ -223,7 +220,7 @@ In this task, you will make a user eligible for an Azure AD directory role.
 
     >**Note**: User aaduser2 is eligible for the Global Reader role. 
  
-#### Task 7: Give a user permanent assignment to a role
+### Task 7: Give a user permanent assignment to a role
 
 1. In the Azure Portal, navigate back to the **Azure AD Privileged Identity Management** blade and click on **Azure AD roles**.
 
@@ -247,16 +244,16 @@ In this task, you will make a user eligible for an Azure AD directory role.
 
     >**Note**: User aaduser2 is now permanently eligible for the Security Administrator role.
 	
-### Exercise 2 - Activate PIM roles with and without approval
+## Exercise 2 - Activate PIM roles with and without approval
 
-#### Estimated timing: 15 minutes
+## Estimated timing: 15 minutes
 
 In this exercise, you will complete the following tasks:
 
 - Task 1: Activate a role that does not require approval. 
 - Task 2: Activate a role that requires approval. 
 
-#### Task 1: Activate a role that does not require approval
+### Task 1: Activate a role that does not require approval
 
 In this task, you will activate a role that does not require approval.
 
@@ -305,9 +302,9 @@ In this task, you will activate a role that does not require approval.
 
 12.  On the **Deactivate - Billing Administrator** blade, click on **Deactivate** again to confirm.
 
-   >**Note:** if it says **Deactivate role failed**, then you have to wait for 5 mins, and perform the step 11-12 again.
+     >**Note:** if it says **Deactivate role failed**, then you have to wait for 5 mins, and perform the step 11-12 again.
 
-#### Task 2: Activate a role that requires approval
+### Task 2: Activate a role that requires approval
 
 In this task, you will activate a role that requires approval.
 
@@ -369,18 +366,18 @@ In this task, you will activate a role that requires approval.
 
 22. Sign out and close the InPrivate browser window.
 
-> **Result**: You have practiced activating PIM roles with and without approval. 
+    > **Result**: You have practiced activating PIM roles with and without approval. 
 
-### Exercise 3 - Create an Access Review and review PIM auditing features
+## Exercise 3 - Create an Access Review and review PIM auditing features
 
-#### Estimated timing: 10 minutes
+## Estimated timing: 10 minutes
 
 In this exercise, you will complete the following tasks:
 
 - Task 1: Configure security alerts for Azure AD directory roles in PIM
 - Task 2: Review PIM alerts, summary information, and detailed audit information
 
-#### Task 1: Configure security alerts for Azure AD directory roles in PIM
+### Task 1: Configure security alerts for Azure AD directory roles in PIM
 
 In this task, you will reduce the risk associated with "stale" role assignments. You will do this by creating a PIM access review to ensure that assigned roles are still valid. Specifically, you will review the Global Reader role. 
 
@@ -436,7 +433,7 @@ In this task, you will reduce the risk associated with "stale" role assignments.
 
 18. Select the entry representing the **Global Reader** review. Note that the **Progress** chart. 
 
-#### Task 2: Review PIM alerts, summary information, and detailed audit information 
+### Task 2: Review PIM alerts, summary information, and detailed audit information 
 
 In this task, you will review PIM alerts, summary information, and detailed audit information. 
 
@@ -456,17 +453,18 @@ In this task, you will review PIM alerts, summary information, and detailed audi
 
 7. Notice you can retrieve detailed information, including **Time**, **Requestor**, **Action**, **Resource name**, **Scope**, **Primary Target** and **Subject**. 
 
-> **Result:** You have configured an access review and reviewed audit information.
+    > **Result:** You have configured an access review and reviewed audit information.
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 
 ## Review
 
-In this lab, you have:
+In this lab, you have completed:
 
 - Configured PIM users and roles.
 - Activated PIM roles with and without approval.
