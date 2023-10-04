@@ -1,5 +1,4 @@
-# Lab 12: Service Endpoints and Securing Storage
-# Student lab manual
+# Lab 12 - Service Endpoints and Securing Storage
 
 ## Lab scenario
 
@@ -15,29 +14,28 @@ You have been asked to create a proof of concept to demonstrate securing Azure f
 
 In this lab, you will complete the following exercise:
 
-- Exercise 1: Service endpoints and security storage
+- Exercise 1: Service endpoints and security storage.
+
+## Estimated timing: 60 minutes
 
 ## Architecture diagram
 
 ![](../Labs/Lab-Scenario-Preview/media/AZ-500-LSP-Mod-3-3.png)
 
-## Estimated timing: 60 minutes
-
-### Exercise 1: Service endpoints and security storage
-
+## Exercise 1: Service endpoints and security storage
 
 In this exercise, you will complete the following tasks:
 
-- Task 1: Create a virtual network
-- Task 2: Add a subnet to the virtual network and configure a storage endpoint
-- Task 3: Configure a network security group to restrict access to the subnet
-- Task 4: Configure a network security group to allow rdp on the public subnet
-- Task 5: Create a storage account with a file share
-- Task 6: Deploy virtual machines into the designated subnets
-- Task 7: Test the storage connection from the private subnet to confirm that access is allowed
-- Task 8: Test the storage connection from the public subnet to confirm that access is denied 
+- Task 1: Create a virtual network.
+- Task 2: Add a subnet to the virtual network and configure a storage endpoint.
+- Task 3: Configure a network security group to restrict access to the subnet.
+- Task 4: Configure a network security group to allow rdp on the public subnet.
+- Task 5: Create a storage account with a file share.
+- Task 6: Deploy virtual machines into the designated subnets.
+- Task 7: Test the storage connection from the private subnet to confirm that access is allowed.
+- Task 8: Test the storage connection from the public subnet to confirm that access is denied. 
 
-#### Task 1: Create a virtual network
+### Task 1: Create a virtual network
 
 In this task, you will create a virtual network.
 
@@ -65,7 +63,7 @@ In this task, you will create a virtual network.
 
 1. On the **Review + create** tab of the **Create virtual network** blade, click **Create**.
 
-#### Task 2: Add a subnet to the virtual network and configure a storage endpoint
+### Task 2: Add a subnet to the virtual network and configure a storage endpoint
 
 In this task, you will create another subnet and enable a service endpoint on that subnet. Service endpoints are enabled per service, per subnet. 
 
@@ -89,15 +87,15 @@ In this task, you will create another subnet and enable a service endpoint on th
 
     >**Note**: The virtual network now has two subnets: Public and Private. 
 	
-#### Task 3: Configure a network security group to restrict access to the subnet
+### Task 3: Configure a network security group to restrict access to the subnet
 
 In this task, you will create a network security group with two outbound security rules (Storage and internet) and one inbound security rule (RDP). You will also associate the network security group with the Private subnet. This will restrict outbound traffic from Azure VMs connected to that subnet.
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Network security groups** and press the **Enter** key.
 
-1. On the **Network security groups** blade, click **+ Create**.
+2. On the **Network security groups** blade, click **+ Create**.
 
-1. On the **Basics** tab of the **Create network security group** blade, specify the following settings: 
+3. On the **Basics** tab of the **Create network security group** blade, specify the following settings: 
 
     |Setting|Value|
     |---|---|
@@ -106,17 +104,17 @@ In this task, you will create a network security group with two outbound securit
     |Name|**myNsgPrivate**|
     |Region|**East US**|
 
-1. Click **Review + create** and then click **Create**.
+4. Click **Review + create** and then click **Create**.
 
     >**Note**: In the next steps, you will create an outbound security rule that allows communication to the Azure Storage service. 
 
-1. In the Azure portal, navigate back to the **Network security groups** blade and click the **myNsgPrivate** entry.
+5. In the Azure portal, navigate back to the **Network security groups** blade and click the **myNsgPrivate** entry.
 
-1. On the **myNsgPrivate** blade, in the **Settings** section, click **Outbound security rules**.
+6. On the **myNsgPrivate** blade, in the **Settings** section, click **Outbound security rules**.
 
-1. On the **myNsgPrivate \| Outbound security rules** blade, click **+ Add**.
+7. On the **myNsgPrivate \| Outbound security rules** blade, click **+ Add**.
 
-1. On the **Add outbound security rule** blade, specify the following settings to explicitly allow outbound traffic to Azure Storage (leave all other values with their default settings): 
+8. On the **Add outbound security rule** blade, specify the following settings to explicitly allow outbound traffic to Azure Storage (leave all other values with their default settings): 
 
     |Setting|Value|
     |---|---|
@@ -131,13 +129,13 @@ In this task, you will create a network security group with two outbound securit
     |Priority|**1000**|
     |Name|**Allow-Storage-All**|
 
-![image](../images/lab12-1.png)
+    ![image](../images/lab12-1.png)
 
-1. On the **Add outbound security rule** blade, click **Add** to create the new outbound rule. 
+9. On the **Add outbound security rule** blade, click **Add** to create the new outbound rule. 
 
-1. On the **myNsgPrivate** blade, in the **Settings** section, click **Outbound security rules**, and then click **+ Add**.
+10. On the **myNsgPrivate** blade, in the **Settings** section, click **Outbound security rules**, and then click **+ Add**.
 
-1. On the **Add outbound security rule** blade, specify the following settings to explicitly deny outbound traffic to Internet (leave all other values with their default settings): 
+11. On the **Add outbound security rule** blade, specify the following settings to explicitly deny outbound traffic to Internet (leave all other values with their default settings): 
 
     |Setting|Value|
     |---|---|
@@ -152,13 +150,13 @@ In this task, you will create a network security group with two outbound securit
     |Priority|**1100**|
     |Name|**Deny-Internet-All**|
 
-![image](../images/lab12-2.png)
+    ![image](../images/lab12-2.png)
    
-1. On the **Add outbound security rule** blade, click **Add** to create the new outbound rule. 
+12. On the **Add outbound security rule** blade, click **Add** to create the new outbound rule. 
 
-1. On the **myNsgPrivate** blade, in the **Settings** section, click **Inbound security rules** and then click **+ Add**.
+13. On the **myNsgPrivate** blade, in the **Settings** section, click **Inbound security rules** and then click **+ Add**.
 
-1. On the **Add inbound security rule** blade, specify the following settings (leave all other values with their default values): 
+14. On the **Add inbound security rule** blade, specify the following settings (leave all other values with their default values): 
 
     |Setting|Value|
     |---|---|
@@ -172,20 +170,20 @@ In this task, you will create a network security group with two outbound securit
     |Priority|**1200**|                                                    
     |Name|**Allow-RDP-All**|
 
-![image](../images/lab12-3.png)
+    ![image](../images/lab12-3.png)
 
-1. On the **Add inbound security rule** blade, click **Add** to create the new inbound rule. 
+15. On the **Add inbound security rule** blade, click **Add** to create the new inbound rule. 
 
     >**Note**: Now you will associate the network security group with the Private subnet.
 
-1. On the **Subnets** blade, select **+ Associate** and specify the following settings in the **Associate subnet** section and then click **OK**:
+16. On the **Subnets** blade, select **+ Associate** and specify the following settings in the **Associate subnet** section and then click **OK**:
 
     |Setting|Value|
     |---|---|
     |Virtual network|**myVirtualNetwork**|
     |Subnet|**Private**|
     
-#### Task 4: Configure a network security group to allow rdp on the public subnet
+### Task 4: Configure a network security group to allow rdp on the public subnet
 
 In this task, you will create a network security group with one inbound security rule (RDP). You will also associate the network security group with the Public subnet. This will allow RDP access to the Public VM.
 
@@ -235,7 +233,7 @@ In this task, you will create a network security group with one inbound security
     |Virtual network|**myVirtualNetwork**|
     |Subnet|**Public**|
 
-#### Task 5: Create a storage account with a file share
+### Task 5: Create a storage account with a file share
 
 In this task, you will create a storage account with a file share and obtain the storage account key.  
 
@@ -284,7 +282,7 @@ In this task, you will create a storage account with a file share and obtain the
 
 13. On the **Connect** blade, on the **Windows** tab, click on **Show Script** and copy the PowerShell script that creates a Z drive mapping to the file share. 
 
-![image](../images/lab12-4.png)
+    ![image](../images/lab12-4.png)
 
  >**Note**: Record this script. You will need this in a later in this lab in order to map the file share from the Azure virtual machine on the **Private** subnet.
 
@@ -292,7 +290,7 @@ In this task, you will create a storage account with a file share and obtain the
 	
 15. Under **Firewalls and virtual networks** blade, select the **Enabled from selected virtual networks and IP addresses** option and click the **+ Add existing virtual network** link. 
 
-![image](../images/lab12-5.png)
+    ![image](../images/lab12-5.png)
 
 16. On the **Add networks** blade, specify the following settings:
 
@@ -308,7 +306,7 @@ In this task, you will create a storage account with a file share and obtain the
 
     >**Note**: At this point in the lab you have configured a virtual network, a network security group, and a storage account with a file share. 
 
-#### Task 6: Deploy virtual machines into the designated subnets
+### Task 6: Deploy virtual machines into the designated subnets
 
 In this task, you will create two virtual machines one in the Private subnet and one in the Public subnet. 
 
@@ -384,7 +382,7 @@ In this task, you will create two virtual machines one in the Private subnet and
 
     >**Note**: You can continue to the next task once the deployment of the **myVMPrivate** Azure VM is completed.
 
-#### Task 7: Test the storage connection from the private subnet to confirm that access is allowed
+### Task 7: Test the storage connection from the private subnet to confirm that access is allowed
 
 In this task, you will connect to the myVMPrivate virtual machine via Remote Desktop and map a drive to the file share. 
 
@@ -403,9 +401,9 @@ In this task, you will connect to the myVMPrivate virtual machine via Remote Des
 
 In the pop that follows, click on **Yes**.
 
-    >**Note**: Wait for the Remote Desktop session to open and Server Manager to load.
+>**Note**: Wait for the Remote Desktop session to open and Server Manager to load.
 
-    >**Note**: You will now map drive Z to an Azure File share within the Remote Desktop session to a Windows Server 2022 computer
+>**Note**: You will now map drive Z to an Azure File share within the Remote Desktop session to a Windows Server 2022 computer
 
 5. Within the Remote Desktop session to **myVMPrivate**, click **Start** and then click **Windows PowerShell ISE**.
 
@@ -438,7 +436,7 @@ In the pop that follows, click on **Yes**.
 
     >**Note**: At this point, you have confirmed that the virtual machine in the Private subnet can access the storage account. 
 
-####  Task 8: Test the storage connection from the public subnet to confirm that access is denied 
+###  Task 8: Test the storage connection from the public subnet to confirm that access is denied 
 
 1. Navigate back to the **Virtual machines** blade. 
 
@@ -477,13 +475,13 @@ In the pop that follows, click on **Yes**.
 
      >**Note**: At this point, you have confirmed that the virtual machine in the Public subnet cannot access the storage account, but has access to the internet.
     
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Review
+### Review
 
 In this lab, you have:
 
@@ -496,5 +494,5 @@ In this lab, you have:
 - Tested the storage connection from the private subnet to confirm that access is allowed.
 - Tested the storage connection from the public subnet to confirm that access is denied.
 
-## You have successfully completed the lab
+### You have successfully completed the lab
 
