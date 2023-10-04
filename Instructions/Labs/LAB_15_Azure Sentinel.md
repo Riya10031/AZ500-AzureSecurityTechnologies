@@ -1,5 +1,4 @@
-# Lab 15: Microsoft Sentinel
-# Student lab manual
+# Lab 15 - Microsoft Sentinel
 
 ## Lab scenario
 
@@ -19,16 +18,11 @@ In this lab, you will complete the following exercise:
 
 ## Estimated timing: 30 minutes
 
-
-## Lab files:
-
-- **\\C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\\15\\changeincidentseverity.json**
-
 ## Architecture diagram
 
 ![](../Labs/Lab-Scenario-Preview/media/AZ-500-LSP-Mod-4-3.png)
 
-### Exercise 1: Implement Microsoft Sentinel
+## Exercise 1: Implement Microsoft Sentinel
 
 
 In this exercise, you will complete the following tasks:
@@ -40,7 +34,7 @@ In this exercise, you will complete the following tasks:
 - Task 5: Create a custom alert and configure the playbook as an automated response.
 - Task 6: Invoke an incident and review the associated actions.
 
-#### Task 1: On-board Microsoft Sentinel
+### Task 1: On-board Microsoft Sentinel
 
 In this task, you will on-board Microsoft Sentinel and connect the Log Analytics workspace. 
 
@@ -54,7 +48,7 @@ In this task, you will on-board Microsoft Sentinel and connect the Log Analytics
 
     >**Note**: Microsoft Sentinel has very specific requirements for workspaces. For example, workspaces created by Azure Security Center can not be used. Read more at [Quickstart: On-board Azure Sentinel](https://docs.microsoft.com/en-us/azure/sentinel/quickstart-onboard)
 	
-#### Task 2: Configure Microsoft Sentinel to use the Azure Activity data connector 
+### Task 2: Configure Microsoft Sentinel to use the Azure Activity data connector 
 
 In this task, you will configure Sentinel to use the Azure Activity data connector.  
 
@@ -92,7 +86,7 @@ In this task, you will configure Sentinel to use the Azure Activity data connect
 
     >**Note**: It may take over 15 minutes before the Status shows "Connected" and the graph displays Data received.
 
-#### Task 3: Create a rule that uses the Azure Activity data connector 
+### Task 3: Create a rule that uses the Azure Activity data connector 
 
 In this task, you will review and create a rule that uses the Azure Activity data connector. 
 
@@ -120,7 +114,7 @@ In this task, you will review and create a rule that uses the Azure Activity dat
 
     >**Note**: You now have an active rule.
 
-#### Task 4: Create a playbook
+### Task 4: Create a playbook
 
 In this task, you will create a playbook. A security playbook is a collection of tasks that can be invoked by Microsoft Sentinel in response to an alert. 
 
@@ -172,7 +166,7 @@ In this task, you will create a playbook. A security playbook is a collection of
 
 1. On the **Logic Apps Designer** blade, click **Save** to save your changes.
 
-#### Task 5: Create a custom alert and configure a playbook as an automated response
+### Task 5: Create a custom alert and configure a playbook as an automated response
 
 1. In the Azure portal, navigate back to the **Microsoft Sentinel \| Overview** blade.
 
@@ -214,7 +208,7 @@ In this task, you will create a playbook. A security playbook is a collection of
 
     >**Note**: You now have a new active rule called **Playbook Demo**. If an event identified by the rue logic occurs, it will result in a medium severity alert, which will generate a corresponding incident.
 
-#### Task 6: Invoke an incident and review the associated actions
+### Task 6: Invoke an incident and review the associated actions
 
 1. In the Azure portal, navigate to the **Microsoft Defender for Cloud \| Overview** blade.
 
@@ -254,9 +248,9 @@ In this task, you will create a playbook. A security playbook is a collection of
 	>- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 	>- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 	
-## Review
+### Review
 
-In this lab, you have:
+In this lab, you have completed:
 
 - On-boarded Microsoft Sentinel.
 - Connected Azure Activity to Sentinel.
@@ -265,6 +259,4 @@ In this lab, you have:
 - Created a custom alert and configure the playbook as an automated response.
 - Invoked an incident and review the associated actions.
 
-## You have successfully completed the lab
-
-
+### You have successfully completed the lab
