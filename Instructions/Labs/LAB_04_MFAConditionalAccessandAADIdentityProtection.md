@@ -29,7 +29,7 @@ In this lab, you will complete the following exercises:
 In this exercise, you will complete the following tasks
 
 - Task 1: Create a new Microsoft Entra ID tenant.
-- Task 2: Activate the Microsoft Entra ID P2 trial.
+- Task 2: Activate the Microsoft Entra ID P2 trial license.
 - Task 3: Create Microsoft Entra ID users and groups.
 - Task 4: Assign Microsoft Entra ID P2 licenses to Microsoft Entra ID users.
 - Task 5: Configure Azure MFA settings.
@@ -53,13 +53,13 @@ In this task, you will create a new Microsoft Entra ID tenant.
    |Initial domain name|a unique name consisting of a combination of letters and digits|
    |Country or region|**United States**|
 
->**Note**: Record the initial domain name. You will need it later in this lab.
+   >**Note**: Record the initial domain name. You will need it later in this lab.
 
 5. Click on **Review + Create** and then click on **Create**.
 
 6. Add Captcha code on **Help us prove you're not a robot** blade and then click on **Submit** button.
 
->**Note**: Wait for the new tenant to be created. Use the **Notification** icon to monitor the deployment status. 
+   >**Note**: Wait for the new tenant to be created. Use the **Notification** icon to monitor the deployment status. 
 
 
 ### Task 2: Activate Microsoft Entra ID P2 trial
@@ -68,11 +68,11 @@ In this task, you will sign up for the Microsoft Entra ID P2 free trial.
 
 1. In the Azure portal, in the toolbar, click on the **Directories + subscriptions** icon, located to the right of the Cloud Shell icon.
 
-![image](../images/lab4.1.png)
+   ![image](../images/lab4.1.png)
 
 2. In the **Directories + subscriptions** blade, click on the newly created tenant, **AdatumLab500-04** and click on the **Switch** button to set it as the current directory.
 
->**Note**: You may need to refresh the browser window if the **AdatumLab500-04** entry does not appear in the **Directories + subscriptions** filter list.
+   >**Note**: You may need to refresh the browser window if the **AdatumLab500-04** entry does not appear in the **Directories + subscriptions** filter list.
 
 3. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Microsoft Entra ID** and press the **Enter** key. On the **AdatumLab500-04** blade, in the **Manage** section, click on **Licenses**.
 
@@ -80,8 +80,7 @@ In this task, you will sign up for the Microsoft Entra ID P2 free trial.
 
 5. On the **Activate** blade, in the **Microsoft Entra ID P2** section, click on **Free Trial** and then click on **Activate**.
 
-![image](../images/e1t2s5.png)
-
+   ![image](../images/e1t2s5.png)
 
 ### Task 3: Create Microsoft Entra ID users and groups
 
@@ -93,24 +92,24 @@ In this task, you will create three users: aaduser1 (Global Admin), aaduser2 (us
 
 3. On the **New user** blade, ensure that the **Create user** option is selected, specify the following settings (leave all others with their default values) and click on **Create**:
 
-  |Setting|Value|
+   |Setting|Value|
    |---|---|
    |User principal name|**aaduser1**|
    |Display Name|**aaduser1**|
    |Password|Ensure that the option **Auto-generate password** is selected then Copy to clipboard and Save the password|
 
 
-![image](../images/lab4-3.png)
+   ![image](../images/lab4-3.png)
 
 
-Then Select **Next:Properties**. In the **Usage Location** select **United States**.Select **Next:Assignments**. Select **Add role**. Search **Global administrator**, and click **Select**. <br>
-Then. Select **Review+create** and **Create**.
+Then Select **Next:Properties**. In the **Usage Location** select **United States**. Then, Select **Next:Assignments** and Select **Add role**. Search **Global administrator**, and click **Select**. <br>
+Then, Select **Review+create** and **Create**.
 
-![image](../images/lab4-4.png)
+   ![image](../images/lab4-4.png)
 
->**Note**: Record the full user name. You can copy its value by clicking the **Copy to clipboard** button on the right hand side of the drop-down list displaying the domain name. 
+   >**Note**: Record the full user name. You can copy its value by clicking the **Copy to clipboard** button on the right hand side of the drop-down list displaying the domain name. 
 
->**Note**: Record the user's password. You will need this later in this lab. 
+   >**Note**: Record the user's password. You will need this later in this lab. 
 
 4. Back on the **Users \| All users** blade, click on **+ New User** and then from the drop-down menu select **Create new user**.
 
@@ -124,7 +123,7 @@ Then. Select **Review+create** and **Create**.
    
    Then Select **Next:Properties**. In the **Usage Location** select **United States**.Then. Select **Review+create** and **Create**.
 
->**Note**: Record the full user name and the password.
+   >**Note**: Record the full user name and the password.
 
 6. Back on the **Users \| All users** blade, click on **+ New User** and then from the drop-down menu select **Create new user**. 
 
@@ -138,9 +137,9 @@ Then. Select **Review+create** and **Create**.
    
    Then Select **Next:Properties**. In the **Usage Location** select **United States**.Then. Select **Review+create** and **Create**.
 
->**Note**: Record the full user name and the password.
+   >**Note**: Record the full user name and the password.
 
->**Note**: At this point, you should have three new users listed on the **Users** page. 
+   >**Note**: At this point, you should have three new users listed on the **Users** page. 
 	
 ### Task 4: Assign Microsoft Entra ID P2 licenses to Microsoft Entra ID users
 
@@ -164,7 +163,7 @@ In this task, you will assign each user to the Microsoft Entra ID P2 license.
 
 1. Sign out from the Azure portal and sign back in using the same account. This step is necessary in order for the license assignment to take effect.
 
->**Note**: At this point, you assigned Microsoft Entra ID P2 licenses to all user accounts you will be using in this lab. Be sure to sign out and then sign back in. 
+   >**Note**: At this point, you assigned Microsoft Entra ID P2 licenses to all user accounts you will be using in this lab. Be sure to sign out and then sign back in. 
 
 ### Task 5: Configure Azure MFA settings
 
@@ -172,7 +171,7 @@ In this task, you will configure MFA and enable MFA for aaduser1.
 
 1. In the Azure portal, navigate back to the **AdatumLab500-04** Microsoft Entra ID tenant blade.
 
->**Note**: Make sure you are using the AdatumLab500-04 Microsoft Entra ID tenant.
+   >**Note**: Make sure you are using the AdatumLab500-04 Microsoft Entra ID tenant.
 
 2. On the **AdatumLab500-04** Microsoft Entra ID tenant blade, in the **Manage** section, click on **Security**.
 
@@ -180,21 +179,21 @@ In this task, you will configure MFA and enable MFA for aaduser1.
 
 4. On the **Multi-Factor Authentication \| Getting started** blade, click on the **Additional cloud-based Multifactor authentication settings** link. 
 
->**Note**: This will open a new browser tab, displaying **multi-factor authentication** page.
+   >**Note**: This will open a new browser tab, displaying **multi-factor authentication** page.
 
 5. On the **multi-factor authentication** page, click on the **service settings** tab. Review **verification options**. Note that **Text message to phone**, **Notification through mobile app**, and **Verification code from mobile app or hardware token** are enabled. Click on **Save** and then click on **close**.
 
-![image](../images/lab4-5.png)
+   ![image](../images/lab4-5.png)
 
 6. On the **multi-factor authentication** page, switch to the **users** tab, click on **aaduser1** entry, click on the **Enable** link on the right-side, and, when prompted, click on **enable multi-factor auth** and then click on **close**.
 
-![image](../images/lab4-6.png)
+   ![image](../images/lab4-6.png)
 
 7. Notice the **Multi-Factor Auth status** column for **aaduser1** is now **Enabled**.
 
 8. Again click on **aaduser1** and notice that, at this point, you also have the **Enforce** option on the right-side. 
 
->**Note**: Changing the user status from Enabled to Enforced impacts only legacy Microsoft Entra ID integrated apps which do not support Azure MFA and, once the status changes to Enforced, require the use of app passwords.
+   >**Note**: Changing the user status from Enabled to Enforced impacts only legacy Microsoft Entra ID integrated apps which do not support Azure MFA and, once the status changes to Enforced, require the use of app passwords.
 
 9. Again with the **aaduser1** entry selected, click on **Manage user settings** and review the available options: 
 
@@ -218,13 +217,13 @@ In this task, you will configure MFA and enable MFA for aaduser1.
 
 14. Click on **Save**
 
->**Note**: At this point, you have enabled MFA for aaduser1 and setup fraud alert settings. 
+   >**Note**: At this point, you have enabled MFA for aaduser1 and setup fraud alert settings. 
 
 15. Navigate back to the **AdatumLab500-04** Microsoft Entra ID tenant blade, in the **Manage** section, click on **Properties**, next click on the **Manage Security defaults** link at the bottom of the blade, on the **Security defaults** blade, in the security defaults dropdown select **Disabled**. Select **My Organization is using Conditonal Access** as the reason and and then click on **Save** and **Disable**.
 
-![image](../images/lab4-7.png)
+   ![image](../images/lab4-7.png)
 
->**Note**: Ensure that you are signed-in to the **AdatumLab500-04** Microsoft Entra ID tenant. You can use the **Directories + subscriptions** filter to switch between Microsoft Entra ID tenants. Ensure you are signed in as a user with the Global Administrator role in the Microsoft Entra ID tenant.
+   >**Note**: Ensure that you are signed-in to the **AdatumLab500-04** Microsoft Entra ID tenant. You can use the **Directories + subscriptions** filter to switch between Microsoft Entra ID tenants. Ensure you are signed in as a user with the Global Administrator role in the Microsoft Entra ID tenant.
 
 ### Task 6: Validate MFA configuration
 
@@ -234,11 +233,11 @@ In this task, you will validate the MFA configuration by testing the sign in of 
 
 2. Navigate to the Azure portal and sign in using the **aaduser1** user account. 
 
->**Note**: To sign in you will need to provide a fully qualified name of the **aaduser1** user account, including the Microsoft Entra ID tenant DNS domain name, which you recorded earlier in this lab. This user name is in the format aaduser1@`<your_tenant_name>`.onmicrosoft.com, where `<your_tenant_name>` is the placeholder representing your unique Microsoft Entra ID tenant name. 
+   >**Note**: To sign in you will need to provide a fully qualified name of the **aaduser1** user account, including the Microsoft Entra ID tenant DNS domain name, which you recorded earlier in this lab. This user name is in the format aaduser1@`<your_tenant_name>`.onmicrosoft.com, where `<your_tenant_name>` is the placeholder representing your unique Microsoft Entra ID tenant name. 
 
 3. When prompted, in the **More information required** dialog box, click on **Next**.
 
->**Note**: The browser session will be redirected to the **Additional security verification** page.
+   >**Note**: The browser session will be redirected to the **Additional security verification** page.
 
 4. On the **Keep your account secure** page, select the **I want to set up a different method** link, in the **Which method would you like to use?** drop-down list, select **Phone**, and select **Confirm**.
 
@@ -254,12 +253,12 @@ In this task, you will validate the MFA configuration by testing the sign in of 
 
 10. Sign out as **aaduser1** and close the InPrivate browser window.
 
-> **Result**: You have created a new Microsoft Entra ID tenant, configured Microsoft Entra ID users, configured MFA, and tested the MFA experience for a user. 
+   > **Result**: You have created a new Microsoft Entra ID tenant, configured Microsoft Entra ID users, configured MFA, and tested the MFA experience for a user. 
 
 ## Exercise 2: Implement Microsoft Entra ID Conditional Access Policies 
 
 
-In this exercise, you will complete the following tasks 
+In this exercise, you will complete the following tasks: 
 - Task 1: Configure a conditional access policy.
 - Task 2: Test the conditional access policy.
 
@@ -293,11 +292,11 @@ In this task, you will review conditional access policy settings and create a po
 	
    - Set the **Enable policy** to **On**.
 
->**Note**: Review the warning that this policy impacts access to the Azure Portal.
+   >**Note**: Review the warning that this policy impacts access to the Azure Portal.
 
 6. On the **New** blade, click on **Create**. 
 
->**Note**: At this point, you have a conditional access policy that requires MFA to sign in to the Azure portal. 
+   >**Note**: At this point, you have a conditional access policy that requires MFA to sign in to the Azure portal. 
 
 ### Task 2 - Test the conditional access policy
 
@@ -309,7 +308,7 @@ In this task, you will sign in to the Azure portal as **aaduser2** and verify MF
 
 3. When prompted, in the **More information required** dialog box, click on **Next**.
 
->**Note**: The browser session will be redirected to the **Keep your account secure** page.
+   >**Note**: The browser session will be redirected to the **Keep your account secure** page.
     
 4. On the **Keep your account secure** page, select the **I want to set up a different method** link, in the **Which method would you like to use?** drop-down list, select **Phone**, and select **Confirm**.
 
@@ -327,7 +326,7 @@ In this task, you will sign in to the Azure portal as **aaduser2** and verify MF
 
 11. Sign out as **aaduser2** and close the InPrivate browser window.
 
->**Note**: You have now verified that the newly created conditional access policy enforces MFA when aaduser2 signs into the Azure portal.
+   >**Note**: You have now verified that the newly created conditional access policy enforces MFA when aaduser2 signs into the Azure portal.
 
 12. Back in the browser window displaying the Azure portal, navigate back to the **AdatumLab500-04** Microsoft Entra ID tenant blade.
 
@@ -337,9 +336,9 @@ In this task, you will sign in to the Azure portal as **aaduser2** and verify MF
 
 15. On the **Conditional Access \| Policies** blade, click on the ellipsis next to **AZ500Policy1**, click on **Delete**, and, when prompted to confirm, click on **Yes**.
 
->**Note**: Result: In this exercise you implement a conditional access policy to require MFA when a user signs into the Azure portal. 
+   >**Note**: Result: In this exercise you implement a conditional access policy to require MFA when a user signs into the Azure portal. 
 
-> **Result**: You have configured and tested Microsoft Entra ID conditional access.
+   > **Result**: You have configured and tested Microsoft Entra ID conditional access.
 
 ## Exercise 3: Implement Microsoft Entra ID Identity Protection
 
@@ -358,7 +357,7 @@ In this task, you will view the Microsoft Entra ID Identity Protection options i
 
 1. If needed, sign-in to the Azure portal **`https://portal.azure.com/`**.
 
->**Note**: Ensure that you are signed-in to the **AdatumLab500-04** Microsoft Entra ID tenant. You can use the **Directory + subscription** filter to switch between Microsoft Entra ID tenants. Ensure you are signed in as a user with the Global Administrator role in the Microsoft Entra ID tenant.
+   >**Note**: Ensure that you are signed-in to the **AdatumLab500-04** Microsoft Entra ID tenant. You can use the **Directory + subscription** filter to switch between Microsoft Entra ID tenants. Ensure you are signed in as a user with the Global Administrator role in the Microsoft Entra ID tenant.
 
 2. On the **AdatumLab500-04** blade, in the **Manage** section, click on **Security**.
 
@@ -412,11 +411,11 @@ In this task, you will configure a sign-in risk policy.
 
 5. When prompted, attempt to sign in with the **aaduser3** account. 
 
->**Note**: You will be presented with the message **Your sign-in was blocked**. This is expected, since this account is not configured with multi-factor authentication, which is required due to increased sign-in risk associated with the use of ToR Browser.
+   >**Note**: You will be presented with the message **Your sign-in was blocked**. This is expected, since this account is not configured with multi-factor authentication, which is required due to increased sign-in risk associated with the use of ToR Browser.
 
 6. Sign in as **aaduser1** account you created and configured for multi-factor authentication earlier in this lab.
 
->**Note**: This time, you will be presented with the **Suspicious activity detected** message. Again, this is expected, since this account is configured with multi-factor authentiation. Considering the increased sign-in risk associated with the use of ToR Browser, you will have to use multi-factor authentication.
+   >**Note**: This time, you will be presented with the **Suspicious activity detected** message. Again, this is expected, since this account is configured with multi-factor authentiation. Considering the increased sign-in risk associated with the use of ToR Browser, you will have to use multi-factor authentication.
 
 7. Use the **Verify** option and specify whether you want to verify your identity via text or a call.
 
@@ -442,9 +441,9 @@ In this task, you will review the Microsoft Entra ID Identity Protection reports
 
 8. Review the report and identify any entries representing the sign-in from an anonymous IP address generated by the ToR browser. 
 
->**Note**: It may take 10-15 minutes to risks to show up in reports.
+   >**Note**: It may take 10-15 minutes to risks to show up in reports.
 
-> **Result**: You have enabled Microsoft Entra ID Identity Protection, configured user risk policy and sign-in risk policy, as well as validated Azure Microsoft Entra ID Identity Protection configuration by simulating risk events.
+   > **Result**: You have enabled Microsoft Entra ID Identity Protection, configured user risk policy and sign-in risk policy, as well as validated Azure Microsoft Entra ID Identity Protection configuration by simulating risk events.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
