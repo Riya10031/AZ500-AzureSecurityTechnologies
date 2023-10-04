@@ -1,28 +1,23 @@
-# Lab 03: Resource Manager Locks
-# Student lab manual
+# Lab 03 - Resource Manager Locks
 
 ## Lab scenario 
 
 You have been asked to create a proof of concept showing how resource locks can be used to prevent accidental deletion or changes. Specifically, you need to:
-
-- Create a ReadOnly lock
-
-- Create a Delete lock
+- Create a ReadOnly lock.
+- Create a Delete lock.
  
 ## Lab objectives
 
 In this lab, you will complete the following exercise:
+- Exercise 1: Resource Manager Locks.
 
-- Exercise 1: Resource Manager Locks
+## Estimated timing: 30 minutes
 
 ## Architecture diagram
 
 ![](../Labs/Lab-Scenario-Preview/media/AZ-500-LSP-Mod-1a-3.png)
 
-## Estimated timing: 30 minutes
-
-### Exercise 1: Resource Manager Locks
-
+## Exercise 1: Resource Manager Locks
 
 In this exercise, you will complete the following tasks:
 
@@ -32,7 +27,7 @@ In this exercise, you will complete the following tasks:
 - Task 4: Remove the ReadOnly lock and create a Delete lock.
 - Task 5: Test the Delete lock.
 
-#### Task 1: Create a storage account
+### Task 1: Create a storage account
 
 In this task, you will create a storage account for the lab.
 
@@ -61,7 +56,7 @@ In this task, you will create a storage account for the lab.
 
 1. Close the Cloud Shell pane.
 
-#### Task 2: Add a ReadOnly lock on the storage account 
+### Task 2: Add a ReadOnly lock on the storage account 
 
 In this task, you will add a read-only lock to the storage account. This will protect the resource from accidental deletion or modification. 
 
@@ -84,7 +79,7 @@ In this task, you will add a read-only lock to the storage account. This will pr
 
    >**Note**:  The storage account is now protected from accidental deletion and modification.
 
-#### Task 3: Test the ReadOnly lock 
+### Task 3: Test the ReadOnly lock 
 
 1. In the **Settings** section of the storage account blade, click on **Configuration**.
 
@@ -106,7 +101,7 @@ In this task, you will add a read-only lock to the storage account. This will pr
 	
    >**Note**:  You have now verified that a ReadOnly lock will stop accidental deletion and modification of a resource.
 
-#### Task 4: Remove the ReadOnly lock and create a Delete lock
+### Task 4: Remove the ReadOnly lock and create a Delete lock
 
 In this task, you remove the ReadOnly lock from the storage account and create a Delete lock. 
 
@@ -127,7 +122,7 @@ In this task, you remove the ReadOnly lock from the storage account and create a
 
 1. Click on **OK**. 
 
-#### Task 5: Test the Delete lock
+### Task 5: Test the Delete lock
 
 In this task, you will test the Delete lock. You should be able to modify the storage account, but not delete it. 
 
@@ -163,14 +158,13 @@ In this task, you will test the Delete lock. You should be able to modify the st
 	>- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 	>- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 	
-## Review
+### Review
 
-In this lab, you have:
-
+In this lab, you have completed:
 - Created a storage account.
 - Added a ReadOnly lock on the storage account.
 - Tested the ReadOnly lock.
 - Removed the ReadOnly lock and create a Delete lock.
 - Tested the Delete lock.
 
-## You have successfully completed the lab
+### You have successfully completed the lab
