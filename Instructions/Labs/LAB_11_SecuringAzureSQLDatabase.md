@@ -145,9 +145,11 @@ In this task, you will first configure server level auditing and then configure 
 
     >**Note**: If storage-based auditing is enabled on the server, it will always apply to the database, regardless of the database settings.
 
-13. Click **View Audit Logs**.
+13. On your SQL database Overview page in the Azure portal, select **Query editor (preview)** from the left menu. Try to sign in, you might fail on password, firewall rule for your IP address, everything gets audited. Try successful login as well, run query and you might find more detials in audit logs.
 
-14. On the **Audit records** blade, note that you can switch between Server audit and Database audit. 
+14. Switch back to DB, Auditing and Click **View Audit Logs**.
+
+15. On the **Audit records** blade, note that you can switch between Server audit and Database audit. 
 
     >**Note**: Since this SQL server and database were created recently, it is unlikely that any events will be available at this point. 
 
