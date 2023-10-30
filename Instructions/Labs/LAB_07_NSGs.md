@@ -210,7 +210,7 @@ In this task, you will create a virtual machine to use as a web server.
 
 1. Under **NIC network security group** select **None**.
 
-1. Click **Next: Management >** , then click **Next: Monitoring>** on the **Monitoring** tab of the **Create a virtual machine** blade, verify the following setting:
+1. Click **Next: Management >** , then click **Next: Monitoring>**. On the **Monitoring** tab of the **Create a virtual machine** blade, verify the following setting:
 
    |Setting|Value|
    |---|---|
@@ -247,7 +247,7 @@ In this task, you will create a virtual machine to use as a management server.
 
 1. Under **NIC network security group** select **None**.
 
-1. Click **Next: Management >**, then click **Next: Monitoring >** on the **Monitoring** tab of the **Create a virtual machine** blade, verify the following setting:
+1. Click **Next: Management >**, then click **Next: Monitoring >**. On the **Monitoring** tab of the **Create a virtual machine** blade, verify the following setting:
 
    |Setting|Value|
    |---|---|
