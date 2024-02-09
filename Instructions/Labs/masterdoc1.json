@@ -1,6 +1,6 @@
 [
   {
-    "Name": "Configure and manage Azure Monitor",
+    "Name": "Deploy Azure Kubernetes Cluster",
     "Language": "English",
     "BaseURL": "https://github.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies",
     "Files": [
