@@ -27,9 +27,9 @@ Exercise 4: Test the application
 1. On the **Basics** tab of **Create Kubernetes Cluster**, configure the following options and click on **Next** **(11)**. 
 
     - **Subscription**: Select Avaiable Subscription **(1)**.
-    - **Resource group**: Select `Kubernetes` **(2)**.
+    - **Resource group**: Select `<inject key="resourcegroup" enableCopy="false"/>` **(2)**.
     - **Cluster preset configuration**: Select `Dev/Test` **(3)**.
-    - **Kubernetes cluster name**: Enter `myAKSCluster-did`**` **(4)**.
+    - **Kubernetes cluster name**: Enter `myAKSCluster-<inject key="DeploymentID"  enableCopy="false"/>` **(4)**.
     - **Region**: **(5)**.
     - **Availability zones**: Select `None` **(6)**.
     - **AKS pricing tier**: Select `free` **(7)**.
@@ -67,7 +67,7 @@ Exercise 4: Test the application
 
     > **Note**: Deployment will take 5 to 10 minutes to create the AKS cluster.
 
-### Exercise 2: Connect to the cluster
+### Exercise 2: Connect to the Cluster
 
 1. In the Azure port click on **Cloud Shell**, open it with the >_ button on the top of the Azure portal and select `PowerShell`.
 
@@ -80,24 +80,24 @@ Exercise 4: Test the application
 1. Create an Azure Storage account for the Azure file share, enter the following details and click on `Create account` **(5)**.
 
     - **Resource group**: Select `Use existing` **(1)** and from drop down select select the `<inject key="resourcegroup" enableCopy="true"/>` **(2)** Resource group.
-    - **Storage account**: Enter the name as `storage<inject key="Deployment id"  enableCopy="false"/>` **(3)**.
+    - **Storage account**: Enter the name as `storage<inject key="DeploymentID"  enableCopy="false"/>` **(3)**.
     - **File share**: Enter `blob` **(4)**
 
     ![](../images/create-account.png)
 
-1. Configure kubectl to connect to your Kubernetes cluster using the `Import-AzAksCredential` cmdlet. This command downloads credentials and configures the Kubernetes CLI to use them.
+1. Configure `kubectl` to connect to your Kubernetes cluster using the `Import-AzAksCredential` cmdlet. This command downloads credentials and configures the Kubernetes CLI to use them.
 
     ```
     Import-AzAksCredential -ResourceGroupName <resouresegroupname> -Name <myAKSClustername>
     ```
 
-    > **Note**: Replace `<resouresegroupname>` with `` and <myAKSClustername> with ``.
+    > **Note**: Replace `<resouresegroupname>` with `<inject key="resourcegroup" enableCopy="true"/>` and <myAKSClustername> with `<inject key="DeploymentID"  enableCopy="true"/>`.
 
 1. Confirm Do you want to import the Kubernetes config?, type `y` and press `Enter`.
 
     ![](../images/create-aks-powershell-connect.png)
 
-1. Verify the connection to your cluster using kubectl get to return a list of the cluster nodes.
+1. Verify the connection to your cluster using `kubectl` to return a list of the cluster nodes.
 
     ```
     kubectl get nodes
@@ -379,9 +379,9 @@ To deploy the application, you use a manifest file to create all the objects req
     ```
 ### Exercise 4: Test the application
 
-When the application runs, a Kubernetes service exposes the application front end to the internet. This process can take a few minutes to complete.
+When the application runs, a Kubernetes service exposes the application's front end to the internet. This process can take a few minutes to complete.
 
-1. Check the status of the deployed pods using the [kubectl get pods][kubectl-get] command. Make all pods are `Running` before proceeding.
+1. Check the status of the deployed pods using the [kubectl get pods][kubectl-get] command. Make sure all pods are `Running` before proceeding.
 
     ```console
     kubectl get pods
