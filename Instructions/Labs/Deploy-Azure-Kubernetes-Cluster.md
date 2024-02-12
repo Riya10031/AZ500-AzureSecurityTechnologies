@@ -11,10 +11,10 @@ Azure Kubernetes Service (AKS) is a managed Kubernetes service that lets you qui
 
 In this lab, you will complete the following exercise: 
 
-Exercise 1: Create an AKS cluster
-Exercise 2: Connect to the cluster
-Exercise 3: Deploy the application
-Exercise 4: Test the application
+- Exercise 1: Create an AKS cluster
+- Exercise 2: Connect to the cluster
+- Exercise 3: Deploy the application
+- Exercise 4: Test the application
 
 ### Exercise 1: Create an AKS cluster
 
