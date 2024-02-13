@@ -27,9 +27,9 @@ In this lab, you will complete the following exercise:
 1. On the **Basics** tab of **Create Kubernetes Cluster**, configure the following options and click on **Next** **(11)**. 
 
     - **Subscription**: Select Avaiable Subscription **(1)**.
-    - **Resource group**: Select `<inject key="resourcegroup" enableCopy="false"/>` **(2)**.
+    - **Resource group**: Select **<inject key="resourcegroup" enableCopy="false"/>** **(2)**.
     - **Cluster preset configuration**: Select `Dev/Test` **(3)**.
-    - **Kubernetes cluster name**: Enter `myAKSCluster-<inject key="DeploymentID"  enableCopy="false"/>` **(4)**.
+    - **Kubernetes cluster name**: Enter **myAKSCluster-<inject key="DeploymentID"  enableCopy="false"/>** **(4)**.
     - **Region**: **(5)**.
     - **Availability zones**: Select `None` **(6)**.
     - **AKS pricing tier**: Select `free` **(7)**.
@@ -79,8 +79,8 @@ In this lab, you will complete the following exercise:
 
 1. Create an Azure Storage account for the Azure file share, enter the following details and click on `Create account` **(5)**.
 
-    - **Resource group**: Select `Use existing` **(1)** and from drop down select select the `<inject key="resourcegroup" enableCopy="true"/>` **(2)** Resource group.
-    - **Storage account**: Enter the name as `storage<inject key="DeploymentID"  enableCopy="false"/>` **(3)**.
+    - **Resource group**: Select `Use existing` **(1)** and from drop down select select the **<inject key="resourcegroup" enableCopy="true"/>** **(2)** Resource group.
+    - **Storage account**: Enter the name as **storage<inject key="DeploymentID"  enableCopy="false"/>** **(3)**.
     - **File share**: Enter `blob` **(4)**
 
     ![](../images/create-account.png)
@@ -91,7 +91,7 @@ In this lab, you will complete the following exercise:
     Import-AzAksCredential -ResourceGroupName <resouresegroupname> -Name <myAKSClustername>
     ```
 
-    > **Note**: Replace `<resouresegroupname>` with `<inject key="resourcegroup" enableCopy="true"/>` and <myAKSClustername> with `<inject key="DeploymentID"  enableCopy="true"/>`.
+    > **Note**: Replace `<resouresegroupname>` with **<inject key="resourcegroup" enableCopy="true"/>** and <myAKSClustername> with **<inject key="DeploymentID"  enableCopy="true"/>**.
 
 1. Confirm Do you want to import the Kubernetes config?, type `y` and press `Enter`.
 
