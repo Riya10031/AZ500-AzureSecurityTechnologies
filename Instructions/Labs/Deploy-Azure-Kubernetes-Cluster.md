@@ -30,7 +30,7 @@ In this lab, you will complete the following exercise:
     - **Resource group**: Select **<inject key="resourcegroup" enableCopy="false"/>** **(2)**.
     - **Cluster preset configuration**: Select `Dev/Test` **(3)**.
     - **Kubernetes cluster name**: Enter **myAKSCluster-<inject key="DeploymentID"  enableCopy="false"/>** **(4)**.
-    - **Region**: **(5)**.
+    - **Region**: **<inject key="region"  enableCopy="false"/>** **(5)**.
     - **Availability zones**: Select `None` **(6)**.
     - **AKS pricing tier**: Select `free` **(7)**.
     - **Kubernetes Version**: Select `default` version **(8)**.
