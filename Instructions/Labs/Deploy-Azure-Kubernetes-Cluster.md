@@ -43,19 +43,20 @@ In this lab, you will complete the following exercise:
 
     ![](../images/create-aks-delete.png)
 
-1. Enter the following detils in **Update node pool** tab and click on **Update** **(5)**.
+1. Enter the following detils in **Update node pool** tab and click on **Add** **(7)**.
 
     - **Node pool name**: Enter node name as `nplinux` **(1)**.
-    - **OS SKU**: select `Ubuntu Linux` **(2)**.
-    - **Availability zones**: setting to `None` **(3)**.
-    - **Node size**: select `Choose a size` **(4)**. 
+    - **Mode**: Select `System` **(2)**
+    - **OS SKU**: select `Ubuntu Linux` **(3)**.
+    - **Availability zones**: setting to `None` **(4)**.
+    - **Node size**: select `Choose a size` **(5)**. 
         - On the **Select a VM size** page, select `D2s_v3` **(1)**, then choose the `Select` **(2)** button.
 
-            ![](../images/create-aks-vm-size.png)
+            ![](../images/add-new-node.png)
     
-    - **Scale method**: Leave the setting set to `Autoscale` **(5)**.
+    - **Scale method**: Leave the setting set to `Autoscale` **(6)**.
 
-        ![](../images/create-aks-add-node.png)
+        ![](../images/add-new-node.png)
 
 1. On the **Node pools** tab, click on **Review + create**.
 
@@ -63,7 +64,7 @@ In this lab, you will complete the following exercise:
 
 1. On the **Review + create** tab, click on **Create**.
 
-    ![](../images/create-aks-create.png)
+    ![](../images/new-review.png)
 
     > **Note**: The Deployment will take 5 to 10 minutes to create the AKS cluster, so you can proceed to the next exercise.
    
@@ -91,7 +92,7 @@ In this lab, you will complete the following exercise:
     Import-AzAksCredential -ResourceGroupName <resouresegroupname> -Name <myAKSClustername>
     ```
 
-    > **Note**: Replace `<resouresegroupname>` with **<inject key="resourcegroup" enableCopy="true"/>** and <myAKSClustername> with **<inject key="DeploymentID"  enableCopy="true"/>**.
+    > **Note**: Replace `<resouresegroupname>` with **<inject key="resourcegroup" enableCopy="true"/>** and <myAKSClustername> with **myAKSCluster-<inject key="DeploymentID"  enableCopy="true"/>**.
 
 1. Confirm Do you want to import the Kubernetes config?, type `y` and press `Enter`.
 
@@ -105,7 +106,7 @@ In this lab, you will complete the following exercise:
 
     > The following example output shows the single node created in the previous steps. Make sure the node status is Ready.
 
-    ![](../../images/create-aks-powershell-aks.png)
+     ![](../images/create-aks-powershell-aks.png)
 
 ### Exercise 3: Deploy the application
 
@@ -355,7 +356,7 @@ To deploy the application, you use a manifest file to create all the objects req
       type: LoadBalancer
     ```
 
-1. Then press ESC, write :wq to save your changes and close the file.
+1. Then press ESC, write `:wq` to save your changes and close the file.
 
     > **Note**: If ESC doesn't work press ctrl+[ and then write :wq to save your changes and close the file.
 
@@ -377,6 +378,7 @@ To deploy the application, you use a manifest file to create all the objects req
     deployment.apps/store-front created
     service/store-front created
     ```
+
 ### Exercise 4: Test the application
 
 When the application runs, a Kubernetes service exposes the application's front end to the internet. This process can take a few minutes to complete.
@@ -413,3 +415,6 @@ When the application runs, a Kubernetes service exposes the application's front 
 
     ![](../images/aks-output.png)
 
+> Result: You have Deploy Azure Kubernetes Cluster
+
+You have successfully completed the lab.
