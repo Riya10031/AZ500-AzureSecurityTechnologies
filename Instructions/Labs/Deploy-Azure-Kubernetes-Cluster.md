@@ -65,8 +65,8 @@ In this lab, you will complete the following exercise:
 
     ![](../images/create-aks-create.png)
 
-    > **Note**: Deployment will take 5 to 10 minutes to create the AKS cluster.
-
+    > **Note**: The Deployment will take 5 to 10 minutes to create the AKS cluster, so you can proceed to the next exercise.
+   
 ### Exercise 2: Connect to the Cluster
 
 1. In the Azure port click on **Cloud Shell**, open it with the >_ button on the top of the Azure portal and select `PowerShell`.
