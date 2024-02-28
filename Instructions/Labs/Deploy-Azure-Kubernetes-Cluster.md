@@ -1,4 +1,4 @@
-# Deploy Azure Kubernetes Cluster
+## Lab 1: Deploy Azure Kubernetes Cluster
 
 ## Lab scenario
 
