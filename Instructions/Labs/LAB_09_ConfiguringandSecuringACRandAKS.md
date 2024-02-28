@@ -1,4 +1,4 @@
-# Configuring and Securing ACR and AKS
+## Lab 1: Configuring and Securing ACR and AKS
 
 ## Lab scenario
 You have been asked to deploy a proof of concept with Azure Container Registry and Azure Kubernetes Service. Specifically, the proof of concept should demonstrate:
