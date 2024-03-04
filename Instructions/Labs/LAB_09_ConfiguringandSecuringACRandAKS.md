@@ -126,16 +126,14 @@ In this task, you will create an Azure Kubernetes service and review the deploye
     |Kubernetes cluster name|**MyKubernetesCluster**|
     |Region|**(US) East US**|
     |Availability zones |**None**|
-    |Scale method|**Manual**|
-    |Node count|**1**|
 
-1. Click **Next: Node Pools >** and, on the **Node Pools** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
+1. Click **Next** and, on the **Node Pools** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 
     |Setting|Value|
     |----|----|
     |Enable virtual nodes|cleared checkbox|
 	
-1. Click **Next: Access >**, on the **Access** tab of the **Create Kubernetes cluster** blade, accept the defaults, and click **Next: Networking >**. 
+1. Click **Next**
 
 1. On the **Networking** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 
@@ -146,7 +144,7 @@ In this task, you will create an Azure Kubernetes service and review the deploye
 
     >**Note**: AKS can be configured as a private cluster. This assigns a private IP to the API server to ensure network traffic between your API server and your node pools remains on the private network only. For more information, visit [Create a private Azure Kubernetes Service cluster](https://docs.microsoft.com/en-us/azure/aks/private-clusters) page.
 
-1. Click **Next: Integrations >** and, on the **Integrations** tab of the **Create Kubernetes cluster** blade, uncheck the box of **Enable container logs** under **Container Insights**. 
+1. Click **Next** twice and, on the **Monitoring** tab of the **Create Kubernetes cluster** blade, uncheck the box of **Enable container logs** under **Container Insights**. 
 
 1. Click **Review + Create** and then click **Create**.
 
