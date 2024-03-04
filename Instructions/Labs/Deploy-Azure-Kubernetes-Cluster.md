@@ -24,7 +24,7 @@ In this lab, you will complete the following exercise:
 
     ![Aks create](../images/create-aks.png)
 
-1. On the **Basics** tab of **Create Kubernetes Cluster**, configure the following options and click on **Next** **(11)**. 
+1. On the **Basics** tab of **Create Kubernetes Cluster**, configure the following options and leave all other settings as default and click on **Next** **(11)**. 
 
     - **Subscription**: Select Avaiable Subscription **(1)**.
     - **Resource group**: Select **<inject key="resourcegroup" enableCopy="false"/>** **(2)**.
