@@ -122,10 +122,10 @@ To deploy the application, you use a manifest file to create all the objects req
 1. Create a file named `aks-store-quickstart.yaml` by running below command.
 
     ```
-    vi aks-store-quickstart.yaml
+    code aks-store-quickstart.yaml
     ```
 
-1. Press `i` to get into insert mode. Paste the following manifest into the editor:
+1. Copy and Paste the following manifest into the editor:
 
     ```yaml
     apiVersion: apps/v1
@@ -356,9 +356,7 @@ To deploy the application, you use a manifest file to create all the objects req
       type: LoadBalancer
     ```
 
-1. Then press ESC, write `:wq` to save your changes and close the file.
-
-    > **Note**: If ESC doesn't work press ctrl+[ and then write :wq to save your changes and close the file.
+1. Right click on the top right corner of the editor and click on **Save** to save your changes and close the file.
 
 1. Deploy the application using the `kubectl apply` command and specify the name of your YAML manifest:
 
