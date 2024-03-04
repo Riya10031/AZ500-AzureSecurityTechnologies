@@ -70,7 +70,7 @@ In this lab, you will complete the following exercise:
    
 ### Exercise 2: Connect to the Cluster
 
-1. In the Azure port click on **Cloud Shell**, open it with the >_ button on the top of the Azure portal and select `PowerShell`.
+1. In the Azure portal click on **Cloud Shell**, open it with the >_ button on the top of the Azure portal and select `PowerShell`.
 
     ![](../images/select-powershell.png)
 
