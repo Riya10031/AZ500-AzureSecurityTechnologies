@@ -247,7 +247,7 @@ In this task,  you will download the Manifest files, edit the YAML file, and app
     service/nginxexternal created
     ```
 
-## Task 6: Verify the you can access an external AKS-hosted service
+## Task 6: Verify that you can access an external AKS-hosted service
 
 In this task, verify the container can be accessed externally using the public IP address.
 
