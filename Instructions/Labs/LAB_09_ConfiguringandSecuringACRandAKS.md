@@ -25,7 +25,6 @@ In this lab, you will complete the following exercise:
 
 # Exercise 1: Configuring and Securing ACR and AKS
 
-
 > For all the resources in this lab, we are using the **East (US)** region. Verify with your instructor this is region to use for you class. 
 
 In this exercise, you will complete the following tasks:
