@@ -1,15 +1,15 @@
 [
   {
-    "Name": "Configuring and Securing ACR and AKS",
+    "Name": "Lab 09: Configuring and Securing ACR and AKS",
     "Language": "English",
     "BaseURL": "https://github.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies",
     "Files": [
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/guided-labs/Instructions/Labs/LabIntroV2.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/prod/Instructions/Labs/LabIntroV2.md",
         "Order": 1
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/labwise-modules/Instructions/Labs/guidedlab_LAB_09_ConfiguringandSecuringACRandAKS.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/lab-wise-modules/Instructions/Labs/guidedlab_LAB_09_ConfiguringandSecuringACRandAKS.md",
         "Order": 2
       }
     ]
