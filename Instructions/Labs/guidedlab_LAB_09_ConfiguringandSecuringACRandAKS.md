@@ -193,10 +193,13 @@ In this task, you will grant the AKS cluster permission to access the ACR and ma
 
     ```sh
     ACRNAME=$(az acr list --resource-group AZ500LAB09 --query '[].{Name:name}' --output tsv)
+    
+    az aks update -n MyKubernetesCluster -g AZ500LAB09 --attach-acr $ACRNAME
 
     ```
 
-    >**Note**: This command grants the 'acrpull' role assignment to the ACR.  
+    >**Note**: This command grants the 'acrpull' role assignment to the ACR.
+    >**Note**: It may take a few minutes for this command to complete.
 
 1. In the Bash session within the Cloud Shell pane, run the following to grant the AKS cluster the Contributor role to its virtual network. 
 
