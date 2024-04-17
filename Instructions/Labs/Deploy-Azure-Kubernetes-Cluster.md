@@ -67,6 +67,10 @@ In this lab, you will complete the following exercise:
     ![](../images/new-review.png)
 
     > **Note**: The Deployment will take 5 to 10 minutes to create the AKS cluster, so you can proceed to the next exercise.
+
+#### Validation
+
+<validation step="799ff4d8-16ac-4fd4-99b5-32123bae7865" />
    
 ### Exercise 2: Connect to the Cluster
 
