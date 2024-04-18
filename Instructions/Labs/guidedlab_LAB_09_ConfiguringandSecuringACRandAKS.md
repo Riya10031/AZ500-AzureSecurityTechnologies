@@ -185,6 +185,10 @@ In this task, you will create an Azure Kubernetes service and review the deploye
 
     >**Note**: Verify that the **Status** of the cluster node is listed as **Ready**.
 
+#### Validation
+
+<validation step="f74f6cd9-a7e4-40d3-a11b-cf38751bb93f" />
+
 ### Task 4: Grant the AKS cluster permissions to access the ACR and manage its virtual network
 
 In this task, you will grant the AKS cluster permission to access the ACR and manage its virtual network. 
