@@ -415,7 +415,7 @@ When the application runs, a Kubernetes service exposes the application's front 
 
 1. Open a web browser to the external IP address of your service to see the Azure Store app in action.
 
-    ![](../images/aks-output.png)
+    ![](../images/aks-output1.png)
 
 > Result: You have Deploy Azure Kubernetes Cluster
 
