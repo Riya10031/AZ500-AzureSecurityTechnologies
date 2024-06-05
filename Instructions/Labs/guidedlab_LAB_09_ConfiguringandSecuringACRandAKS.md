@@ -42,14 +42,23 @@ In this exercise, you will complete the following tasks:
 
 In this task, you will create a resource group for the lab an an Azure Container Registry.
 
-1. In the Azure portal, open the **Cloud Shell (1)** by clicking the first icon in the top right of the Azure Portal. If prompted, click **Bash (2)** and **Create storage (3)**.
+1. 1. In the Azure portal click on **Cloud Shell**, open it with the **>_** (1) button on the top of the Azure portal and select `Bash` (2).
 
-   ![](../images/lab9-1.png)
-   
+   ![](../images/Bash1.png)
 
-   ![](../images/lab9-1-1.png)
+1. If You don't have pre-created storage account, select **Mount storage account** and then click on **Apply**.
+
+   ![](../images/Bash2.png)
    
-1. Ensure **Bash** is selected in the drop-down menu in the upper-left corner of the Cloud Shell pane.
+1. Select **I want to create a storage**, click on **Next**. provide all the below details Click on **Create**.
+
+    - **Resource group**: Select the **<inject key="resourcegroup" enableCopy="true"/>**  Resource group.
+    - **Storage account**: Enter the name as **storage<inject key="DeploymentID"  enableCopy="false"/>** .
+    - **File share**: Enter `blob` 
+
+    ![](../images/Bash3.png)
+
+    ![](../images/Bash4.png)
 
 1. In the Bash session within the Cloud Shell pane, run the following to create a new resource group and virtual network for this lab:
 
@@ -185,10 +194,6 @@ In this task, you will create an Azure Kubernetes service and review the deploye
 
     >**Note**: Verify that the **Status** of the cluster node is listed as **Ready**.
 
-#### Validation
-
-<validation step="f74f6cd9-a7e4-40d3-a11b-cf38751bb93f" />
-
 ### Task 4: Grant the AKS cluster permissions to access the ACR and manage its virtual network
 
 In this task, you will grant the AKS cluster permission to access the ACR and manage its virtual network. 
@@ -232,9 +237,9 @@ In this task, you will grant the AKS cluster permission to access the ACR and ma
 
 In this task,  you will download the Manifest files, edit the YAML file, and apply your changes to the cluster. 
 
-1. In the Bash session within the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload**, in the **Open** dialog box, naviate to the location where you downloaded the lab files, select **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\09\\nginxexternal.yaml** click **Open**. Next, select **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\09\\nginxinternal.yaml**, and click **Open**.
+1. In the Bash session within the Cloud Shell pane, click the **Manage files** icon, in the drop-down menu, click **Upload**, in the **Open** dialog box, naviate to the location where you downloaded the lab files, select **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\09\\nginxexternal.yaml** click **Open**. Next, select **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\09\\nginxinternal.yaml**, and click **Open**.
 
-    ![](../images/upload.png)
+    ![](../images/Bash5.png)
    
 1. In the Bash session within the Cloud Shell pane, run the following to identify the name of the Azure Container Registry instance:
 
@@ -252,7 +257,9 @@ In this task,  you will download the Manifest files, edit the YAML file, and app
     code ./nginxexternal.yaml
     ```
 
-    >**Note**: This is the *external* yaml file.
+    >**Note**: This is the *external* yaml file. If you get a pop-up to **Switch to Classic Cloud Shell** then click on **Confirm**.
+
+    ![](../images/Bash6.png)
 
 1. In the editor pane, scroll down to **line 24** and replace the **`<ACRUniquename>`** placeholder with the ACR name.
 
