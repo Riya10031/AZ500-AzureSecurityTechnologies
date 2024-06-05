@@ -78,13 +78,13 @@ In this lab, you will complete the following exercise:
 
     ![](../images/select-powershell.png)
 
-1. If You don't have pre-created storage account, select **mount storage account** and then click on **Apply**.
+1. If You don't have pre-created storage account, select **Mount storage account** and then click on **Apply**.
 
     ![](../images/cloudshell_image1.png)
 
 1. Select **I want to create a storage**, click on **Next**. provide all the below details Click on **Create**.
 
-    - **Resource group**: Select `Use existing` and from drop down select select the **<inject key="resourcegroup" enableCopy="true"/>**  Resource group.
+    - **Resource group**: Select the **<inject key="resourcegroup" enableCopy="true"/>**  Resource group.
     - **Storage account**: Enter the name as **storage<inject key="DeploymentID"  enableCopy="false"/>** .
     - **File share**: Enter `blob` 
 
