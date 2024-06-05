@@ -96,7 +96,7 @@ In this lab, you will complete the following exercise:
     Import-AzAksCredential -ResourceGroupName <resouresegroupname> -Name <myAKSClustername>
     ```
 
-    > **Note**: Replace `<resouresegroupname>` with **<inject key="resourcegroup" enableCopy="true"/>** and `<myAKSClustername>` with **myAKSCluster-<inject key="DeploymentID"  enableCopy="true"/>**.
+    > **Note**: Replace `<resouresegroupname>` with **<inject key="resourcegroup" enableCopy="true"/>**  and `<myAKSClustername>` with **myAKSCluster-<inject key="DeploymentID"  enableCopy="true"/>**.
 
 1. Confirm Do you want to import the Kubernetes config?, type `y` and press `Enter`.
 
