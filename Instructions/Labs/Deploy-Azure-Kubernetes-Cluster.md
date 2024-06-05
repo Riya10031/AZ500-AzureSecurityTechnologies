@@ -74,21 +74,23 @@ In this lab, you will complete the following exercise:
    
 ### Exercise 2: Connect to the Cluster
 
-1. In the Azure portal click on **Cloud Shell**, open it with the >_ button on the top of the Azure portal and select `PowerShell`.
+1. In the Azure portal click on **Cloud Shell**, open it with the **>_** button on the top of the Azure portal and select `PowerShell`.
 
     ![](../images/select-powershell.png)
 
-1. In the **You have no storage mounted** , click on `Show advanced settings`.
+1. If You don't have pre-created storage account, select **mount storage account** and then click on **Apply**.
 
-    ![](../images/advance.png)
+    ![](../images/cloudshell_image1.png)
 
-1. Create an Azure Storage account for the Azure file share, enter the following details and click on `Create account` **(5)**.
+1. Select **I want to create a storage**, click on **Next**. provide all the below details Click on **Create**.
 
-    - **Resource group**: Select `Use existing` **(1)** and from drop down select select the **<inject key="resourcegroup" enableCopy="true"/>** **(2)** Resource group.
-    - **Storage account**: Enter the name as **storage<inject key="DeploymentID"  enableCopy="false"/>** **(3)**.
-    - **File share**: Enter `blob` **(4)**
+    - **Resource group**: Select `Use existing` and from drop down select select the **<inject key="resourcegroup" enableCopy="true"/>**  Resource group.
+    - **Storage account**: Enter the name as **storage<inject key="DeploymentID"  enableCopy="false"/>** .
+    - **File share**: Enter `blob` 
 
-    ![](../images/create-account.png)
+    ![](../images/cloudshell_image2.png)
+
+    ![](../images/cloudshell_image3.png)
 
 1. Configure `kubectl` to connect to your Kubernetes cluster using the `Import-AzAksCredential` cmdlet. This command downloads credentials and configures the Kubernetes CLI to use them.
 
