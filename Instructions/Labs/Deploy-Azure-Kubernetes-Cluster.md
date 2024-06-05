@@ -96,7 +96,7 @@ In this lab, you will complete the following exercise:
     Import-AzAksCredential -ResourceGroupName <resouresegroupname> -Name <myAKSClustername>
     ```
 
-    > **Note**: Replace `<resouresegroupname>` with **<inject key="resourcegroup" enableCopy="true"/>** and <myAKSClustername> with **myAKSCluster-<inject key="DeploymentID"  enableCopy="true"/>**.
+    > **Note**: Replace `<resouresegroupname>` with **<inject key="resourcegroup" enableCopy="true"/>** and `<myAKSClustername>` with **myAKSCluster-<inject key="DeploymentID"  enableCopy="true"/>**.
 
 1. Confirm Do you want to import the Kubernetes config?, type `y` and press `Enter`.
 
@@ -419,4 +419,13 @@ When the application runs, a Kubernetes service exposes the application's front 
 
 > Result: You have Deploy Azure Kubernetes Cluster
 
-You have successfully completed the lab.
+ <validation step="799ff4d8-16ac-4fd4-99b5-32123bae7865" />
+
+  **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
+
+  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.   
+
+## You have successfully completed the lab.
