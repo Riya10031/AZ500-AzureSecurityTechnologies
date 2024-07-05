@@ -160,7 +160,7 @@ In this task, you will create an Azure Kubernetes service and review the deploye
 
     >**Note**: AKS can be configured as a private cluster. This assigns a private IP to the API server to ensure network traffic between your API server and your node pools remains on the private network only. For more information, visit [Create a private Azure Kubernetes Service cluster](https://docs.microsoft.com/en-us/azure/aks/private-clusters) page.
 
-1. Click **Next: Integrations >** and, on the **Integrations** tab of the **Create Kubernetes cluster** blade, set **Azure Monitor** to **Off**. 
+1. Click **Next** twice so that you will be navigated to **Monitoring** tab. on the Monitoring tab of the Create Kubernetes cluster blade, uncheck the box of **Enable container logs** under Container Insights.
 
     >**Note**: In production scenarios, you would want to enable monitoring. Monitoring is disabled in this case since it is not covered in the lab. 
 
