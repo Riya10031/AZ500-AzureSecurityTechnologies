@@ -20,11 +20,11 @@ In this lab, you will complete the following exercise:
 
 1. In a new web browser window or tab, navigate to the Azure portal (``portal.azure.com``).
 
-1. On the Azure portal home page, select **+ Create a resource** **(1)**, in the search bar **Azure Kubernetes Service aks** **(2)** click enter, click on  **Create** **(3)** and select **Azure Kubernetes Service (AKS)** **(4)**.
+2. On the Azure portal home page, select **+ Create a resource** **(1)**, in the search bar **Azure Kubernetes Service aks** **(2)** click enter, click on  **Create** **(3)** and select **Azure Kubernetes Service (AKS)** **(4)**.
 
     ![Aks create](../images/create-aks.png)
 
-1. On the **Basics** tab of **Create Kubernetes Cluster**, configure the following options and leave all other settings as default and click on **Next** **(11)**. 
+3. On the **Basics** tab of **Create Kubernetes Cluster**, configure the following options and leave all other settings as default and click on **Next** **(11)**. 
 
     - **Subscription**: Select Avaiable Subscription **(1)**.
     - **Resource group**: Select **<inject key="resourcegroup" enableCopy="false"/>** **(2)**.
@@ -39,11 +39,11 @@ In this lab, you will complete the following exercise:
     
         ![](../images/create-aks-basic.png)
 
-1. On the **Node pools** tab, select **agentpool** **(1)** node pool, click on **Delete** **(2)** and click on **+ Add node pool** **(3)**.
+4. On the **Node pools** tab, select **agentpool** **(1)** node pool, click on **Delete** **(2)** and click on **+ Add node pool** **(3)**.
 
     ![](../images/create-aks-delete.png)
 
-1. Enter the following detils in **Update node pool** tab and click on **Add** **(7)**.
+5. Enter the following detils in **Update node pool** tab and click on **Add** **(7)**.
 
     - **Node pool name**: Enter node name as `nplinux` **(1)**.
     - **Mode**: Select `System` **(2)**
@@ -58,11 +58,11 @@ In this lab, you will complete the following exercise:
 
         ![](../images/add-new-node.png)
 
-1. On the **Node pools** tab, click on **Review + create**.
+6. On the **Node pools** tab, click on **Review + create**.
 
     ![](../images/create-aks-click-review.png)
 
-1. On the **Review + create** tab, click on **Create**.
+7. On the **Review + create** tab, click on **Create**.
 
     ![](../images/new-review.png)
 
@@ -78,11 +78,11 @@ In this lab, you will complete the following exercise:
 
     ![](../images/select-powershell.png)
 
-1. If You don't have pre-created storage account, select **Mount storage account** and then click on **Apply**.
+2. If You don't have pre-created storage account, select **Mount storage account** and then click on **Apply**.
 
     ![](../images/cloudshell_image1.png)
 
-1. Select **I want to create a storage**, click on **Next**. provide all the below details Click on **Create**.
+3. Select **I want to create a storage**, click on **Next**. provide all the below details Click on **Create**.
 
     - **Resource group**: Select the **<inject key="resourcegroup" enableCopy="true"/>**  Resource group.
     - **Storage account**: Enter the name as **storage<inject key="DeploymentID"  enableCopy="false"/>** .
@@ -92,7 +92,7 @@ In this lab, you will complete the following exercise:
 
     ![](../images/cloudshell_image3.png)
 
-1. Configure `kubectl` to connect to your Kubernetes cluster using the `Import-AzAksCredential` cmdlet. This command downloads credentials and configures the Kubernetes CLI to use them.
+4. Configure `kubectl` to connect to your Kubernetes cluster using the `Import-AzAksCredential` cmdlet. This command downloads credentials and configures the Kubernetes CLI to use them.
 
     ```
     Import-AzAksCredential -ResourceGroupName <resouresegroupname> -Name <myAKSClustername>
@@ -100,11 +100,11 @@ In this lab, you will complete the following exercise:
 
     > **Note**: Replace `<resouresegroupname>` with **<inject key="resourcegroup" enableCopy="true"/>**  and `<myAKSClustername>` with **myAKSCluster-<inject key="DeploymentID"  enableCopy="true"/>**.
 
-1. Confirm Do you want to import the Kubernetes config?, type `y` and press `Enter`.
+5. Confirm Do you want to import the Kubernetes config?, type `y` and press `Enter`.
 
     ![](../images/create-aks-powershell-connect.png)
 
-1. Verify the connection to your cluster using `kubectl` to return a list of the cluster nodes.
+6. Verify the connection to your cluster using `kubectl` to return a list of the cluster nodes.
 
     ```
     kubectl get nodes
@@ -130,8 +130,17 @@ To deploy the application, you use a manifest file to create all the objects req
     ```
     code aks-store-quickstart.yaml
     ```
+2. After running the command a pop-up window will show up. click on **confirm**. it will take you to the classic powershell terminal.
+ 
+     ![](../images/classic-pop-up.png)
 
-1. Copy and Paste the following manifest into the editor:
+3. Run the below command again, it will open the code editor.
+
+   ```
+   code aks-store-quickstart.yaml
+   ```
+   
+4. Copy and Paste the following manifest into the editor:
 
     ```yaml
     apiVersion: apps/v1
@@ -362,9 +371,9 @@ To deploy the application, you use a manifest file to create all the objects req
       type: LoadBalancer
     ```
 
-1. Right click on the top right corner of the editor and click on **Save** to save your changes and close the file.
+5. Right click on the top right corner of the editor and click on **Save** to save your changes and close the file.
 
-1. Deploy the application using the `kubectl apply` command and specify the name of your YAML manifest:
+6. Deploy the application using the `kubectl apply` command and specify the name of your YAML manifest:
 
     ```console
     kubectl apply -f aks-store-quickstart.yaml
@@ -393,7 +402,7 @@ When the application runs, a Kubernetes service exposes the application's front 
     kubectl get pods
     ```
 
-1. Check for a public IP address for the store-front application. Monitor progress using the [kubectl get service][kubectl-get] command with the `--watch` argument.
+2. Check for a public IP address for the store-front application. Monitor progress using the [kubectl get service][kubectl-get] command with the `--watch` argument.
 
     ```azurecli
     kubectl get service store-front --watch
@@ -415,7 +424,7 @@ When the application runs, a Kubernetes service exposes the application's front 
     store-front   LoadBalancer   10.0.100.10   20.62.159.19   80:30025/TCP   4h5m
     ```
 
-1. Open a web browser to the external IP address of your service to see the Azure Store app in action.
+3. Open a web browser to the external IP address of your service to see the Azure Store app in action.
 
     ![](../images/aks-output1.png)
 
