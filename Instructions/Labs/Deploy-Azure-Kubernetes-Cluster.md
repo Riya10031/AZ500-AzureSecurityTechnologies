@@ -132,7 +132,7 @@ To deploy the application, you use a manifest file to create all the objects req
     ```
 2. After running the command a pop-up window will show up. click on **confirm**. it will take you to the classic powershell terminal.
  
- ![](../images/classic-pop-up.png)
+     ![](../images/classic-pop-up.png)
 
 3. Run the below command again, it will open the code editor.
 
