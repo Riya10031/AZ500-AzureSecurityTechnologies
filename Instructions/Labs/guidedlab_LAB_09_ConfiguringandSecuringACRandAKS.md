@@ -371,7 +371,7 @@ In this task, you will use one of the pods running on the AKS cluster to access 
 
    > **Result:** You have configured and secured ACR and AKS.
 
-<validation step="f74f6cd9-a7e4-40d3-a11b-cf38751bb93f" />
+<validation step="d57eeea8-6168-46ed-ae17-6c4a5fdb0f4d" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
