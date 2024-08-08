@@ -18,6 +18,8 @@ In this lab, you will complete the following exercise:
 
 ### Exercise 1: Create an AKS cluster
 
+In this exercise, we set up an Azure Kubernetes Service (AKS) cluster via the Azure portal. We create the AKS resource, configure basic settings such as subscription, resource group, cluster name, and region, and manage node pools by replacing the default with a new one configured with specific settings.
+
 1. In a new web browser window or tab, navigate to the Azure portal (``portal.azure.com``).
 
 2. On the Azure portal home page, select **+ Create a resource** **(1)**, in the search bar **Azure Kubernetes Service aks** **(2)** click enter, click on  **Create** **(3)** and select **Azure Kubernetes Service (AKS)** **(4)**.
@@ -74,6 +76,8 @@ In this lab, you will complete the following exercise:
    
 ### Exercise 2: Connect to the Cluster
 
+In this exercise, we connect to an AKS cluster. We start by opening the Cloud Shell in the Azure portal, select PowerShell, and set up a storage account if necessary. We then configure the connection to our Kubernetes cluster and verify it by checking the cluster nodes to ensure they are ready.
+
 1. In the Azure portal click on **Cloud Shell**, open it with the **>_** button on the top of the Azure portal and select `PowerShell`.
 
     ![](../images/select-powershell.png)
@@ -116,7 +120,7 @@ In this lab, you will complete the following exercise:
 
 ### Exercise 3: Deploy the application
 
-To deploy the application, you use a manifest file to create all the objects required to run the AKS Store application. A Kubernetes manifest file defines a cluster's desired state, such as which container images to run. The manifest includes the following Kubernetes deployments and services:
+In this exercise, we deploy an application to an AKS cluster using a Kubernetes manifest file. To deploy the application, you use a manifest file to create all the objects required to run the AKS Store application. A Kubernetes manifest file defines a cluster's desired state, such as which container images to run. The manifest includes the following Kubernetes deployments and services:
 
 ![](../images/aks-store-architecture.png)
 
@@ -394,7 +398,7 @@ To deploy the application, you use a manifest file to create all the objects req
 
 ### Exercise 4: Test the application
 
-When the application runs, a Kubernetes service exposes the application's front end to the internet. This process can take a few minutes to complete.
+In this exercise, we test the deployed AKS application by ensuring it is running properly. First, we check the status of the pods to confirm they are running. Next, we monitor the service to get the public IP address of the store-front application. Once the public IP is available, we open a web browser to this IP address to access and view the Azure Store app in action. When the application runs, a Kubernetes service exposes the application's front end to the internet. This process can take a few minutes to complete.
 
 1. Check the status of the deployed pods using the [kubectl get pods][kubectl-get] command. Make sure all pods are `Running` before proceeding.
 
@@ -437,6 +441,13 @@ When the application runs, a Kubernetes service exposes the application's front 
   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.   
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
+## Review
+In this lab, you will complete the following tasks:
+- Created an AKS cluster
+- Connected to the cluster
+- Deployed the application
+- Tested the application
 
 ## You have successfully completed the lab.
