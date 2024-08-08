@@ -40,7 +40,7 @@ In this exercise, you will complete the following tasks:
 
 ### Task 1: Create an Azure Container Registry
 
-In this task, you will create a resource group for the lab an an Azure Container Registry.
+In this task, we set up a resource group and an Azure Container Registry (ACR). We start by opening Cloud Shell in Bash and creating a new resource group and virtual network using Azure CLI commands. Next, we verify the creation of the resource group and then create a new ACR instance with a unique name. Finally, we confirm the creation of the ACR and record its name for future use.
 
 1. 1. In the Azure portal click on **Cloud Shell**, open it with the **>_** (1) button on the top of the Azure portal and select `Bash` (2).
 
@@ -91,7 +91,7 @@ In this task, you will create a resource group for the lab an an Azure Container
    
 ### Task 2: Create a Dockerfile, build a container and push it to Azure Container Registry
 
-In this task, you will create a Dockerfile, build an image from the Dockerfile, and deploy the image to the ACR. 
+In this task, we create a Dockerfile, build a container image from it, and push the image to Azure Container Registry (ACR). We start by creating a Dockerfile with an Nginx base image, then build and push the image to ACR using Azure CLI commands. After the process completes, we close Cloud Shell and verify the image's presence and version in the Azure portal by checking the ACR's repositories and image tags.
 
 1. In the Bash session within the Cloud Shell pane, run the following to create a Dockerfile to create an Nginx-based image: 
 
@@ -129,7 +129,7 @@ In this task, you will create a Dockerfile, build an image from the Dockerfile, 
 
 ### Task 3: Create an Azure Kubernetes Service cluster
 
-In this task, you will create an Azure Kubernetes service and review the deployed resources. 
+In this task, we create an Azure Kubernetes Service (AKS) cluster and review its resources. We start by initiating the creation of a Kubernetes cluster in the Azure portal, configuring basic settings such as the cluster name, resource group, and region, and setting up node pools and networking. Once deployed, we check the new resource group for AKS components, return to the original resource group to review the AKS cluster, and use Cloud Shell to connect to the cluster and verify its nodes are ready. 
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Kubernetes services** and press the **Enter** key.
 
@@ -196,7 +196,7 @@ In this task, you will create an Azure Kubernetes service and review the deploye
 
 ### Task 4: Grant the AKS cluster permissions to access the ACR and manage its virtual network
 
-In this task, you will grant the AKS cluster permission to access the ACR and manage its virtual network. 
+In this task, we grant an Azure Kubernetes Service (AKS) cluster the necessary permissions to access an Azure Container Registry (ACR) and manage its virtual network. We first configure the AKS cluster to access the ACR by attaching it and assigning the necessary role for image pulling. Next, we provide the AKS cluster with the Contributor role to manage its virtual network, ensuring it can interact with network resources. Finally, we confirm the AKS cluster's ability to pull container images from the ACR by updating its configuration.
 
 1. In the Bash session within the Cloud Shell pane, run the following to configure the AKS cluster to use the Azure Container Registry instance you created earlier in this lab. 
 
@@ -235,7 +235,7 @@ In this task, you will grant the AKS cluster permission to access the ACR and ma
 
 ### Task 5: Deploy an external service to AKS
 
-In this task,  you will download the Manifest files, edit the YAML file, and apply your changes to the cluster. 
+In this task, you'll deploy an external service to your Azure Kubernetes Service (AKS) cluster. Begin by uploading the necessary YAML manifest files for the external service to the Cloud Shell. Edit the `nginxexternal.yaml` file to replace the placeholder with the name of your Azure Container Registry (ACR). After saving your changes, apply the updated YAML file to the AKS cluster using `kubectl`. Finally, verify the deployment and service creation by reviewing the command output.
 
 1. In the Bash session within the Cloud Shell pane, click the **Manage files** icon, in the drop-down menu, click **Upload**, in the **Open** dialog box, naviate to the location where you downloaded the lab files, select **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\09\\nginxexternal.yaml** click **Open**. Next, select **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\09\\nginxinternal.yaml**, and click **Open**.
 
@@ -299,7 +299,7 @@ In this task, verify the container can be accessed externally using the public I
   
 ### Task 7: Deploy an internal service to AKS
 
-In this task, you will deploy the internal facing service on the AKS. 
+In this task, you'll deploy a service within the AKS cluster that is only accessible internally. First, update the configuration file to include the correct Azure Container Registry name, then apply these changes to the cluster. After deploying, find and note the private IP address assigned to this service, which you'll use to access the service from within the cluster.
 
 1. In the Bash session within the Cloud Shell pane, run the following to open the nginxintenal.yaml file, so you can edit its content. 
 
@@ -341,7 +341,7 @@ In this task, you will deploy the internal facing service on the AKS.
 
 ### Task 8: Verify the you can access an internal AKS-hosted service
 
-In this task, you will use one of the pods running on the AKS cluster to access the internal service. 
+In this task, you will verify access to the internal service hosted on AKS by using one of the cluster's pods. Start by listing the available pods and selecting one to use. Connect to this pod interactively and then check if you can reach the internal service using its private IP address.
 
 1. In the Bash session within the Cloud Shell pane, run the following to list the pods in the default namespace on the AKS cluster:
 
