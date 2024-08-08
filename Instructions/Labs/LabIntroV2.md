@@ -82,7 +82,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
     ![](../images/AZ-500-staysignedin.png)
  
-5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
+5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
  
 6. Click "Next" from the bottom right corner to embark on your Lab journey!
  
