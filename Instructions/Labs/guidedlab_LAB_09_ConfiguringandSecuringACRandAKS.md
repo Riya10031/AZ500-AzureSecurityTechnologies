@@ -40,9 +40,9 @@ In this exercise, you will complete the following tasks:
 
 ### Task 1: Create an Azure Container Registry
 
-In this task, we set up a resource group and an Azure Container Registry (ACR). We start by opening Cloud Shell in Bash and creating a new resource group and virtual network using Azure CLI commands. Next, we verify the creation of the resource group and then create a new ACR instance with a unique name. Finally, we confirm the creation of the ACR and record its name for future use.
+In this task, you will set up a resource group and an Azure Container Registry (ACR). We start by opening Cloud Shell in Bash and creating a new resource group and virtual network using Azure CLI commands. Next, you will verify the creation of the resource group and then create a new ACR instance with a unique name. Finally, you will confirm the creation of the ACR and record its name for future use.
 
-1. 1. In the Azure portal click on **Cloud Shell**, open it with the **>_** (1) button on the top of the Azure portal and select `Bash` (2).
+1. In the Azure portal click on **Cloud Shell**, open it with the **>_** (1) button on the top of the Azure portal and select `Bash` (2).
 
    ![](../images/Bash1.png)
 
@@ -91,7 +91,7 @@ In this task, we set up a resource group and an Azure Container Registry (ACR). 
    
 ### Task 2: Create a Dockerfile, build a container and push it to Azure Container Registry
 
-In this task, we create a Dockerfile, build a container image from it, and push the image to Azure Container Registry (ACR). We start by creating a Dockerfile with an Nginx base image, then build and push the image to ACR using Azure CLI commands. After the process completes, we close Cloud Shell and verify the image's presence and version in the Azure portal by checking the ACR's repositories and image tags.
+In this task, you will create a Dockerfile, build a container image from it, and push the image to Azure Container Registry (ACR). You will start by creating a Dockerfile with an Nginx base image, then build and push the image to ACR using Azure CLI commands. After the process completes, you will verify the image's presence and version in the Azure portal by checking the ACR's repositories and image tags.
 
 1. In the Bash session within the Cloud Shell pane, run the following to create a Dockerfile to create an Nginx-based image: 
 
@@ -129,7 +129,7 @@ In this task, we create a Dockerfile, build a container image from it, and push 
 
 ### Task 3: Create an Azure Kubernetes Service cluster
 
-In this task, we create an Azure Kubernetes Service (AKS) cluster and review its resources. We start by initiating the creation of a Kubernetes cluster in the Azure portal, configuring basic settings such as the cluster name, resource group, and region, and setting up node pools and networking. Once deployed, we check the new resource group for AKS components, return to the original resource group to review the AKS cluster, and use Cloud Shell to connect to the cluster and verify its nodes are ready. 
+In this task, you will create an Azure Kubernetes Service (AKS) cluster and review its resources. you will start by initiating the creation of a Kubernetes cluster in the Azure portal, configuring basic settings such as the cluster name, resource group, and region, and setting up node pools and networking. Once deployed, you will check the new resource group for AKS components, and use Cloud Shell to connect to the cluster and verify its nodes are ready. 
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Kubernetes services** and press the **Enter** key.
 
@@ -196,7 +196,7 @@ In this task, we create an Azure Kubernetes Service (AKS) cluster and review its
 
 ### Task 4: Grant the AKS cluster permissions to access the ACR and manage its virtual network
 
-In this task, we grant an Azure Kubernetes Service (AKS) cluster the necessary permissions to access an Azure Container Registry (ACR) and manage its virtual network. We first configure the AKS cluster to access the ACR by attaching it and assigning the necessary role for image pulling. Next, we provide the AKS cluster with the Contributor role to manage its virtual network, ensuring it can interact with network resources. Finally, we confirm the AKS cluster's ability to pull container images from the ACR by updating its configuration.
+In this task, you will grant an Azure Kubernetes Service (AKS) cluster the necessary permissions to access an Azure Container Registry (ACR) and manage its virtual network. You will first configure the AKS cluster to access the ACR by attaching it and assigning the necessary role for image pulling. Next, you will provide the AKS cluster with the Contributor role to manage its virtual network, ensuring it can interact with network resources. Finally, you will confirm the AKS cluster's ability to pull container images from the ACR by updating its configuration.
 
 1. In the Bash session within the Cloud Shell pane, run the following to configure the AKS cluster to use the Azure Container Registry instance you created earlier in this lab. 
 
@@ -279,7 +279,7 @@ In this task, you'll deploy an external service to your Azure Kubernetes Service
   
 ### Task 6: Verify the you can access an external AKS-hosted service
 
-In this task, verify the container can be accessed externally using the public IP address.
+In this task, you will verify the container can be accessed externally using the public IP address.
 
 1. In the Bash session within the Cloud Shell pane, run the following to retrieve information about the nginxexternal service including name, type, IP addresses, and ports. 
 
