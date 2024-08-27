@@ -70,8 +70,7 @@ In this exercise, we set up an Azure Kubernetes Service (AKS) cluster via the Az
 
     > **Note**: The Deployment will take 5 to 10 minutes to create the AKS cluster, so you can proceed to the next exercise.
 
-#### Validation
-
+>**Congratulations** on completing the task! Now, it's time to validate it.
 <validation step="799ff4d8-16ac-4fd4-99b5-32123bae7865" />
    
 ### Exercise 2: Connect to the Cluster
@@ -434,15 +433,6 @@ In this exercise, we test the deployed AKS application by ensuring it is running
       ![](../images/aks-output1.png)
 
 > Result: You have Deploy Azure Kubernetes Cluster
-
- <validation step="799ff4d8-16ac-4fd4-99b5-32123bae7865" />
-
-  **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 ## Review
 In this lab, you will complete the following tasks:
