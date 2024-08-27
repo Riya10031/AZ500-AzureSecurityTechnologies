@@ -111,11 +111,11 @@ In this exercise, we connect to an AKS cluster. We start by opening the Cloud Sh
 
 6. Verify the connection to your cluster using `kubectl` to return a list of the cluster nodes.
 
-    ```
-    kubectl get nodes
-    ```
+      ```
+      kubectl get nodes
+      ```
 
-    > The following example output shows the single node created in the previous steps. Make sure the node status is Ready.
+      > The following example output shows the single node created in the previous steps. Make sure the node status is Ready.
 
       ![](../images/create-aks-powershell-aks.png)
 
