@@ -372,7 +372,7 @@ In this task, you will verify access to the internal service hosted on AKS by us
 
    > **Result:** You have configured and secured ACR and AKS.
 
-Congratulations on completing the task! Now, it's time to validate it.
+>Congratulations on completing the task! Now, it's time to validate it.
 <validation step="d57eeea8-6168-46ed-ae17-6c4a5fdb0f4d" />
 
 ### Review
