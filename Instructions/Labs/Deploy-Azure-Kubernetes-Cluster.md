@@ -87,8 +87,8 @@ In this exercise, we connect to an AKS cluster. We start by opening the Cloud Sh
       ![](../images/cloudshell_image1.png)
 
 3. Select **I want to create a storage**, click on **Next**. provide all the below details Click on **Create**.
-
-    - **Resource group**: Select the **<inject key="resourcegroup" enableCopy="true"/>**  Resource group.
+    - **Resource group**: Select the **<inject key="resourcegroup" enableCopy="false"/>**  Resource group.
+    - **Region**: **<inject key="region"  enableCopy="false"/>**.
     - **Storage account**: Enter the name as **storage<inject key="DeploymentID"  enableCopy="false"/>** .
     - **File share**: Enter `blob` 
 
