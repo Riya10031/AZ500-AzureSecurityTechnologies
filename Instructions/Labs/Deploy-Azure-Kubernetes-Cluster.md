@@ -107,7 +107,7 @@ In this exercise, we connect to an AKS cluster. We start by opening the Cloud Sh
 
 5. Confirm Do you want to import the Kubernetes config?, type `y` and press `Enter`.
 
-    ![](../images/create-aks-powershell-connect.png)
+      ![](../images/create-aks-powershell-connect.png)
 
 6. Verify the connection to your cluster using `kubectl` to return a list of the cluster nodes.
 
@@ -117,7 +117,7 @@ In this exercise, we connect to an AKS cluster. We start by opening the Cloud Sh
 
     > The following example output shows the single node created in the previous steps. Make sure the node status is Ready.
 
-     ![](../images/create-aks-powershell-aks.png)
+      ![](../images/create-aks-powershell-aks.png)
 
 ### Exercise 3: Deploy the application
 
