@@ -376,7 +376,7 @@ In this exercise, we deploy an application to an AKS cluster using a Kubernetes 
       type: LoadBalancer
     ```
 
-5. Right click on the top right corner of the editor and click on **Save** to save your changes and close the file.
+5. **Save** the file by pressing **Ctrl+S** and close the file.
 
 6. Deploy the application using the `kubectl apply` command and specify the name of your YAML manifest:
 
