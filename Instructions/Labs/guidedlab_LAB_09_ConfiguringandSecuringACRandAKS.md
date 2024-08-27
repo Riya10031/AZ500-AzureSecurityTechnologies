@@ -372,13 +372,8 @@ In this task, you will verify access to the internal service hosted on AKS by us
 
    > **Result:** You have configured and secured ACR and AKS.
 
+Congratulations on completing the task! Now, it's time to validate it.
 <validation step="d57eeea8-6168-46ed-ae17-6c4a5fdb0f4d" />
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Review
 
