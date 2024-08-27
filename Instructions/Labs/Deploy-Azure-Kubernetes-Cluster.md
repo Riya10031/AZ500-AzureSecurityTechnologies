@@ -80,11 +80,11 @@ In this exercise, we connect to an AKS cluster. We start by opening the Cloud Sh
 
 1. In the Azure portal click on **Cloud Shell**, open it with the **>_** button on the top of the Azure portal and select `PowerShell`.
 
-    ![](../images/select-powershell.png)
+      ![](../images/select-powershell.png)
 
 2. If You don't have pre-created storage account, select **Mount storage account** and then click on **Apply**.
 
-    ![](../images/cloudshell_image1.png)
+      ![](../images/cloudshell_image1.png)
 
 3. Select **I want to create a storage**, click on **Next**. provide all the below details Click on **Create**.
 
@@ -92,17 +92,17 @@ In this exercise, we connect to an AKS cluster. We start by opening the Cloud Sh
     - **Storage account**: Enter the name as **storage<inject key="DeploymentID"  enableCopy="false"/>** .
     - **File share**: Enter `blob` 
 
-    ![](../images/cloudshell_image2.png)
+      ![](../images/cloudshell_image2.png)
 
-    ![](../images/cloudshell_image3.png)
+      ![](../images/cloudshell_image3.png)
 
 4. Configure `kubectl` to connect to your Kubernetes cluster using the `Import-AzAksCredential` cmdlet. This command downloads credentials and configures the Kubernetes CLI to use them.
 
-    ```
-    Import-AzAksCredential -ResourceGroupName <resouresegroupname> -Name <myAKSClustername>
-    ```
+      ```
+      Import-AzAksCredential -ResourceGroupName <resouresegroupname> -Name <myAKSClustername>
+      ```
 
-    > **Note**: Replace `<resouresegroupname>` with **<inject key="resourcegroup" enableCopy="true"/>**  and `<myAKSClustername>` with **myAKSCluster-<inject key="DeploymentID"  enableCopy="true"/>**.
+      > **Note**: Replace `<resouresegroupname>` with **<inject key="resourcegroup" enableCopy="true"/>**  and `<myAKSClustername>` with **myAKSCluster-<inject key="DeploymentID"  enableCopy="true"/>**.
 
 5. Confirm Do you want to import the Kubernetes config?, type `y` and press `Enter`.
 
