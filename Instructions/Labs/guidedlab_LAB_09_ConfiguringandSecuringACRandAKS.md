@@ -57,9 +57,9 @@ In this task, you will set up a resource group and an Azure Container Registry (
     - **Storage account**: Enter the name as **storage<inject key="DeploymentID"  enableCopy="false"/>** .
     - **File share**: Enter `blob` 
 
-    ![](../images/Bash3.png)
+        ![](../images/Bash3.png)
 
-    ![](../images/Bash4.png)
+        ![](../images/Bash4.png)
 
 1. In the Bash session within the Cloud Shell pane, run the following to create a new resource group and virtual network for this lab:
 
