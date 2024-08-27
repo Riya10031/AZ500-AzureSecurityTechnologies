@@ -38,7 +38,6 @@ In this exercise, we set up an Azure Kubernetes Service (AKS) cluster via the Az
     - **Kubernetes Version**: Select `default` version **(8)**.
     - **Automatic upgrade**: Leave the setting set to the `Enabled with patch (recommended)` **(9)**.
     - **Authentication and authorization**: Leave the setting set to `Local accounts with Kubernetes RBAC` **(10)**.
-    
         ![](../images/create-aks-basic.png)
 
 4. On the **Node pools** tab, select **agentpool** **(1)** node pool, click on **Delete** **(2)** and click on **+ Add node pool** **(3)**.
