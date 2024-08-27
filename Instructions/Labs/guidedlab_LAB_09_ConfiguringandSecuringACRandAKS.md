@@ -258,7 +258,7 @@ In this task, you'll deploy an external service to your Azure Kubernetes Service
     code ./nginxexternal.yaml
     ```
 
-    >**Note**: This is the *external* yaml file. If you get a pop-up to **Switch to Classic Cloud Shell** then click on **Confirm**.
+    >**Note**: This is the *external* yaml file. If you get a pop-up to **Switch to Classic Cloud Shell** then click on **Confirm**, and repeat the above step.
 
     ![](../images/Bash6.png)
 
