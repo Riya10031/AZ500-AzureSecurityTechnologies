@@ -53,6 +53,7 @@ In this task, you will set up a resource group and an Azure Container Registry (
 1. Select **I want to create a storage**, click on **Next**. provide all the below details Click on **Create**.
 
     - **Resource group**: Select the **<inject key="resourcegroup" enableCopy="true"/>**  Resource group.
+    - **Region**: **<inject key="region"  enableCopy="false"/>**.
     - **Storage account**: Enter the name as **storage<inject key="DeploymentID"  enableCopy="false"/>** .
     - **File share**: Enter `blob` 
 
