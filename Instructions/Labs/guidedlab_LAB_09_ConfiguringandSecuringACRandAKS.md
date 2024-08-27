@@ -156,7 +156,7 @@ In this task, you will create an Azure Kubernetes Service (AKS) cluster and revi
 
     |Setting|Value|
     |----|----|
-    |Network configuration|**Azure CNI**|
+    |Network configuration|**Azure CNI Node Subnet**|
     |DNS name prefix|**Leave the default value**|
 
     >**Note**: AKS can be configured as a private cluster. This assigns a private IP to the API server to ensure network traffic between your API server and your node pools remains on the private network only. For more information, visit [Create a private Azure Kubernetes Service cluster](https://docs.microsoft.com/en-us/azure/aks/private-clusters) page.
