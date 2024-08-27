@@ -116,7 +116,7 @@ In this task, you will create a Dockerfile, build a container image from it, and
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Resource Group** and select it.
 
-1. navigate to the **AZ500Lab09** resource group and, in the list of resources, click the entry representing the Azure Container Registry instance you provisioned in the previous task.
+1. navigate to the **AZ500LAB09** resource group and, in the list of resources, click the entry representing the Azure Container Registry instance you provisioned in the previous task.
 
 1. On the Container registry blade, in the **Services** section, click **Repositories**. 
 
