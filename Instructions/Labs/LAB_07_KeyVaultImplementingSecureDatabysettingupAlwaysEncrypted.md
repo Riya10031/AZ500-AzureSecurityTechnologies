@@ -24,11 +24,11 @@ In this lab, you will complete the following exercises:
 
 ## Architecture Diagram
 
-![image](https://user-images.githubusercontent.com/91347931/157532938-c724cc40-f64f-4d69-9e91-d75344c5e0a2.png)
+   ![image](https://user-images.githubusercontent.com/91347931/157532938-c724cc40-f64f-4d69-9e91-d75344c5e0a2.png)
 
 ## Key Vault diagram
 
-![image](../images/LAB10PNG.png)
+   ![image](../images/LAB10PNG.png)
 
 ## Lab files:
 
@@ -51,11 +51,11 @@ In this task, you will deploy an Azure VM, which will automatically install Visu
 
 2. On the **Custom deployment** blade, click the **Build your own template in the editor** option.
 
-   ![image](../images/Custom_Template.png)
+     ![image](../images/Custom_Template.png)
 
 3. On the **Edit template** blade, click **Load file**, locate the **C:\\AllFiles\\AZ500-AzureSecurityTechnologies-prod\\Allfiles\\Labs\\10\\az-500-10_azuredeploy.json** file and click **Open**.
 
-   ![image](../images/Lab-10_Ex1_Task1.png)
+     ![image](../images/Lab-10_Ex1_Task1.png)
 
 4. On the **Edit template** blade, click **Save**.
 
@@ -102,27 +102,27 @@ In this task, you will create an Azure Key Vault resource. You will also configu
 
 1. Open the Cloud Shell by clicking the first icon (next to the search bar) at the top right of the Azure portal. If prompted, select **PowerShell**.
 
-   ![image](../images/powersh1.png)
+     ![image](../images/powersh1.png)
 
-   ![image](../images/powersh2.png)
+     ![image](../images/powersh2.png)
 
 2. On getting started page, select the option **No storage account required** and select the **Subscription** provided. once subscription is selected, click on **Apply.**
 
-   ![image](../images/powersh3.png)
+     ![image](../images/powersh3.png)
 
 3. Ensure **PowerShell** is selected in the drop-down menu in the upper-left corner of the Cloud Shell pane.
 
 4. In the PowerShell session within the Cloud Shell pane, run the following to create an Azure Key Vault in the resource group **AZ500LAB10**. (If you chose another name for this lab's Resource Group out of Task 1, use that name for this task as well). The Key Vault name must be unique. Remember the name you have chosen. You will need it throughout this lab.  
 
-    ```powershell
+```powershell
     $kvName = 'az500kv' + $(Get-Random)
 
     $location = (Get-AzResourceGroup -ResourceGroupName 'AZ500LAB10-<inject key="DeploymentID"></inject>').Location
 
     New-AzKeyVault -VaultName $kvName -ResourceGroupName 'AZ500LAB10-<inject key="DeploymentID"></inject>' -Location $location
-    ```
+```
 
-    >**Note**: The output of the last command will display the vault name and the vault URI. The vault URI is in the format `https://<vault_name>.vault.azure.net/`
+   >**Note**: The output of the last command will display the vault name and the vault URI. The vault URI is in the format `https://<vault_name>.vault.azure.net/`
 
 5. Close the Cloud Shell pane. 
 
@@ -132,16 +132,16 @@ In this task, you will create an Azure Key Vault resource. You will also configu
 
 8. On the Resource Group blade, click the entry representing the newly created Key Vault. 
 
-   ![image](../images/Lab-10_Ex2_Task1_1.png)
+     ![image](../images/Lab-10_Ex2_Task1_1.png)
 
 9. On the Key Vault blade, in the **Overview** section, click **Access Policies** and then click **+ Create**.
 
-   ![image](../images/Lab-10_Ex2_Task1_2.png)
+     ![image](../images/Lab-10_Ex2_Task1_2.png)
 
-    >**Note**: If the option of **Access Policies** is greyed out, navigate to the **settings** tab on the left > select **Access Configuration** > on the right side 
+   >**Note**: If the option of **Access Policies** is greyed out, navigate to the **settings** tab on the left > select **Access Configuration** > on the right side 
        select **Vault access policies** and click on **Apply.**
 
-   ![image](../images/powersh4.png)
+     ![image](../images/powersh4.png)
 
 10. On the **Create an access policy** blade, specify the following settings (leave all others with their default values): 
 
