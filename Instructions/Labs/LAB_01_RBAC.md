@@ -1,5 +1,6 @@
 # Lab 01: Role-Based Access Control
 
+
 ## Lab scenario
 
 You have been asked to create a proof of concept showing how Azure users and groups are created. Also, how role-based access control is used to assign roles to groups. Specifically, you need to:
