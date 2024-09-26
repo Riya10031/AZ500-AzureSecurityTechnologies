@@ -100,7 +100,15 @@ In this exercise, you will complete the following tasks:
 
 In this task, you will create an Azure Key Vault resource. You will also configure the Azure Key Vault permissions.
 
-1. Open the Cloud Shell by clicking the first icon (next to the search bar) at the top right of the Azure portal. If prompted, select **PowerShell** and **Create storage**.
+1. Open the Cloud Shell by clicking the first icon (next to the search bar) at the top right of the Azure portal. If prompted, select **PowerShell**.
+
+   ![image](../images/powersh1.png)
+
+   ![image](../images/powersh2.png)
+
+1. On getting started page, select the option **No storage account required** and select the **Subscription** provided. once subscription is selected, click on **Apply.**
+
+   ![image](../images/powersh3.png)
 
 1. Ensure **PowerShell** is selected in the drop-down menu in the upper-left corner of the Cloud Shell pane.
 
@@ -120,7 +128,7 @@ In this task, you will create an Azure Key Vault resource. You will also configu
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Resource groups** and press the **Enter** key.
 
-1. On the **Resource groups** blade, in the list of resource group, click the **AZ500LAB10** entry.
+1. On the **Resource groups** blade, in the list of resource group, click the **AZ500LAB10-<inject key="DeploymentID"></inject>** entry.
 
 1. On the Resource Group blade, click the entry representing the newly created Key Vault. 
 
