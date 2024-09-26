@@ -39,7 +39,7 @@ In this task, you will create a user account for Joseph Price.
 
 1. In the Azure Portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Microsoft Entra ID** and press the **Enter** key.
 
-      ![image](../images/az-500-lab1-image1.png)
+      ![image](../images/img07.png)
 
 1. On the **Overview** blade of the Azure Active Directory tenant, in the **Manage** section, select **Users**, and then select **+ New user**, then, in the drop-down menu, click on **Create new user**.
 
@@ -86,7 +86,7 @@ In this task, you will create the *Senior Admins* group, add the user account of
 
 1. Back on the **New Group** blade, click on **Create**.
 
-    ![image](../images/az-500-lab1-image5.png)
+    ![image](../images/imgnewgroups.png)
 
 > **Result:** You used the Azure Portal to create a user and a group, and assigned the user to the group. 
 
@@ -103,9 +103,29 @@ In this exercise, you will complete the following tasks:
 
 In this task, you will create a user account for Isabel Garcia by using PowerShell.
 
-1. Open the Cloud Shell by clicking the first icon in the top right of the Azure Portal. If prompted, select **PowerShell** and **Create storage**.
+1. Open a **Cloud Shell** prompt by selecting the icon shown below.
 
-1. Ensure **PowerShell** is selected in the drop-down menu in the upper-left corner of the Cloud Shell pane.
+     ![image](../images/img001.png)
+
+1. At the bottom half of the portal, you may see a message welcoming you to the Azure Cloud Shell, if you have not yet used a Cloud Shell. Select **PowerShell**.
+
+    ![image](../images/img02.png)
+
+1. On the **Getting started**, select **Mount storage account** and select your subscription under storage account subscription. Click on **Apply**.
+
+   ![image](../images/img03.png)
+
+1. On the **Mount storage account** tab, select **I want to create a storage account**. Click on **Next**.
+
+    ![image](../images/img04.png)
+
+1. Use the existing **Resource group** as AZ500LAB01**<inject key="DeploymentID" enableCopy="false" />(1)** and specify new names for **Storage account** as str**<inject key="DeploymentID" enableCopy="false" /> (2)** and **File share** as fileshare (3)**<inject key="DeploymentID" enableCopy="false" />**, as shown in the dialog below. Then select **Create (4)**.
+
+   ![image](../images/img05.png)
+
+1. Once complete, you will see a prompt similar to the one below. Verify that the upper left corner of the Cloud Shell screen shows **PowerShell**.
+
+   ![image](../images/img06.png)
 
    >**Note**: To paste copied text into the Cloud Shell, right-click within the pane window and select **Paste**. Alternatively, you can use the **Shift+Insert** key combination.
 
