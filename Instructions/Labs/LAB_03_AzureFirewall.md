@@ -161,7 +161,7 @@ In this task, you will create a default route for the **Workload-SN** subnet. Th
 
 In this task you will create an application rule that allows outbound access to `www.bing.com`.
 
-1. In the Azure portal, navigate back to the **Test-FW01** firewall.
+1. In the Azure portal, navigate back to the overview panel of **Test-FW01** firewall .
 
 1. On the **Test-FW01** blade, in the **Settings** section, click **Rules (classic)**.
 
@@ -231,7 +231,7 @@ In this task, you will configure the primary and secondary DNS addresses for the
 
 1. On the **Srv-Work** blade, in the **Settings** section, click **Networking**.
 
-1. On the **Srv-Work \| Networking** blade, click the link next to the **Network interface** entry.
+1. On the **Srv-Work \| Networking Settings** blade, click the link next to the **Network interface** entry.
 
 1. On the network interface blade, in the **Settings** section, click **DNS servers**, select the **Custom** option, add the two DNS servers referenced in the network rule: **209.244.0.3** and **209.244.0.4**, and click **Save** to save the change.
 
