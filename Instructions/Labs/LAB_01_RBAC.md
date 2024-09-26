@@ -39,7 +39,7 @@ In this task, you will create a user account for Joseph Price.
 
 1. In the Azure Portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Microsoft Entra ID** and press the **Enter** key.
 
-   ![image](../images/img07.png)
+   ![image](../images/new01.png)
 
 1. On the **Overview** blade of the Azure Active Directory tenant, in the **Manage** section, select **Users**, and then select **+ New user**, then, in the drop-down menu, click on **Create new user**.
 
@@ -86,7 +86,7 @@ In this task, you will create the *Senior Admins* group, add the user account of
 
 1. Back on the **New Group** blade, click on **Create**.
 
-    ![image](../images/imgnewgroups.png)
+    ![image](../images/imgnewgroups01.png)
 
 > **Result:** You used the Azure Portal to create a user and a group, and assigned the user to the group. 
 
@@ -105,27 +105,27 @@ In this task, you will create a user account for Isabel Garcia by using PowerShe
 
 1. Open a **Cloud Shell** prompt by selecting the icon shown below.
 
-   ![image](../images/img001.png)
+  ![image](../images/new02.png)
 
 1. At the bottom half of the portal, you may see a message welcoming you to the Azure Cloud Shell, if you have not yet used a Cloud Shell. Select **PowerShell**.
 
-    ![image](../images/img02.png)
+    ![image](../images/new03.png)
 
 1. On the **Getting started**, select **Mount storage account** and select your subscription under storage account subscription. Click on **Apply**.
 
-   ![image](../images/img03.png)
+   ![image](../images/new04.png)
 
 1. On the **Mount storage account** tab, select **I want to create a storage account**. Click on **Next**.
 
-    ![image](../images/img04.png)
+    ![image](../images/new05.png)
 
 1. Use the existing **Resource group** as AZ500LAB01**<inject key="DeploymentID" enableCopy="false" />(1)** and specify new names for **Storage account** as str**<inject key="DeploymentID" enableCopy="false" /> (2)** and **File share** as fileshare (3)**<inject key="DeploymentID" enableCopy="false" />**, as shown in the dialog below. Then select **Create (4)**.
 
-   ![image](../images/img05.png)
+   ![image](../images/new06.png)
 
 1. Once complete, you will see a prompt similar to the one below. Verify that the upper left corner of the Cloud Shell screen shows **PowerShell**.
 
-   ![image](../images/img06.png)
+   ![image](../images/new07.png)
 
    >**Note**: To paste copied text into the Cloud Shell, right-click within the pane window and select **Paste**. Alternatively, you can use the **Shift+Insert** key combination.
 
@@ -305,7 +305,7 @@ In this exercise, you will complete the following task:
    |In Search bar |Search and select **Virtual Machine Contributor**, click **Next** |
    
 
-     ![image](../images/img008.png)
+     ![image](../images/new08.png)
 
    |Setting|Value|
    |---|---|
@@ -313,7 +313,7 @@ In this exercise, you will complete the following task:
    |Select (+Select Members)|**Service Desk**|
 
 
-     ![image](../images/img009.png)
+     ![image](../images/new09.png)
 
 1. Click on **Review + assign** twice to create the role assignment.
 
@@ -339,4 +339,3 @@ In this exercise, you will complete the following task:
    <validation step="b8b0d15c-4752-41bc-86ee-10bb1220b83e" />
 
 **You have successfully completed the lab, please click on the Next button to start the next lab.**
-
