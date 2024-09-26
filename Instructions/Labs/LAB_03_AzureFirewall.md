@@ -249,9 +249,11 @@ In this task, you will test the firewall to confirm that it works as expected.
 
 1. On the **AZ500LAB08** blade, in the list of resources, click the **Srv-Jump** virtual machine.
 
-1. On the **Srv-Jump** blade, click **Connect**. 
+1. On the **Srv-Jump** blade, click connect dropdown and select **Connect**. 
 
 1. Then on the **RDP** page, click **Download RDP File** and use it to connect to the **Srv-Jump** Azure VM via Remote Desktop. When prompted to authenticate, provide the following credntials, after providing the credentials, click on **Yes** on remote desktop connection page:
+
+    >**Note**: If any warning popup prompts in browser for download, click on **Keep** .
 
    |Setting|Value|
    |---|---|
