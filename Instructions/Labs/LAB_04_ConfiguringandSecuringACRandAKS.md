@@ -45,9 +45,17 @@ In this exercise, you will complete the following tasks:
 
 In this task, you will create a resource group for the lab an an Azure Container Registry.
 
-1. In the Azure portal, open the Cloud Shell by clicking the first icon in the top right of the Azure Portal. If prompted, click **Bash** and **Create storage**.
+1. Use the **[\>_]** button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, and select ***Bash*** environment.
+    
+    ![Azure portal with a cloud shell pane](./images/az500s1.png)
+   
+1. In the **Getting Started** menu,choose **Mount storage account (1)**,select your default **Subscription (2)** from the dropdown and click on **Apply (3)**
 
-1. Ensure **Bash** is selected in the drop-down menu in the upper-left corner of the Cloud Shell pane.
+   ![Azure portal with a cloud shell pane](./images/az500s2.png)
+
+1. On the **Mount Storage account**, select **we will create a storage account for you** and click on **Next**
+
+   ![Azure portal with a cloud shell pane](./images/az500s3.png)
 
 1. In the Bash session within the Cloud Shell pane, run the following to create a new resource group for this lab:
 
@@ -126,29 +134,28 @@ In this task, you will create an Azure Kubernetes service and review the deploye
     |Subscription|the name of the Azure subscription you are using in this lab|
     |Resource group|**AZ500LAB09**|
     |Kubernetes cluster name|**MyKubernetesCluster**|
+    |Cluster preset configuration|**Dev/Test**|
     |Region|**(US) East US**|
     |Availability zones |**None**|
-    |Scale method|**Manual**|
-    |Node count|**1**|
 
-1. Click **Next: Node Pools >** and, on the **Node Pools** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
+1. Click **Next** and, on the **Node Pools** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 
     |Setting|Value|
     |----|----|
     |Enable virtual nodes|cleared checkbox|
 	
-1. Click **Next: Access >**, on the **Access** tab of the **Create Kubernetes cluster** blade, accept the defaults, and click **Next: Networking >**. 
+1. Click **Next** 
 
 1. On the **Networking** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 
     |Setting|Value|
     |----|----|
-    |Network configuration|**Azure CNI**|
+    |Network configuration|**Azure CNI Overlay**|
     |DNS name prefix|**Leave the default value**|
 
     >**Note**: AKS can be configured as a private cluster. This assigns a private IP to the API server to ensure network traffic between your API server and your node pools remains on the private network only. For more information, visit [Create a private Azure Kubernetes Service cluster](https://docs.microsoft.com/en-us/azure/aks/private-clusters) page.
 
-1. Click **Next: Integrations >** and, on the **Integrations** tab of the **Create Kubernetes cluster** blade, uncheck the box of **Enable container logs** under **Container Insights**. 
+1. Click **Next** twice and, on the **Monitoring** tab of the **Create Kubernetes cluster** blade, uncheck the box of **Enable container logs** under **Container Insights**. 
 
 1. Click **Review + Create** and then click **Create**.
 
@@ -200,15 +207,17 @@ In this task, you will grant the AKS cluster permission to access the ACR and ma
 
     ```sh
     RG_AKS=AZ500LAB09
-    
-    AKS_VNET_NAME=AZ500LAB09-vnet
-    
+
+    RG_VNET=MC_AZ500LAB09_MyKubernetesCluster_eastus	
+
+    AKS_VNET_NAME=aks-vnet-30198516
+
     AKS_CLUSTER_NAME=MyKubernetesCluster
-    
-    AKS_VNET_ID=$(az network vnet show --name $AKS_VNET_NAME --resource-group $RG_AKS --query id -o tsv)
-    
+
+    AKS_VNET_ID=$(az network vnet show --name $AKS_VNET_NAME --resource-group $RG_VNET --query id -o tsv)
+
     AKS_MANAGED_ID=$(az aks show --name $AKS_CLUSTER_NAME --resource-group $RG_AKS --query identity.principalId -o tsv)
-    
+
     az role assignment create --assignee $AKS_MANAGED_ID --role "Contributor" --scope $AKS_VNET_ID
     ```
 
