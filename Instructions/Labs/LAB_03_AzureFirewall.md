@@ -294,10 +294,11 @@ In this task, you will test the firewall to confirm that it works as expected.
 > **Result:** You have successfully configured and tested the Azure Firewall.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-> - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+> - Hit the Validate button. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="d7fc707d-6388-4dd1-80f2-5092ff0d75a8" />
 
 **You have successfully completed the lab, please click on the next button to start the next lab.**
 
