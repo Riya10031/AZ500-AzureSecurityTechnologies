@@ -39,7 +39,7 @@ In this task, you will create a user account for Joseph Price.
 
 1. In the Azure Portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Microsoft Entra ID** and press the **Enter** key.
 
-      ![image](../images/img07.png)
+   ![image](../images/img07.png)
 
 1. On the **Overview** blade of the Azure Active Directory tenant, in the **Manage** section, select **Users**, and then select **+ New user**, then, in the drop-down menu, click on **Create new user**.
 
@@ -105,7 +105,7 @@ In this task, you will create a user account for Isabel Garcia by using PowerShe
 
 1. Open a **Cloud Shell** prompt by selecting the icon shown below.
 
-     ![image](../images/img001.png)
+   ![image](../images/img001.png)
 
 1. At the bottom half of the portal, you may see a message welcoming you to the Azure Cloud Shell, if you have not yet used a Cloud Shell. Select **PowerShell**.
 
