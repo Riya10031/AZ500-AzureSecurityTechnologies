@@ -1,4 +1,4 @@
-# Lab 13: Azure Monitor
+# Lab 08: Azure Monitor
 
 ## Lab scenario
 You have been asked to create a proof of concept for monitoring virtual machine performance. Specifically, you want to:
@@ -85,105 +85,101 @@ In this task, you will create a Log Analytics workspace.
 
 1. On the **Review + create** tab of the **Create Log Analytics workspace** blade, click **Create**.
 
-## Task 3: Enable the Log Analytics virtual machine extension
 
-In this task, you will enable the Log Analytics virtual machine extension. This extension installs the Log Analytics agent on Windows and Linux virtual machines. This agent collects data from the virtual machine and transfers it to the Log Analytics workspace that you designate. Once the agent is installed it will be automatically upgraded ensuring you always have the latest features and fixes. 
+## Task 3: Create an Azure storage account
 
-1. In the Azure portal, navigate back to the **Log Analytics workspaces** blade, and, in the list of workspaces, click the entry representing the workspace you created in the previous task.
+In this task, you will create a storage account.
 
-1. On the Log Analytics workspace blade, in the **Get started with Log Analytics** section, click the **Azure virtual machines (VMs)** entry under **Connect a data source** field.
+1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Storage accounts** and press the **Enter** key.
 
-    >**Note**: For the agent to be successfully installed, the virtual machine must be running.
+2. On the **Storage accounts** blade in the Azure portal, click the **+ Create** button to create a new storage account.
 
-1. In the list of virtual machines, locate the entry representing the Azure VM **myVM** you deployed in the first task of this exercise and note that it is listed as **Not connected**.
+    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/73eb9241-d642-455a-a1ff-b504670395c0)
 
-1. Click the **myVM** entry and then, on the **myVM** blade, click **Connect**. 
+3. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values):
 
-1. Wait for the virtual machine to connect to the Log Analytics workspace.
+    |Setting|Value|
+    |---|---|
+    |Subscription|the name of the Azure subscription you are using in this lab|
+    |Resource group|**AZ500LAB131415**|
+    |Storage account name|any globally unique name between 3 and 24 in length consisting of letters and digits|
+    |Location|**(US) EastUS**|
+    |Performance|**Standard (general-purpose v2 account)**|
+    |Redundency|**Locally redundant storage (LRS)**|
 
-    >**Note**: This may take a few minutes. The **Status** displayed on the **myVM** blade, will change from **Connecting** to **This workspace**. 
+4. On the **Basics** tab of the **Create storage account** blade, click **Review**, wait for the validation process to complete, and click **Create**.
 
-## Task 4: Collect virtual machine event and performance data
+     ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/d443821c-2ddf-4794-87fa-bfc092980eba)
 
-In this task, you will configure collection of the Windows System log and several common performance counters. You will also review other sources that are available.
+    >**Note**: Wait for the Storage account to be created. This should take about 2 minutes.
 
-1. In the Azure portal, navigate back to the Log Analytics workspace you created earlier in this exercise.
+## Task 4: Create a Data Collection Rule.
 
-1. On the Log Analytics workspace blade, in the **Classics** section, click **Legacy agents management**.
+In this task, you will create a data collection rule.
 
-    ![image](../images/AZ-500--legacy.png)
+1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Monitor** and press the **Enter** key.
 
-1. On the **Legacy agents management** blade, review the configurable settings including Windows Event Logs, Windows Performance Counters, Linux Performance Counters, IIS Logs, and Syslog. 
+2. On the **Monitor Settings** blade, click **Data Collection Rules.**
 
-1. Under tab **Windows event logs**, click on **+ Add windows event log**, in the listing of event log types, select **System**.
+  ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/d43e8f94-efb2-4255-9320-210c976fd45e)
 
-    >**Note**: This is how you add event logs to the workspace. Other choices include, for example, **Hardware events** or **Key Management Service**.  
 
-1. Unselect the **Information** checkbox, leaving the **Error** and **Warning** check boxes selected.
-
-1. Click **Windows Performance Counters**, click **+ Add performance counter**, review the listing of available performance counters, and add the following:
-
-    - Memory(\*)\Available Memory Mbytes
-    - Process(\*)\\% Processor Time
-    - Event Tracing for Windows\Total Memory Usage --- Non-Paged Pool
-    - Event Tracing for Windows\Total Memory Usage --- Paged Pool
-
-    >**Note**: The counters are added and configured with 60 second collection sample interval.
+3. On the **Basics** tab of the **Create Data Collection Rule** blade, specify the following settings:
   
-1. Now click **Apply**.
+    |Setting|Value|
+    |---|---|
+    |**Rule details**|
+    |Rule Name|**DCR1**|
+    |Subscription|the name of the Azure subscription you are using in this lab|
+    |Resource Group|**AZ500LAB131415**|
+    |Region|**East US**|
+    |Platform Type|**Windows**|
+    |Data Collection Endpoint|*Leave Blank*|
 
-## Task 5: View and query collected data
+    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/9b58c4ce-b7a8-4acf-8289-d95b270a6083)
 
-In this task, you will run a log search on your data collection. 
 
-1. In the Azure portal, navigate back to the Log Analytics workspace you created earlier in this exercise.
+4. Click on the button labeled **Next: Resources >** to proceed.
+   
+6. On the Resources tab, select **+ Add resources,** check **Enable Data Collection Endpoints.** In the Select a scope template, check **AZ500LAB131415,** and click **Apply.**
 
-2. On the Log Analytics workspace blade, in the **General** section, click **Logs**.
+    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/d4191115-11bc-43ec-9bee-e84b9b95a821)
 
-     ![image](../images/AZ-500-general.png)
+10. Click on the button labeled **Next: Collect and deliver >** to proceed.
 
-3. If needed, close the **Welcome to Log Analysis** window. 	
+    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/8294d300-f910-4757-ad52-43c7594ac822)
 
-4. On the **Queries** pane, within the searchbox, type **Memory and CPU usage**.
-    	
-5. On the **Memory and CPU usage** card, click on the **Run** button.
+11. Click **+ Add data source**, then on the **Add data source** page, change the **Data source type** drop-down menu to display **Performance Counters.** Leave the following default settings:
 
-6. The query will automatically open in a new query tab. 
+    |Setting|Value|
+    |---|---|
+    |**Performance counter**|**Sample rate (seconds)**|
+    |CPU|60|
+    |Memory|60|
+    |Disk|60|
+    |Network|60|
 
-    >**Note**: Log Analytics uses the Kusto query language. You can customize the existing queries or create your own. 
+   ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/a24e44ad-1d10-4533-80e2-bae1b3f6564d)
 
-    >**Note**: The results of the query you selected are automatically displayed below the query pane. To re-run the query, click **Run**.
+11. Click on the button labeled **Next: Destination >** to proceed.
+  
+12. Change the **Destination type** drop-down menu to display **Azure Monitor Logs.** In the **Subscription** window, ensure that your *Subscription* is displayed, then change the **Account or namespace** drop-down menu to reflect your previously created Log Analytics Workspace.
 
-    >**Note**: Since this virtual machine was just created, there may not be any data yet. 
+   ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/481843f5-94c4-4a8f-bf51-a10d49130bf8)
 
-    >**Note**: You have the option of displaying data in different formats. You also have the option of creating an alert rule based on the results of the query.
+11. Click on **Add data source** at the bottom of th
     
-    >**Note**: You can generate some additional load on the Azure VM you deployed earlier in this lab by using the following steps:	
-    
- 7. Now, navigate to the Azure VM blade within the Azure portal and select **myVM**.
- 
- 8. On the **Overview** page for the virtual machine, select the **Connect** button.
- 
- 9. On the RDP tab, select the **Download RDP File** button.
- 
-10. Open the RDP file that was just downloaded. When a dialog appears asking if you want to connect, select **Connect**.
- 
-11. Enter the username and password selected during the virtual machine provisioning process. Then select **OK**.
- 
-12. When the **Remote Desktop Connection** dialog appears asking if you want to connect, select **Yes**.
-    
-13. Within the remote session, right-click on the **Start** icon on the Task bar and select **Windows Powershell(Admin)** and Run the below commands one by one:
- 	
-       ```cmd	
-       cmd	
-       :loop	
-       dir c:\ /s > SWAP	
-       goto loop	
-       ```	
-       	
- 14. Switch back to the Log Analytics blade and re-run the query. You might need to wait a few minutes for data to be collected and re-run the query again.
+    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/964091e7-bbbc-4ca8-8383-bb2871a1e7f0)
 
-> **Results:** You used a Log Analytics workspace to configure data sources and query logs. 
+13. Click **Review + create.**
+
+    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/50dd8407-a106-4540-9e14-ae40a3c04830)
+
+14. Click **Create.**
+
+> Results: You deployed an Azure virtual machine, Log Analytics workspace, Azure storage account, and a data collection rule to collect events and performance counters from virtual machines with Azure Monitor Agent.
+
+>**Note**: Do not remove the resources from this lab as they are needed for the Microsoft Defender for Cloud lab and the Microsoft Sentinel lab.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 

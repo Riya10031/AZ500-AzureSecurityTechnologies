@@ -1,9 +1,9 @@
-14_Security Center.md
-@@ -1,121 +0,0 @@
-# Lab 14: Microsoft Defender for Cloud
+# Lab 09: Microsoft Defender for Cloud
 
 ## Lab scenario
+
 You have been asked to create a proof of concept of Microsoft Defender for Cloud-based environment. Specifically, you want to:
+
 - Configure Microsoft Defender for Cloud to monitor a virtual machine.
 - Review Microsoft Defender for Cloud recommendations for the virtual machine.
 - Implement recommendations for guest configuration and Just in time VM access. 
@@ -12,7 +12,9 @@ You have been asked to create a proof of concept of Microsoft Defender for Cloud
  > For all the resources in this lab, we are using the **East US** region. Verify with your instructor this is the region to use for class. 
 
 ## Lab objectives
+
 In this lab, you will complete the following exercise:
+
 - Exercise 1: Implement Microsoft Defender for Cloud
 
 ## Architecture Diagram
@@ -36,7 +38,8 @@ In this task, you will on-board and configure Microsoft Defender for Cloud.
 1. On the **Microsoft Defender for Cloud \| Getting started** blade, click **Upgrade** and then click **Install agents tab** scroll down and click **Install agents**.
 
    >**Note**: If you see any pop-up like **Only upgrade plans with existing resources** then click on **Enable** and then perform the previous step.
-   
+
+   >**Note**: Review all the features that are available as part of Microsoft Defender plans. 
    
      ![image](../images/Az-500lab14-upgrade.png) 
      
@@ -50,18 +53,11 @@ In this task, you will on-board and configure Microsoft Defender for Cloud.
 
 1. On the **Settings \| Azure Defender plans** blade, select **Enable all plans** and click **Save** to save any changes.
 
-1. Navigate back to the **Microsoft Defender for Cloud** Home page, from the left navigation pane, under the **Settings** section click on **Workflow Automation** and  click **+ Add workflow automation**.
+1. Navigate back to the **Microsoft Defender for Cloud \| Environment settings** blade, expand until your subscription appears, and click the entry representing the Log Analytics workspace you created in the previous lab.
 
-1. On the **Add workflow automation** blade, review the available settings and click **Cancel**.
+1. On the **Settings \| Defender plans** blade, ensure that all options are "On". If needed, click **Enable all plans** and then click **Save**.
 
-    >**Note**: You can trigger actions based threat detection alerts and Microsoft Defender for Cloud recommendations. You can also configure an action based on Logic apps. 
-
-    >**Note**: Microsoft Defender for Cloud provides many insights into virtual machines including system update status, OS security configurations, and endpoint protection.
-
-1. Navigate back to the **Microsoft Defender for Cloud | Environment Settings** blade, expand your subscription, and click the entry representing the Log Analytics workspace you created in the previous lab.
-
-1. On the **Settings \| Defender plans** blade, click on **Enable all Plans** and click  on **Save**.
-
+1. Select **Data collection** from the **Settings \| Defender plans** blade. Click **All Events** and **Save**.
 
 ## Task 2: Review the Microsoft Defender for Cloud recommendation
 
@@ -83,7 +79,6 @@ In this task, you will review the Microsoft Defender for Cloud recommendations.
     
 1. On the **Resource health** blade, on the **Recommendations** tab, review the list of recommendations for **myVM**.
 
-
 ## Task 3: Implement the Microsoft Defender for Cloud recommendation to enable Just in time VM Access
 
 In this task, you will implement the Microsoft Defender for Cloud recommendation to enable Just in time VM Access on the virtual machine. 
@@ -98,7 +93,7 @@ In this task, you will implement the Microsoft Defender for Cloud recommendation
 
     >**Note**: You might have to wait a few minutes before the **myVM** entry becomes available.
 
-4. Select **Enable JIT on 1 VM**.
+4. Select **Enable JIT on 1 VM**. option on the far right of the **Virtual machines** section.
 
 5. On the **JIT VM access configuration** blade, on the far right of the row referencing the port **22**, click the ellipsis button and then click **Delete**.
 

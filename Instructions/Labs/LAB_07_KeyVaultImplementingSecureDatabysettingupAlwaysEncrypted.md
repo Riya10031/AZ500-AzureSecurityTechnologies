@@ -1,14 +1,20 @@
-# Lab 10: Key Vault (Implementing Secure Data by setting up Always Encrypted)
+# Lab 07: Key Vault (Implementing Secure Data by setting up Always Encrypted)
 
 ## Lab scenario
+
 You have been asked to create a proof of concept application that makes use of the Azure SQL Database support for Always Encrypted functionality. All of the secrets and keys used in this scenario should be stored in Key Vault. The application should be registered in Azure Active Directory (Azure AD) to enhance its security posture. To accomplish these objectives, the proof of concept should include:
+
 - Creating an Azure Key Vault and storing keys and secrets in the vault.
 - Create a SQL Database and encrypting content of columns in database tables by using Always Encrypted.
+
+>**Note**: For all the resources in this lab, we are using the **East US** region. Verify with your instructor this is the region to use for class.
 
 To keep the focus on the security aspects of Azure, related to building this proof of concept, you will start from an automated ARM template deployment, setting up a Virtual Machine with Visual Studio 2019 and SQL Server Management Studio 2019.
 
 ## Lab objectives
+
 In this lab, you will complete the following exercises:
+
 - Exercise 1: Deploy the base infrastructure from an ARM template
 - Exercise 2: Configure the Key Vault resource with a key and a secret
 - Exercise 3: Configure an Azure SQL database and a data-driven application
@@ -124,15 +130,15 @@ In this task, you will create an Azure Key Vault resource. You will also configu
 
    ![image](../images/Lab-10_Ex2_Task1_2.png)
 
-1. On the **Add access policy** blade, specify the following settings (leave all others with their default values): 
+1. On the **Create an access policy** blade, specify the following settings (leave all others with their default values): 
 
     |Setting|Value|
     |----|----|
     |Configure from template (optional)|**Key, Secret, & Certificate Management**|
     |Key permissions|click **Select all** permissions|
+    |Key permissions/Cryptographic Operations|click **Sign** resulting in total of **1 selected** permissions|
     |Secret permissions|click **Select all** resulting in total of **7 selected** permissions|
     |Certification permissions|click **Select all** resulting in total of **15 selected** permissions|
-    |Cryptographic Operations |click **Select all** resulting in total of **6 selected** permissions|
     |Select principal|click **None selected**, on the **Principal** blade, select your user account, and click **Next**|
     |Application (optional)|click **Next**|
     |Review + create|click **Create**|
@@ -179,7 +185,6 @@ In this task, you will add a key to the Key Vault and view information about the
 
     >**Note**: You can reference any key by using the key identifier. To get the most current version, reference `https://<key_vault_name>.vault.azure.net/keys/MyLabKey` or get the specific version with: `https://<key_vault_name>.vault.azure.net/keys/MyLabKey/<key_version>`
 
-
 ### Task 3: Add a Secret to Key Vault
 
 1. Switch back to the Cloud Shell pane.
@@ -189,7 +194,6 @@ In this task, you will add a key to the Key Vault and view information about the
     ```powershell
     $secretvalue = ConvertTo-SecureString 'Pa55w.rd1234' -AsPlainText -Force
     ```
-
 1.  In the PowerShell session within the Cloud Shell pane, run the following to add the secret to the vault:
 
     ```powershell
@@ -222,7 +226,6 @@ In this task, you will add a key to the Key Vault and view information about the
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-
 ## Exercise 3: Configure an Azure SQL database and a data-driven application
 
 In this exercise, you will complete the following tasks:
@@ -232,7 +235,6 @@ In this exercise, you will complete the following tasks:
 - Task 3: Retrieve SQL Azure database ADO.NET Connection String 
 - Task 4: Log on to the Azure VM running Visual Studio 2019 and SQL Management Studio 2019
 - Task 5: Create a table in the SQL Database and select data columns for encryption
-
 
 ### Task 1: Enable a client application to access the Azure SQL Database service. 
 
@@ -251,7 +253,7 @@ In this task, you will enable a client application to access the Azure SQL Datab
     |Name|**sqlApp**|
     |Redirect URI (optional)|**Web** and **https://sqlapp**|
 
-1. Now click **Register**. 
+1.  On the **Register an application** blade, click **Register**. 
 
     >**Note**: Once the registration is completed, the browser will automatically redirect you to **sqlApp** blade. 
 
@@ -280,7 +282,6 @@ In this task, you will enable a client application to access the Azure SQL Datab
 
     >**Note**: Make sure to copy the value *before* you navigate away from the blade. Once you do, it is no longer possible to retrieve its clear text value.
 
-
 ### Task 2: Create a policy allowing the application access to the Key Vault.
 
 In this task, you will grant the newly registered app permissions to access secrets stored in the Key Vault.
@@ -295,8 +296,11 @@ In this task, you will grant the newly registered app permissions to access secr
     $applicationId = '<Azure_AD_Application_ID>'
     ```
 1. In the PowerShell session within the Cloud Shell pane, run the following to create a variable storing the Key Vault name.
+
     ```powershell
     $kvName = (Get-AzKeyVault -ResourceGroupName 'AZ500LAB10').VaultName
+
+    $kvName
     ```
 
 1. In the PowerShell session within the Cloud Shell pane, run the following to grant permissions on the Key Vault to the application you registered in the previous task:
@@ -304,9 +308,7 @@ In this task, you will grant the newly registered app permissions to access secr
     ```powershell
     Set-AZKeyVaultAccessPolicy -VaultName $kvName -ResourceGroupName AZ500LAB10 -ServicePrincipalName $applicationId -PermissionsToKeys get,wrapKey,unwrapKey,sign,verify,list
     ```
-
 1. Close the Cloud Shell pane. 
-
 
 ### Task 3: Retrieve SQL Azure database ADO.NET Connection String 
 
@@ -443,7 +445,6 @@ In this task, you will connect to the SQL Database with SQL Server Management St
 
     >**Note**: The **Always Encrypted Keys** subnode contains the **Column Master Keys** and **Column Encryption Keys** subfolders.
 
-
 ## Exercise 4: Demonstrate the use of Azure Key Vault in encrypting the Azure SQL database
 
 In this exercise, you will complete the following tasks:
@@ -462,7 +463,7 @@ You will create a Console application using Visual Studio to load data into the 
 	
 	![image](../images/Lab-10_Ex4_Task1.png)
 	
-5. On the **Configure your new project** page, specify the following settings (leave other settings with their default values) and click on **create**
+5. On the **Configure your new project** page, specify the following settings (leave other settings with their default values) and click on **create**.
 
     |Setting|Value|
     |---|---|
