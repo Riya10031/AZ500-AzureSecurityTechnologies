@@ -65,7 +65,7 @@ In this task, you will deploy an Azure VM, which will automatically install Visu
    |---|---|
    |Subscription|Let it be default|
    |Resource group|Select resource group with name **AZ500LAB10-<inject key="DeploymentID"></inject>**|
-   |Location|**It will automatically fetch resource group location**|
+   |Location|**It will automatically fetch resource group location and set it for your deployment**|
    |Admin Username|**Student**|
    |Admin Password|**Pa55w.rd1234**|
    
@@ -109,9 +109,9 @@ In this task, you will create an Azure Key Vault resource. You will also configu
     ```powershell
     $kvName = 'az500kv' + $(Get-Random)
 
-    $location = (Get-AzResourceGroup -ResourceGroupName 'AZ500LAB10').Location
+    $location = (Get-AzResourceGroup -ResourceGroupName 'AZ500LAB10-<inject key="DeploymentID"></inject>').Location
 
-    New-AzKeyVault -VaultName $kvName -ResourceGroupName 'AZ500LAB10' -Location $location
+    New-AzKeyVault -VaultName $kvName -ResourceGroupName 'AZ500LAB10-<inject key="DeploymentID"></inject>' -Location $location
     ```
 
     >**Note**: The output of the last command will display the vault name and the vault URI. The vault URI is in the format `https://<vault_name>.vault.azure.net/`
