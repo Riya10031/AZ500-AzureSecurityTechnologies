@@ -309,3 +309,5 @@ In this exercise, you will complete the following task:
  
    <validation step="b8b0d15c-4752-41bc-86ee-10bb1220b83e" />
 
+**You have successfully completed the lab, please click on the Next button to start the next lab.**
+
