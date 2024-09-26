@@ -92,9 +92,9 @@ In this task you will deploy the Azure firewall into the virtual network.
    |Choose a virtual network|click the **Use existing** option and, in the drop-down list, select **Test-FW-VN**|
    |Public IP address|click **Add new** and type the name **TEST-FW-PIP** and click **OK**|
 
-1. Click **Review + create** and then click **Create**. 
+1. Click **Review + create** at the top and then click **Create**. 
 
-    >**Note**: Wait for the deployment to complete. This should take about 5 minutes. 
+    >**Note**: You might need to scroll up to see the **Review + create**, Wait for the deployment to complete. This should take about 5 minutes. 
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type/search and select **Resource groups**.
 
