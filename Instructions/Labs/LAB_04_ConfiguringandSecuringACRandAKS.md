@@ -127,7 +127,7 @@ In this task, you will create an Azure Kubernetes service and review the deploye
 
 1. On the **Kubernetes services** blade, click **+ Create** and, in the drop-down menu, click **+ Create Kubernetes cluster**
 
-1. On the **Basics** tab of the **Create Kubernetes cluster** blade, select **Cluster preset configuration**, select **Dev/Test ($)**. Now specify the following settings (leave others with their default values):
+1. On the **Basics** tab of the **Create Kubernetes cluster** blade, Now specify the following settings (leave others with their default values):
 
     |Setting|Value|
     |----|----|
