@@ -37,7 +37,7 @@ In this exercise, you will complete the following tasks:
 
 In this task, you will create a user account for Joseph Price.
 
-1. In the Azure Portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Azure Active Directory** and press the **Enter** key.
+1. In the Azure Portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Microsoft Entra ID** and press the **Enter** key.
 
       ![image](../images/az-500-lab1-image1.png)
 
@@ -64,7 +64,7 @@ In this task, you will create a user account for Joseph Price.
 
 In this task, you will create the *Senior Admins* group, add the user account of Joseph Price to the group, and configure it as the group owner.
 
-1. In the Azure portal, navigate back to the blade displaying your Azure Active Directory tenant. 
+1. In the Azure portal, navigate back to the blade displaying your Microsoft Entra ID tenant. 
 
 1. In the **Manage** section, click on **Groups**, and then select **+ New group**.
  
@@ -116,6 +116,7 @@ In this task, you will create a user account for Isabel Garcia by using PowerShe
     ```
 
 1. In the PowerShell session within the Cloud Shell pane, run the following to set the value of the password within the profile object:
+
     ```powershell
     $passwordProfile.Password = 'Pa55w.rd1234'
     ```
@@ -141,7 +142,7 @@ In this task, you will create a user account for Isabel Garcia by using PowerShe
 1. In the PowerShell session within the Cloud Shell pane, run the following to list Azure AD users (the accounts of Joseph and Isabel should appear on the listed): 
 
     ```powershell
-    Get-AzureADUser 
+     Get-AzureADUser -All $true | Where-Object {$_.UserPrincipalName -like "*43846135@LOD*"}
     ```
 
 ## Task2: Use PowerShell to create the Junior Admins group and add the user account of Isabel Garcia to the group.
@@ -154,16 +155,16 @@ In this task, you will create the Junior Admins group and add the user account o
     New-AzureADGroup -DisplayName 'Junior Admins' -MailEnabled $false -SecurityEnabled $true -MailNickName JuniorAdmins
     ```
 
-1. In the PowerShell session within the Cloud Shell pane, run the following to list the groups in your Azure AD tenant (the list should include the Senior Admins and Junior Admins groups):
+1. In the PowerShell session within the Cloud Shell pane, run the following to **list groups** in your Microsoft Entra tenant (the list should include the Senior Admins and Junior Admins groups):
 
     ```powershell
     Get-AzureADGroup
     ```
 
-1. In the PowerShell session within the Cloud Shell pane, run the following to obtain a reference to the user account of Isabel Garcia:
+1. In the PowerShell session within the Cloud Shell pane, run the following to **obtain a reference** to the user account of Isabel Garcia:
 
     ```powershell
-    $user = Get-AzureADUser -Filter "MailNickName eq 'Isabel'"
+    $user = Get-AzureADUser -Filter "UserPrincipalName eq 'Isabel-43846135@LODSPRODMCA.onmicrosoft.com'"
     ```
 
 1. In the PowerShell session within the Cloud Shell pane, run the following to add a user account of Isabel to the Junior Admins group:
@@ -179,7 +180,6 @@ In this task, you will create the Junior Admins group and add the user account o
     ```
 
 > **Result:** You used PowerShell to create a user and a group account, and added the user account to the group account. 
-
 
 # Exercise 3: Create a Service Desk group containing the user account of Dylan Williams as its member.
 
@@ -224,7 +224,7 @@ In this task, you will create the Service Desk group and assign Dylan to the gro
     az ad group create --display-name "Service Desk" --mail-nickname "ServiceDesk"
     ```
  
-1. In the Bash session within the Cloud Shell pane, run the following to list the Azure AD groups (the list should include Service Desk, Senior Admins, and Junior Admins groups):
+1. In the Bash session within the Cloud Shell pane, run the following to list the Microsoft Entra ID groups (the list should include Service Desk, Senior Admins, and Junior Admins groups):
 
     ```cli
     az ad group list -o table

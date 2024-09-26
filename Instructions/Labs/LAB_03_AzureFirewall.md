@@ -1,7 +1,9 @@
-# Lab 08: Azure Firewall
+# Lab 03: Azure Firewall
 
 ## Lab scenario
+
 You have been asked to install Azure Firewall. This will help your organization control inbound and outbound network access which is an important part of an overall network security plan. Specifically, you would like to create and test the following infrastructure components:
+
 - A virtual network with a workload subnet and a jump host subnet.
 - A virtual machine is each subnet. 
 - A custom route that ensures all outbound workload traffic from the workload subnet must use the firewall.
@@ -28,7 +30,6 @@ In this lab, you will complete the following exercise:
 
 # Exercise 1: Deploy and test an Azure Firewall
 
-
 > For all the resources in this lab, we are using the **East (US)** region. Verify with your instructor this is region to use for you class. 
 
 In this exercise, you will complete the following tasks:
@@ -52,6 +53,8 @@ In this task, you will create a virtual machine by using an ARM template. This v
 1. On the **Custom deployment** blade, click the **Build your own template in the editor** option.
 
 1. On the **Edit template** blade, click **Load file**, locate the **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\08\\template.json** file and click **Open**.
+
+   >**Note**: Review the content of the template and note that it deploys an Azure VM hosting Windows Server 2016 Datacenter.
 
 1. On the **Edit template** blade, click **Save**.
 
@@ -105,7 +108,6 @@ In this task you will deploy the Azure firewall into the virtual network.
 
     >**Note**: You will need this information in the next task.
 
-
 ## Task 3: Create a default route
 
 In this task, you will create a default route for the **Workload-SN** subnet. This route will configure outbound traffic through the firewall.
@@ -154,7 +156,6 @@ In this task, you will create a default route for the **Workload-SN** subnet. Th
     >**Note**: Azure Firewall is actually a managed service, but virtual appliance works in this situation.
 	
 1.  Click **Add** to add the route. 
-
 
 ## Task 4: Configure an application rule
 

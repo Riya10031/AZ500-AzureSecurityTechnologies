@@ -1,4 +1,4 @@
-# Lab 11: Securing Azure SQL Database
+# Lab 05: Securing Azure SQL Database
 
 ## Lab scenario
 You have been asked to review security features for Azure SQL database. Specifically, you are interested in:
@@ -21,7 +21,6 @@ In this lab, you will complete the following exercise:
 - **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\\11\\azuredeploy.json**
 
 ## Exercise 1: Implement SQL Database security features
-
 
 In this exercise, you will complete the following tasks:
 
@@ -156,7 +155,7 @@ In this task, you will first configure server level auditing and then configure 
 
     >**Note**: If storage-based auditing is enabled on the server, it will always apply to the database, regardless of the database settings.
 
-12. Click **View Audit Logs**.
+12. Switch back to DB, Auditing and Click **View Audit Logs**.
 
 13. On the **Audit records** blade, note that you can switch between Server audit and Database audit. 
 

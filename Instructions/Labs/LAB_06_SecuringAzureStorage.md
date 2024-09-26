@@ -1,13 +1,18 @@
-# Lab 12: Service Endpoints and Securing Storage
+# Lab 06: Service Endpoints and Securing Storage
 
 ## Lab scenario
 You have been asked to create a proof of concept to demonstrate securing Azure file shares. Specifically, you want to:
+
 - Create a storage endpoint so traffic destined to Azure Storage always stays within the Azure backbone network.
 - Configure the storage endpoint so only resources from a specific subnet can access the storage.
 - Confirm that resources outside of the specific subnet cannot access the storage. 
 
+> For all the resources in this lab, we are using the **East US** region. Verify with your instructor this is the region to use for class. 
+
 ## Lab objectives
+
 In this lab, you will complete the following exercise:
+
 - Exercise 1: Service endpoints and security storage
 
 ## Estimated timing: 45 minutes
@@ -17,7 +22,6 @@ In this lab, you will complete the following exercise:
 ![image](https://user-images.githubusercontent.com/91347931/157534883-29664a05-85d1-4c70-99a7-f16d2360755d.png)
 
 ## Exercise 1: Service endpoints and security storage
-
 
 In this exercise, you will complete the following tasks:
 
@@ -59,6 +63,7 @@ In this task, you will create a virtual network.
 1. Back on the **IP addresses** tab of the **Create virtual network** blade, click **Review + create**.
 
 1. On the **Review + create** tab of the **Create virtual network** blade, click **Create**.
+
 >**Note**:If you are not able to edit the **default** first create the virtual network and go to subnets in created Virtual network and delete the Default Subnet and add **Public** Subnet 
 
 ### Task 2: Add a subnet to the virtual network and configure a storage endpoint
@@ -81,7 +86,7 @@ In this task, you will create another subnet and enable a service endpoint on th
     |---|---|
     |Subnet name|**Private**|
     |Subnet address range|**10.0.1.0/24**|
-    |Service endpoints|Select services **Microsoft.Storage**|
+    |Service endpoints|**Leave the default of None**|
 
 1. On the **Add subnet** blade, click **Save** to add the new subnet.
 
@@ -153,7 +158,6 @@ In this task, you will create a network security group with two outbound securit
     |Name|**Deny-Internet-All**|
 	
 	![image](../images/Lab-12_Ex1_Task3_2.png)
-	
 
     >**Note**: This rule overrides a default rule in all network security groups that allows outbound internet communication. 
 
@@ -176,8 +180,10 @@ In this task, you will create a network security group with two outbound securit
     |Name|**Allow-RDP-All**|
 	
 	![image](../images/Lab-12_Ex1_Task3_3.png)
-	
 
+14. On the **Add inbound security rule** blade, click **Add** to create the new inbound rule. 
+
+    >**Note**: Now you will associate the network security group with the Private subnet.
 
 1. On the **Subnets** blade, select **+ Associate** and specify the following settings in the **Associate subnet** section and then click **OK**:
 

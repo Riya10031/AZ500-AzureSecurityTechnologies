@@ -1,12 +1,15 @@
-# Lab 07: Network Security Groups and Application Security Groups
+# Lab 02: Network Security Groups and Application Security Groups
 
 ## Lab scenario
 You have been asked to implement your organization's virtual networking infrastructure and test to ensure it is working correctly. In particular:
+
 - The organization has two groups of servers: Web Servers and Management Servers.
 - Each group of servers should be in its own Application Security Group. 
 - You should be able to RDP into the Management Servers, but not the Web Servers.
 - The Web Servers should display the IIS web page when accessed from the internet. 
 - Network security group rules should be used to control network access.  
+
+ > For all the resources in this lab, we are using the **East US** region. Verify with your instructor this is the region to use for class. 
 
 ## Lab objectives
 In this lab, you will complete the following exercises:
@@ -49,12 +52,12 @@ In this task, you will create a virtual network to use with the network and appl
 
 1. On the **IP addresses** tab of the **Create virtual network** blade, set the **IPv4 address space** to **10.0.0.0/16**, and, if needed, in the **Subnet name** column, click **default**, on the **Edit subnet** blade, specify the following settings and click **Save**:
 
-> Note: if the **default** subnet is not there in the subnet section, then you have to create it. Click on **+ Add subnet**, then follow this given instructions, and click on **Add**.
-
     |Setting|Value|
     |---|---|
     |Subnet name|**default**|
     |Subnet address range|**10.0.0.0/24**|
+
+    >**Note:** If the **default** subnet is not there in the subnet section, then you have to create it. Click on **+ Add subnet**, then follow this given instructions, and click on **Add**.
 
 1. Back on the **IP addresses** tab of the **Create virtual network** blade, click **Review + create**.
 
@@ -142,7 +145,7 @@ In this task, you will create a network security group.
 
 1. On the **Add inbound security rules** blade, click **Add** to create the new inbound rule. 
 
-1. Again click **+ Add inbound security rules** page.
+1. On the **myNsg** blade, in the **Settings** section, click **Inbound security rules**, and then click **+ Add**.
 
 1. On the **Add inbound security rules** blade, specify the following settings to allow the RDP port (TCP 3389) to the **myAsgMgmtServers** application security group (leave all other values with their default values): 
 
@@ -265,7 +268,7 @@ In this task, you will associate each virtual machine's network interface with t
 
 1. On the **myVMMgmt** blade, in the **Settings** section, click **Networking** and then, on the **myVMMgmt \| Networking** blade, click the **Application security groups** tab.
 
-1. Click **Configure the application security groups**, in the **Application security group** drop-down list, select **myAsgMgmtServers**, and then click **Save**.
+1. Click + **Add application security groups**, in the **Application security group** list, select **myAsgMgmtServers**, and then click **Save**.
 
 ## Task 4: Test the network traffic filtering
 
@@ -296,8 +299,7 @@ In this task, you will test the network traffic filters. You should be able to R
 
     >**Note**: Wait for the installation to complete. This might take a couple of minutes. At that point, you can verify that myVmWeb can be accessed via HTTP/HTTPS.
 
-1. After getting the output, close the **Run Command Script** blade, and navigate back to the 
-overview page of **myVmWeb** blade.
+1. After getting the output, close the **Run Command Script** blade, and navigate back to the overview page of **myVmWeb** blade.
 
 1. Identify the **Public IP address** of the myVmWeb Azure VM.
 
