@@ -47,15 +47,15 @@ In this task, you will create a resource group for the lab an an Azure Container
 
 1. Use the **[\>_]** button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, and select ***Bash*** environment.
     
-    ![Azure portal with a cloud shell pane](./images/az500s1.png)
+    ![Azure portal with a cloud shell pane](../images/az500s1.png)
    
 1. In the **Getting Started** menu,choose **Mount storage account (1)**,select your default **Subscription (2)** from the dropdown and click on **Apply (3)**
 
-   ![Azure portal with a cloud shell pane](./images/az500s2.png)
+   ![Azure portal with a cloud shell pane](../images/az500s2.png)
 
 1. On the **Mount Storage account**, select **we will create a storage account for you** and click on **Next**
 
-   ![Azure portal with a cloud shell pane](./images/az500s3.png)
+   ![Azure portal with a cloud shell pane](../images/az500s3.png)
 
 1. In the Bash session within the Cloud Shell pane, run the following to create a new resource group for this lab:
 
@@ -242,6 +242,8 @@ In this task,  you will download the Manifest files, edit the YAML file, and app
     ```
 
     >**Note**: This is the *external* yaml file.
+
+1. Select **Confirm** for a pop-up prompting you to switch to the classic version in Azure Cloud Shell to edit the file.
 
 1. In the editor pane, scroll down to **line 24** and replace the **`<ACRUniquename>`** placeholder with the ACR name.
 
