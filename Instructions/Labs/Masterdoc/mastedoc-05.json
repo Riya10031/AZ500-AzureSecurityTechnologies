@@ -1,6 +1,6 @@
 [
   {
-    "Name": "Role-Based Access Control",
+    "Name": "Configure and manage Azure Monitor",
     "Language": "English",
     "BaseURL": "https://github.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies",
     "Files": [
@@ -9,7 +9,7 @@
         "Order": 1
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/stage/Instructions/Labs/LAB_01_RBAC.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/stage/Instructions/Labs/LAB_07_KeyVaultImplementingSecureDatabysettingupAlwaysEncrypted.md",
         "Order": 2
       }
     ]
