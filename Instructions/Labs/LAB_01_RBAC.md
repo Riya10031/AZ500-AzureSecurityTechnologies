@@ -303,8 +303,17 @@ In this exercise, you will complete the following task:
    |---|---|
    |Role|select **Job function roles**|
    |In Search bar |Search and select **Virtual Machine Contributor**, click **Next** |
+   
+
+     ![image](../images/img008.png)
+
+   |Setting|Value|
+   |---|---|
    |Assign access to (Under Members Pane)|**User, group, or service principal**|
    |Select (+Select Members)|**Service Desk**|
+
+
+     ![image](../images/img009.png)
 
 1. Click on **Review + assign** twice to create the role assignment.
 
@@ -321,8 +330,9 @@ In this exercise, you will complete the following task:
 1. Repeat the same last two steps to check access for **Joseph Price**. 
 
 > **Result:** You have assigned and checked RBAC permissions. 
-> 
+
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
 > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
 > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
