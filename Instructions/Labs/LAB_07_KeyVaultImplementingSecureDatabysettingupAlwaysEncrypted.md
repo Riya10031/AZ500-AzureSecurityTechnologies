@@ -80,12 +80,12 @@ In this task, you will deploy an Azure VM, which will automatically install Visu
     >**Note**: Do not wait for the ARM template deployment to be completed, continue on to the next exercise. The deployment might take up to **20-25 minutes**. 
 
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    > - Click the Lab Validation icon located at the upper right corner of the lab guide section which navigates to the Lab Validation Page.
     > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-
+   <validation step="0e72c8e7-5523-4e4b-90d8-d0a51f2fcd66" />
+   
 ## Exercise 2: Configure the Key Vault resource with a key and a secret
 
 >**Note**: For all the resources in this lab, we are using the **East US** region. Verify with your instructor this is region to use for you class. 
@@ -221,10 +221,11 @@ In this task, you will add a key to the Key Vault and view information about the
     >**Note**: To get the most current version of a secret, reference `https://<key_vault_name>.vault.azure.net/secrets/<secret_name>` or get a specific version, reference `https://<key_vault_name>.vault.azure.net/secrets/<secret_name>/<secret_version>`
 
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    > - Click the Lab Validation icon located at the upper right corner of the lab guide section which navigate to the Lab Validation Page.
     > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+  <validation step="78d6ad92-713c-4103-9c46-2c825031ea9a" />
 
 ## Exercise 3: Configure an Azure SQL database and a data-driven application
 
@@ -520,11 +521,11 @@ You will create a Console application using Visual Studio to load data into the 
 20. To terminate the console app, press the Enter key.
 	
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Click the Lab Validation icon located at the upper right corner of the lab guide section which navigates to the Lab Validation Page.
-> - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+> - Hit the Validate button. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+   <validation step="9c0b0cd9-dab4-4395-a98a-0a4dbf1e8444" />
 
 **You have successfully completed the lab. Please click on next to go to the next lab.**
 	
