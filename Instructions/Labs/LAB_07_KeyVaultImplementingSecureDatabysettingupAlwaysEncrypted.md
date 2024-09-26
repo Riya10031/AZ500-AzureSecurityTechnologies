@@ -106,13 +106,13 @@ In this task, you will create an Azure Key Vault resource. You will also configu
 
    ![image](../images/powersh2.png)
 
-1. On getting started page, select the option **No storage account required** and select the **Subscription** provided. once subscription is selected, click on **Apply.**
+2. On getting started page, select the option **No storage account required** and select the **Subscription** provided. once subscription is selected, click on **Apply.**
 
    ![image](../images/powersh3.png)
 
-1. Ensure **PowerShell** is selected in the drop-down menu in the upper-left corner of the Cloud Shell pane.
+3. Ensure **PowerShell** is selected in the drop-down menu in the upper-left corner of the Cloud Shell pane.
 
-1. In the PowerShell session within the Cloud Shell pane, run the following to create an Azure Key Vault in the resource group **AZ500LAB10**. (If you chose another name for this lab's Resource Group out of Task 1, use that name for this task as well). The Key Vault name must be unique. Remember the name you have chosen. You will need it throughout this lab.  
+4. In the PowerShell session within the Cloud Shell pane, run the following to create an Azure Key Vault in the resource group **AZ500LAB10**. (If you chose another name for this lab's Resource Group out of Task 1, use that name for this task as well). The Key Vault name must be unique. Remember the name you have chosen. You will need it throughout this lab.  
 
     ```powershell
     $kvName = 'az500kv' + $(Get-Random)
@@ -124,25 +124,26 @@ In this task, you will create an Azure Key Vault resource. You will also configu
 
     >**Note**: The output of the last command will display the vault name and the vault URI. The vault URI is in the format `https://<vault_name>.vault.azure.net/`
 
-1. Close the Cloud Shell pane. 
+5. Close the Cloud Shell pane. 
 
-1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Resource groups** and press the **Enter** key.
+6. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Resource groups** and press the **Enter** key.
 
-1. On the **Resource groups** blade, in the list of resource group, click the **AZ500LAB10-<inject key="DeploymentID"></inject>** entry.
+7. On the **Resource groups** blade, in the list of resource group, click the **AZ500LAB10-<inject key="DeploymentID"></inject>** entry.
 
-1. On the Resource Group blade, click the entry representing the newly created Key Vault. 
+8. On the Resource Group blade, click the entry representing the newly created Key Vault. 
 
    ![image](../images/Lab-10_Ex2_Task1_1.png)
 
-1. On the Key Vault blade, in the **Overview** section, click **Access Policies** and then click **+ Create**.
+9. On the Key Vault blade, in the **Overview** section, click **Access Policies** and then click **+ Create**.
 
    ![image](../images/Lab-10_Ex2_Task1_2.png)
 
-    >**Note**: If the option of **Access Policies** is greyed out, navigate to the **settings** tab on the left > select **Access Configuration** > on the right side select **Vault access policies** and click on **Apply.**
+    >**Note**: If the option of **Access Policies** is greyed out, navigate to the **settings** tab on the left > select **Access Configuration** > on the right side 
+       select **Vault access policies** and click on **Apply.**
 
-     ![image](../images/powersh4.png)
+   ![image](../images/powersh4.png)
 
-1. On the **Create an access policy** blade, specify the following settings (leave all others with their default values): 
+10. On the **Create an access policy** blade, specify the following settings (leave all others with their default values): 
 
     |Setting|Value|
     |----|----|
