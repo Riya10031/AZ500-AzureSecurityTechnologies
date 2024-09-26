@@ -46,7 +46,7 @@ In this task, you will create a virtual network to use with the network and appl
     |Setting|Value|
     |---|---|
     |Subscription|the name of the Azure subscription you are using in this lab|
-    |Resource group|click **Create new** and type the name **AZ500LAB07**|
+    |Resource group|click **Create new** and type the name **AZ500LAB02**|
     |Name|**myVirtualNetwork**|
     |Region|**East US**|
 
