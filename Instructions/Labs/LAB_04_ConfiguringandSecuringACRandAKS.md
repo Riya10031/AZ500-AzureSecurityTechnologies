@@ -45,17 +45,17 @@ In this exercise, you will complete the following tasks:
 
 In this task, you will create a resource group for the lab an an Azure Container Registry.
 
-1. Use the **[\>_]** button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, and select ***Bash*** environment.
+1. Use the **[\>_] (1)** button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, and select **Bash (2)** environment.
     
-    ![Azure portal with a cloud shell pane](../images/az500s1.png)
+    ![Azure portal with a cloud shell pane](../images/new-az500-lab4-1.png)
    
 1. In the **Getting Started** menu,choose **Mount storage account (1)**,select your default **Subscription (2)** from the dropdown and click on **Apply (3)**
 
-   ![Azure portal with a cloud shell pane](../images/az500s2.png)
+   ![Azure portal with a cloud shell pane](../images/new-az500-lab4-2.png)
 
-1. On the **Mount Storage account**, select **we will create a storage account for you** and click on **Next**
+1. On the **Mount Storage account**, select **We will create a storage account for you (1)** and click on **Next (2)**
 
-   ![Azure portal with a cloud shell pane](../images/az500s3.png)
+   ![Azure portal with a cloud shell pane](../images/new-az500-lab4-3.png)
 
 1. In the Bash session within the Cloud Shell pane, run the following to create a new resource group for this lab:
 
@@ -107,7 +107,7 @@ In this task, you will create a Dockerfile, build an image from the Dockerfile, 
 
 1. Close the Cloud Shell pane.
 
-1. In the Azure portal, navigate to the **AZ500Lab04** resource group and, in the list of resources, click the entry representing the Azure Container Registry instance you provisioned in the previous task.
+1. In the Azure portal, navigate to the **AZ500LAB04** resource group and, in the list of resources, click the entry representing the Azure Container Registry instance you provisioned in the previous task.
 
 1. On the Container registry blade, in the **Services** section, click **Repositories**. 
 
@@ -123,7 +123,7 @@ In this task, you will create a Dockerfile, build an image from the Dockerfile, 
 
 In this task, you will create an Azure Kubernetes service and review the deployed resources. 
 
-1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Kubernetes services** and press the **Enter** key.
+1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Kubernetes services** and select the **Kubernetes services** option.
 
 1. On the **Kubernetes services** blade, click **+ Create** and, in the drop-down menu, click **+ Create Kubernetes cluster**
 
@@ -131,7 +131,7 @@ In this task, you will create an Azure Kubernetes service and review the deploye
 
     |Setting|Value|
     |----|----|
-    |Subscription|the name of the Azure subscription you are using in this lab|
+    |Subscription|Use default subscription|
     |Resource group|**AZ500LAB04**|
     |Kubernetes cluster name|**MyKubernetesCluster**|
     |Cluster preset configuration|**Dev/Test**|
@@ -165,7 +165,7 @@ In this task, you will create an Azure Kubernetes service and review the deploye
 
 1. On the **Resource groups** blade, in the listing of resource groups, note a new resource group named **MC_AZ500LAB04_MyKubernetesCluster_eastus** that holds components of the AKS Nodes. Review resources in this resource group. 
 	
-1. Navigate back to the **Resource groups** blade and click the **AZ500LAB09** entry. 
+1. Navigate back to the **Resource groups** blade and click the **AZ500LAB04** entry. 
 
     >**Note**: In the list of resources, note the AKS Cluster and the corresponding virtual network.
 
@@ -194,7 +194,7 @@ In this task, you will grant the AKS cluster permission to access the ACR and ma
 1. In the Bash session within the Cloud Shell pane, run the following to configure the AKS cluster to use the Azure Container Registry instance you created earlier in this lab. 
 
     ```sh
-    ACRNAME=$(az acr list --resource-group AZ500LAB09 --query '[].{Name:name}' --output tsv)
+    ACRNAME=$(az acr list --resource-group AZ500LAB04 --query '[].{Name:name}' --output tsv)
 
     az aks update -n MyKubernetesCluster -g AZ500LAB04 --attach-acr $ACRNAME
     ```
@@ -225,7 +225,7 @@ In this task, you will grant the AKS cluster permission to access the ACR and ma
 
 In this task,  you will download the Manifest files, edit the YAML file, and apply your changes to the cluster. 
 
-1. In the Bash session within the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload**, in the **Open** dialog box, naviate to the location where you downloaded the lab files, select **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\09\\nginxexternal.yaml** click **Open**. Next, select **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\09\\nginxinternal.yaml**, and click **Open**.
+1. In the Bash session within the Cloud Shell pane, click the **Manage Files**, in the drop-down menu, click **Upload**, in the **Open** dialog box, naviate to the location where you downloaded the lab files, select **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\09\\nginxexternal.yaml** click **Open**. Next, select **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\09\\nginxinternal.yaml**, and click **Open**.
 
 1. In the Bash session within the Cloud Shell pane, run the following to identify the name of the Azure Container Registry instance:
 
