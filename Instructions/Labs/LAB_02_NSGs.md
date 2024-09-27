@@ -75,7 +75,7 @@ In this task, you will create an application security group.
 
     |Setting|Value|
     |---|---|
-    |Resource group|**AZ500LAB07**|
+    |Resource group|**AZ500LAB02**|
     |Name|**myAsgWebServers**|
     |Region|**East US**|
 
@@ -89,7 +89,7 @@ In this task, you will create an application security group.
 
     |Setting|Value|
     |---|---|
-    |Resource group|**AZ500LAB07**|
+    |Resource group|**AZ500LAB02**|
     |Name|**myAsgMgmtServers**|
     |Region|**East US**|
 
@@ -110,7 +110,7 @@ In this task, you will create a network security group.
     |Setting|Value|
     |---|---|
     |Subscription|the name of the Azure subscription you are using in this lab|
-    |Resource group|**AZ500LAB07**|
+    |Resource group|**AZ500LAB02**|
     |Name|**myNsg**|
     |Region|**East US**|
 
@@ -185,7 +185,7 @@ In this task, you will create a virtual machine to use as a web server.
    |Setting|Value|
    |---|---|
    |Subscription|the name of the Azure subscription you will be using in this lab|
-   |Resource group|**AZ500LAB07**|
+   |Resource group|**AZ500LAB02**|
    |Virtual machine name|**myVmWeb**|
    |Region|**(US)East US**|
    |Image|**Windows Server 2022 Datacenter: Azure Edition- Gen2**|
@@ -223,7 +223,7 @@ In this task, you will create a virtual machine to use as a management server.
    |Setting|Value|
    |---|---|
    |Subscription|the name of the Azure subscription you will be using in this lab|
-   |Resource group|**AZ500LAB07**|
+   |Resource group|**AZ500LAB02**|
    |Virtual machine name|**myVMMgmt**|
    |Region|(US)East US|
    |Image|**Windows Server 2022 Datacenter: Azure Edition- Gen2**|
