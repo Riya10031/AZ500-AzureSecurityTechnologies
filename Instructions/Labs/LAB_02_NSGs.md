@@ -83,6 +83,8 @@ In this task, you will create an application security group.
 
 1. Click **Review + create** and then click **Create**.
 
+   ![image](../images/lab1-3.png)
+
 1. Navigate back to the **Application security groups** blade and click **+ Create**.
 
 1. On the **Basics** tab of the **Create an application security group** blade, specify the following settings: 
@@ -297,6 +299,8 @@ In this task, you will test the network traffic filters. You should be able to R
     Install-WindowsFeature -name Web-Server -IncludeManagementTools
     ```
 
+     ![image](../images/lab01-2.png)
+
     >**Note**: Wait for the installation to complete. This might take a couple of minutes. At that point, you can verify that myVmWeb can be accessed via HTTP/HTTPS.
 
 1. After getting the output, close the **Run Command Script** blade, and navigate back to the overview page of **myVmWeb** blade.
@@ -304,6 +308,8 @@ In this task, you will test the network traffic filters. You should be able to R
 1. Identify the **Public IP address** of the myVmWeb Azure VM.
 
 1. Open another browser tab and navigate to IP address you identified in the previous step.
+
+   ![image](../images/lab1-1.png)
 
     >**Note**: The browser page should display the default IIS welcome page because port 80 is allowed inbound from the internet based on the setting of the **myAsgWebServers** application security group. The network interface of the myVmWeb Azure VM is associated with that application security group. 
 

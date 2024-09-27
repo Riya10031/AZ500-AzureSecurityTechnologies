@@ -136,7 +136,7 @@ In this task, you will create a playbook. A security playbook is a collection of
     |Setting|Value|
     |---|---|
     |Subscription|the name of the Azure subscription you are using in this lab|
-    |Resource group|**AZ500LAB131415**|
+    |Resource group|**AZ500LAB080910**|
     |Location|**(US) East US**|
     |Playbook Name|**Change-Incident-Severity**|
     |User Name|your email address|
@@ -147,9 +147,9 @@ In this task, you will create a playbook. A security playbook is a collection of
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Resource groups** and press the **Enter** key.
 
-1. On the **Resource groups** blade, in the list of resource group, click the **AZ500LAB131415** entry.
+1. On the **Resource groups** blade, in the list of resource group, click the **AZ500LAB080910** entry.
 
-1. On the **AZ500LAB131415** resource group blade, in the list of resources, click the entry representing the newly created **Change-Incident-Severity** logic app.
+1. On the **AZ500LAB080910** resource group blade, in the list of resources, click the entry representing the newly created **Change-Incident-Severity** logic app.
 
 1. On the **Change-Incident-Severity** blade, click **Edit**.
 
@@ -208,7 +208,7 @@ In this task, you will create a playbook. A security playbook is a collection of
 
 1. In the **Create new automation rule** window, enter **Run Change-Severity Playbook** for the **Automation rule name**; under the **Trigger** field, click the drop-down menu and select **When alert is created**.
 
-1. In the **Create new automation rule** window, under **Actions**, read the note and then click **Manage playbook permissions**. On the **Manage permissions** window, select the checkbox next to the previously created **Resource group AZ500LAB1314151** and then click **Apply**.
+1. In the **Create new automation rule** window, under **Actions**, read the note and then click **Manage playbook permissions**. On the **Manage permissions** window, select the checkbox next to the previously created **Resource group AZ500LAB080910** and then click **Apply**.
 
 1. In the **Create new automation rule** window, under **Actions**, click the second drop-down menu and select the **Change-Incident-Severity** logic app. On the **Create new automation rule** window, click **Apply**.
 

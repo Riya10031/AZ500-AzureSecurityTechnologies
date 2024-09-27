@@ -38,13 +38,13 @@ In this exercise, you will complete the following tasks:
 1. In the PowerShell session within the Cloud Shell pane, run the following to create a resource group that will be used in this lab:
   
     ```powershell
-    New-AzResourceGroup -Name AZ500LAB131415 -Location 'EastUS'
+    New-AzResourceGroup -Name AZ500LAB080910 -Location 'EastUS'
     ```
 
 1. In the PowerShell session within the Cloud Shell pane, run the following to create a new Azure virtual machine. 
 
     ```powershell
-    New-AzVm -ResourceGroupName "AZ500LAB131415" -Name "myVM" -Location 'EastUS' -VirtualNetworkName "myVnet" -SubnetName "mySubnet" -SecurityGroupName   "myNetworkSecurityGroup" -PublicIpAddressName "myPublicIpAddress" -OpenPorts 80,3389
+    New-AzVm -ResourceGroupName "AZ500LAB080910" -Name "myVM" -Location 'EastUS' -VirtualNetworkName "myVnet" -SubnetName "mySubnet" -SecurityGroupName   "myNetworkSecurityGroup" -PublicIpAddressName "myPublicIpAddress" -OpenPorts 80,3389
     ```
 
 1.  When prompted for credentials:
@@ -59,7 +59,7 @@ In this exercise, you will complete the following tasks:
 1. In the PowerShell session within the Cloud Shell pane, run the following to confirm that the virtual machine named **myVM** was created and its **ProvisioningState** is **Succeeded**.
 
     ```powershell
-    Get-AzVM -Name 'myVM' -ResourceGroupName 'AZ500LAB131415' | Format-Table
+    Get-AzVM -Name 'myVM' -ResourceGroupName 'AZ500LAB080910' | Format-Table
     ```
 
 1. Close the Cloud Shell pane. 
@@ -77,7 +77,7 @@ In this task, you will create a Log Analytics workspace.
     |Setting|Value|
     |---|---|
     |Subscription|the name of the Azure subscription you are using in this lab|
-    |Resource group|**AZ500LAB131415**|
+    |Resource group|**AZ500LAB080910**|
     |Name|any valid, globally unique name|
     |Region|**(US) East US**|
 
@@ -101,7 +101,7 @@ In this task, you will create a storage account.
     |Setting|Value|
     |---|---|
     |Subscription|the name of the Azure subscription you are using in this lab|
-    |Resource group|**AZ500LAB131415**|
+    |Resource group|**AZ500LAB080910**|
     |Storage account name|any globally unique name between 3 and 24 in length consisting of letters and digits|
     |Location|**(US) EastUS**|
     |Performance|**Standard (general-purpose v2 account)**|
@@ -131,7 +131,7 @@ In this task, you will create a data collection rule.
     |**Rule details**|
     |Rule Name|**DCR1**|
     |Subscription|the name of the Azure subscription you are using in this lab|
-    |Resource Group|**AZ500LAB131415**|
+    |Resource Group|**AZ500LAB080910**|
     |Region|**East US**|
     |Platform Type|**Windows**|
     |Data Collection Endpoint|*Leave Blank*|
@@ -141,7 +141,7 @@ In this task, you will create a data collection rule.
 
 4. Click on the button labeled **Next: Resources >** to proceed.
    
-6. On the Resources tab, select **+ Add resources,** check **Enable Data Collection Endpoints.** In the Select a scope template, check **AZ500LAB131415,** and click **Apply.**
+6. On the Resources tab, select **+ Add resources,** check **Enable Data Collection Endpoints.** In the Select a scope template, check **AZ500LAB080910,** and click **Apply.**
 
     ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/d4191115-11bc-43ec-9bee-e84b9b95a821)
 
