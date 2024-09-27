@@ -63,7 +63,7 @@ In this task, you will create a virtual machine by using an ARM template. This v
    |Setting|Value|
    |---|---|
    |Subscription|the name of the Azure subscription you will be using in this lab|
-   |Resource group|click **Create new** and type the name **AZ500LAB08**|
+   |Resource group|click **Create new** and type the name **AZ500LAB03**|
    |Location|**(US) East US**|
 
     >**Note**: To identify Azure regions where you can provision Azure VMs, refer to [**https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
@@ -84,7 +84,7 @@ In this task you will deploy the Azure firewall into the virtual network.
 
    |Setting|Value|
    |---|---|
-   |Resource group|**AZ500LAB08**|
+   |Resource group|**AZ500LAB03**|
    |Name|**Test-FW01**|
    |Region|**(US) East US**|
    |Firewall SKU|**Standard**|
@@ -100,7 +100,7 @@ In this task you will deploy the Azure firewall into the virtual network.
 
 1. On the **Resource groups** blade, in the list of resource group, click the **AZ500LAB08** entry.
 
-    >**Note**: On the **AZ500LAB08** resource group blade, review the list of resources. You can sort by **Type**.
+    >**Note**: On the **AZ500LAB03** resource group blade, review the list of resources. You can sort by **Type**.
 
 1. In the list of resources, click the entry representing the **Test-FW01** firewall.
 
@@ -120,7 +120,7 @@ In this task, you will create a default route for the **Workload-SN** subnet. Th
 
    |Setting|Value|
    |---|---|
-   |Resource group|**AZ500LAB08**|
+   |Resource group|**AZ500LAB03**|
    |Region| **East US**|
    |Name|**Firewall-route**|
 
@@ -227,7 +227,7 @@ In this task, you will configure the primary and secondary DNS addresses for the
 
 1. In the Azure portal, navigate back to the **AZ500LAB08** resource group.
 
-1. On the **AZ500LAB08** blade, in the list of resources, click the **Srv-Work** virtual machine.
+1. On the **AZ500LAB03** blade, in the list of resources, click the **Srv-Work** virtual machine.
 
 1. On the **Srv-Work** blade, in the **Settings** section, click **Networking**.
 
@@ -245,9 +245,9 @@ In this task, you will configure the primary and secondary DNS addresses for the
 
 In this task, you will test the firewall to confirm that it works as expected.
 
-1. In the Azure portal, navigate back to the **AZ500LAB08** resource group.
+1. In the Azure portal, navigate back to the **AZ500LAB03** resource group.
 
-1. On the **AZ500LAB08** blade, in the list of resources, click the **Srv-Jump** virtual machine.
+1. On the **AZ500LAB03** blade, in the list of resources, click the **Srv-Jump** virtual machine.
 
 1. On the **Srv-Jump** blade, click connect dropdown and select **Connect**. 
 

@@ -64,7 +64,7 @@ In this task, you will deploy an Azure VM, which will automatically install Visu
    |Setting|Value|
    |---|---|
    |Subscription|Let it be default|
-   |Resource group|Select resource group with name **AZ500LAB10-<inject key="DeploymentID"></inject>**|
+   |Resource group|Select resource group with name **AZ500LAB07-<inject key="DeploymentID"></inject>**|
    |Location|**It will automatically fetch resource group location and set it for your deployment**|
    |Admin Username|**Student**|
    |Admin Password|**Pa55w.rd1234**|
@@ -112,14 +112,14 @@ In this task, you will create an Azure Key Vault resource. You will also configu
 
 3. Ensure **PowerShell** is selected in the drop-down menu in the upper-left corner of the Cloud Shell pane.
 
-4. In the PowerShell session within the Cloud Shell pane, run the following to create an Azure Key Vault in the resource group **AZ500LAB10**. (If you chose another name for this lab's Resource Group out of Task 1, use that name for this task as well). The Key Vault name must be unique. Remember the name you have chosen. You will need it throughout this lab.  
+4. In the PowerShell session within the Cloud Shell pane, run the following to create an Azure Key Vault in the resource group **AZ500LAB07**. (If you chose another name for this lab's Resource Group out of Task 1, use that name for this task as well). The Key Vault name must be unique. Remember the name you have chosen. You will need it throughout this lab.  
 
 ```powershell
     $kvName = 'az500kv' + $(Get-Random)
 
-    $location = (Get-AzResourceGroup -ResourceGroupName 'AZ500LAB10-<inject key="DeploymentID"></inject>').Location
+    $location = (Get-AzResourceGroup -ResourceGroupName 'AZ500LAB07-<inject key="DeploymentID"></inject>').Location
 
-    New-AzKeyVault -VaultName $kvName -ResourceGroupName 'AZ500LAB10-<inject key="DeploymentID"></inject>' -Location $location
+    New-AzKeyVault -VaultName $kvName -ResourceGroupName 'AZ500LAB07-<inject key="DeploymentID"></inject>' -Location $location
 ```
 
    >**Note**: The output of the last command will display the vault name and the vault URI. The vault URI is in the format `https://<vault_name>.vault.azure.net/`
@@ -128,7 +128,7 @@ In this task, you will create an Azure Key Vault resource. You will also configu
 
 6. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Resource groups** and press the **Enter** key.
 
-7. On the **Resource groups** blade, in the list of resource group, click the **AZ500LAB10-<inject key="DeploymentID"></inject>** entry.
+7. On the **Resource groups** blade, in the list of resource group, click the **AZ500LAB07-<inject key="DeploymentID"></inject>** entry.
 
 8. On the Resource Group blade, click the entry representing the newly created Key Vault. 
 
@@ -169,7 +169,7 @@ In this task, you will add a key to the Key Vault and view information about the
 1. In the PowerShell session within the Cloud Shell pane, run the following to add a software-protected key to the Key Vault: 
 
     ```powershell
-    $kv = Get-AzKeyVault -ResourceGroupName 'AZ500LAB10'
+    $kv = Get-AzKeyVault -ResourceGroupName 'AZ500LAB07'
 
     $key = Add-AZKeyVaultKey -VaultName $kv.VaultName -Name 'MyLabKey' -Destination 'Software'
     ```
@@ -312,7 +312,7 @@ In this task, you will grant the newly registered app permissions to access secr
 1. In the PowerShell session within the Cloud Shell pane, run the following to create a variable storing the Key Vault name.
 
     ```powershell
-    $kvName = (Get-AzKeyVault -ResourceGroupName 'AZ500LAB10').VaultName
+    $kvName = (Get-AzKeyVault -ResourceGroupName 'AZ500LAB07').VaultName
 
     $kvName
     ```
@@ -320,7 +320,7 @@ In this task, you will grant the newly registered app permissions to access secr
 1. In the PowerShell session within the Cloud Shell pane, run the following to grant permissions on the Key Vault to the application you registered in the previous task:
 
     ```powershell
-    Set-AZKeyVaultAccessPolicy -VaultName $kvName -ResourceGroupName AZ500LAB10 -ServicePrincipalName $applicationId -PermissionsToKeys get,wrapKey,unwrapKey,sign,verify,list
+    Set-AZKeyVaultAccessPolicy -VaultName $kvName -ResourceGroupName AZ500LAB07 -ServicePrincipalName $applicationId -PermissionsToKeys get,wrapKey,unwrapKey,sign,verify,list
     ```
 1. Close the Cloud Shell pane. 
 
@@ -332,7 +332,7 @@ The ARM-template deployment in Exercise 1 provisioned an Azure SQL Server instan
 
 1. In the list of SQL databases, click the **medical(<randomsqlservername>)** entry.
 
-    >**Note**: If the database cannot be found, this likely means the deployment you initiated in Exercise 1 has not completed yet. You can validate this by browsing to the Azure Resource Group "AZ500LAB10" (or the name you chose), and selecting **Deployments** from the Settings pane.  
+    >**Note**: If the database cannot be found, this likely means the deployment you initiated in Exercise 1 has not completed yet. You can validate this by browsing to the Azure Resource Group "AZ500LAB07" (or the name you chose), and selecting **Deployments** from the Settings pane.  
 
 1. On the SQL database blade, in the **Settings** section, click **Connection strings**. 
 
@@ -348,7 +348,7 @@ The ARM-template deployment in Exercise 1 provisioned an Azure SQL Server instan
 
 In this task, you log on to the Azure VM, which deployment you initiated in Exercise 1. This Azure VM hosts Visual Studio 2019 and SQL Server Management Studio 2019.
 
->**Note**: Before you proceed with this task, ensure that the deployment you initiated in the first exercise has completed successfully. You can validate this by navigating to the blade of the Azure resource group "Az500Lab10" and selecting **Deployments** from the Settings pane.  
+>**Note**: Before you proceed with this task, ensure that the deployment you initiated in the first exercise has completed successfully. You can validate this by navigating to the blade of the Azure resource group "Az500Lab07" and selecting **Deployments** from the Settings pane.  
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **virtual machines** and press the **Enter** key.
 

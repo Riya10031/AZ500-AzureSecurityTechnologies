@@ -50,7 +50,7 @@ In this task, you will use a template to deploy the lab infrastructure.
    |Setting|Value|
    |---|---|
    |Subscription|the name of the Azure subscription you will be using in this lab|
-   |Resource group|click **Create new** and type the name **AZ500LAB11**|
+   |Resource group|click **Create new** and type the name **AZ500LAB05**|
    |Location|**(US) East US**|
 
 6. Click **Review + Create** and then click **Create**.
@@ -61,9 +61,9 @@ In this task, you will use a template to deploy the lab infrastructure.
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Resource groups** and press the **Enter** key.
 
-2. On the **Resource groups** blade, in the list of resource group, click the **AZ500LAB11** entry.
+2. On the **Resource groups** blade, in the list of resource group, click the **AZ500LAB05** entry.
 
-3. On the **AZ500LAB11** blade, click the entry representing the newly created SQL Server.
+3. On the **AZ500LAB05** blade, click the entry representing the newly created SQL Server.
 
 4. On the SQL server blade, in the **Security** section, click **Microsoft Defender for Cloud**, select **Enable Microsoft Defender for SQL**.
     

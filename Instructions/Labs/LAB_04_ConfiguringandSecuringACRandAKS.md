@@ -60,25 +60,25 @@ In this task, you will create a resource group for the lab an an Azure Container
 1. In the Bash session within the Cloud Shell pane, run the following to create a new resource group for this lab:
 
     ```sh
-    az group create --name AZ500LAB09 --location eastus
+    az group create --name AZ500LAB04 --location eastus
     ```
 
 1. In the Bash session within the Cloud Shell pane, run the following to verify the resource group was created:
 
     ```
-    az group list --query "[?name=='AZ500LAB09']" -o table
+    az group list --query "[?name=='AZ500LAB04']" -o table
     ```
 
 1. In the Bash session within the Cloud Shell pane, run the following to create a new Azure Container Registry (ACR) instance (The name of the ACR must be globally unique): 
 
     ```sh
-    az acr create --resource-group AZ500LAB09 --name az500$RANDOM$RANDOM --sku Basic
+    az acr create --resource-group AZ500LAB04 --name az500$RANDOM$RANDOM --sku Basic
     ```
 
 1. In the Bash session within the Cloud Shell pane, run the following to confirm that the new ACR was created:
 
     ```sh
-    az acr list --resource-group AZ500LAB09
+    az acr list --resource-group AZ500LAB04
     ```
 
     >**Note**: Record the name of the ACR. You will need it in the next task.
@@ -98,7 +98,7 @@ In this task, you will create a Dockerfile, build an image from the Dockerfile, 
     >**Note**: The trailing period at the end of the command line is required. It designates the current directory as the location of Dockerfile. 
 
     ```sh
-    ACRNAME=$(az acr list --resource-group AZ500LAB09 --query '[].{Name:name}' --output tsv)
+    ACRNAME=$(az acr list --resource-group AZ500LAB04 --query '[].{Name:name}' --output tsv)
 
     az acr build --image sample/nginx:v1 --registry $ACRNAME --file Dockerfile .
     ```
@@ -107,7 +107,7 @@ In this task, you will create a Dockerfile, build an image from the Dockerfile, 
 
 1. Close the Cloud Shell pane.
 
-1. In the Azure portal, navigate to the **AZ500Lab09** resource group and, in the list of resources, click the entry representing the Azure Container Registry instance you provisioned in the previous task.
+1. In the Azure portal, navigate to the **AZ500Lab04** resource group and, in the list of resources, click the entry representing the Azure Container Registry instance you provisioned in the previous task.
 
 1. On the Container registry blade, in the **Services** section, click **Repositories**. 
 
@@ -132,7 +132,7 @@ In this task, you will create an Azure Kubernetes service and review the deploye
     |Setting|Value|
     |----|----|
     |Subscription|the name of the Azure subscription you are using in this lab|
-    |Resource group|**AZ500LAB09**|
+    |Resource group|**AZ500LAB04**|
     |Kubernetes cluster name|**MyKubernetesCluster**|
     |Cluster preset configuration|**Dev/Test**|
     |Region|**(US) East US**|
@@ -163,7 +163,7 @@ In this task, you will create an Azure Kubernetes service and review the deploye
 
 1. Once the deployment completes, in the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type/search and select **Resource groups**.
 
-1. On the **Resource groups** blade, in the listing of resource groups, note a new resource group named **MC_AZ500LAB09_MyKubernetesCluster_eastus** that holds components of the AKS Nodes. Review resources in this resource group. 
+1. On the **Resource groups** blade, in the listing of resource groups, note a new resource group named **MC_AZ500LAB04_MyKubernetesCluster_eastus** that holds components of the AKS Nodes. Review resources in this resource group. 
 	
 1. Navigate back to the **Resource groups** blade and click the **AZ500LAB09** entry. 
 
@@ -176,7 +176,7 @@ In this task, you will create an Azure Kubernetes service and review the deploye
 1. In the Bash session within the Cloud Shell pane, run the following to connect to the Kubernetes cluster:
 
     ```sh
-    az aks get-credentials --resource-group AZ500LAB09 --name MyKubernetesCluster
+    az aks get-credentials --resource-group AZ500LAB04 --name MyKubernetesCluster
     ```
 
 1. In the Bash session within the Cloud Shell pane, run the following to list nodes of the Kubernetes cluster: 
@@ -196,7 +196,7 @@ In this task, you will grant the AKS cluster permission to access the ACR and ma
     ```sh
     ACRNAME=$(az acr list --resource-group AZ500LAB09 --query '[].{Name:name}' --output tsv)
 
-    az aks update -n MyKubernetesCluster -g AZ500LAB09 --attach-acr $ACRNAME
+    az aks update -n MyKubernetesCluster -g AZ500LAB04 --attach-acr $ACRNAME
     ```
 
     >**Note**: This command grants the 'acrpull' role assignment to the ACR. 
@@ -206,9 +206,9 @@ In this task, you will grant the AKS cluster permission to access the ACR and ma
 1. In the Bash session within the Cloud Shell pane, run the following to grant the AKS cluster the Contributor role to its virtual network. 
 
     ```sh
-    RG_AKS=AZ500LAB09
+    RG_AKS=AZ500LAB04
 
-    RG_VNET=MC_AZ500LAB09_MyKubernetesCluster_eastus	
+    RG_VNET=MC_AZ500LAB04_MyKubernetesCluster_eastus	
 
     AKS_VNET_NAME=aks-vnet-30198516
 
