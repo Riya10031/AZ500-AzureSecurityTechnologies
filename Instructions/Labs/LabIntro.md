@@ -43,4 +43,3 @@
     ![](../images/AZ-500-staysignedin.png)
 
 1. If a **Welcome to Microsoft Azure** popup window appears, click Maybe Later to skip the tour.
-    
