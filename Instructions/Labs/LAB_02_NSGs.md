@@ -50,6 +50,8 @@ In this task, you will create a virtual network to use with the network and appl
     |Name|**myVirtualNetwork**|
     |Region|**East US**|
 
+    ![image](../images/lab1-8.png)
+
 1. On the **IP addresses** tab of the **Create virtual network** blade, set the **IPv4 address space** to **10.0.0.0/16**, and, if needed, in the **Subnet name** column, click **default**, on the **Edit subnet** blade, specify the following settings and click **Save**:
 
     |Setting|Value|
@@ -60,6 +62,8 @@ In this task, you will create a virtual network to use with the network and appl
     >**Note:** If the **default** subnet is not there in the subnet section, then you have to create it. Click on **+ Add subnet**, then follow this given instructions, and click on **Add**.
 
 1. Back on the **IP addresses** tab of the **Create virtual network** blade, click **Review + create**.
+
+   ![image](../images/lab1-9.png)
 
 1. On the **Review + create** tab of the **Create virtual network** blade, click **Create**.
 
@@ -99,6 +103,8 @@ In this task, you will create an application security group.
 
 1. Click **Review + create** and then click **Create**.
 
+   ![image](../images/lab1-10.png)
+
 ## Task 3:  Create a network security group and associate the NSG to the subnet
 
 In this task, you will create a network security group. 
@@ -118,6 +124,8 @@ In this task, you will create a network security group.
 
 1. Click **Review + create** and then click **Create**.
 
+    ![image](../images/lab1-11.png)
+
 1. After deployment succeeded, click on **Go to resources**.
 
 1. On the **myNsg** blade, in the **Settings** section, click **Subnets** and then click **+ Associate**. 
@@ -128,6 +136,8 @@ In this task, you will create a network security group.
     |---|---|
     |Virtual network|**myVirtualNetwork**|
     |Subnet|**default**|
+    
+    ![image](../images/lab1-12.png)
 
 ## Task 4: Create inbound NSG security rules to all traffic to web servers and RDP to the servers. 
 
@@ -147,6 +157,8 @@ In this task, you will create a network security group.
 
 1. On the **Add inbound security rules** blade, click **Add** to create the new inbound rule. 
 
+   ![image](../images/lab1-13.png)
+
 1. On the **myNsg** blade, in the **Settings** section, click **Inbound security rules**, and then click **+ Add**.
 
 1. On the **Add inbound security rules** blade, specify the following settings to allow the RDP port (TCP 3389) to the **myAsgMgmtServers** application security group (leave all other values with their default values): 
@@ -160,6 +172,8 @@ In this task, you will create a network security group.
     |Name|**Allow-RDP-All**|
 
 1. On the **Add inbound security rule** blade, click **Add** to create the new inbound rule. 
+
+   ![image](../images/lab1-14.png)
 
 > Result: You have deployed a virtual network, network security with inbound security rules, and two application security groups. 
 
@@ -190,17 +204,34 @@ In this task, you will create a virtual machine to use as a web server.
    |Resource group|**AZ500LAB02**|
    |Virtual machine name|**myVmWeb**|
    |Region|**(US)East US**|
+
+    ![image](../images/lab1-4.png)
+    
+   |Setting|Value|
+   |---|---|
    |Image|**Windows Server 2022 Datacenter: Azure Edition- Gen2**|
    |Size|**Standard D2s v3**|
+
+     ![image](../images/lab1-5.png)
+
+   |Setting|Value|
+   |---|---|
    |Username|**Student**|
    |Password|**Pa55w.rd1234**|
    |Public inbound ports|**None**|
+
+    ![image](../images/lab1-6.png)
+ 
+   |Setting|Value|
+   |---|---|
    |Would you like to use an existing Windows Server License |**No**|
-   |I confirm I have an eligible Windows Server license with Software Assurance or Windows Server subscription to apply this Azure Hybrid Benefit| |**Check the box**|
+   |I confirm I have an eligible Windows Server license with Software Assurance or Windows Server subscription to apply this Azure Hybrid Benefit| **Check the box**|
 
     >**Note**: For public inbound ports, we will rely on the precreated NSG. 
 
 1. Click **Next: Disks >** and, on the **Disks** tab of the **Create a virtual machine** blade, set the **OS disk type** to **Standard HDD** and click **Next: Networking >**.
+
+   ![image](../images/lab1-7.png)
 
 1. On the **Networking** tab of the **Create a virtual machine** blade, select the previously created network **myVirtualNetwork**.
 
@@ -264,7 +295,11 @@ In this task, you will associate each virtual machine's network interface with t
 
 1. On the **myVmWeb** blade, in the **Settings** section, click **Networking** and then, on the **myVmWeb \| Networking** blade, click the **Application security groups** tab.
 
-1. Click **Configure the application security groups**, in the **Application security group** drop-down list, select **myAsgWebServers**, and then click **Save**.
+   ![image](../images/lab1-15.png)
+
+1. Click **Configure the application security groups**, in the **Application security group** drop-down list, select **myAsgWebServers**, and then click **Add**.
+
+   ![image](../images/lab1-16.png)
 
 1. Navigate back to the **Virtual machines** blade and in the list of virtual machines, click the **myVMMgmt** entry.
 
@@ -278,9 +313,15 @@ In this task, you will test the network traffic filters. You should be able to R
 
 1. Navigate back to the **myVMMgmt** virtual machine blade.
 
-1. On the **myVMMgmt** blade, click **Connect** and, click **RDP**. 
+1. On the **myVMMgmt** blade, click **Connect** . 
 
-1. Click **Download RDP File**, then open that file and use it to connect to the **myVMMgmt** Azure VM via Remote Desktop. When prompted to authenticate, provide the following credentials, after providing the credentials, click on **Yes**:
+   ![image](../images/lab1-16.png)
+
+1. Click **RDP** then **Download RDP File**.
+
+   ![image](../images/lab1-17.png)
+
+2. Open that file and use it to connect to the **myVMMgmt** Azure VM via Remote Desktop. When prompted to authenticate, provide the following credentials, after providing the credentials, click on **Yes**:
 
    |Setting|Value|
    |---|---|
