@@ -117,9 +117,9 @@ In this task, you will create an Azure Key Vault resource. You will also configu
 ```powershell
     $kvName = 'az500kv' + $(Get-Random)
 
-    $location = (Get-AzResourceGroup -ResourceGroupName 'AZ500LAB07-<inject key="DeploymentID"></inject>').Location
+    $location = (Get-AzResourceGroup -ResourceGroupName 'AZ500LAB07-DID').Location
 
-    New-AzKeyVault -VaultName $kvName -ResourceGroupName 'AZ500LAB07-<inject key="DeploymentID"></inject>' -Location $location
+    New-AzKeyVault -VaultName $kvName -ResourceGroupName 'AZ500LAB07-DID' -Location $location
 ```
 
    >**Note**: The output of the last command will display the vault name and the vault URI. The vault URI is in the format `https://<vault_name>.vault.azure.net/`
