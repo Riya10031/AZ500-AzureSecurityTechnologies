@@ -32,9 +32,9 @@ In this lab, you will complete the following exercises:
 
 ## Lab files:
 
-- **C:\\AllFiles\\AZ500-AzureSecurityTechnologies-prod\\Allfiles\\Labs\\10\\az-500-10_azuredeploy.json**
+- **C:\\AllFiles\\AZ500-AzureSecurityTechnologies-lab-files\\Allfiles\\Labs\\10\\az-500-10_azuredeploy.json**
 
-- **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\\10\\program.cs**
+- **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\\10\\program.cs**
 
 
 ## Exercise 1: Deploy the base infrastructure from an ARM template
@@ -73,7 +73,7 @@ In this task, you will deploy an Azure VM, which will automatically install Visu
 
     >**Note**: To identify Azure regions where you can provision Azure VMs, refer to [**https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
 
-6. Click the **Review and Create** button, and confirm the deployment by clicking the **Create** button. 
+6. Click the **Review + create** button, and confirm the deployment by clicking the **Create** button. 
 
     >**Note**: This initiates the deployment of the Azure VM and Azure SQL Database required for this lab. 
 
@@ -106,21 +106,21 @@ In this task, you will create an Azure Key Vault resource. You will also configu
 
      ![image](../images/powersh2.png)
 
-2. On getting started page, select the option **No storage account required** and select the **Subscription** provided. once subscription is selected, click on **Apply.**
+2. On getting started page, select the option **No storage account required (1)** and select the **Subscription (2)** provided. once subscription is selected, click on **Apply (3)**.
 
      ![image](../images/powersh3.png)
 
 3. Ensure **PowerShell** is selected in the drop-down menu in the upper-left corner of the Cloud Shell pane.
 
-4. In the PowerShell session within the Cloud Shell pane, run the following to create an Azure Key Vault in the resource group **AZ500LAB07**. (If you chose another name for this lab's Resource Group out of Task 1, use that name for this task as well). The Key Vault name must be unique. Remember the name you have chosen. You will need it throughout this lab.  
+4. In the PowerShell session within the Cloud Shell pane, run the following to create an Azure Key Vault in the resource group **AZ500LAB07-<inject key="DeploymentID" enableCopy="false"/>**. (If you chose another name for this lab's Resource Group out of Task 1, use that name for this task as well). The Key Vault name must be unique. Remember the name you have chosen. You will need it throughout this lab.  
 
-```powershell
-    $kvName = 'az500kv' + $(Get-Random)
+    ```powershell
+        $kvName = 'az500kv' + $(Get-Random)
 
-    $location = (Get-AzResourceGroup -ResourceGroupName 'AZ500LAB07-DID').Location
+        $location = (Get-AzResourceGroup -ResourceGroupName 'AZ500LAB07-<inject key="DeploymentID" enableCopy="false"/>').Location
 
-    New-AzKeyVault -VaultName $kvName -ResourceGroupName 'AZ500LAB07-DID' -Location $location
-```
+        New-AzKeyVault -VaultName $kvName -ResourceGroupName 'AZ500LAB07-<inject key="DeploymentID" enableCopy="false"/>' -Location $location
+    ```
 
    >**Note**: The output of the last command will display the vault name and the vault URI. The vault URI is in the format `https://<vault_name>.vault.azure.net/`
 
@@ -128,7 +128,7 @@ In this task, you will create an Azure Key Vault resource. You will also configu
 
 6. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Resource groups** and press the **Enter** key.
 
-7. On the **Resource groups** blade, in the list of resource group, click the **AZ500LAB07-<inject key="DeploymentID"></inject>** entry.
+7. On the **Resource groups** blade, in the list of resource group, click the **AZ500LAB07-<inject key="DeploymentID" enableCopy="false"/>** entry.
 
 8. On the Resource Group blade, click the entry representing the newly created Key Vault. 
 
@@ -138,7 +138,7 @@ In this task, you will create an Azure Key Vault resource. You will also configu
 
      ![image](../images/Lab-10_Ex2_Task1_2.png)
 
-   >**Note**: If the option of **Access Policies** is greyed out, navigate to the **settings** tab on the left > select **Access Configuration** > on the right side 
+   >**Note**: If the option of **Access Policies** is greyed out, navigate to the **Settings** tab on the left > select **Access configuration** > on the right side 
        select **Vault access policies** and click on **Apply.**
 
      ![image](../images/powersh4.png)
@@ -147,12 +147,13 @@ In this task, you will create an Azure Key Vault resource. You will also configu
 
     |Setting|Value|
     |----|----|
-    |Configure from template (optional)|**Key, Secret, & Certificate Management**|
+    |Configure from a template |**Key, Secret, & Certificate Management**|
     |Key permissions|click **Select all** permissions|
     |Key permissions/Cryptographic Operations|click **Sign** resulting in total of **1 selected** permissions|
     |Secret permissions|click **Select all** resulting in total of **7 selected** permissions|
-    |Certification permissions|click **Select all** resulting in total of **15 selected** permissions|
-    |Select principal|click **None selected**, on the **Principal** blade, select your user account, and click **Next**|
+    |Certification permissions|click **Select all** resulting in total of **15 selected** permissions and then click **Next**|
+    |Under Principal tab|Search and select your user account 
+     i.e. <inject key="AzureAdUserEmail" enableCopy="false"/>, on the **Principal** blade, and click **Next**|
     |Application (optional)|click **Next**|
     |Review + create|click **Create**|
     
@@ -169,7 +170,7 @@ In this task, you will add a key to the Key Vault and view information about the
 1. In the PowerShell session within the Cloud Shell pane, run the following to add a software-protected key to the Key Vault: 
 
     ```powershell
-    $kv = Get-AzKeyVault -ResourceGroupName 'AZ500LAB07'
+    $kv = Get-AzKeyVault -ResourceGroupName 'AZ500LAB07-<inject key="DeploymentID" enableCopy="false"/>'
 
     $key = Add-AZKeyVaultKey -VaultName $kv.VaultName -Name 'MyLabKey' -Destination 'Software'
     ```
@@ -275,7 +276,7 @@ In this task, you will enable a client application to access the Azure SQL Datab
 
     >**Note**: Record this value. You will need it in the next task.
 
-1. On the **sqlApp** blade, in the **Manage** section, click **Certificates & secrets**.
+1. On the **sqlApp** blade, in the **Manage** section, click **Certificates & secrets** under Manage.
 
 1. On the **sqlApp | Certificates & secrets** blade / **Client Secrets** section, click **+ New client secret**
 	
@@ -312,7 +313,7 @@ In this task, you will grant the newly registered app permissions to access secr
 1. In the PowerShell session within the Cloud Shell pane, run the following to create a variable storing the Key Vault name.
 
     ```powershell
-    $kvName = (Get-AzKeyVault -ResourceGroupName 'AZ500LAB07').VaultName
+    $kvName = (Get-AzKeyVault -ResourceGroupName 'AZ500LAB07-<inject key="DeploymentID" enableCopy="false"/>').VaultName
 
     $kvName
     ```
@@ -320,7 +321,7 @@ In this task, you will grant the newly registered app permissions to access secr
 1. In the PowerShell session within the Cloud Shell pane, run the following to grant permissions on the Key Vault to the application you registered in the previous task:
 
     ```powershell
-    Set-AZKeyVaultAccessPolicy -VaultName $kvName -ResourceGroupName AZ500LAB07 -ServicePrincipalName $applicationId -PermissionsToKeys get,wrapKey,unwrapKey,sign,verify,list
+    Set-AZKeyVaultAccessPolicy -VaultName $kvName -ResourceGroupName AZ500LAB07-<inject key="DeploymentID" enableCopy="false"/> -ServicePrincipalName $applicationId -PermissionsToKeys get,wrapKey,unwrapKey,sign,verify,list
     ```
 1. Close the Cloud Shell pane. 
 
@@ -366,7 +367,7 @@ In this task, you will connect to the SQL Database with SQL Server Management St
 	
 	![image](../images/Lab-10_Ex3_Task5_1.png)
 	
-1. On the **Networking** blade, scroll down to **Firewall Rules**, click on **+Add a firewall rule**, and specify the following settings: 
+1. On the **Networking** blade, scroll down to **Firewall Rules**, click on **+Add a firewall rule**, and specify the following settings and click **OK**: 
 	
 	![image](../images/Lab-10_Ex3_Task5_2.png)
 	
@@ -380,9 +381,9 @@ In this task, you will connect to the SQL Database with SQL Server Management St
 
     >**Note**: This modifies the server firewall settings, allowing connections to the medical database from the Azure VM's public IP address you deployed in this lab.
 
-1. Navigate back to the **az500-10-vm1** blade, click **Overview**, next click **Connect** and, in the drop-down menu, click **RDP**. 
+1. Navigate back to the **az500-10-vm1** blade, click **Overview**, next click **Connect** and, in the drop-down menu, click **Connect**.
 	
-1. Click **Download RDP File** and use it to connect to the **az500-10-vm1** Azure VM via Remote Desktop. When prompted to authenticate, provide the following credentials and click **Ok**. 
+1. Click **Download RDP File** under Native RDP tab and use it to connect to the **az500-10-vm1** Azure VM via Remote Desktop. Select **Keep** to download the RDP file. Open the RDP file and select **Connect**. When prompted to authenticate, provide the following credentials and click **Ok**. In the pop that follows, click on **Yes**.
 	
 	![image](../images/Download_RDP.png)
 	
@@ -390,14 +391,12 @@ In this task, you will connect to the SQL Database with SQL Server Management St
     |---|---|
     |User name|**Student**|
     |Password|**Pa55w.rd1234**|
-	
-   In the pop that follows, click on **Yes**.
 
     >**Note**: Wait for the Remote Desktop session and **Server Manager** to load. Close Server Manager. 
 
     >**Note**: The remaining steps in this lab are performed within the Remote Desktop session to the **az500-10-vm1** Azure VM. 
 
-1. Click **Start**, in the **Start** menu, expand the **Microsoft SQL Server Tools 19** folder, and click the **Micosoft SQL Server Management Studio** menu item.
+1. Click **Start**, in the **Start** menu, expand the **Microsoft SQL Server Tools 20** folder, and click the **SQL Server Management Studio 20** menu item.
 
 1. In the **Connect to Server** dialog box, specify the following settings: 
 
@@ -439,7 +438,7 @@ In this task, you will connect to the SQL Database with SQL Server Management St
 
     >**Note**: This will initiate the **Always Encrypted** wizard.
 
-1. On the **Introduction** page, click **Next**.
+1. On the **Introduction** page, click **Next** twice.
 
 1. On the **Column Selection** page, select the **SSN** and **Birthdate** columns, set the **Encryption Type** of the **SSN** column to **Deterministic** and of the **Birthdate** column to **Randomized**, and click **Next**.
 	
@@ -477,7 +476,7 @@ You will create a Console application using Visual Studio to load data into the 
 	
 	![image](../images/Lab-10_Ex4_Task1.png)
 	
-5. On the **Configure your new project** page, specify the following settings (leave other settings with their default values) and click on **create**.
+5. On the **Configure your new project** page, specify the following settings (leave other settings with their default values) and click on **Create**.
 
     |Setting|Value|
     |---|---|
@@ -499,7 +498,7 @@ You will create a Console application using Visual Studio to load data into the 
     Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory
     ```
 	
-9. Minimize the RDP session to your Azure virtual machine, In Labvm Server then navigate to **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\10\program.cs**, open it in Notepad, and copy its content into Clipboard.
+9. Minimize the RDP session to your Azure virtual machine. In Labvm Server then navigate to **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\10\program.cs**, open it in Notepad, and copy its content into Clipboard.
 
 10. Return to the RDP session, and in the Visual Studio console, in the **Solution Explorer** window, click **Program.cs** and replace its content with the code you copied into Clipboard.
 	
@@ -540,6 +539,6 @@ You will create a Console application using Visual Studio to load data into the 
 
    <validation step="9c0b0cd9-dab4-4395-a98a-0a4dbf1e8444" />
 
-**You have successfully completed the lab. Please click on next to go to the next lab.**
+**You have successfully completed the lab.**
 	
 
