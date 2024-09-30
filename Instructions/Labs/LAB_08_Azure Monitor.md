@@ -165,8 +165,6 @@ In this task, you will create a data collection rule.
 
 10. Click on the button labeled **Next: Collect and deliver >** to proceed.
 
-    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/8294d300-f910-4757-ad52-43c7594ac822)
-
 11. Click **+ Add data source**, then on the **Add data source** page, change the **Data source type** drop-down menu to display **Performance Counters.** Leave the following default settings:
 
     |Setting|Value|
@@ -177,13 +175,11 @@ In this task, you will create a data collection rule.
     |Disk|60|
     |Network|60|
 
-   ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/a24e44ad-1d10-4533-80e2-bae1b3f6564d)
-
 11. Click on the button labeled **Next: Destination >** to proceed.
   
 12. Change the **Destination type** drop-down menu to display **Azure Monitor Logs.** In the **Subscription** window, ensure that your *Subscription* is displayed, then change the **Account or namespace** drop-down menu to reflect your previously created Log Analytics Workspace. Click on **Add data source**. 
 
-   ![](../images/New-image120.png)
+     ![](../images/New-image120.png)
 
 13. Click **Review + create.**
 
