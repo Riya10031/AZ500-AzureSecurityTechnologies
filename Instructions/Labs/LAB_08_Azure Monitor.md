@@ -41,7 +41,7 @@ In this exercise, you will complete the following tasks:
    
 1. On the Getting started, select **No storage account required (1)** and select your **Subscription (2)** under storage account subscription. Click on **Apply (3)**.
 
-    ![Screenshot of Azure Portal Azure Cloud Shell with the Bash dropdown highlighted.](./images/new-az-900-lab3-3.png)
+     ![](../images/New-image110.png)
 
 1. In the upper-left menu of the Cloud Shell pane, make sure you are using **Powershell**. If not selected select **Switch to Powershell**. In **Switch to Powershell in Cloud Shell** pop-up select **Confirm**.
 
@@ -80,6 +80,9 @@ In this task, you will create a Log Analytics workspace.
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Log Analytics workspaces** and press the **Enter** key.
 
+   ![](../images/New-image111.png)
+
+
 1. On the **Log Analytics workspaces** blade, click **+ Create**.
 
 1. On the **Basics** tab of the **Create Log Analytics workspace** blade, specify the following settings (leave others with their default values):
@@ -93,6 +96,8 @@ In this task, you will create a Log Analytics workspace.
 
 1. Click **Review + create**.
 
+    ![](../images/New-image112.png)
+   
 1. On the **Review + create** tab of the **Create Log Analytics workspace** blade, click **Create**.
 
 
