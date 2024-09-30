@@ -161,7 +161,8 @@ In this task, you will first configure server level auditing and then configure 
 
     >**Note**: Since this SQL server and database were created recently, it is unlikely that any events will be available at this point. 
 
-    > **Results:** You have created a SQL server and database, configured data classification, and auditing.  
+    > **Results:** You have created a SQL server and database, configured data classification, and auditing.
+    
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    - If you receive a success message, you can proceed to the next task.
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
@@ -184,4 +185,4 @@ In this task, you will first configure server level auditing and then configure 
     ```
 4. Close the **Cloud Shell** pane. 
 
-**You have successfully completed the lab. Please click on next to go to the next lab.**
+### You have successfully completed the lab
