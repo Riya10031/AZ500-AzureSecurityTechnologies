@@ -31,6 +31,37 @@ In this exercise, you will complete the following tasks:
 
 ## Task 1: Deploy an Azure virtual machine
 
+1. From the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
+
+    ![](../images/unit6-image1.png)
+
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). If so, select **Powershell**.
+
+    ![](../images/pwershell1.png)
+   
+1. On the Getting started, select **No storage account required (1)** and select your **Subscription (2)** under storage account subscription. Click on **Apply (3)**.
+
+    ![Screenshot of Azure Portal Azure Cloud Shell with the Bash dropdown highlighted.](./images/new-az-900-lab3-3.png)
+
+1. In the upper-left menu of the Cloud Shell pane, make sure you are using **Powershell**. If not selected select **Switch to Powershell**. In **Switch to Powershell in Cloud Shell** pop-up select **Confirm**.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 1. Open the Cloud Shell by clicking the first icon in the top right of the Azure Portal. If prompted, select **PowerShell** and **Create storage**.
 
 1. Ensure **PowerShell** is selected in the drop-down menu in the upper-left corner of the Cloud Shell pane.
