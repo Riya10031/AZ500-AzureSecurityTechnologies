@@ -168,5 +168,20 @@ In this task, you will first configure server level auditing and then configure 
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
    <validation step="b614de5a-3bf9-4457-9566-2ebbaf298146" />
+   
+### Task 5 : **Clean up resources**
+
+> Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not incur unexpected costs. 
+
+1. In the Azure portal, open the Cloud Shell by clicking the first icon in the top right of the Azure Portal. If prompted, click **PowerShell** and **Create storage**.
+
+2. Ensure **PowerShell** is selected in the drop-down menu in the upper-left corner of the Cloud Shell pane.
+
+3. In the PowerShell session within the Cloud Shell pane, run the following to remove the resource group you created in this lab:
+  
+    ```powershell
+    Remove-AzResourceGroup -Name "AZ500LAB11" -Force -AsJob
+    ```
+4. Close the **Cloud Shell** pane. 
 
 **You have successfully completed the lab. Please click on next to go to the next lab.**
