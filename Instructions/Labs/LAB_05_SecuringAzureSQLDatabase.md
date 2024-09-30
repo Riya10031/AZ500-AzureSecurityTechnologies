@@ -161,12 +161,27 @@ In this task, you will first configure server level auditing and then configure 
 
     >**Note**: Since this SQL server and database were created recently, it is unlikely that any events will be available at this point. 
 
-> **Results:** You have created a SQL server and database, configured data classification, and auditing.  
+    > **Results:** You have created a SQL server and database, configured data classification, and auditing.  
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+ 
+   <validation step="b614de5a-3bf9-4457-9566-2ebbaf298146" />
+   
+### Task 5 : **Clean up resources**
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Click the Lab Validation icon located at the upper right corner of the lab guide section which navigates to the Lab Validation Page.
-> - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not incur unexpected costs. 
+
+1. In the Azure portal, open the Cloud Shell by clicking the first icon in the top right of the Azure Portal. If prompted, click **PowerShell** and **Create storage**.
+
+2. Ensure **PowerShell** is selected in the drop-down menu in the upper-left corner of the Cloud Shell pane.
+
+3. In the PowerShell session within the Cloud Shell pane, run the following to remove the resource group you created in this lab:
+  
+    ```powershell
+    Remove-AzResourceGroup -Name "AZ500LAB11" -Force -AsJob
+    ```
+4. Close the **Cloud Shell** pane. 
 
 **You have successfully completed the lab. Please click on next to go to the next lab.**
