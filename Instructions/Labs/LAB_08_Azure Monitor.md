@@ -107,9 +107,11 @@ In this task, you will create a storage account.
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Storage accounts** and press the **Enter** key.
 
+   ![](../images/New-image113.png)
+
 2. On the **Storage accounts** blade in the Azure portal, click the **+ Create** button to create a new storage account.
 
-    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/73eb9241-d642-455a-a1ff-b504670395c0)
+    ![](../images/New-image114.png)
 
 3. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values):
 
@@ -122,9 +124,10 @@ In this task, you will create a storage account.
     |Performance|**Standard (general-purpose v2 account)**|
     |Redundency|**Locally redundant storage (LRS)**|
 
-4. On the **Basics** tab of the **Create storage account** blade, click **Review**, wait for the validation process to complete, and click **Create**.
 
-     ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/d443821c-2ddf-4794-87fa-bfc092980eba)
+      ![](../images/New-image115.png)
+   
+4. On the **Basics** tab of the **Create storage account** blade, click **Review**, wait for the validation process to complete, and click **Create**.
 
     >**Note**: Wait for the Storage account to be created. This should take about 2 minutes.
 
@@ -134,10 +137,11 @@ In this task, you will create a data collection rule.
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Monitor** and press the **Enter** key.
 
-2. On the **Monitor Settings** blade, click **Data Collection Rules.**
+      ![](../images/New-image116.png)
+   
+2. On the **Monitor Settings** blade, click **Data Collection Rules > Create**
 
-  ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/d43e8f94-efb2-4255-9320-210c976fd45e)
-
+   ![](../images/New-image117.png)
 
 3. On the **Basics** tab of the **Create Data Collection Rule** blade, specify the following settings:
   
@@ -151,14 +155,13 @@ In this task, you will create a data collection rule.
     |Platform Type|**Windows**|
     |Data Collection Endpoint|*Leave Blank*|
 
-    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/9b58c4ce-b7a8-4acf-8289-d95b270a6083)
-
+    ![](../images/New-image118.png)
 
 4. Click on the button labeled **Next: Resources >** to proceed.
    
 6. On the Resources tab, select **+ Add resources,** check **Enable Data Collection Endpoints.** In the Select a scope template, check **AZ500LAB080910,** and click **Apply.**
 
-    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/d4191115-11bc-43ec-9bee-e84b9b95a821)
+    ![](../images/New-image119.png)
 
 10. Click on the button labeled **Next: Collect and deliver >** to proceed.
 
@@ -178,17 +181,13 @@ In this task, you will create a data collection rule.
 
 11. Click on the button labeled **Next: Destination >** to proceed.
   
-12. Change the **Destination type** drop-down menu to display **Azure Monitor Logs.** In the **Subscription** window, ensure that your *Subscription* is displayed, then change the **Account or namespace** drop-down menu to reflect your previously created Log Analytics Workspace.
+12. Change the **Destination type** drop-down menu to display **Azure Monitor Logs.** In the **Subscription** window, ensure that your *Subscription* is displayed, then change the **Account or namespace** drop-down menu to reflect your previously created Log Analytics Workspace. Click on **Add data source**. 
 
-   ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/481843f5-94c4-4a8f-bf51-a10d49130bf8)
-
-11. Click on **Add data source** at the bottom of th
-    
-    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/964091e7-bbbc-4ca8-8383-bb2871a1e7f0)
+   ![](../images/New-image120.png)
 
 13. Click **Review + create.**
 
-    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/50dd8407-a106-4540-9e14-ae40a3c04830)
+     ![](../images/New-image121.png)
 
 14. Click **Create.**
 
