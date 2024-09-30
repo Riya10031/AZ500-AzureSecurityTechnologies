@@ -125,7 +125,7 @@ In this task, you will create a storage account.
     |Redundency|**Locally redundant storage (LRS)**|
 
 
-      ![](../images/New-image115.png)
+      ![](../images/New-image(115).png)
    
 4. On the **Basics** tab of the **Create storage account** blade, click **Review**, wait for the validation process to complete, and click **Create**.
 
