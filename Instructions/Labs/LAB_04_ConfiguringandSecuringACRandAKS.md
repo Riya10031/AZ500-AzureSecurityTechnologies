@@ -7,13 +7,19 @@ You have been asked to deploy a proof of concept with Azure Container Registry a
 - Using Dockerfile to build an image.
 - Using Azure Container Registry to store images.
 - Configuring an Azure Kubernetes Service.
-- Securing and accessing container applications both internally and externally. 
-
-> For all the resources in this lab, we are using the **East US** region. Verify with your instructor this is the region to use for class. 
+- Securing and accessing container applications both internally and externally.
 
 ## Lab objectives
-In this lab, you will complete the following exercise:
-- Exercise 1: Configuring and Securing ACR and AKS
+
+In this lab, you will complete the following tasks:
+- Task 1: Create an Azure Container Registry
+- Task 2: Create a Dockerfile, build a container and push it to Azure Container Registry
+- Task 3: Create an Azure Kubernetes Service cluster
+- Task 4: Grant the AKS cluster permissions to access the ACR
+- Task 5: Deploy an external service to AKS
+- Task 6: Verify you can access an external AKS-hosted service
+- Task 7: Deploy an internal service to AKS
+- Task 8: Verify you can access an internal AKS-hosted service
 
 ## Estimated timing: 45 minutes
 
@@ -21,35 +27,17 @@ In this lab, you will complete the following exercise:
 
 ![image](https://user-images.githubusercontent.com/91347931/157532250-1104a829-792a-4b6d-beff-fe976e2d5d4b.png)
 
-## Lab files:
-- **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\09\\nginxexternal.yaml**
-- **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\09\\nginxinternal.yaml**
-
 # Exercise 1: Configuring and Securing ACR and AKS
-
-
-> For all the resources in this lab, we are using the **East (US)** region. Verify with your instructor this is region to use for you class. 
-
-In this exercise, you will complete the following tasks:
-
-- Task 1: Create an Azure Container Registry
-- Task 2: Create a Dockerfile, build a container and push it to Azure Container Registry
-- Task 3: Create an Azure Kubernetes Service cluster
-- Task 4: Grant the AKS cluster permissions to access the ACR
-- Task 5: Deploy an external service to AKS
-- Task 6: Verify the you can access an external AKS-hosted service
-- Task 7: Deploy an internal service to AKS
-- Task 8: Verify the you can access an internal AKS-hosted service
 
 ## Task 1: Create an Azure Container Registry
 
-In this task, you will create a resource group for the lab an an Azure Container Registry.
+In this task, you will create a resource group for the lab an Azure Container Registry.
 
 1. Use the **[\>_] (1)** button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, and select **Bash (2)** environment.
     
     ![Azure portal with a cloud shell pane](../images/new-az500-lab4-1.png)
    
-1. In the **Getting Started** menu,choose **Mount storage account (1)**,select your default **Subscription (2)** from the dropdown and click on **Apply (3)**
+1. In the **Getting Started** menu, choose **Mount storage account (1)**,select your default **Subscription (2)** from the dropdown and click on **Apply (3)**
 
    ![Azure portal with a cloud shell pane](../images/new-az500-lab4-2.png)
 
@@ -87,7 +75,7 @@ In this task, you will create a resource group for the lab an an Azure Container
 
 In this task, you will create a Dockerfile, build an image from the Dockerfile, and deploy the image to the ACR. 
 
-1. In the Bash session within the Cloud Shell pane, run the following to create a Dockerfile to create an Nginx-based image: 
+1. In the Bash session within the Cloud Shell pane, run the following to create a Dockerfile to create a Nginx-based image: 
 
     ```sh
     echo FROM nginx > Dockerfile
@@ -223,9 +211,9 @@ In this task, you will grant the AKS cluster permission to access the ACR and ma
 
 ## Task 5: Deploy an external service to AKS
 
-In this task,  you will download the Manifest files, edit the YAML file, and apply your changes to the cluster. 
+In this task, you will download the Manifest files, edit the YAML file, and apply your changes to the cluster. 
 
-1. In the Bash session within the Cloud Shell pane, click the **Manage Files**, in the drop-down menu, click **Upload**, in the **Open** dialog box, naviate to the location where you downloaded the lab files, select **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\09\\nginxexternal.yaml** click **Open**. Next, select **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\09\\nginxinternal.yaml**, and click **Open**.
+1. In the Bash session within the Cloud Shell pane, click the **Manage Files**, in the drop-down menu, click **Upload**, in the **Open** dialog box, navigate to the location where you downloaded the lab files, select **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\09\\nginxexternal.yaml** click **Open**. Next, select **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\09\\nginxinternal.yaml**, and click **Open**.
 
 1. In the Bash session within the Cloud Shell pane, run the following to identify the name of the Azure Container Registry instance:
 
@@ -262,7 +250,7 @@ In this task,  you will download the Manifest files, edit the YAML file, and app
     service/nginxexternal created
     ```
 
-## Task 6: Verify the you can access an external AKS-hosted service
+## Task 6: Verify you can access an external AKS-hosted service
 
 In this task, verify the container can be accessed externally using the public IP address.
 
@@ -313,15 +301,15 @@ In this task, you will deploy the internal facing service on the AKS.
     kubectl get service nginxinternal
     ```
 
-1. In the Bash session within the Cloud Shell pane, review the output. The External-IP is, in this case, a private IP address. If it is in a **Pending** state then try to run the previous command again.
+1. In the Bash session within the Cloud Shell pane, review the output. The External-IP is, in this case, a private IP address. If it is in a **Pending** state, then try to run the previous command again.
 
     >**Note**: Record this IP address. You will need it in the next task. 
 
     >**Note**: To access the internal service endpoint, you will connect interactively to one of the pods running in the cluster. 
 
-    >**Note**: Alternatively you could use the CLUSTER-IP address.
+    >**Note**: Alternatively, you could use the CLUSTER-IP address.
 
-## Task 8: Verify the you can access an internal AKS-hosted service
+## Task 8: Verify you can access an internal AKS-hosted service
 
 In this task, you will use one of the pods running on the AKS cluster to access the internal service. 
 
@@ -352,11 +340,22 @@ In this task, you will use one of the pods running on the AKS cluster to access 
 > **Result:** You have configured and secured ACR and AKS.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
 > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 <validation step="f74f6cd9-a7e4-40d3-a11b-cf38751bb93f" />
+
+### Review
+
+In this lab, you have completed:
+- Created an Azure Container Registry
+- Created a Dockerfile, build a container and push it to Azure Container Registry
+- Created an Azure Kubernetes Service cluster
+- Granted the AKS cluster permissions to access the ACR
+- Deployed an external service to AKS
+- Verified you can access an external AKS-hosted service
+- Deployed an internal service to AKS
+- Verified you can access an internal AKS-hosted service
 
 **You have successfully completed the lab.**
