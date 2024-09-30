@@ -161,12 +161,12 @@ In this task, you will first configure server level auditing and then configure 
 
     >**Note**: Since this SQL server and database were created recently, it is unlikely that any events will be available at this point. 
 
-> **Results:** You have created a SQL server and database, configured data classification, and auditing.  
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Click the Lab Validation icon located at the upper right corner of the lab guide section which navigates to the Lab Validation Page.
-> - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+    > **Results:** You have created a SQL server and database, configured data classification, and auditing.  
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+ 
+   <validation step="b614de5a-3bf9-4457-9566-2ebbaf298146" />
 
 **You have successfully completed the lab. Please click on next to go to the next lab.**
