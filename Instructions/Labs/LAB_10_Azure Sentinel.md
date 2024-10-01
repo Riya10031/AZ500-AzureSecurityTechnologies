@@ -183,7 +183,7 @@ In this task, you will create a playbook. A security playbook is a collection of
 
 3. On the **Microsoft Sentinel \| Analytics** blade, click **+ Create** and, in the drop-down menu, click **Scheduled query rule**. 
 
-4. On the **General** tab of the **Analytic rule wizard - Create new rule** blade, specify the following settings (leave others with their default values):
+4. On the **General** tab of the **Analytic rule wizard - Create a new Scheduled rule** blade, specify the following settings (leave others with their default values):
 
     |Setting|Value|
     |---|---|
@@ -192,7 +192,7 @@ In this task, you will create a playbook. A security playbook is a collection of
 
 5. Click **Next: Set rule logic >**.
 
-6. On the **Set rule logic** tab of the **Analytic rule wizard - Create new rule** blade, in the **Rule query** text box, paste the following rule query. 
+6. On the **Set rule logic** tab of the **Analytic rule wizard - Create a new Scheduled rule** blade, in the **Rule query** text box, paste the following rule query. 
 
     ```
     AzureActivity
@@ -202,17 +202,17 @@ In this task, you will create a playbook. A security playbook is a collection of
 
     >**Note**: This rule identifies removal of Just in time VM access policies.
 
-    >**Note** if you receive a parse error, intellisense may have added values to your query. Ensure the query matches otherwise paste the query into notepad and then from notepad to the rule query. 
+    >**Note**: If you receive a parse error, intellisense may have added values to your query. Ensure the query matches otherwise paste the query into notepad and then from notepad to the rule query. 
 
-7. On the **Set rule logic** tab of the **Analytic rule wizard - Create new rule** blade, in the **Query scheduling** section, set the **Run query every** to **5 Minutes**.
+7. On the **Set rule logic** tab of the **Analytic rule wizard - Create a new Scheduled rule** blade, in the **Query scheduling** section, set the **Run query every** to **5 Minutes**.
 
-8. On the **Set rule logic** tab of the **Analytic rule wizard - Create new rule** blade, accept the default values of the remaining settings and click **Next: Incident settings >**.
+8. On the **Set rule logic** tab of the **Analytic rule wizard - Create a new Scheduled rule** blade, accept the default values of the remaining settings and click **Next: Incident settings >**.
 
-9. On the **Incident settings** tab of the **Analytic rule wizard - Create new rule** blade, accept the default settings and click **Next: Automated response >**. 
+9. On the **Incident settings** tab of the **Analytic rule wizard - Create a new Scheduled rule** blade, accept the default settings and click **Next: Automated response >**. 
 
 10. On the **Automated response** tab of the **Analytic rule wizard - Create a new Scheduled rule** blade, under **Automation rules**, click **+ Add new**.
 
-1. In the **Create new automation rule** window, enter **Run Change-Severity Playbook** for the **Automation rule name**; under the **Trigger** field, click the drop-down menu and select **When alert is created**.
+1. In the **Create new automation rule** window, enter **Run Change-Severity Playbook** for the **Automation rule name** under the **Trigger** field, click the drop-down menu and select **When alert is created**.
 
 1. In the **Create new automation rule** window, under **Actions**, read the note and then click **Manage playbook permissions**. On the **Manage permissions** window, select the checkbox next to the previously created **Resource group AZ500LAB080910** and then click **Apply**.
 
