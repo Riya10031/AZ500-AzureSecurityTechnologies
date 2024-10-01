@@ -30,9 +30,19 @@ In this exercise, you will complete the following tasks:
 
 ## Task 1: Deploy an Azure virtual machine
 
-1. Open the Cloud Shell by clicking the first icon in the top right of the Azure Portal. If prompted, select **PowerShell** and **Create storage**.
+1. From the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
-1. Ensure **PowerShell** is selected in the drop-down menu in the upper-left corner of the Cloud Shell pane.
+    ![](../images/unit6-image1.png)
+
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). If so, select **Powershell**.
+
+    ![](../images/pwershell1.png)
+   
+1. On the Getting started, select **No storage account required (1)** and select your **Subscription (2)** under storage account subscription. Click on **Apply (3)**.
+
+     ![](../images/New-image110.png)
+
+1. In the upper-left menu of the Cloud Shell pane, make sure you are using **Powershell**. If not selected select **Switch to Powershell**. In **Switch to Powershell in Cloud Shell** pop-up select **Confirm**.
 
 1. In the PowerShell session within the Cloud Shell pane, run the following to create a resource group that will be used in this lab:
   
@@ -69,6 +79,9 @@ In this task, you will create a Log Analytics workspace.
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Log Analytics workspaces** and press the **Enter** key.
 
+   ![](../images/New-image111.png)
+
+
 1. On the **Log Analytics workspaces** blade, click **+ Create**.
 
 1. On the **Basics** tab of the **Create Log Analytics workspace** blade, specify the following settings (leave others with their default values):
@@ -82,6 +95,8 @@ In this task, you will create a Log Analytics workspace.
 
 1. Click **Review + create**.
 
+    ![](../images/New-image112.png)
+   
 1. On the **Review + create** tab of the **Create Log Analytics workspace** blade, click **Create**.
 
 
@@ -91,9 +106,11 @@ In this task, you will create a storage account.
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Storage accounts** and press the **Enter** key.
 
+   ![](../images/New-image113.png)
+
 2. On the **Storage accounts** blade in the Azure portal, click the **+ Create** button to create a new storage account.
 
-    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/73eb9241-d642-455a-a1ff-b504670395c0)
+    ![](../images/New-image114.png)
 
 3. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values):
 
@@ -106,9 +123,10 @@ In this task, you will create a storage account.
     |Performance|**Standard (general-purpose v2 account)**|
     |Redundency|**Locally redundant storage (LRS)**|
 
-4. On the **Basics** tab of the **Create storage account** blade, click **Review**, wait for the validation process to complete, and click **Create**.
 
-     ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/d443821c-2ddf-4794-87fa-bfc092980eba)
+      ![](../images/New-image(115).png)
+   
+4. On the **Basics** tab of the **Create storage account** blade, click **Review**, wait for the validation process to complete, and click **Create**.
 
     >**Note**: Wait for the Storage account to be created. This should take about 2 minutes.
 
@@ -118,10 +136,11 @@ In this task, you will create a data collection rule.
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Monitor** and press the **Enter** key.
 
-2. On the **Monitor Settings** blade, click **Data Collection Rules.**
+      ![](../images/New-image116.png)
+   
+2. On the **Monitor Settings** blade, click **Data Collection Rules > Create**
 
-  ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/d43e8f94-efb2-4255-9320-210c976fd45e)
-
+   ![](../images/New-image117.png)
 
 3. On the **Basics** tab of the **Create Data Collection Rule** blade, specify the following settings:
   
@@ -135,18 +154,15 @@ In this task, you will create a data collection rule.
     |Platform Type|**Windows**|
     |Data Collection Endpoint|*Leave Blank*|
 
-    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/9b58c4ce-b7a8-4acf-8289-d95b270a6083)
-
+    ![](../images/New-image118.png)
 
 4. Click on the button labeled **Next: Resources >** to proceed.
    
 6. On the Resources tab, select **+ Add resources,** check **Enable Data Collection Endpoints.** In the Select a scope template, check **AZ500LAB080910,** and click **Apply.**
 
-    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/d4191115-11bc-43ec-9bee-e84b9b95a821)
+    ![](../images/New-image119.png)
 
 10. Click on the button labeled **Next: Collect and deliver >** to proceed.
-
-    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/8294d300-f910-4757-ad52-43c7594ac822)
 
 11. Click **+ Add data source**, then on the **Add data source** page, change the **Data source type** drop-down menu to display **Performance Counters.** Leave the following default settings:
 
@@ -158,21 +174,15 @@ In this task, you will create a data collection rule.
     |Disk|60|
     |Network|60|
 
-   ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/a24e44ad-1d10-4533-80e2-bae1b3f6564d)
-
 11. Click on the button labeled **Next: Destination >** to proceed.
   
-12. Change the **Destination type** drop-down menu to display **Azure Monitor Logs.** In the **Subscription** window, ensure that your *Subscription* is displayed, then change the **Account or namespace** drop-down menu to reflect your previously created Log Analytics Workspace.
+12. Change the **Destination type** drop-down menu to display **Azure Monitor Logs.** In the **Subscription** window, ensure that your *Subscription* is displayed, then change the **Account or namespace** drop-down menu to reflect your previously created Log Analytics Workspace. Click on **Add data source**. 
 
-   ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/481843f5-94c4-4a8f-bf51-a10d49130bf8)
-
-11. Click on **Add data source** at the bottom of th
-    
-    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/964091e7-bbbc-4ca8-8383-bb2871a1e7f0)
+     ![](../images/New-image120.png)
 
 13. Click **Review + create.**
 
-    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/50dd8407-a106-4540-9e14-ae40a3c04830)
+     ![](../images/New-image121.png)
 
 14. Click **Create.**
 
