@@ -302,5 +302,5 @@ In this task, you will test the firewall to confirm that it works as expected.
 
 <validation step="d7fc707d-6388-4dd1-80f2-5092ff0d75a8" />
 
-**You have successfully completed the lab**
+### You have successfully completed the lab
 
