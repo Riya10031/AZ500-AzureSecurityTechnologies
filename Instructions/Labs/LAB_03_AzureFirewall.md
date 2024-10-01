@@ -10,7 +10,7 @@ You have been asked to install Azure Firewall. This will help your organization 
 - Firewall Application rules that only allow outbound traffic to www.bing.com. 
 - Firewall Network rules that allow external DNS server lookups.
 
-> For all the resources in this lab, we are using the **East US** region. Verify with your instructor this is the region to use for class. 
+> For all the resources in this lab, we are using the **East US** region.
 
 ## Lab objectives
 
