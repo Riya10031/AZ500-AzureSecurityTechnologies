@@ -267,4 +267,4 @@ In this task, you will create a playbook. A security playbook is a collection of
  
    <validation step="61d471a2-0512-4d07-9e23-7393e56ef937" />
  
-**You have successfully completed the lab**
+### You have successfully completed the lab
