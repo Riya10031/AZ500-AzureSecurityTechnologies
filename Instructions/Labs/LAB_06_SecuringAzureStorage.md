@@ -32,7 +32,9 @@ In this exercise, you will complete the following tasks:
 - Task 5: Create a storage account with a file share
 - Task 6: Deploy virtual machines into the designated subnets
 - Task 7: Test the storage connection from the private subnet to confirm that access is allowed
-- Task 8: Test the storage connection from the public subnet to confirm that access is denied 
+- Task 8: Test the storage connection from the public subnet to confirm that access is denied
+
+## Exercise 1: Service endpoints and security storage
 
 ### Task 1: Create a virtual network
 
