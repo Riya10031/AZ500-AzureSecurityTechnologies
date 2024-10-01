@@ -37,7 +37,7 @@ In this task, you will use a template to deploy the lab infrastructure.
     
     ![image](../images/Custom_Template.png)
     
-1. On the **Edit template** blade, click **Load file**, locate the **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\\11\\azuredeploy.json** file and click **Open**.
+1. On the **Edit template** blade, click **Load file**, locate the **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\\11\\azuredeploy.json** file and click **Open**.
 
     >**Note**: Review the content of the template and note that it deploys an Azure SQL database.
     
