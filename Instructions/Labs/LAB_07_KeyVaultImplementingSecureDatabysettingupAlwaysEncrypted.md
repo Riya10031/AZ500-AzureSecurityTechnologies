@@ -7,7 +7,7 @@ You have been asked to create a proof of concept application that makes use of t
 - Creating an Azure Key Vault and storing keys and secrets in the vault.
 - Create a SQL Database and encrypting content of columns in database tables by using Always Encrypted.
 
->**Note**: For all the resources in this lab, we are using the **East US** region.
+    >**Note**: For all the resources in this lab, we are using the **East US** region.
 
 To keep the focus on the security aspects of Azure, related to building this proof of concept, you will start from an automated ARM template deployment, setting up a Virtual Machine with Visual Studio 2019 and SQL Server Management Studio 2019.
 
@@ -88,7 +88,7 @@ In this task, you will deploy an Azure VM, which will automatically install Visu
    
 ## Exercise 2: Configure the Key Vault resource with a key and a secret
 
->**Note**: For all the resources in this lab, we are using the **East US** region. Verify with your instructor this is region to use for you class. 
+>**Note**: For all the resources in this lab, we are using the **East US** region.
 
 In this exercise, you will complete the following tasks:
 
@@ -102,13 +102,13 @@ In this task, you will create an Azure Key Vault resource. You will also configu
 
 1. Open the Cloud Shell by clicking the first icon (next to the search bar) at the top right of the Azure portal. If prompted, select **PowerShell**.
 
-     ![image](../images/powersh1.png)
+    ![image](../images/powersh1.png)
 
-     ![image](../images/powersh2.png)
+    ![image](../images/powersh2.png)
 
 2. On getting started page, select the option **No storage account required (1)** and select the **Subscription (2)** provided. once subscription is selected, click on **Apply (3)**.
 
-     ![image](../images/powersh3.png)
+    ![image](../images/powersh3.png)
 
 3. Ensure **PowerShell** is selected in the drop-down menu in the upper-left corner of the Cloud Shell pane.
 
@@ -132,16 +132,16 @@ In this task, you will create an Azure Key Vault resource. You will also configu
 
 8. On the Resource Group blade, click the entry representing the newly created Key Vault. 
 
-     ![image](../images/Lab-10_Ex2_Task1_1.png)
+    ![image](../images/Lab-10_Ex2_Task1_1.png)
 
 9. On the Key Vault blade, in the **Overview** section, click **Access Policies** and then click **+ Create**.
 
-     ![image](../images/Lab-10_Ex2_Task1_2.png)
+    ![image](../images/Lab-10_Ex2_Task1_2.png)
 
    >**Note**: If the option of **Access Policies** is greyed out, navigate to the **Settings** tab on the left > select **Access configuration** > on the right side 
        select **Vault access policies** and click on **Apply.**
 
-     ![image](../images/powersh4.png)
+    ![image](../images/powersh4.png)
 
 10. On the **Create an access policy** blade, specify the following settings (leave all others with their default values): 
 
@@ -253,7 +253,7 @@ In this exercise, you will complete the following tasks:
 
 ### Task 1: Enable a client application to access the Azure SQL Database service. 
 
-In this task, you will enable a client application to access the Azure SQL Database service. This will be done by setting up the required authentication and acquiring the Application ID and Secret that you will need to authenticate your application. T
+In this task, you will enable a client application to access the Azure SQL Database service. This will be done by setting up the required authentication and acquiring the Application ID and Secret that you will need to authenticate your application.
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **App Registrations** and press the **Enter** key.
 
@@ -407,7 +407,7 @@ In this task, you will connect to the SQL Database with SQL Server Management St
     |Authentication|**SQL Server Authentication**|
     |Login|**Student**|
     |Password|**Pa55w.rd1234**|
-	
+
 	![image](../images/Lab-10_Ex3_Task5_3.png)
 	
 1. In the **Connect to Server** dialog box, click **Connect**.
