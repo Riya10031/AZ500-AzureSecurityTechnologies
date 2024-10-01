@@ -19,7 +19,7 @@ In this lab, you will complete the following exercise:
 
 ## Architecture Diagram
 
-![image](https://user-images.githubusercontent.com/91347931/157538440-4953be73-90be-4edd-bd23-b678326ba637.png)
+![image](../images/archtech8.png)
 
 ## Lab files:
 - **\\C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\\15\\changeincidentseverity.json**
@@ -69,7 +69,7 @@ In this task, you will configure Sentinel to use the Azure Activity data connect
 
 1. In step 2 **Connect your subscriptions through diagnostic settings new pipeline**, review the "Launch the Azure Policy Assignment wizard and follow the steps" instructions then click **Launch the Azure Policy Assignment wizard\>**.
 
-1. On the **Configure Azure Activity logs to stream to specified Log Analytics workspace** (Assign Policy page) **Basics** tab, click the **Scope ellipsis (...)** button. In the **Scope** page choose your Azure Pass subscription from the drop-down subscription list and click the **Select** button at the bottom of the page.
+1. On the **Configure Azure Activity logs to stream to specified Log Analytics workspace** (Assign Policy page) **Basics** tab, click the **Scope ellipsis (...)** button. In the **Scope** page choose your subscription from the drop-down subscription list and click the **Select** button at the bottom of the page.
 
     >**Note**: *Do not* select a Resource Group
 
@@ -143,6 +143,8 @@ In this task, you will create a playbook. A security playbook is a collection of
 
 1. Click **Review + create** and then click **Create**.
 
+    ![image](../images/logic.png)
+
     >**Note**: Wait for the deployment to complete.
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Resource groups** and press the **Enter** key.
@@ -156,6 +158,10 @@ In this task, you will create a playbook. A security playbook is a collection of
     >**Note**: On the **Logic Apps Designer** blade, each of the four connections displays a warning. This means that each needs to reviewed and configured.
 
 1. On the **Logic Apps Designer** blade, click the first **Connections** step.
+
+   >**Note** You need to click on **Change Connection** to add a new connection.
+
+   ![image](../images/connection.png)
 
 1. Click **Add new**, ensure that the entry in the **Tenant** drop down list contains your Azure AD tenant name and click **Sign-in**.
 
