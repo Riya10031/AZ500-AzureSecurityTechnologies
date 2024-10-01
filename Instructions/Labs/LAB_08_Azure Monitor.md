@@ -187,6 +187,6 @@ In this task, you will create a data collection rule.
  
    <validation step="2438c3db-e10e-4895-88cd-b6f1ffa433ca" />
 
-**You have successfully completed the lab** Please click on **Next** to start the next lab.
+### You have successfully completed the lab, click on Next to start the next lab
 
  
