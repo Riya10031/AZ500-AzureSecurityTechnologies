@@ -539,6 +539,6 @@ You will create a Console application using Visual Studio to load data into the 
 
    <validation step="9c0b0cd9-dab4-4395-a98a-0a4dbf1e8444" />
 
-**You have successfully completed the lab.**
+### You have successfully completed the lab
 	
 
