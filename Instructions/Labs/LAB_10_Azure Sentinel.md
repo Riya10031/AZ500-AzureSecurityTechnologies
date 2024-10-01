@@ -1,4 +1,4 @@
-# Lab 15: Microsoft Sentinel
+# Lab 10: Microsoft Sentinel
 
 ## Lab scenario
 You have been asked to create a proof of concept of Microsoft Sentinel-based threat detection and response. Specifically, you want to:
