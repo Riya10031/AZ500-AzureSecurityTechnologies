@@ -7,7 +7,7 @@ You have been asked to create a proof of concept to demonstrate securing Azure f
 - Configure the storage endpoint so only resources from a specific subnet can access the storage.
 - Confirm that resources outside of the specific subnet cannot access the storage. 
 
-> For all the resources in this lab, we are using the **East US** region. Verify with your instructor this is the region to use for class. 
+> For all the resources in this lab, we are using the **East US** region.
 
 ## Lab objectives
 
@@ -38,7 +38,7 @@ In this exercise, you will complete the following tasks:
 
 In this task, you will create a virtual network.
 
-1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Virtual networks** and press the **Enter** key.
+1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Virtual networks** and press the **Enter** key twice.
 
 1. On the **Virtual Networks** blade, click **+ Create**.
 
@@ -58,7 +58,7 @@ In this task, you will create a virtual network.
     |Subnet name|**Public**|
     |Subnet address range|**10.0.0.0/24**|
 	
-	![image](../images/Lab-12_Ex1_Task1.png)
+	![image](../images/new-lab06-1.png)
 	
 1. Back on the **IP addresses** tab of the **Create virtual network** blade, click **Review + create**.
 
@@ -78,7 +78,7 @@ In this task, you will create another subnet and enable a service endpoint on th
 
 1. On the **myVirtualNetwork \| Subnets** blade, click **+ Subnet**. 
 	
-	![image](../images/Lab-12_Ex1_Task2.png)
+	![image](../images/new-lab06-2.png)
 	
 1. On the **Add subnet** blade, specify the following settings (leave others with their default values):
 
@@ -100,7 +100,7 @@ In this task, you will create a network security group with two outbound securit
 
 1. On the **Network security groups** blade, click **+ Create**.
 
-	![image](../images/New_NSG.png)
+	![image](../images/new-lab06-3.png)
 
 1. On the **Basics** tab of the **Create network security group** blade, specify the following settings: 
 
@@ -277,17 +277,21 @@ In this task, you will create a storage account with a file share and obtain the
 
 7. On the **AZ500LAB06** resource group blade, in the list of resources, click the entry representing the newly created storage account.
 
-8. On the storage account **Overview** blade, click **File Shares** under the **Data storage** tab, and then click **+ File Share**.
+8. On the storage account **Overview** blade, click **File Shares (1)** under the **Data storage** tab, and then click **+ File Share (2)**.
 
-9. On the **New file share** blade, untick the **Enable backup** option in the backup tab. 
+    ![image](../images/new-lab06-5.png)
 
-10. On the **New file share** blade, specify the following settings:
+9. On the **New file share** blade, specify the following settings and click **Next: Backup > (2)**:
 
     |Setting|Value|
     |---|---|
-    |Name|**my-file-share**|
+    |Name|**my-file-share (1)**|
 
-11. On the **New file share** blade, click **Create**.
+    ![image](../images/new-lab06-4.png)
+
+10. On the **Backup** blade, untick the **Enable backup** option.
+
+11. On the **New file share** blade, click **Review + Create** and then **Create**.
 
     >**Note**: Now, retrieve and record the PowerShell script that creates a drive mapping to the Azure file share. 
 	
@@ -301,7 +305,7 @@ In this task, you will create a storage account with a file share and obtain the
 
     >**Note**: Record this script. You will need this in a later in this lab in order to map the file share from the Azure virtual machine on the **Private** subnet.
     
-    ![image](../images/Lab-12_Ex1_Task5_3.png)
+    ![image](../images/new-lab06-6.png)
 
 15. Navigate back to the storage account blade, then in the **Security + networking** section, click **Networking**.
 	
