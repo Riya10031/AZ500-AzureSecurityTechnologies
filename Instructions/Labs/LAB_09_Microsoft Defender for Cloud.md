@@ -9,7 +9,7 @@ You have been asked to create a proof of concept of Microsoft Defender for Cloud
 - Implement recommendations for guest configuration and Just in time VM access. 
 - Review how the Secure Score can be used to determine progress toward creating a more secure infrastructure.
 
- > For all the resources in this lab, we are using the **East US** region. Verify with your instructor this is the region to use for class. 
+ > For all the resources in this lab, we are using the **East US** region.
 
 ## Lab objectives
 
