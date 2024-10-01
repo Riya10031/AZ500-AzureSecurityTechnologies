@@ -7,7 +7,7 @@ You have been asked to create a proof of concept to demonstrate securing Azure f
 - Configure the storage endpoint so only resources from a specific subnet can access the storage.
 - Confirm that resources outside of the specific subnet cannot access the storage. 
 
-> For all the resources in this lab, we are using the **East US** region.
+    > For all the resources in this lab, we are using the **East US** region.
 
 ## Lab objectives
 
@@ -59,14 +59,14 @@ In this task, you will create a virtual network.
     |---|---|
     |Subnet name|**Public**|
     |Subnet address range|**10.0.0.0/24**|
-	
+
 	![image](../images/new-lab06-1.png)
 	
 1. Back on the **IP addresses** tab of the **Create virtual network** blade, click **Review + create**.
 
 1. On the **Review + create** tab of the **Create virtual network** blade, click **Create**.
 
->**Note**:If you are not able to edit the **default** first create the virtual network and go to subnets in created Virtual network and delete the Default Subnet and add **Public** Subnet 
+    >**Note**:If you are not able to edit the **default** first create the virtual network and go to subnets in created Virtual network and delete the Default Subnet and add **Public** Subnet 
 
 ### Task 2: Add a subnet to the virtual network and configure a storage endpoint
 
@@ -180,7 +180,7 @@ In this task, you will create a network security group with two outbound securit
     |Action|**Allow**|
     |Priority|**1200**|                                                    
     |Name|**Allow-RDP-All**|
-	
+
 	![image](../images/Lab-12_Ex1_Task3_3.png)
 
 14. On the **Add inbound security rule** blade, click **Add** to create the new inbound rule. 
