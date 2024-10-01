@@ -53,7 +53,7 @@ In this task, you will deploy an Azure VM, which will automatically install Visu
 
      ![image](../images/Custom_Template.png)
 
-3. On the **Edit template** blade, click **Load file**, locate the **C:\\AllFiles\\AZ500-AzureSecurityTechnologies-prod\\Allfiles\\Labs\\10\\az-500-10_azuredeploy.json** file and click **Open**.
+3. On the **Edit template** blade, click **Load file**, locate the **C:\\AllFiles\\AZ500-AzureSecurityTechnologies-lab-files\\Allfiles\\Labs\\10\\az-500-10_azuredeploy.json** file and click **Open**.
 
      ![image](../images/Lab-10_Ex1_Task1.png)
 
