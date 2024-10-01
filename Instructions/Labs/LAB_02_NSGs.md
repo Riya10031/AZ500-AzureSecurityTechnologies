@@ -9,7 +9,7 @@ You have been asked to implement your organization's virtual networking infrastr
 - The Web Servers should display the IIS web page when accessed from the internet. 
 - Network security group rules should be used to control network access.  
 
- > For all the resources in this lab, we are using the **East US** region. Verify with your instructor this is the region to use for class. 
+ > For all the resources in this lab, we are using the **East US** region.
 
 ## Lab objectives
 In this lab, you will complete the following exercises:
