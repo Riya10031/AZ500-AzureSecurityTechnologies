@@ -107,11 +107,11 @@ In this task, you will implement the Microsoft Defender for Cloud recommendation
 
 >**Note**: Do not remove the resources from this lab as they are needed for the Azure Sentinel lab.
 
- **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
  
- - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
- - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
- - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
- - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   <validation step="b6cace8a-4562-4975-863b-5feceb7b1a70" />
  
  **You have successfully completed the lab**. Please click on **Next** to start the next lab.
