@@ -24,10 +24,6 @@ In this lab, you will complete the following exercise:
 
 ![image](https://user-images.githubusercontent.com/91347931/157529954-a1bc434b-2eca-41c1-b875-1f0c977d5e20.png)
 
-## Lab files:
-
-- **C:\AllFiles\AZ500-AzureSecurityTechnologies-prod\Allfiles\Labs\08\\template.json**
-
 # Exercise 1: Deploy and test an Azure Firewall
 
 > For all the resources in this lab, we are using the **East (US)** region. Verify with your instructor this is region to use for you class. 
