@@ -116,4 +116,4 @@ In this task, you will implement the Microsoft Defender for Cloud recommendation
  
    <validation step="b6cace8a-4562-4975-863b-5feceb7b1a70" />
  
- **You have successfully completed the lab**. Please click on **Next** to start the next lab.
+### You have successfully completed the lab, click on Next to start the next lab
