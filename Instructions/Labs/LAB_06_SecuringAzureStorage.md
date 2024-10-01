@@ -499,4 +499,4 @@ In this task, you will connect to the myVMPrivate virtual machine via Remote Des
  
    <validation step="a34b7e41-b40a-47fc-b73d-1b8d40da1391" />
 
-**You have successfully completed the lab**
+### You have successfully completed the lab
