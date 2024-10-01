@@ -358,4 +358,4 @@ In this lab, you have completed:
 - Deployed an internal service to AKS
 - Verified you can access an internal AKS-hosted service
 
-**You have successfully completed the lab**
+### You have successfully completed the lab
