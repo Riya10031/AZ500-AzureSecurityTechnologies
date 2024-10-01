@@ -363,4 +363,4 @@ In this task, you will test the network traffic filters. You should be able to R
  
    <validation step="63a375cc-ae94-418b-a78c-4561f35ff40d" />
 
-**You have successfully completed the lab**
+### You have successfully completed the lab
