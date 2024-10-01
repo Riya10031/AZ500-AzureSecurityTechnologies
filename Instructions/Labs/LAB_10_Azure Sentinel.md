@@ -7,7 +7,7 @@ You have been asked to create a proof of concept of Microsoft Sentinel-based thr
 - Add built in and custom alerts 
 - Review how Playbooks can be used to automate a response to an incident.
 
-> For all the resources in this lab, we are using the **East US** region. Verify with your instructor this is the region to use for class. 
+> For all the resources in this lab, we are using the **East US** region.
 
 ## Lab objectives
 
