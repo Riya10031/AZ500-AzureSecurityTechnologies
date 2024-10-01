@@ -6,7 +6,7 @@ You have been asked to create a proof of concept for monitoring virtual machine 
 - Show what telemetry and logs can be collected.
 - Show how the data can be used and queried. 
 
-> For all the resources in this lab, we are using the **East US** region. Verify with your instructor this is the region to use for class. 
+> For all the resources in this lab, we are using the **East US** region.
 
 ## Lab objectives
 In this lab, you will complete the following exercise:
