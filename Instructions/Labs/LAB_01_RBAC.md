@@ -105,7 +105,7 @@ In this task, you will create a user account for Isabel Garcia by using PowerShe
 
 1. Open a **Cloud Shell** prompt by selecting the icon shown below.
 
-  ![image](../images/new02.png)
+    ![image](../images/new02.png)
 
 1. At the bottom half of the portal, you may see a message welcoming you to the Azure Cloud Shell, if you have not yet used a Cloud Shell. Select **PowerShell**.
 
@@ -199,7 +199,7 @@ In this task, you will create the Junior Admins group and add the user account o
     Get-AzADGroupMember -GroupDisplayName "Junior Admins"
     ```
 
-> **Result:** You used PowerShell to create a user and a group account, and added the user account to the group account. 
+    > **Result:** You used PowerShell to create a user and a group account, and added the user account to the group account. 
 
 # Exercise 3: Create a Service Desk group containing the user account of Dylan Williams as its member.
 
@@ -276,7 +276,7 @@ In this task, you will create the Service Desk group and assign Dylan to the gro
 
 1. Close the Cloud Shell pane.
 
-> **Result:** Using Azure CLI you created a user and a group accounts, and added the user account to the group. 
+    > **Result:** Using Azure CLI you created a user and a group accounts, and added the user account to the group. 
 
 
 # Exercise 4: Assign the Virtual Machine Contributor role to the Service Desk group.
@@ -311,7 +311,6 @@ In this exercise, you will complete the following task:
    |---|---|
    |Assign access to (Under Members Pane)|**User, group, or service principal**|
    |Select (+Select Members)|**Service Desk**|
-
 
      ![image](../images/new09.png)
 
