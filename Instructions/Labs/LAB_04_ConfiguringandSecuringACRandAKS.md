@@ -57,6 +57,8 @@ In this task, you will create a resource group for the lab an Azure Container Re
     az group list --query "[?name=='AZ500LAB04']" -o table
     ```
 
+     ![image](../images/new-az500-lab4-4.png)
+
 1. In the Bash session within the Cloud Shell pane, run the following to create a new Azure Container Registry (ACR) instance (The name of the ACR must be globally unique): 
 
     ```sh
@@ -68,6 +70,8 @@ In this task, you will create a resource group for the lab an Azure Container Re
     ```sh
     az acr list --resource-group AZ500LAB04
     ```
+
+     ![image](../images/new-az500-lab4-6.png)
 
     >**Note**: Record the name of the ACR. You will need it in the next task.
 
@@ -91,6 +95,10 @@ In this task, you will create a Dockerfile, build an image from the Dockerfile, 
     az acr build --image sample/nginx:v1 --registry $ACRNAME --file Dockerfile .
     ```
 
+     ![image](../images/new-az500-lab4-7.png)
+
+     ![image](../images/new-az500-lab4-8.png)
+
     >**Note**: Wait for the command to successfully complete. This might take about 2 minutes.
 
 1. Close the Cloud Shell pane.
@@ -104,6 +112,8 @@ In this task, you will create a Dockerfile, build an image from the Dockerfile, 
 1. Click the **sample/nginx** entry and verify presence of the **v1** tag that identifies the image version.
 
 1. Click the **v1** entry to view the image manifest.
+
+     ![image](../images/new-az500-lab4-10.png)
 
     >**Note**: The manifest includes the sha256 digest, manifest creation date, and platform entries. 
 
@@ -126,13 +136,14 @@ In this task, you will create an Azure Kubernetes service and review the deploye
     |Region|**(US) East US**|
     |Availability zones |**None**|
 
-1. Click **Next** and, on the **Node Pools** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
+     ![image](../images/new-az500-lab4-11.png)
+
+1. Click **Next** and, on the **Node Pools** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values) and Click **Next**:
 
     |Setting|Value|
     |----|----|
-    |Enable virtual nodes|cleared checkbox|
-	
-1. Click **Next** 
+    |Enable virtual nodes|Uncheck checkbox|
+ 
 
 1. On the **Networking** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 
@@ -214,6 +225,8 @@ In this task, you will grant the AKS cluster permission to access the ACR and ma
 In this task, you will download the Manifest files, edit the YAML file, and apply your changes to the cluster. 
 
 1. In the Bash session within the Cloud Shell pane, click the **Manage Files**, in the drop-down menu, click **Upload**, in the **Open** dialog box, navigate to the location where you downloaded the lab files, select **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\09\\nginxexternal.yaml** click **Open**. Next, select **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\09\\nginxinternal.yaml**, and click **Open**.
+
+     ![image](../images/new-az500-lab4-15.png)
 
 1. In the Bash session within the Cloud Shell pane, run the following to identify the name of the Azure Container Registry instance:
 
@@ -329,11 +342,15 @@ In this task, you will use one of the pods running on the AKS cluster to access 
     kubectl exec -it <pod_name> -- /bin/bash
     ```
 
+     ![image](../images/new-az500-lab4-17.png)
+
 1. In the Bash session within the Cloud Shell pane, run the following to verify that the nginx web site is available via the private IP address of the service (replace the `<internal_IP>` placeholder with the IP address you recorded in the previous task):
 
     ```sh
     curl http://<internal_IP>
     ```
+
+     ![image](../images/new-az500-lab4-18.png)
 
 1. Close the Cloud Shell pane.
 
