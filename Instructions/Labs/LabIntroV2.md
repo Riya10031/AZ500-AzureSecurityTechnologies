@@ -1,10 +1,10 @@
-# Getting Started with Your AZ-500: Microsoft Azure Security Technologies Workshop
+# Getting Started with your AZ-500: Microsoft Azure Security Technologies Workshop
  
 Welcome to your AZ-500: Microsoft Azure Security Technologies workshop! We've prepared a seamless environment for you to explore and learn Azure Security Technologies. Let's begin by making the most of this experience:
  
 ## Accessing Your Lab Environment
  
-Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and **Lab guide** will be right at your fingertips within your web browser.
  
 ![Access Your VM and Lab Guide](../images/labguide.png)
 
