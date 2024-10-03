@@ -174,11 +174,41 @@ In this task, you will create a playbook. A security playbook is a collection of
 
 ## Task 5 : Create a custom alert and configure a playbook as an automated response
 
-1. In the Azure portal, navigate back to the **Microsoft Sentinel \| Overview** blade.
+1. We need to assign two roles to perform this task i.e. **Microsoft Sentinel Contributor** on Resource group **AZ500LAB080910** and **Logic App Contributor** on Logic app **Change-Incident-Severity**.
 
-2. On the the **Microsoft Sentinel \| Overview** blade, in the **Configuration** section, click **Analytics**.
+1. Go to the resource group from the portal and select Resource group **AZ500LAB080910**. Select **Access control (IAM)** from the left pan and select **+ Add** and choose **Add role assignment** from the dropdown list.
 
-3. On the **Microsoft Sentinel \| Analytics** blade, click **+ Create** and, in the drop-down menu, click **Scheduled query rule**. 
+1. On the **Resource groups** blade, click the **AZ500LAB080910** resource group entry.
+
+1. On the **AZ500LAB080910** blade, click **Access control (IAM)** from the left pan.
+
+1. On the **AZ500LAB080910 | Access control (IAM)** blade, click **+ Add** and then, in the drop-down menu, click **Add role assignment**.
+
+1. On the **Add role assignment** blade under Role tab search and select **Microsoft Sentinel Contributor** role and select **Next**.
+
+1. On the **Add role assignment** blade under Members tab, select **User, group, or service principal** from Assign access to section. Click on  **+ Select members** from Members section. from the new Select members tab search and select your user account i.e. **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+1. Click **Review + assign** twice to create the role assignment.
+
+1. Return back to **AZ500LAB080910** resource group and select **Change-Incident-Severity** logic app.
+
+1. On the **Change-Incident-Severity** blade, click **Access control (IAM)** from the left pan.
+
+1. On the **Change-Incident-Severity | Access control (IAM)** blade, click **+ Add** and then, in the drop-down menu, click **Add role assignment**.
+
+1. On the **Add role assignment** blade under Role tab search and select **Logic App Contributor** role and select **Next**.
+
+1. On the **Add role assignment** blade under Members tab, select **User, group, or service principal** from Assign access to section. Click on  **+ Select members** from Members section. from the new Select members tab search and select your user account i.e. **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+1. Click **Review + assign** twice to create the role assignment.
+
+1. In the Azure portal, navigate back to the **Microsoft Sentinel | Settings** blade and select **Settings** tab. Then, from Playbook permissions select **Configure permissions**. Select **AZ500LAB080910** resource group entry then click on **Apply**. Wait till permission has been assigned.
+
+1. In the Azure portal, navigate back to the **Microsoft Sentinel | Overview** blade.
+
+2. On the the **Microsoft Sentinel | Overview** blade, in the **Configuration** section, click **Analytics**.
+
+3. On the **Microsoft Sentinel | Analytics** blade, click **+ Create** and, in the drop-down menu, click **Scheduled query rule**. 
 
 4. On the **General** tab of the **Analytic rule wizard - Create a new Scheduled rule** blade, specify the following settings (leave others with their default values):
 
@@ -201,23 +231,29 @@ In this task, you will create a playbook. A security playbook is a collection of
 
     >**Note**: If you receive a parse error, intellisense may have added values to your query. Ensure the query matches otherwise paste the query into notepad and then from notepad to the rule query. 
 
-7. On the **Set rule logic** tab of the **Analytic rule wizard - Create a new Scheduled rule** blade, in the **Query scheduling** section, set the **Run query every** to **5 Minutes**.
+7. On the **Set rule logic** tab of the **Analytic rule wizard - Create a new Scheduled rule** blade, in the **Query scheduling** section, set the **Run query every** and **Lookup data from the last**to **5 Minutes**.
 
 8. On the **Set rule logic** tab of the **Analytic rule wizard - Create a new Scheduled rule** blade, accept the default values of the remaining settings and click **Next: Incident settings >**.
 
-9. On the **Incident settings** tab of the **Analytic rule wizard - Create a new Scheduled rule** blade, accept the default settings and click **Next: Automated response >**. 
+9. On the **Incident settings** tab of the **Analytic rule wizard - Create a new Scheduled rule** blade, accept the default settings and click **Next: Automated response >**.
 
-10. On the **Automated response** tab of the **Analytic rule wizard - Create a new Scheduled rule** blade, under **Automation rules**, click **+ Add new**.
+1. Click **Next: Review and create >** and click **Save**
+
+10. Navigate to the **Microsoft Sentinel | Automation** blade , under **Automation**, click **Create** and choose **Automation Rule** from dropdown list.
 
 1. In the **Create new automation rule** window, enter **Run Change-Severity Playbook** for the **Automation rule name** under the **Trigger** field, click the drop-down menu and select **When alert is created**.
 
-1. In the **Create new automation rule** window, under **Actions**, read the note and then click **Manage playbook permissions**. On the **Manage permissions** window, select the checkbox next to the previously created **Resource group AZ500LAB080910** and then click **Apply**.
-
 1. In the **Create new automation rule** window, under **Actions**, click the second drop-down menu and select the **Change-Incident-Severity** logic app. On the **Create new automation rule** window, click **Apply**.
 
-11. On the **Automated response** tab of the **Analytic rule wizard - Create a new Scheduled rule** blade, click **Next: Review and create >** and click **Save**
+1. Navigate to the **Microsoft Sentinel | Analytics** blade, select **PlayBook Demo** rule. Select **(...) ellipses** from the end of the row and select **Edit** option.
 
-    >**Note**: You now have a new active rule called **Playbook Demo**. If an event identified by the rue logic occurs, it will result in a medium severity alert, which will generate a corresponding incident.
+1. You will be navigated to Analytics rule wizard window, select **Autommated response** tab then select **+ Add new** under Automation rules.
+
+1. In the **Create new automation rule** window, enter **Run Change-Severity Playbook** for the Automation rule name under the Trigger field, click the drop-down menu and select **When alert is created.**
+
+1. In the **Create new automation rule** window, under Actions, click the second drop-down menu and select the **Change-Incident-Severity** logic app. On the Create new automation rule window, click **Apply**. Click **Next: Review and create >** and click **Save**
+
+>**Note**: You now have a new active rule called **Playbook Demo**. If an event identified by the rue logic occurs, it will result in a medium severity alert, which will generate a corresponding incident.
 
 ## Task 6: Invoke an incident and review the associated actions.
 
