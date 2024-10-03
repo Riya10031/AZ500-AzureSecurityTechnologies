@@ -36,7 +36,6 @@ In this lab, you will complete the following exercises:
 
 - **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\\10\\program.cs**
 
-
 ## Exercise 1: Deploy the base infrastructure from an ARM template
 
 In this exercise, you will complete the following tasks:
@@ -85,7 +84,7 @@ In this task, you will deploy an Azure VM, which will automatically install Visu
     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
    <validation step="0e72c8e7-5523-4e4b-90d8-d0a51f2fcd66" />
-   
+  
 ## Exercise 2: Configure the Key Vault resource with a key and a secret
 
 >**Note**: For all the resources in this lab, we are using the **East US** region.
