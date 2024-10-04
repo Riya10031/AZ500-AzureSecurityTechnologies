@@ -24,10 +24,6 @@ In this lab, you will complete the following exercises:
 
 ## Architecture Diagram
 
-   ![image](https://user-images.githubusercontent.com/91347931/157532938-c724cc40-f64f-4d69-9e91-d75344c5e0a2.png)
-
-## Key Vault diagram
-
    ![image](../images/LAB10PNG.png)
 
 ## Lab files:
@@ -52,11 +48,11 @@ In this task, you will deploy an Azure VM, which will automatically install Visu
 
      ![image](../images/Custom_Template.png)
 
-3. On the **Edit template** blade, click **Load file**, locate the **C:\\AllFiles\\AZ500-AzureSecurityTechnologies-lab-files\\Allfiles\\Labs\\10\\az-500-10_azuredeploy.json** file and click **Open**.
+3. On the **Edit template** blade, click **Load file (1)**, locate the **C:\\AllFiles\\AZ500-AzureSecurityTechnologies-lab-files\\Allfiles\\Labs\\10\\az-500-10_azuredeploy.json (2)** file and click **Open**.
 
      ![image](../images/Lab-10_Ex1_Task1.png)
 
-4. On the **Edit template** blade, click **Save**.
+4. On the **Edit template** blade, click **Save (3)**.
 
 5. On the **Custom deployment** blade, under **Deployment Scope** ensure that the following settings are configured (leave any others with their default values):
 
@@ -133,7 +129,7 @@ In this task, you will create an Azure Key Vault resource. You will also configu
 
      ![image](../images/Lab-10_Ex2_Task1_1.png)
 
-9. On the Key Vault blade, in the **Overview** section, click **Access Policies** and then click **+ Create**.
+9. On the Key Vault blade, in the **Overview** section, click **Access Policies (1)** and then click **+ Create (2)**.
 
      ![image](../images/Lab-10_Ex2_Task1_2.png)
 
@@ -365,13 +361,13 @@ In this task, you will connect to the SQL Database with SQL Server Management St
 	
 	![image](../images/Lab-10_Ex3_Task5_1.png)
 	
-1. On the **Networking** blade, scroll down to **Firewall Rules**, click on **+Add a firewall rule**, and specify the following settings and click **OK**: 
+1. On the **Networking** blade, scroll down to **Firewall Rules**, click on **+Add a firewall rule (1)**, and specify the following settings and click **OK (3)**: 
 	
 	![image](../images/Lab-10_Ex3_Task5_2.png)
 	
     |Setting|Value|
     |---|---|
-    |Rule Name|**Allow Mgmt VM**|
+    |Rule Name|**Allow Mgmt VM (2)**|
     |Start IP|Enter the Public IP Address of the az500-10-vm1|
     |End IP|Enter the Public IP Address of the az500-10-vm1|
 
