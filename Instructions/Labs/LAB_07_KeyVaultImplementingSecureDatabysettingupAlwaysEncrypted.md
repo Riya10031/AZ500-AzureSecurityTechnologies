@@ -161,7 +161,7 @@ In this task, you will add a key to the Key Vault and view information about the
 1. Ensure **PowerShell** is selected in the upper-left drop-down menu of the Cloud Shell pane.
 
 1. In the PowerShell session within the Cloud Shell pane, run the following to add a software-protected key to the Key Vault: 
-
+   
    ```powershell
    $kv = Get-AzKeyVault -ResourceGroupName 'AZ500LAB07-<inject key="DeploymentID" enableCopy="false"/>'
 
@@ -171,13 +171,13 @@ In this task, you will add a key to the Key Vault and view information about the
     >**Note**: The name of the key is **MyLabKey**
 
 1. In the PowerShell session within the Cloud Shell pane, run the following to verify the key was created:
-
+   
    ```powershell
    Get-AZKeyVaultKey -VaultName $kv.VaultName
    ```
 
 1. In the PowerShell session within the Cloud Shell pane, run the following to display the key identifier:
-
+   
    ```powershell
    $key.key.kid
    ```
@@ -201,12 +201,12 @@ In this task, you will add a key to the Key Vault and view information about the
 1. Switch back to the Cloud Shell pane.
 
 1. In the PowerShell session within the Cloud Shell pane, run the following to create a variable with a secure string value:
-
+   
     ```powershell
     $secretvalue = ConvertTo-SecureString 'Pa55w.rd1234' -AsPlainText -Force
     ```
 1.  In the PowerShell session within the Cloud Shell pane, run the following to add the secret to the vault:
-
+   
     ```powershell
     $secret = Set-AZKeyVaultSecret -VaultName $kv.VaultName -Name 'SQLPassword' -SecretValue $secretvalue
     ```
@@ -214,7 +214,7 @@ In this task, you will add a key to the Key Vault and view information about the
     >**Note**: The name of the secret is SQLPassword. 
 
 1.  In the PowerShell session within the Cloud Shell pane, run the following to verify the secret was created.
-
+   
     ```powershell
     Get-AZKeyVaultSecret -VaultName $kv.VaultName
     ```
