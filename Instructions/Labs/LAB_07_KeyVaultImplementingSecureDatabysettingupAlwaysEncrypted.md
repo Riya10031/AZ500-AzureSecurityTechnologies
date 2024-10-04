@@ -1,4 +1,4 @@
-# Lab 07: Key Vault (Implementing Secure Data by setting up Always Encrypted)
+# Lab 07: Key Vault (Implementing Secure Data by setting up Always Encrypted).
 
 ## Lab scenario
 
@@ -109,13 +109,13 @@ In this task, you will create an Azure Key Vault resource. You will also configu
 
 1. In the PowerShell session within the Cloud Shell pane, run the following to create an Azure Key Vault in the resource group **AZ500LAB07-<inject key="DeploymentID" enableCopy="false"/>**. (If you chose another name for this lab's Resource Group out of Task 1, use that name for this task as well). The Key Vault name must be unique. Remember the name you have chosen. You will need it throughout this lab.  
 
-   ```powershell
+    ```powershell
    $kvName = 'az500kv' + $(Get-Random)
 
    $location = (Get-AzResourceGroup -ResourceGroupName 'AZ500LAB07-<inject key="DeploymentID" enableCopy="false"/>').Location
 
    New-AzKeyVault -VaultName $kvName -ResourceGroupName 'AZ500LAB07-<inject key="DeploymentID" enableCopy="false"/>' -Location $location
-   ```
+    ```
 1. The output of the last command will display the vault name and the vault URI. The vault URI is in the format `https://<vault_name>.vault.azure.net/`
 
 1. Close the Cloud Shell pane. 
