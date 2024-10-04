@@ -26,17 +26,9 @@ In this lab, you will complete the following exercises:
 
    ![image](../images/LAB10PNG.png)
 
-## Lab files:
-
-- **C:\\AllFiles\\AZ500-AzureSecurityTechnologies-lab-files\\Allfiles\\Labs\\10\\az-500-10_azuredeploy.json**
-
-- **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\\10\\program.cs**
-
 ## Exercise 1: Deploy the base infrastructure from an ARM template
 
-In this exercise, you will complete the following tasks:
-
-- Task 1: Deploy an Azure VM and an Azure SQL database
+In this exercise, you will deploy infrastructure using an ARM template, configure Azure Key Vault with a key and a secret, set up an Azure SQL database with a connected data-driven application, and demonstrate database encryption using Azure Key Vault. These tasks will enhance your skills in automating deployments, managing secrets, and securing data in Azure.
 
 ### Task 1: Deploy an Azure VM and an Azure SQL database
 
@@ -85,11 +77,7 @@ In this task, you will deploy an Azure VM, which will automatically install Visu
 
 >**Note**: For all the resources in this lab, we are using the **East US** region.
 
-In this exercise, you will complete the following tasks:
-
-- Task 1: Create and configure a Key Vault
-- Task 2: Add a key to the Key Vault
-- Task 3: Add a secret to the Key Vault
+In this exercise, you will create and configure an Azure Key Vault, add a key to securely store encryption keys, and add a secret for managing sensitive information. These steps will help you understand how to securely manage keys and secrets in Azure.
 
 ### Task 1: Create and configure a Key Vault
 
@@ -242,13 +230,7 @@ In this task, you will add a key to the Key Vault and view information about the
 
 ## Exercise 3: Configure an Azure SQL database and a data-driven application
 
-In this exercise, you will complete the following tasks:
-
-- Task 1: Enable a client application to access the Azure SQL Database service.
-- Task 2: Create a policy allowing the application access to the Key Vault.
-- Task 3: Retrieve SQL Azure database ADO.NET Connection String 
-- Task 4: Log on to the Azure VM running Visual Studio 2019 and SQL Management Studio 2019
-- Task 5: Create a table in the SQL Database and select data columns for encryption
+In this exercise, you will enable a client application to access Azure SQL Database, create a Key Vault access policy, retrieve the ADO.NET connection string, and log into an Azure VM running Visual Studio and SQL Management Studio. You will then create a SQL Database table and encrypt selected columns, ensuring secure access and data protection.
 
 ### Task 1: Enable a client application to access the Azure SQL Database service. 
 
@@ -463,7 +445,7 @@ In this task, you will connect to the SQL Database with SQL Server Management St
 
 ## Exercise 4: Demonstrate the use of Azure Key Vault in encrypting the Azure SQL database
 
-In this exercise, you will complete the following tasks:
+In this exercise, you will run a data-driven application to demonstrate how Azure Key Vault is used for encrypting an Azure SQL database, showcasing how to securely manage encryption keys for protecting data at rest.
 
 ### Task 1: Run a data-driven application to demonstrate the use of Azure Key Vault in encrypting the Azure SQL database
 
