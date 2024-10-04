@@ -78,7 +78,7 @@ In this task, you will create another subnet and enable a service endpoint on th
 
 1. On the **myVirtualNetwork** blade, in the **Settings** section, click **Subnets**.
 
-1. On the **myVirtualNetwork \| Subnets** blade, click **+ Subnet**. 
+1. On the **myVirtualNetwork \| Subnets (1)** blade, click **+ Subnet (2)**. 
 	
 	![image](../images/new-lab06-2.png)
 	
