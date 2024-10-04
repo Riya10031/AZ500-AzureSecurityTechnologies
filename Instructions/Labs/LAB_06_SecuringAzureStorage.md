@@ -4,7 +4,7 @@
 
 In this lab scenario, you are tasked with creating a proof of concept (PoC) to demonstrate securing Azure file shares. The PoC will involve setting up a storage endpoint to ensure that all traffic to Azure Storage remains within the Azure backbone network. Additionally, you will configure the storage endpoint to allow access only from resources within a specific subnet, while verifying that resources outside of this subnet are unable to access the storage, thereby ensuring enhanced security for the Azure file shares.
 
-    > For all the resources in this lab, we are using the **East US** region.
+> For all the resources in this lab, we are using the **East US** region.
 
 ## Lab objectives
 
