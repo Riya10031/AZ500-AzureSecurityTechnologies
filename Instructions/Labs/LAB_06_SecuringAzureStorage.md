@@ -1,13 +1,10 @@
 # Lab 06: Service Endpoints and Securing Storage
 
 ## Lab scenario
-You have been asked to create a proof of concept to demonstrate securing Azure file shares. Specifically, you want to:
 
-- Create a storage endpoint so traffic destined to Azure Storage always stays within the Azure backbone network.
-- Configure the storage endpoint so only resources from a specific subnet can access the storage.
-- Confirm that resources outside of the specific subnet cannot access the storage. 
+In this lab scenario, you are tasked with creating a proof of concept (PoC) to demonstrate securing Azure file shares. The PoC will involve setting up a storage endpoint to ensure that all traffic to Azure Storage remains within the Azure backbone network. Additionally, you will configure the storage endpoint to allow access only from resources within a specific subnet, while verifying that resources outside of this subnet are unable to access the storage, thereby ensuring enhanced security for the Azure file shares.
 
-    > For all the resources in this lab, we are using the **East US** region.
+> For all the resources in this lab, we are using the **East US** region.
 
 ## Lab objectives
 
@@ -78,7 +75,7 @@ In this task, you will create another subnet and enable a service endpoint on th
 
 1. On the **myVirtualNetwork** blade, in the **Settings** section, click **Subnets**.
 
-1. On the **myVirtualNetwork \| Subnets** blade, click **+ Subnet**. 
+1. On the **myVirtualNetwork \| Subnets (1)** blade, click **+ Subnet (2)**. 
 	
 	![image](../images/new-lab06-2.png)
 	
@@ -295,25 +292,21 @@ In this task, you will create a storage account with a file share and obtain the
 
 11. On the **New file share** blade, click **Review + Create** and then **Create**.
 
-    >**Note**: Now, retrieve and record the PowerShell script that creates a drive mapping to the Azure file share. 
-	
-	![image](../images/Lab-12_Ex1_Task5_2.png)
-	
-12. On the storage account blade, in the list of file shares, click **my-file-share**.
+    >**Note**: Now, retrieve and record the PowerShell script that creates a drive mapping to the Azure file share.
 
-13. On the **my-file-share** blade, click **Connect**.
+12. You will be redirected to the newly created file share. On the **my-file-share** blade, click **Connect**.
 
-14. On the **Connect** blade, on the **Windows** tab, click on **Show Script** and copy the PowerShell script that creates a Z drive mapping to the file share. 
+13. On the **Connect** blade, on the **Windows** tab, click on **Show Script** and copy the PowerShell script that creates a Z drive mapping to the file share. 
 
     >**Note**: Record this script. You will need this in a later in this lab in order to map the file share from the Azure virtual machine on the **Private** subnet.
     
     ![image](../images/new-lab06-6.png)
 
-15. Navigate back to the storage account blade, then in the **Security + networking** section, click **Networking**.
+14. Navigate back to the storage account blade, then in the **Security + networking** section, click **Networking**.
 	
-16. Under **Firewalls and virtual networks** blade, select the **Enabled from selected virtual networks and IP addresses** option and click the **+ Add existing virtual network** link. 
+15. Under **Firewalls and virtual networks** blade, select the **Enabled from selected virtual networks and IP addresses** option and click the **+ Add existing virtual network** link. 
 
-17. On the **Add networks** blade, specify the following settings:
+16. On the **Add networks** blade, specify the following settings:
 
     |Setting|Value|
     |---|---|
@@ -321,9 +314,9 @@ In this task, you will create a storage account with a file share and obtain the
     |Virtual networks|**myVirtualNetwork**|
     |Subnets|**Private**|
 
-18. On the **Add networks** blade, Click on **Add**. 
+17. On the **Add networks** blade, Click on **Add**. 
 
-19. Back on the storage account blade, click **Save**.
+18. Back on the storage account blade, click **Save**.
 
     >**Note**: At this point in the lab you have configured a virtual network, a network security group, and a storage account with a file share. 
 
@@ -497,7 +490,7 @@ In this task, you will connect to the myVMPrivate virtual machine via Remote Des
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    - If you receive a success message, you can proceed to the next task.
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+   - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
  
    <validation step="a34b7e41-b40a-47fc-b73d-1b8d40da1391" />
 
