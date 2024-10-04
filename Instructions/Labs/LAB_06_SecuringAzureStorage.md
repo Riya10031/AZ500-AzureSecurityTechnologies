@@ -16,7 +16,7 @@ In this lab, you will complete the following exercise:
 
 ## Architecture Diagram
 
-![image](https://user-images.githubusercontent.com/91347931/157534883-29664a05-85d1-4c70-99a7-f16d2360755d.png)
+![Architecture diagram](../images/arch-az-500-lab6.png)
 
 ## Exercise 1: Service endpoints and security storage
 
