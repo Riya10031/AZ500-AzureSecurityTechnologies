@@ -20,7 +20,7 @@ In this lab, you will complete the following tasks:
 
 ## Architecture Diagram
 
-![image](https://user-images.githubusercontent.com/91347931/157532250-1104a829-792a-4b6d-beff-fe976e2d5d4b.png)
+![Architecture diagram](../images/arch-az-500-lab4.png)
 
 ## Exercise 1: Configuring and Securing ACR and AKS
 
