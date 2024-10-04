@@ -133,9 +133,9 @@ In this task, you will create an Azure Key Vault resource. You will also configu
 
      ![image](../images/new-lab07-05.png)
 
-   >**Note**: If the option of **Access Policies** is greyed out, navigate to the **Settings** tab on the left > select **Access configuration** > on the right side select **Vault access policies** and click on **Apply.**
+1. If the option of **Access Policies** is greyed out, navigate to the **Settings** tab on the left > select **Access configuration** > on the right side select **Vault access policies** and click on **Apply.**
 
-	![image](../images/new-lab07-04.png)
+     ![image](../images/new-lab07-04.png)
 
 1. On the **Create an access policy** blade, specify the following settings (leave all others with their default values): 
 
