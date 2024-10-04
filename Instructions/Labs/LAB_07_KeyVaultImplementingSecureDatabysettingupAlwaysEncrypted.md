@@ -109,14 +109,13 @@ In this task, you will create an Azure Key Vault resource. You will also configu
 
 1. In the PowerShell session within the Cloud Shell pane, run the following to create an Azure Key Vault in the resource group **AZ500LAB07-<inject key="DeploymentID" enableCopy="false"/>**. (If you chose another name for this lab's Resource Group out of Task 1, use that name for this task as well). The Key Vault name must be unique. Remember the name you have chosen. You will need it throughout this lab.  
 
-     ```powershell
-        $kvName = 'az500kv' + $(Get-Random)
+   ```powershell
+   $kvName = 'az500kv' + $(Get-Random)
 
-        $location = (Get-AzResourceGroup -ResourceGroupName 'AZ500LAB07-<inject key="DeploymentID" enableCopy="false"/>').Location
+   $location = (Get-AzResourceGroup -ResourceGroupName 'AZ500LAB07-<inject key="DeploymentID" enableCopy="false"/>').Location
 
-        New-AzKeyVault -VaultName $kvName -ResourceGroupName 'AZ500LAB07-<inject key="DeploymentID" enableCopy="false"/>' -Location $location
-     ```
-
+   New-AzKeyVault -VaultName $kvName -ResourceGroupName 'AZ500LAB07-<inject key="DeploymentID" enableCopy="false"/>' -Location $location
+   ```
 	>**Note**: The output of the last command will display the vault name and the vault URI. The vault URI is in the format `https://<vault_name>.vault.azure.net/`
 
 1. Close the Cloud Shell pane. 
@@ -163,25 +162,25 @@ In this task, you will add a key to the Key Vault and view information about the
 
 1. In the PowerShell session within the Cloud Shell pane, run the following to add a software-protected key to the Key Vault: 
 
-    ```powershell
-    $kv = Get-AzKeyVault -ResourceGroupName 'AZ500LAB07-<inject key="DeploymentID" enableCopy="false"/>'
+   ```powershell
+   $kv = Get-AzKeyVault -ResourceGroupName 'AZ500LAB07-<inject key="DeploymentID" enableCopy="false"/>'
 
-    $key = Add-AZKeyVaultKey -VaultName $kv.VaultName -Name 'MyLabKey' -Destination 'Software'
-    ```
+   $key = Add-AZKeyVaultKey -VaultName $kv.VaultName -Name 'MyLabKey' -Destination 'Software'
+   ```
 
     >**Note**: The name of the key is **MyLabKey**
 
 1. In the PowerShell session within the Cloud Shell pane, run the following to verify the key was created:
 
-    ```powershell
-    Get-AZKeyVaultKey -VaultName $kv.VaultName
-    ```
+   ```powershell
+   Get-AZKeyVaultKey -VaultName $kv.VaultName
+   ```
 
 1. In the PowerShell session within the Cloud Shell pane, run the following to display the key identifier:
 
-    ```powershell
-    $key.key.kid
-    ```
+   ```powershell
+   $key.key.kid
+   ```
 
 1. Minimize the Cloud Shell pane. 
 
