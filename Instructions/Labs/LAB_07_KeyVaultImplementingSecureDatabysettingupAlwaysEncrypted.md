@@ -44,17 +44,17 @@ In this task, you will deploy an Azure VM, which will automatically install Visu
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Deploy a custom template** and press the **Enter** key.
 
-2. On the **Custom deployment** blade, click the **Build your own template in the editor** option.
+1. On the **Custom deployment** blade, click the **Build your own template in the editor** option.
 
      ![image](../images/Custom_Template.png)
 
-3. On the **Edit template** blade, click **Load file (1)**, locate the **C:\\AllFiles\\AZ500-AzureSecurityTechnologies-lab-files\\Allfiles\\Labs\\10\\az-500-10_azuredeploy.json (2)** file and click **Open**.
+1. On the **Edit template** blade, click **Load file (1)**, locate the **C:\\AllFiles\\AZ500-AzureSecurityTechnologies-lab-files\\Allfiles\\Labs\\10\\az-500-10_azuredeploy.json (2)** file and click **Open**.
 
      ![image](../images/Lab-10_Ex1_Task1.png)
 
-4. On the **Edit template** blade, click **Save (3)**.
+1. On the **Edit template** blade, click **Save (3)**.
 
-5. On the **Custom deployment** blade, under **Deployment Scope** ensure that the following settings are configured (leave any others with their default values):
+1. On the **Custom deployment** blade, under **Deployment Scope** ensure that the following settings are configured (leave any others with their default values):
 
    |Setting|Value|
    |---|---|
@@ -68,7 +68,7 @@ In this task, you will deploy an Azure VM, which will automatically install Visu
 
     >**Note**: To identify Azure regions where you can provision Azure VMs, refer to [**https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
 
-6. Click the **Review + create** button, and confirm the deployment by clicking the **Create** button. 
+1. Click the **Review + create** button, and confirm the deployment by clicking the **Create** button. 
 
     >**Note**: This initiates the deployment of the Azure VM and Azure SQL Database required for this lab. 
 
@@ -135,7 +135,7 @@ In this task, you will create an Azure Key Vault resource. You will also configu
 
    >**Note**: If the option of **Access Policies** is greyed out, navigate to the **Settings** tab on the left > select **Access configuration** > on the right side select **Vault access policies** and click on **Apply.**
 
-     ![image](../images/new-lab07-04.png)
+      ![image](../images/new-lab07-04.png)
 
 1. On the **Create an access policy** blade, specify the following settings (leave all others with their default values): 
 
@@ -472,15 +472,15 @@ You will create a Console application using Visual Studio to load data into the 
 
 1. From the RDP session to the **az500-10-vm1**, launch **Visual Studio 2019** from the **Start menu**.
 
-2. Switch to the window displaying Visual Studio 2019 welcome message, click the **Sign in** button and, when prompted, provide the credentials you used to authenticate to the Azure subscription you are using in this lab. Now click **Start Visual studio**.
+1. Switch to the window displaying Visual Studio 2019 welcome message, click the **Sign in** button and, when prompted, provide the credentials you used to authenticate to the Azure subscription you are using in this lab. Now click **Start Visual studio**.
 
-3. On the **Get started** page, click **Create a new project**. 
+1. On the **Get started** page, click **Create a new project**. 
 
-4. In the list of project templates, search for **Console App (.NET Framework)**, in the list of results, click **Console App (.NET Framework)** for **C#**, and click **Next**.
+1. In the list of project templates, search for **Console App (.NET Framework)**, in the list of results, click **Console App (.NET Framework)** for **C#**, and click **Next**.
 	
      ![image](../images/new-lab07-28.png)
 	
-5. On the **Configure your new project** page, specify the following settings (leave other settings with their default values) and click on **Create**.
+1. On the **Configure your new project** page, specify the following settings (leave other settings with their default values) and click on **Create**.
 
     |Setting|Value|
     |---|---|
@@ -488,45 +488,45 @@ You will create a Console application using Visual Studio to load data into the 
     |Solution name|**OpsEncrypt**|
     |Framework|**.NET Framework 4.7.2**|
 	
-6. In the Visual Studio console, click the **Tools** menu, in the drop-down menu, click **NuGet Package Manager**, and, in the cascading menu, click **Package Manager Console**.
+1. In the Visual Studio console, click the **Tools** menu, in the drop-down menu, click **NuGet Package Manager**, and, in the cascading menu, click **Package Manager Console**.
 
-7. In the **Package Manager Console** pane, run the following to install the first required **NuGet** package:
+1. In the **Package Manager Console** pane, run the following to install the first required **NuGet** package:
 
     ```powershell
     Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider
     ```
 
-8. In the **Package Manager Console** pane, run the following to install the second required **NuGet** package:
+1. In the **Package Manager Console** pane, run the following to install the second required **NuGet** package:
 
     ```powershell
     Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory
     ```
 	
-9. Minimize the RDP session to your Azure virtual machine. In Labvm Server then navigate to **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\10\program.cs**, open it in Notepad, and copy its content into Clipboard.
+1. Minimize the RDP session to your Azure virtual machine. In Labvm Server then navigate to **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\10\program.cs**, open it in Notepad, and copy its content into Clipboard.
 
-10. Return to the RDP session, and in the Visual Studio console, in the **Solution Explorer** window, click **Program.cs** and replace its content with the code you copied into Clipboard.
+1. Return to the RDP session, and in the Visual Studio console, in the **Solution Explorer** window, click **Program.cs** and replace its content with the code you copied into Clipboard.
 	
-11. In the Visual Studio window, in the **Program.cs** pane, in line 15, replace the `<connection string noted earlier>` placeholder with the Azure SQL database **ADO.NET** connection string you recorded earlier in the lab. In the connection string, replace the `{your_password}` placeholder, with `Pa55w.rd1234`. If you saved the string on the lab computer, you may need to leave the RDP session to copy the ADO string, then return to the Azure virtual machine to paste it in.
+1. In the Visual Studio window, in the **Program.cs** pane, in line 15, replace the `<connection string noted earlier>` placeholder with the Azure SQL database **ADO.NET** connection string you recorded earlier in the lab. In the connection string, replace the `{your_password}` placeholder, with `Pa55w.rd1234`. If you saved the string on the lab computer, you may need to leave the RDP session to copy the ADO string, then return to the Azure virtual machine to paste it in.
 
-12. In the Visual Studio window, in the **Program.cs** pane, in line 16, replace the `<client id noted earlier>` placeholder with the value of **Application (client) ID** of the registered app you recorded earlier in the lab. 
+1. In the Visual Studio window, in the **Program.cs** pane, in line 16, replace the `<client id noted earlier>` placeholder with the value of **Application (client) ID** of the registered app you recorded earlier in the lab. 
 
-13. In the Visual Studio window, in the **Program.cs** pane, in line 17, replace the `<key value noted earlier>` placeholder with the value of **Key1** of the registered app you recorded earlier in the lab. 
+1. In the Visual Studio window, in the **Program.cs** pane, in line 17, replace the `<key value noted earlier>` placeholder with the value of **Key1** of the registered app you recorded earlier in the lab. 
 
-14. In the Visual Studio console, click the **Start** button to initiate the build of the console application and start it.
+1. In the Visual Studio console, click the **Start** button to initiate the build of the console application and start it.
 
-15. The application will start a Command Prompt window. When prompted for password, type **Pa55w.rd1234** to connect to Azure SQL Database. 
+1. The application will start a Command Prompt window. When prompted for password, type **Pa55w.rd1234** to connect to Azure SQL Database. 
 
-16. Leave the console app running and switch to the **SQL Management Studio** console. 
+1. Leave the console app running and switch to the **SQL Management Studio** console. 
 
-17. In the **Object Explorer** pane, right-click the **medical** database and, in the right-click menu, click **New Query**.
+1. In the **Object Explorer** pane, right-click the **medical** database and, in the right-click menu, click **New Query**.
 
-18. From the query window, run the following query by clicking on **Execute** to verify that the data loaded into the database from the console app is encrypted.
+1. From the query window, run the following query by clicking on **Execute** to verify that the data loaded into the database from the console app is encrypted.
 
     ```sql
     SELECT FirstName, LastName, SSN, BirthDate FROM Patients;
     ```
 
-19. Switch back to the console application where you are prompted to enter a valid SSN. This will query the encrypted column for the data. At the Command Prompt, type the following and press the Enter key:
+1. Switch back to the console application where you are prompted to enter a valid SSN. This will query the encrypted column for the data. At the Command Prompt, type the following and press the Enter key:
 
     ```cmd
     999-99-0003
@@ -534,7 +534,7 @@ You will create a Console application using Visual Studio to load data into the 
 
     >**Note**: Verify that the data returned by the query is not encrypted.
 
-20. To terminate the console app, press the Enter key.
+1. To terminate the console app, press the Enter key.
 	
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button. If you receive a success message, you can proceed to the next task. 
