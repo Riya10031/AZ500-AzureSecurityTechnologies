@@ -2,12 +2,7 @@
 
 ## Lab scenario
 
-You have been asked to deploy a proof of concept with Azure Container Registry and Azure Kubernetes Service. Specifically, the proof of concept should demonstrate:
-
-- Using Dockerfile to build an image.
-- Using Azure Container Registry to store images.
-- Configuring an Azure Kubernetes Service.
-- Securing and accessing container applications both internally and externally.
+You have been asked to deploy a proof of concept with Azure Container Registry and Azure Kubernetes Service. In this lab scenario, you are tasked with deploying a proof of concept (PoC) that demonstrates the integration of Azure Container Registry (ACR) and Azure Kubernetes Service (AKS). The PoC will involve building a Docker image using a Dockerfile, pushing the image to ACR for storage, and configuring AKS to orchestrate containerized applications. Additionally, you will focus on securing the containerized applications and ensuring that they can be accessed both internally within the cluster and externally by end users.
 
 ## Lab objectives
 
