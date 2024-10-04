@@ -81,7 +81,6 @@ In this task, you will create a Log Analytics workspace.
 
    ![](../images/New-image111.png)
 
-
 1. On the **Log Analytics workspaces** blade, click **+ Create**.
 
 1. On the **Basics** tab of the **Create Log Analytics workspace** blade, specify the following settings (leave others with their default values):
@@ -95,10 +94,9 @@ In this task, you will create a Log Analytics workspace.
 
 1. Click **Review + create**.
 
-    ![](../images/New-image112.png)
+   ![](../images/New-image112.png)
    
 1. On the **Review + create** tab of the **Create Log Analytics workspace** blade, click **Create**.
-
 
 ## Task 3: Create an Azure storage account
 
