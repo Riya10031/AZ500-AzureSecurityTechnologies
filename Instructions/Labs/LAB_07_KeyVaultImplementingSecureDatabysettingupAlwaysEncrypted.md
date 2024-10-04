@@ -101,13 +101,13 @@ In this task, you will create an Azure Key Vault resource. You will also configu
 
      ![image](../images/new-lab07-02.png)
 
-2. On getting started page, select the option **No storage account required (1)** and select the **Subscription (2)** provided. once subscription is selected, click on **Apply (3)**.
+1. On getting started page, select the option **No storage account required (1)** and select the **Subscription (2)** provided. once subscription is selected, click on **Apply (3)**.
 
      ![image](../images/new-lab07-03.png)
 
-3. Ensure **PowerShell** is selected in the drop-down menu in the upper-left corner of the Cloud Shell pane.
+1. Ensure **PowerShell** is selected in the drop-down menu in the upper-left corner of the Cloud Shell pane.
 
-4. In the PowerShell session within the Cloud Shell pane, run the following to create an Azure Key Vault in the resource group **AZ500LAB07-<inject key="DeploymentID" enableCopy="false"/>**. (If you chose another name for this lab's Resource Group out of Task 1, use that name for this task as well). The Key Vault name must be unique. Remember the name you have chosen. You will need it throughout this lab.  
+1. In the PowerShell session within the Cloud Shell pane, run the following to create an Azure Key Vault in the resource group **AZ500LAB07-<inject key="DeploymentID" enableCopy="false"/>**. (If you chose another name for this lab's Resource Group out of Task 1, use that name for this task as well). The Key Vault name must be unique. Remember the name you have chosen. You will need it throughout this lab.  
 
      ```powershell
         $kvName = 'az500kv' + $(Get-Random)
@@ -119,17 +119,17 @@ In this task, you will create an Azure Key Vault resource. You will also configu
 
    >**Note**: The output of the last command will display the vault name and the vault URI. The vault URI is in the format `https://<vault_name>.vault.azure.net/`
 
-5. Close the Cloud Shell pane. 
+1. Close the Cloud Shell pane. 
 
-6. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Resource groups** and press the **Enter** key.
+1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Resource groups** and press the **Enter** key.
 
-7. On the **Resource groups** blade, in the list of resource group, click the **AZ500LAB07-<inject key="DeploymentID" enableCopy="false"/>** entry.
+1. On the **Resource groups** blade, in the list of resource group, click the **AZ500LAB07-<inject key="DeploymentID" enableCopy="false"/>** entry.
 
-8. On the Resource Group blade, click the entry representing the newly created Key Vault. 
+1. On the Resource Group blade, click the entry representing the newly created Key Vault. 
 
      ![image](../images/Lab-10_Ex2_Task1_1.png)
 
-9. On the Key Vault blade, in the **Overview** section, click **Access Policies (1)** and then click **+ Create (2)**.
+1. On the Key Vault blade, in the **Overview** section, click **Access Policies (1)** and then click **+ Create (2)**.
 
      ![image](../images/new-lab07-05.png)
 
@@ -137,7 +137,7 @@ In this task, you will create an Azure Key Vault resource. You will also configu
 
      ![image](../images/new-lab07-04.png)
 
-10. On the **Create an access policy** blade, specify the following settings (leave all others with their default values): 
+1. On the **Create an access policy** blade, specify the following settings (leave all others with their default values): 
 
     |Setting|Value|
     |----|----|
@@ -150,7 +150,7 @@ In this task, you will create an Azure Key Vault resource. You will also configu
      i.e. <inject key="AzureAdUserEmail" enableCopy="false"/>, on the **Principal** blade, and click **Next**|
     |Application (optional)|click **Next**|
     |Review + create|click **Create**|
-    
+
     >**Note**: The previous Review + create operation returns to the Access policies page that lists Application, Email, Key Permissions, Secret Permissions, and Certificate Permissions.
 
 ### Task 2: Add a key to Key Vault
