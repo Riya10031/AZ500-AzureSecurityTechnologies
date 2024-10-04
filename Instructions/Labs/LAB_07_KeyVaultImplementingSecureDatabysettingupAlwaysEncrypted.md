@@ -99,11 +99,11 @@ In this task, you will create an Azure Key Vault resource. You will also configu
 
      ![image](../images/powersh1.png)
 
-     ![image](../images/powersh2.png)
+     ![image](../images/new-lab07-02.png)
 
 2. On getting started page, select the option **No storage account required (1)** and select the **Subscription (2)** provided. once subscription is selected, click on **Apply (3)**.
 
-     ![image](../images/powersh3.png)
+     ![image](../images/new-lab07-03.png)
 
 3. Ensure **PowerShell** is selected in the drop-down menu in the upper-left corner of the Cloud Shell pane.
 
@@ -131,11 +131,11 @@ In this task, you will create an Azure Key Vault resource. You will also configu
 
 9. On the Key Vault blade, in the **Overview** section, click **Access Policies (1)** and then click **+ Create (2)**.
 
-     ![image](../images/Lab-10_Ex2_Task1_2.png)
+     ![image](../images/new-lab07-05.png)
 
    >**Note**: If the option of **Access Policies** is greyed out, navigate to the **Settings** tab on the left > select **Access configuration** > on the right side select **Vault access policies** and click on **Apply.**
 
-     ![image](../images/powersh4.png)
+     ![image](../images/new-lab07-04.png)
 
 10. On the **Create an access policy** blade, specify the following settings (leave all others with their default values): 
 
@@ -189,6 +189,10 @@ In this task, you will add a key to the Key Vault and view information about the
 
 1. In the list of keys, click the **MyLabKey** entry and then, on the **MyLabKey** blade, click the entry representing the current version of the key.
 
+     ![image](../images/new-lab07-09.png)
+
+     ![image](../images/new-lab07-10.png)
+
     >**Note**: Examine the information about the key you created.
 
     >**Note**: You can reference any key by using the key identifier. To get the most current version, reference `https://<key_vault_name>.vault.azure.net/keys/MyLabKey` or get the specific version with: `https://<key_vault_name>.vault.azure.net/keys/MyLabKey/<key_version>`
@@ -222,8 +226,10 @@ In this task, you will add a key to the Key Vault and view information about the
 
 1. In the list of secrets, click the **SQLPassword** entry and then, on the **SQLPassword** blade, click the entry representing the current version of the secret.
 
-     ![image](../images/Lab-10_Ex2_Task3.png)
-	
+     ![image](../images/new-lab07-11.png)
+
+     ![image](../images/new-lab07-12.png)
+
     >**Note**: Examine the information about the secret you created.
 
     >**Note**: To get the most current version of a secret, reference `https://<key_vault_name>.vault.azure.net/secrets/<secret_name>` or get a specific version, reference `https://<key_vault_name>.vault.azure.net/secrets/<secret_name>/<secret_version>`
@@ -253,7 +259,7 @@ In this task, you will enable a client application to access the Azure SQL Datab
 
 1. On the **App Registrations** blade, click **+ New registration**. 
 	
-	![image](../images/Lab-10_Ex3_Task1.png)
+     ![image](../images/new-lab07-13.png)
 	
 1. On the **Register an application** blade, specify the following settings (leave all others with their default values):
 
@@ -261,6 +267,8 @@ In this task, you will enable a client application to access the Azure SQL Datab
     |----|----|
     |Name|**sqlApp**|
     |Redirect URI (optional)|**Web** and **https://sqlapp**|
+
+     ![image](../images/new-lab07-14.png)
 
 1.  On the **Register an application** blade, click **Register**. 
 
@@ -274,7 +282,7 @@ In this task, you will enable a client application to access the Azure SQL Datab
 
 1. On the **sqlApp | Certificates & secrets** blade / **Client Secrets** section, click **+ New client secret**
 	
-	![image](../images/Lab-10_Ex3_Task1-2.png)
+     ![image](../images/new-lab07-15.png)
 	
 1. In the **Add a client secret** pane, specify the following settings:
 
@@ -282,6 +290,8 @@ In this task, you will enable a client application to access the Azure SQL Datab
     |----|----|
     |Description|**Key1**|
     |Expires|Select **365 days (12 months)**|
+
+     ![image](../images/new-lab07-16.png)
 	
 1. Click **Add** to update the application credentials.
 
@@ -335,7 +345,7 @@ The ARM-template deployment in Exercise 1 provisioned an Azure SQL Server instan
    
 1. Record the **ADO.NET (SQL authentication)** connection string. You will need it later.
 	
-	![image](../images/Lab-10_Ex3_Task3.png)
+     ![image](../images/new-lab07-17.png)
 	
     >**Note**: When you use the connection string, make sure to replace the `{your_password}` placeholder with **Pa55w.rd1234**.
 
@@ -349,7 +359,7 @@ In this task, you log on to the Azure VM, which deployment you initiated in Exer
 
 1. In the list of Virtual Machines shown, select the **az500-10-vm1** entry. On the **az500-10-vm1** blade, on the **Essentials** pane, take note of the **Public IP address**. You will use this later. 
 
-	![image](../images/Lab-10_Ex3_Task4.png)
+     ![image](../images/new-lab07-18.png)
 	
 ### Task 5: Create a table in the SQL Database and select data columns for encryption
 
@@ -468,7 +478,7 @@ You will create a Console application using Visual Studio to load data into the 
 
 4. In the list of project templates, search for **Console App (.NET Framework)**, in the list of results, click **Console App (.NET Framework)** for **C#**, and click **Next**.
 	
-	![image](../images/Lab-10_Ex4_Task1.png)
+     ![image](../images/new-lab07-28.png)
 	
 5. On the **Configure your new project** page, specify the following settings (leave other settings with their default values) and click on **Create**.
 
