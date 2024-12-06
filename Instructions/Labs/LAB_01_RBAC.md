@@ -37,11 +37,17 @@ In this exercise, you will complete the following tasks:
 
 In this task, you will create a user account for Joseph Price.
 
-1. In the Azure Portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Microsoft Entra ID** and press the **Enter** key.
+1. In the Azure Portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Microsoft Entra ID (1)** and select **Microsoft Entra ID (2)** from the results. 
 
-   ![image](../images/new01.png)
+   ![image](../images/az500-29.png)
 
-1. On the **Overview** blade of the Azure Active Directory tenant, in the **Manage** section, select **Users**, and then select **+ New user**, then, in the drop-down menu, click on **Create new user**.
+1. On the **Overview** blade of the Microsoft Entra ID tenant, in the **Manage** section, select **Users**.
+
+   ![image](../images/az500-3.png)
+
+1. Then select **+ New user (1)**, then, in the drop-down menu, click on **Create new user (2)**.
+
+   ![image](../images/az500-4.png)
 
 1. On the **New User** blade, ensure that the **Create new user** option is selected, and specify the following settings:
 
@@ -50,15 +56,17 @@ In this task, you will create a user account for Joseph Price.
    |User principal name|**Joseph (1)**|
    |Display Name|**Joseph Price (2)**|
 
-1. Click on the **copy icon (3)** next to the **User principal name** to copy the full username, and pasted it somewhere.
+    - Click on the **copy icon (3)** next to the **User principal name** to copy the full username, and pasted it somewhere.
 
-1. Ensure that the **Auto-generate (4)** password is selected, and click on the copy icon next to **Password (5)** and paste it somewhere. You would need to provide this password, along with the user name to Joseph. 
+    - Ensure that the **Auto-generate (4)** password is selected, and click on the copy icon next to **Password (5)** and paste it somewhere. You would need to provide this password, along with the user name to Joseph. 
 
-1. Click on **Review + create (6)**, and then click on **Create**.
+    - Click on **Review + create (6)**, and then click on **Create**.
 
       ![image](../images/az-500-lab1-image2.png)
 
 1. Refresh the **Users \| All users** blade to verify the new user was created in your Azure AD tenant.
+
+   ![image](../images/az500-5.png)
 
 ## Task 2: Use the Azure portal to create a Senior Admins group and add the user account of Joseph Price to the group.
 
@@ -66,27 +74,31 @@ In this task, you will create the *Senior Admins* group, add the user account of
 
 1. In the Azure portal, navigate back to the blade displaying your Microsoft Entra ID tenant. 
 
-1. In the **Manage** section, click on **Groups**, and then select **+ New group**.
+1. In the **Manage** section, click on **Groups**.
+
+   ![image](../images/az500-6.png)
+
+1. Select **+ New group**.
  
 1. On the **New Group** blade, specify the following settings (leave others with their default values):
 
    |Setting|Value|
    |---|---|
-   |Group type|**Security**|
-   |Group name|**Senior Admins**|
-   |Membership type|**Assigned**|
+   |Group type|**Security (1)**|
+   |Group name|**Senior Admins (2)**|
+   |Membership type|**Assigned (3)**|
     
-1. Click on the **No owners selected** link, on the **Owners** blade, select **Joseph Price**, and click on **Select**.
+    - Click on the **No owners selected (4)** link, on the **Owners** blade, select **Joseph Price (5)**, and click on **Select (6)**.
 
-    ![image](../images/AZ-500-01.png)
+      ![image](../images/az500-7.png)
 
-1. Click on the **No members selected** link, on the **Members** blade, select **Joseph Price**, and click on **Select**.
+1. Click on the **No members selected (1)** link, on the **Members** blade, search for **Joseph (2)** then select **Joseph Price (3)**, and click on **Select (4)**.
 
-    ![image](../images/AZ-500-02.png)
+    ![image](../images/az500-8.png)
 
 1. Back on the **New Group** blade, click on **Create**.
 
-    ![image](../images/imgnewgroups01.png)
+    ![image](../images/az500-9.png)
 
 > **Result:** You used the Azure Portal to create a user and a group, and assigned the user to the group. 
 
@@ -105,23 +117,33 @@ In this task, you will create a user account for Isabel Garcia by using PowerShe
 
 1. Open a **Cloud Shell** prompt by selecting the icon shown below.
 
-    ![image](../images/new02.png)
+    ![image](../images/az500-10.png)
 
 1. At the bottom half of the portal, you may see a message welcoming you to the Azure Cloud Shell, if you have not yet used a Cloud Shell. Select **PowerShell**.
 
-    ![image](../images/new03.png)
+    ![image](../images/az500-11.png)
 
-1. On the **Getting started**, select **Mount storage account** and select your subscription under storage account subscription. Click on **Apply**.
+1. On the **Getting started**, select **Mount storage account (2)** and select your subscription under storage account subscription **(2)**. Click on **Apply (3)**.
 
-   ![image](../images/new04.png)
+   ![image](../images/az500-12.png)
 
 1. On the **Mount storage account** tab, select **I want to create a storage account**. Click on **Next**.
 
     ![image](../images/new05.png)
 
-1. Use the existing **Resource group** as AZ500LAB01**<inject key="DeploymentID" enableCopy="false" />(1)** and specify new names for **Storage account** as str**<inject key="DeploymentID" enableCopy="false" /> (2)** and **File share** as fileshare (3)**<inject key="DeploymentID" enableCopy="false" />**, as shown in the dialog below. Then select **Create (4)**.
+1. On Create storage account page, provide the following details then click on **Create (6)**.
 
-   ![image](../images/new06.png)
+    - **Subscription**: **Leave the default (1)** 
+    
+    - **Resource group:** **AZ500LAB01(2)**
+    
+    - **Storage account:** Enter **str<inject key="DeploymentID" enableCopy="false" /> (3)** 
+    
+    - **File share:** Enter **fileshare<inject key="DeploymentID" enableCopy="false" /> (4)**
+    
+    - **Region:** **<inject key="Region" enableCopy="false"/> (5)**.
+
+      ![image](../images/az500-13.png)
 
 1. Once complete, you will see a prompt similar to the one below. Verify that the upper left corner of the Cloud Shell screen shows **PowerShell**.
 
@@ -141,17 +163,22 @@ In this task, you will create a user account for Isabel Garcia by using PowerShe
     $passwordProfile.Password = 'Pa55w.rd1234'
     ```
 
-1. In the PowerShell session within the Cloud Shell pane, run the following to connect to Azure Active Directory:
+1. In the PowerShell session within the Cloud Shell pane, run the following to connect to Microsoft Entra ID:
 
     ```powershell
     Connect-AzureAD
     ```
       
-1. In the PowerShell session within the Cloud Shell pane, run the following to identify the name of your Azure AD tenant: 
+1. In the PowerShell session within the Cloud Shell pane, run the following to identify the name of your Microsoft Entra tenant: 
 
     ```powershell
     $domainName = ((Get-AzureAdTenantDetail).VerifiedDomains)[0].Name
     ```
+    ```powershell
+    (Get-AzureAdTenantDetail).VerifiedDomains
+    ```
+
+    ![image](../images/az500-15.png)    
 
 1. In the PowerShell session within the Cloud Shell pane, run the following to create a user account for Isabel Garcia: 
 
@@ -159,11 +186,17 @@ In this task, you will create a user account for Isabel Garcia by using PowerShe
     New-AzureADUser -DisplayName 'Isabel Garcia' -PasswordProfile $passwordProfile -UserPrincipalName "Isabel@$domainName" -AccountEnabled $true -MailNickName 'Isabel'
     ```
 
-1. In the PowerShell session within the Cloud Shell pane, run the following to list Azure AD users (the accounts of Joseph and Isabel should appear on the listed): 
+    ![image](../images/az500-14.png)    
+
+1. In the PowerShell session within the Cloud Shell pane, run the following to list Microsoft Entra ID users (the accounts of Joseph and Isabel should appear on the listed): 
 
     ```powershell
-     Get-AzureADUser -All $true | Where-Object {$_.UserPrincipalName -like "*43846135@LOD*"}
+     Get-AzureADUser -All $true | Select-Object UserPrincipalName, DisplayName
     ```
+
+    ![image](../images/az500-25.png)   
+
+     >**Note:** Please note the **UserPrincipalName** for Isabel, you will be usin this in next task.    
 
 ## Task 2: Use PowerShell to create the Junior Admins group and add the user account of Isabel Garcia to the group.
 
@@ -175,17 +208,23 @@ In this task, you will create the Junior Admins group and add the user account o
     New-AzureADGroup -DisplayName 'Junior Admins' -MailEnabled $false -SecurityEnabled $true -MailNickName JuniorAdmins
     ```
 
+    ![image](../images/az500-16.png)    
+
 1. In the PowerShell session within the Cloud Shell pane, run the following to **list groups** in your Microsoft Entra tenant (the list should include the Senior Admins and Junior Admins groups):
 
     ```powershell
     Get-AzureADGroup
     ```
 
+    ![image](../images/az500-17.png)    
+
 1. In the PowerShell session within the Cloud Shell pane, run the following to **obtain a reference** to the user account of Isabel Garcia:
 
     ```powershell
-    $user = Get-AzureADUser -Filter "UserPrincipalName eq 'Isabel-43846135@LODSPRODMCA.onmicrosoft.com'"
+    $user = Get-AzureADUser -Filter "UserPrincipalName eq 'Isabel<UserPrincipalName>'"
     ```
+
+     >**Note:** Replace the **< UserPrincipalName>** with the name you have copied for Isabel in Task1->12th step.
 
 1. In the PowerShell session within the Cloud Shell pane, run the following to add a user account of Isabel to the Junior Admins group:
 	
@@ -199,7 +238,9 @@ In this task, you will create the Junior Admins group and add the user account o
     Get-AzADGroupMember -GroupDisplayName "Junior Admins"
     ```
 
-    > **Result:** You used PowerShell to create a user and a group account, and added the user account to the group account. 
+    ![image](../images/az500-18.png)        
+
+     > **Result:** You used PowerShell to create a user and a group account, and added the user account to the group account. 
 
 # Exercise 3: Create a Service Desk group containing the user account of Dylan Williams as its member.
 
@@ -214,25 +255,37 @@ In this exercise, you will complete the following tasks:
 
 In this task, you will create a user account for Dylan Williams.
 
-1. In the drop-down menu in the upper-left corner of the Cloud Shell pane, select **Bash**, and, when prompted, click on **Confirm**. 
+1. In the drop-down menu in the upper-left corner of the Cloud Shell pane, select **Switch to Bash**, and, when prompted.
 
-1. In the Bash session within the Cloud Shell pane, run the following to identify the name of your Azure AD tenant:
+   ![image](../images/az500-19.png)
+
+1. Click on **Confirm**. 
+
+1. In the Bash session within the Cloud Shell pane, run the following commands to identify the name of your Microsoft Entra tenant:
 
     ```cli
     DOMAINNAME=$(az ad signed-in-user show --query 'userPrincipalName' | cut -d '@' -f 2 | sed 's/\"//')
     ```
+
+    ```cli
+    echo $DOMAINNAME
+    ```    
 
 1. In the Bash session within the Cloud Shell pane, run the following to create a user, Dylan Williams. Use *yourdomain*.
  
     ```cli
     az ad user create --display-name "Dylan Williams" --password "Pa55w.rd1234" --user-principal-name Dylan@$DOMAINNAME
     ```
+
+    ![image](../images/az500-20.png)        
       
 1. In the Bash session within the Cloud Shell pane, run the following to list Azure AD user accounts (the list should include user accounts of Joseph, Isabel, and Dylan)
 	
     ```cli
     az ad user list --output table
     ```
+
+    ![image](../images/az500--21.png)         
 
 ## Task 2: Use Azure CLI to create the Service Desk group and add a user account of Dylan to the group. 
 
@@ -249,6 +302,8 @@ In this task, you will create the Service Desk group and assign Dylan to the gro
     ```cli
     az ad group list -o table
     ```
+
+    ![image](../images/az500-22.png)         
 
 1. In the Bash session within the Cloud Shell pane, run the following to obtain a reference to the user account of Dylan Williams: 
 
@@ -274,6 +329,8 @@ In this task, you will create the Service Desk group and assign Dylan to the gro
     az ad group member list --group "Service Desk"
     ```
 
+    ![image](../images/az500-23.png)         
+
 1. Close the Cloud Shell pane.
 
     > **Result:** Using Azure CLI you created a user and a group accounts, and added the user account to the group. 
@@ -289,40 +346,51 @@ In this exercise, you will complete the following task:
 
 ## Task 1: Assign the Service Desk Virtual Machine Contributor permissions. 
 
-1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Resource groups** and press the **Enter** key.
+1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Resource groups (1)** and select **Resource groups (2)** from the services.
+
+   ![image](../images/az500-24.png)
 
 1. On the **Resource groups** blade, click on the **AZ500LAB01** resource group entry.
 
 1. On the **AZ500Lab01** blade, click on **Access control (IAM)**.
 
-1. On the **AZ500Lab01 \| Access control (IAM)** blade, click on **+ Add** and then, in the drop-down menu, click on **Add role assignment**.
+1. On the **AZ500Lab01 \| Access control (IAM) (1)** blade, click on **+ Add (2)** and then, in the drop-down menu, click on **Add role assignment (3)**.
+
+   ![image](../images/az500-26.png)
 
 1. On the **Add role assignment** blade, specify the following settings and click Next after each step
 
-   |Setting|Value|
-   |---|---|
-   |Role|select **Job function roles**|
-   |In Search bar |Search and select **Virtual Machine Contributor**, click **Next** |
+    - Select **Job function roles (1)**
+
+    - Search and select **Virtual Machine Contributor (2)(3)**
+    
+    - Click **Next (4)** 
    
+      ![image](../images/az500-27.png)
 
-     ![image](../images/new08.png)
+1. On the Add role assignment page, provide the following deatils.
 
-   |Setting|Value|
-   |---|---|
-   |Assign access to (Under Members Pane)|**User, group, or service principal**|
-   |Select (+Select Members)|**Service Desk**|
+    - Assign access to (Under Members Pane)**User, group, or service principal (1)**
 
-     ![image](../images/new09.png)
+    - Select **+Select Members (2)**
+    
+    - Search and select **Service Desk (3)(4)** 
+    
+    - Click on **Select (5)**
+
+      ![image](../images/new09.png)
 
 1. Click on **Review + assign** twice to create the role assignment.
 
 1. From the **Access control (IAM)** blade, click on the **Check access** tab.
 
-1. On the **AZ500Lab01 \| Access control (IAM)** blade, click on the **Check access** button under check access, and then in the **Search by name or email address** text box, type **Dylan Williams**.
+1. On the **AZ500Lab01 \| Access control (IAM) (1)** blade, click on the **Check access (2)** button under check access, and then in the **Search by name or email address** text box, type **Dylan Williams (3)**.
 
       ![image](../images/az-500-lab1-image6.png)
 
 1. In the list of search results, select the user account of Dylan Williams and, on the **Dylan Williams assignments - AZ500Lab01** blade, view the newly created assignment.
+
+   ![image](../images/az500-28.png)
 
 1. Close the **Dylan Williams assignments - AZ500Lab01** blade.
 
