@@ -6,7 +6,7 @@ Welcome to your AZ-500: Microsoft Azure Security Technologies workshop! We've pr
  
 Once you're ready to dive in, your virtual machine and **Lab guide** will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../images/labguide.png)
+![Access Your VM and Lab Guide](../images/az500-1.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -16,13 +16,13 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../images/env.png)
+![Explore Lab Resources](../images/az--1.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
  
-![Use the Split Window Feature](../images/spl.png)
+![Use the Split Window Feature](../images/az--2.png)
  
 ## Managing Your Virtual Machine
  
@@ -62,9 +62,9 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
      ![Enter Your Password](../images/AZ-500-pass.png)
 
-1. If you are directed to the **Security Defaults Enabled** pop up, please click on **Ask later**    
+1. If you get a pop-up stating **Action Required** click on **Ask Later**.   
    
-   ![](../images/AZ-500-security.png)
+   ![](../images/az500-2.png)
  
 4. If prompted to stay signed in, you can click **No**.
 
