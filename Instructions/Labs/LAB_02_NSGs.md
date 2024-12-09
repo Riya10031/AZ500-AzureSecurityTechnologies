@@ -28,31 +28,35 @@ In this lab, you will complete the following exercises:
 
 In this exercise, you will complete the following tasks:
 
-- Task 1: Create a virtual network with one subnet.
+- Task 1: Create a Virtual network with one subnet.
 - Task 2: Create two application security groups.
 - Task 3: Create a network security group and associate it with the virtual network subnet.
 - Task 4: Create inbound NSG security rules to all traffic to web servers and RDP to the management servers.
 
-## Task 1:  Create a virtual network
+## Task 1:  Create a Virtual network
 
 In this task, you will create a virtual network to use with the network and application security groups. 
 
-1. On the Azure portal locate the search bar at the top of the page. Search for **Virtual networks**, select the search result for **Virtual networks**.
+1. On the Azure portal locate the search bar at the top of the page. Search for **Virtual networks (1)**, select the search result for **Virtual networks (2)**.
+
+   ![image](../images/az500lab7-1.png)
 
 1. On the **Virtual networks** blade, click **+ Create**.
 
-1. On the **Basics** tab of the **Create virtual network** blade, specify the following settings (leave others with their default values) and click **Next: IP Addresses**:
+   ![image](../images/az500lab7-2.png)
+
+1. On the **Basics** tab of the **Create virtual network** blade, specify the following settings (leave others with their default values) and then naviate to **IP Addresses (5)**:
 
     |Setting|Value|
     |---|---|
-    |Subscription|the name of the Azure subscription you are using in this lab|
-    |Resource group|click **Create new** and type the name **AZ500LAB02**|
-    |Name|**myVirtualNetwork**|
-    |Region|**East US**|
+    |Subscription|**Leave the default subscription (1)**|
+    |Resource group|click **Create new** and type the name **AZ500LAB02** then click **OK** **(2)**|
+    |Name|**myVirtualNetwork (3)**|
+    |Region|**East US (4)**|
 
-    ![image](../images/lab1-8.png)
+    ![image](../images/az500lab7-3.png)
 
-1. On the **IP addresses** tab of the **Create virtual network** blade, set the **IPv4 address space** to **10.0.0.0/16**, and, if needed, in the **Subnet name** column, click **default**, on the **Edit subnet** blade, specify the following settings and click **Save**:
+1. On the **IP addresses** tab of the **Create virtual network** blade, set the **IPv4 address space** to **10.0.0.0/16** if it is not yet set and if needed, in the **Subnet name** column, click **default**, on the **Edit subnet** blade, specify the following settings and click **Save**:
 
     |Setting|Value|
     |---|---|
@@ -63,119 +67,128 @@ In this task, you will create a virtual network to use with the network and appl
 
 1. Back on the **IP addresses** tab of the **Create virtual network** blade, click **Review + create**.
 
-   ![image](../images/lab1-9.png)
+   ![image](../images/az500lab7-4.png)
 
-1. On the **Review + create** tab of the **Create virtual network** blade, click **Create**.
+1. On the **Review + create** tab of the **Create virtual network** blade and then click **Create**.
 
 ## Task 2:  Create application security groups
 
 In this task, you will create an application security group.
 
-1. On the Azure portal locate the search bar at the top of the page, and search for **Application security groups** select the search result for **Application security groups**.
+1. On the Azure portal locate the search bar at the top of the page, and search for **Application security groups (1)** select the search result for **Application security groups (2)**.
+
+   ![image](../images/az500lab7-5.png)
 
 1. On the **Application security groups** blade, click **+ Create**.
 
-1. On the **Basics** tab of the **Create an application security group** blade, specify the following settings: 
+1. On the **Basics** tab of the **Create an application security group** blade, specify the following settings and then click on **Review + create (5)**.
 
     |Setting|Value|
     |---|---|
-    |Resource group|**AZ500LAB02**|
-    |Name|**myAsgWebServers**|
-    |Region|**East US**|
+    |Subscription|**Leave the default subscription (1)**|    
+    |Resource group|**AZ500LAB02 (2)**|
+    |Name|**myAsgWebServers (3)**|
+    |Region|**East US (4)**|
 
-    >**Note**: This group will be for the web servers.
+    ![image](../images/az500lab7-6.png)    
 
-1. Click **Review + create** and then click **Create**.
+     >**Note**: This group will be for the web servers.
 
-   ![image](../images/lab1-3.png)
+1. Then click on **Create**.
 
 1. Navigate back to the **Application security groups** blade and click **+ Create**.
 
-1. On the **Basics** tab of the **Create an application security group** blade, specify the following settings: 
+    ![image](../images/az500lab7-7.png)   
+
+1. On the **Basics** tab of the **Create an application security group** blade, specify the following settings and then click on **Review + create (5)**.
 
     |Setting|Value|
     |---|---|
-    |Resource group|**AZ500LAB02**|
-    |Name|**myAsgMgmtServers**|
-    |Region|**East US**|
+    |Subscription|**Leave the default subscription (1)**|       
+    |Resource group|**AZ500LAB02 (2)**|
+    |Name|**myAsgMgmtServers (3)**|
+    |Region|**East US (4)**|
 
-    >**Note**: This group will be for the management servers.
+    ![image](../images/az500lab7-8.png)       
 
-1. Click **Review + create** and then click **Create**.
+     >**Note**: This group will be for the management servers.
 
-   ![image](../images/lab1-10.png)
+1. Then click **Create**.
 
 ## Task 3:  Create a network security group and associate the NSG to the subnet
 
 In this task, you will create a network security group. 
 
-1. On the Azure portal locate the search bar at the top of the page search for **Network security groups**, select the search result for **Network security groups**.
+1. On the Azure portal locate the search bar at the top of the page search for **Network security groups (1)**, select the search result for **Network security groups (2)**.
+
+    ![image](../images/az500lab7-9.png)   
 
 1. On the **Network security groups** blade, click **+ Create**.
 
-1. On the **Basics** tab of the **Create network security group** blade, specify the following settings: 
+1. On the **Basics** tab of the **Create network security group** blade, specify the following settings and then click on **Review+Create (5)**.
 
     |Setting|Value|
     |---|---|
-    |Subscription|the name of the Azure subscription you are using in this lab|
-    |Resource group|**AZ500LAB02**|
-    |Name|**myNsg**|
-    |Region|**East US**|
+    |Subscription|**Leave the default subscription (1)**|
+    |Resource group|**AZ500LAB02 (2)**|
+    |Name|**myNsg (3)**|
+    |Region|**East US (4)**|
 
-1. Click **Review + create** and then click **Create**.
+    ![image](../images/az500lab7-10.png)       
 
-    ![image](../images/lab1-11.png)
+1. Then click **Create**.
 
 1. After deployment succeeded, click on **Go to resources**.
 
-1. On the **myNsg** blade, in the **Settings** section, click **Subnets** and then click **+ Associate**. 
+1. On the **myNsg** blade, in the **Settings** section, click **Subnets (1)** and then click **+ Associate (2)**.
 
-1. On the **Associate subnet** blade, specify the following settings and click **OK**:
+    ![image](../images/az500lab7-11.png)   
+
+1. On the **Associate subnet** blade, specify the following settings and click **OK (3)**:
 
     |Setting|Value|
     |---|---|
-    |Virtual network|**myVirtualNetwork**|
-    |Subnet|**default**|
+    |Virtual network|**myVirtualNetwork (1)**|
+    |Subnet|**default (2)**|
     
-    ![image](../images/lab1-12.png)
+    ![image](../images/az500lab7-12.png)   
 
 ## Task 4: Create inbound NSG security rules to all traffic to web servers and RDP to the servers. 
 
-1. On the **myNsg** blade, in the **Settings** section, click **Inbound security rules**.
+1. On the **myNsg** blade, in the **Settings** section, click **Inbound security rules (1)**. Review the default inbound security rules and then click **+ Add (2)**.
 
-1. Review the default inbound security rules and then click **+ Add**.
+    ![image](../images/az500lab7-13.png)   
 
-1. On the **Add inbound security rules** blade, specify the following settings to allow TCP ports 80 and 443 to the **myAsgWebServers** application security group (leave all other values with their default values): 
-
-    |Setting|Value|
-    |---|---|
-    |Destination|in the drop-down list, select **Application security group** and then click **myAsgWebServers**|
-    |Destination port ranges|**80,443**|
-    |Protocol|**TCP**|
-    |Priority|**100**|                                                    
-    |Name|**Allow-Web-All**|
-
-1. On the **Add inbound security rules** blade, click **Add** to create the new inbound rule. 
-
-   ![image](../images/lab1-13.png)
-
-1. On the **myNsg** blade, in the **Settings** section, click **Inbound security rules**, and then click **+ Add**.
-
-1. On the **Add inbound security rules** blade, specify the following settings to allow the RDP port (TCP 3389) to the **myAsgMgmtServers** application security group (leave all other values with their default values): 
+1. On the **Add inbound security rules** blade, specify the following settings to allow TCP ports 80 and 443 to the **myAsgWebServers** application security group (leave all other values with their default values) and then click on **Add (7)**.
 
     |Setting|Value|
     |---|---|
-    |Destination|in the drop-down list, select **Application security group** and then click **myAsgMgmtServers**|
-    |Destination port ranges|**3389**|
-    |Protocol|**TCP**|
-    |Priority|**110**|                                                    
-    |Name|**Allow-RDP-All**|
+    |Destination|select **Application security group (1)** from the drop down|
+    |Destination application security groups| select **myAsgWebServers (2)** from the drop down |
+    |Destination port ranges|**80,443 (3)**|
+    |Protocol|**TCP (4)**|
+    |Priority|**100 (5)**|                                                    
+    |Name|**Allow-Web-All (6)**|
 
-1. On the **Add inbound security rule** blade, click **Add** to create the new inbound rule. 
+    ![image](../images/az500lab7-14.png)       
 
-   ![image](../images/lab1-14.png)
+1. On the **myNsg** blade, in the **Settings** section, click **Inbound security rules (1)**, and then click **+ Add (2)**.
 
-> Result: You have deployed a virtual network, network security with inbound security rules, and two application security groups. 
+    ![image](../images/az500lab7-13.png)   
+
+1. On the **Add inbound security rules** blade, specify the following settings to allow the RDP port (TCP 3389) to the **myAsgMgmtServers** application security group (leave all other values with their default values) and then click on **Add (6)**. 
+
+    |Setting|Value|
+    |---|---|
+    |Destination|select **Application security group (1)** from the drop down|
+    |Destination application security groups |**myAsgMgmtServers (2)** from the drop down|    
+    |Service|Choose **RDP (3)**|      
+    |Destination port ranges|Ensure **3389**|
+    |Protocol|Ensure **TCP**|
+    |Priority|**110 (4)**|                                                
+    |Name|**Allow-RDP-All (5)**|
+
+     > Result: You have deployed a virtual network, network security with inbound security rules, and two application security groups. 
 
 # Exercise 2: Deploy virtual machines and test network filters
 
@@ -192,58 +205,63 @@ In this exercise, you will complete the following tasks:
 
 In this task, you will create a virtual machine to use as a web server.
 
-1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Virtual machines** and press the **Enter** key.
+1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Virtual machines (1)** and select **Virtual machines (2)** from the services.
 
-1. On the **Virtual machines** blade, click **+ Create** and, in the dropdown list, click **+ Azure Virtual machine**.
+    ![image](../images/az500lab7-16.png)   
 
-1. On the **Basics** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
+1. On the **Virtual machines** blade, click **+ Create (1)** and, in the dropdown list, click **+ Azure Virtual machine (2)**.
+
+    ![image](../images/az500lab7-17.png)   
+
+1. On the **Basics** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values) and then click on **Next: Disks >(15)**.
 
    |Setting|Value|
    |---|---|
-   |Subscription|the name of the Azure subscription you will be using in this lab|
-   |Resource group|**AZ500LAB02**|
-   |Virtual machine name|**myVmWeb**|
-   |Region|**(US)East US**|
-
-    ![image](../images/lab1-4.png)
+   |Subscription|**Leave the default subscription (1)**|
+   |Resource group|**AZ500LAB02 (2)**|
+   |Virtual machine name|**myVmWeb (3)**|
+   |Region|**(US)East US (4)**|
+   |Availability options|**No infrastructure redundancy required (5)**|
+   |Security type|**Standard (6)**|
+   |Image|**Windows Server 2022 Datacenter: Azure Edition- x64 Gen2 (7)**|
+   |Size|**Standard D2s v3 (8)**|
+ 
+    ![image](../images/az500lab7--18.png)
     
    |Setting|Value|
    |---|---|
-   |Image|**Windows Server 2022 Datacenter: Azure Edition- Gen2**|
-   |Size|**Standard D2s v3**|
+   |Username|**Student (9)**|
+   |Password|**Pa55w.rd1234 (10)**|
+   |Confirm password|**Pa55w.rd1234 (11)**|
+   |Public inbound ports|**None (12)**| 
+   |Would you like to use an existing Windows Server License |**check the box (13)**|
+   |I confirm I have an eligible Windows Server license with Software Assurance or Windows Server subscription to apply this Azure Hybrid Benefit| **Check the box (14)**|   
 
-     ![image](../images/lab1-5.png)
-
-   |Setting|Value|
-   |---|---|
-   |Username|**Student**|
-   |Password|**Pa55w.rd1234**|
-   |Public inbound ports|**None**|
-
-    ![image](../images/lab1-6.png)
+    ![image](../images/az500lab7--23.png)
  
-   |Setting|Value|
-   |---|---|
-   |Would you like to use an existing Windows Server License |**No**|
-   |I confirm I have an eligible Windows Server license with Software Assurance or Windows Server subscription to apply this Azure Hybrid Benefit| **Check the box**|
+     >**Note**: For public inbound ports, we will rely on the precreated NSG. 
 
-    >**Note**: For public inbound ports, we will rely on the precreated NSG. 
-
-1. Click **Next: Disks >** and, on the **Disks** tab of the **Create a virtual machine** blade, set the **OS disk type** to **Standard HDD** and click **Next: Networking >**.
+1. On the **Disks** tab of the **Create a virtual machine** blade, set the **OS disk type** to **Standard HDD** and click **Next: Networking >**.
 
    ![image](../images/lab1-7.png)
 
-1. On the **Networking** tab of the **Create a virtual machine** blade, select the previously created network **myVirtualNetwork**.
+1. On the **Networking** tab of the **Create a virtual machine** blade, select the previously created network **myVirtualNetwork (1)**. Under **NIC network security group** select **None (2)** and then click on **Next: Management > (3)**.
 
-1. Under **NIC network security group** select **None**.
+   ![image](../images/az500lab7-20.png)
 
-1. Click **Next: Management >** , then click **Next: Monitoring>** on the **Monitoring** tab of the **Create a virtual machine** blade, verify the following setting:
+1. On the **Management** tab, click on **Next: Monitoring>**.
+
+1. On the **Monitoring** tab of the **Create a virtual machine** blade, verify the following setting and then click on **Review + create (2)**.
 
    |Setting|Value|
    |---|---|
-   |Boot diagnostics|**Enabled with managed storage account (recommended)**|
+   |Boot diagnostics|**Enabled with managed storage account (recommended) (1)**|
 
-1. Click **Review + create**, on the **Review + create** blade, ensure that validation was successful and click **Create**.
+   ![image](../images/az500lab7-21.png)   
+
+1. Ensure that validation was successful and click **Create**.
+
+   ![image](../images/az500lab7-23.png)
 
 ## Task 2: Create a virtual machine to use as a management server. 
 
@@ -251,37 +269,51 @@ In this task, you will create a virtual machine to use as a management server.
 
 1. In the Azure portal, navigate back to the **Virtual machines** blade, click **+ Create**, and, in the dropdown list, click **+ Azure Virtual machine**.
 
-1. On the **Basics** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
+1. On the **Basics** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values) and then click on **Next: Disks > (15)**
 
    |Setting|Value|
    |---|---|
-   |Subscription|the name of the Azure subscription you will be using in this lab|
-   |Resource group|**AZ500LAB02**|
-   |Virtual machine name|**myVMMgmt**|
-   |Region|(US)East US|
-   |Image|**Windows Server 2022 Datacenter: Azure Edition- Gen2**|
-   |Size|**Standard D2s v3**|
-   |Username|**Student**|
-   |Password|**Pa55w.rd1234**|
-   |Public inbound ports|**None**|
-   |Would you like to use an existing Windows Server License|**No**|
-   |I confirm I have an eligible Windows Server license with Software Assurance or Windows Server subscription to apply this Azure Hybrid Benefit| |**Check the box**|
+   |Subscription|**Leave the deafult subscription (1)**|
+   |Resource group|**AZ500LAB02 (2)**|
+   |Virtual machine name|**myVMMgmt (3)**|
+   |Region|**(US)East US (4)**|
+   |Availability options|**No infrastructure redundancy required (5)**|
+   |Security type|**Standard (6)**|   
+   |Image|**Windows Server 2022 Datacenter: Azure Edition- Gen2 (7)**|
+   |Size|**Standard D2s v3 (8)**|
+
+    ![image](../images/az500lab7-24.png)
+
+   |Setting|Value|
+   |---|---|
+   |Username|**Student (9)**|
+   |Password|**Pa55w.rd1234 (10)**|
+   |Confirm password|**Pa55w.rd1234 (11)**|
+   |Public inbound ports|**None (12)**| 
+   |Would you like to use an existing Windows Server License |**check the box (13)**|
+   |I confirm I have an eligible Windows Server license with Software Assurance or Windows Server subscription to apply this Azure Hybrid Benefit| **Check the box (14)**|   
+
+    ![image](../images/az500lab7--23.png)    
 
     >**Note**: For public inbound ports, we will rely on the precreated NSG. 
 
-1. Click **Next: Disks >** and, on the **Disks** tab of the **Create a virtual machine** blade, set the **OS disk type** to **Standard HDD** and click **Next: Networking >**.
+1. On the **Disks** tab of the **Create a virtual machine** blade, set the **OS disk type** to **Standard HDD (1)** and click **Next: Networking > (2)**.
 
-1. On the **Networking** tab of the **Create a virtual machine** blade, select the previously created network **myVirtualNetwork**.
+   ![image](../images/az500lab7--26.png)
 
-1. Under **NIC network security group** select **None**.
+1. On the **Networking** tab of the **Create a virtual machine** blade, select the previously created network **myVirtualNetwork (1)**. Under **NIC network security group** select **None (1)** and then navigate to **Monitoring (3)** tab.
 
-1. Click **Next: Management >**, then click **Next: Monitoring >** on the **Monitoring** tab of the **Create a virtual machine** blade, verify the following setting:
+   ![image](../images/az500lab7-27.png)
+
+1. On the **Monitoring** tab of the **Create a virtual machine** blade, verify the following setting and then click on **Review + create (2)**.
 
    |Setting|Value|
    |---|---|
-   |Boot diagnostics|**Enabled with managed storage account (recommended)**|
+   |Boot diagnostics|**Enabled with managed storage account (recommended) (1)**|
 
-1. Click **Review + create**, on the **Review + create** blade, ensure that validation was successful and click **Create**.
+   ![image](../images/az500lab7-28.png)   
+
+1. Ensure that validation was successful and click **Create**.
 
     >**Note**: Wait for both virtual machines to be provisioned before continuing. 
 
@@ -291,21 +323,30 @@ In this task, you will associate each virtual machine's network interface with t
 
 1. In the Azure portal, navigate back to the **Virtual machines** blade and verify that both virtual machines are listed with the **Running** status.
 
+   ![image](../images/az500lab7-29.png)    
+
 1. In the list of virtual machines, click the **myVmWeb** entry.
 
-1. On the **myVmWeb** blade, in the **Settings** section, click **Networking** and then, on the **myVmWeb \| Networking** blade, click the **Application security groups** tab.
+   ![image](../images/az500lab7--30.png)  
 
-   ![image](../images/lab1-15.png)
+1. On the **myVmWeb** blade, in the **Networking** section, select **Application security groups (1)** an then click on **+ Application security groups (2)**.
 
-1. Click **Configure the application security groups**, in the **Application security group** drop-down list, select **myAsgWebServers**, and then click **Add**.
+   ![image](../images/az500lab7-31.png)  
 
-   ![image](../images/lab1-16.png)
+1. On the **Add Application security groups** select **myAsgWebServers (1)**, and then click **Add (2)**.
+
+   ![image](../images/az500lab7-32.png)  
 
 1. Navigate back to the **Virtual machines** blade and in the list of virtual machines, click the **myVMMgmt** entry.
 
-1. On the **myVMMgmt** blade, in the **Settings** section, click **Networking** and then, on the **myVMMgmt \| Networking** blade, click the **Application security groups** tab.
+1. On the **myVMMgmt** blade, in the **Networking** section, select **Application security groups (1)** an then click on **+ Application security groups (2)**.
 
-1. Click + **Add application security groups**, in the **Application security group** list, select **myAsgMgmtServers**, and then click **Save**.
+   ![image](../images/az500lab7-33.png)  
+
+1. On the **Add Application security groups** select **myAsgWebServers (1)**, and then click **Add (2)**.
+
+   ![image](../images/az500lab7-34.png)  
+
 
 ## Task 4: Test the network traffic filtering
 
@@ -313,26 +354,54 @@ In this task, you will test the network traffic filters. You should be able to R
 
 1. Navigate back to the **myVMMgmt** virtual machine blade.
 
-1. On the **myVMMgmt** blade, click **Connect** . 
+1. On the **myVMMgmt** blade, click **Connect (1)** drop down and select **Connect (2)** from the drop down list. 
 
-   ![image](../images/lab1-16.png)
+   ![image](../images/az500lab7-35.png)  
 
 1. Click **RDP** then **Download RDP File**.
 
    ![image](../images/lab1-17.png)
 
-2. Open that file and use it to connect to the **myVMMgmt** Azure VM via Remote Desktop. When prompted to authenticate, provide the following credentials, after providing the credentials, click on **Yes**:
+1. Click on **Keep**, for the pop up that appears.   
+
+   ![image](../images/az500lab7-36.png)  
+
+1. Click on **Open file** from the top right corner.
+
+   ![image](../images/az500lab7-37.png)  
+
+1. Click on **Connect**.
+
+   ![image](../images/az500lab7-38.png)  
+
+1. On the **Windows Security** pop up, click on **More choices.**
+
+   ![image](../images/az500lab7-39.png)  
+
+1. Select **Use a different account.**
+
+   ![image](../images/az500lab7-40.png)  
+
+1. Open that file and use it to connect to the **myVMMgmt** Azure VM via Remote Desktop. When prompted to authenticate, provide the following credentials, after providing the credentials, click on **OK (3)**:
 
    |Setting|Value|
    |---|---|
-   |User name|**Student**|
-   |Password|**Pa55w.rd1234**|
+   |User name|**Student (1)**|
+   |Password|**Pa55w.rd1234 (2)**|
+
+   ![image](../images/az500lab7-41.png)     
 
     >**Note**: Verify that the Remote Desktop connection was successful. At this point you have confirmed you can connect via Remote Desktop to myVMMgmt.
 
+1. Click on **Yes** to connect RDP.
+
+   ![image](../images/az500lab7-42.png)  
+
 1. In the Azure portal, navigate to the **myVmWeb** virtual machine blade.
 
-1. On the **myVmWeb** blade, in the **Operations** section, click **Run command** and then click **RunPowerShellScript**.
+1. On the **myVmWeb** blade, in the **Operations** section, click **Run command (1)** and then click **RunPowerShellScript (2)**.
+
+   ![image](../images/az500lab7-43.png)  
 
 1. On the **Run Command Script** pane, run the following to install the Web server role on **myVmWeb**:
 
@@ -344,9 +413,9 @@ In this task, you will test the network traffic filters. You should be able to R
 
     >**Note**: Wait for the installation to complete. This might take a couple of minutes. At that point, you can verify that myVmWeb can be accessed via HTTP/HTTPS.
 
-1. After getting the output, close the **Run Command Script** blade, and navigate back to the overview page of **myVmWeb** blade.
+1. After getting the output, close the **Run Command Script** blade, and navigate back to the **Overview (1)** page of **myVmWeb** blade. Copy and paste the **Public IP address (2)** of the myVmWeb Azure VM to the notepad.
 
-1. Identify the **Public IP address** of the myVmWeb Azure VM.
+   ![image](../images/az500lab7-45.png)  
 
 1. Open another browser tab and navigate to IP address you identified in the previous step.
 
