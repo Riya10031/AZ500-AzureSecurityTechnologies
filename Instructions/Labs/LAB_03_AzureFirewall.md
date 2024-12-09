@@ -22,7 +22,7 @@ In this lab, you will complete the following exercise:
 
 ## Architecture Diagram
 
-![image](https://user-images.githubusercontent.com/91347931/157529954-a1bc434b-2eca-41c1-b875-1f0c977d5e20.png)
+   ![image](../images/az500lab3arc.png)
 
 # Exercise 1: Deploy and test an Azure Firewall
 

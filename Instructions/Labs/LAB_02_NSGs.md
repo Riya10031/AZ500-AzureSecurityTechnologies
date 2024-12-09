@@ -13,16 +13,16 @@ You have been asked to implement your organization's virtual networking infrastr
 
 ## Lab objectives
 In this lab, you will complete the following exercises:
-- Exercise 1: Create the virtual networking infrastructure
-- Exercise 2: Deploy virtual machines and test the network filters
+- Exercise 1: Create the Virtual networking infrastructure
+- Exercise 2: Deploy Virtual machines and test the network filters
 
 ## Estimated timing: 45 minutes
 
 ## Architecture Diagram
 
-![image](https://user-images.githubusercontent.com/91347931/157526438-6da4f68b-db88-4931-a041-8474e66d3fe5.png)
+   ![image](../images/az500lab2arc.png)
 
-# Exercise 1: Create the virtual networking infrastructure
+# Exercise 1: Create the Virtual networking infrastructure
 
 ## Estimated timing: 20 minutes
 

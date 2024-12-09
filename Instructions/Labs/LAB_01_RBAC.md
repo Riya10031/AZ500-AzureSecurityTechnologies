@@ -22,7 +22,7 @@ In this lab, you will complete the following exercises
 
 ## Architecture Diagram
 
-![image](https://user-images.githubusercontent.com/91347931/157751243-5aa6e521-9bc1-40af-839b-4fd9927479d7.png)
+   ![image](../images/az500lab1arc.png)
 
 # Exercise 1: Create the Senior Admins group with the user account Joseph Price as its member. 
 
