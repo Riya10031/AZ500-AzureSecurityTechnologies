@@ -196,7 +196,7 @@ In this task, you will create a user account for Isabel Garcia by using PowerShe
 
     ![image](../images/az500-25.png)   
 
-     >**Note:** Please note the **UserPrincipalName** for Isabel, you will be usin this in next task.    
+     >**Note:** Please note the **UserPrincipalName** for Isabel, you will be using this in next task.    
 
 ## Task 2: Use PowerShell to create the Junior Admins group and add the user account of Isabel Garcia to the group.
 
@@ -399,6 +399,7 @@ In this exercise, you will complete the following task:
 > **Result:** You have assigned and checked RBAC permissions. 
  
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   - Hit the Validate button for the corresponding task.
    - If you receive a success message, you can proceed to the next task.
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
