@@ -56,7 +56,7 @@ In this task, you will create a virtual network to use with the network and appl
 
     ![image](../images/az500lab7-3.png)
 
-1. On the **IP addresses** tab of the **Create virtual network** blade, set the **IPv4 address space** to **10.0.0.0/16** if it is not yet set and if needed, in the **Subnet name** column, click **default**, on the **Edit subnet** blade, specify the following settings and click **Save**:
+1. On the **IP addresses** tab of the **Create virtual network** blade, set the **IPv4 address space** to **10.0.0.0/16**, if it is not yet set and if needed, in the **Subnet name** column, click **default**, on the **Edit subnet** blade, specify the following settings and click **Save**:
 
     |Setting|Value|
     |---|---|
