@@ -56,7 +56,7 @@ In this task, you will create a virtual machine by using an ARM template. This v
 
    ![image](../images/az500lab8-3.png)
 
-1. Navigate to the **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\08\\template.json** file and click **Open**.
+1. Navigate to the **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\08** folder, then select **template.json** file and then click **Open**.
 
    >**Note**: Review the content of the template and note that it deploys an Azure VM hosting Windows Server 2016 Datacenter.
 
