@@ -62,10 +62,6 @@ In this task, you will create a virtual network.
 
 In this task, you will create another subnet and enable a service endpoint on that subnet. Service endpoints are enabled per service, per subnet. 
 
-1. In the Azure portal, navigate back to the **Virtual Networks** blade.
-
-1. On the **Virtual networks** blade, click the **myVirtualNetwork** entry.
-
 1. On the **myVirtualNetwork** blade, in the **Settings** section, click **Subnets**.
 
 1. On the **myVirtualNetwork \| Subnets (1)** blade, click **+ Subnet (2)**. 
