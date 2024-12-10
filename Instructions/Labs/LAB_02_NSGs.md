@@ -188,6 +188,8 @@ In this task, you will create a network security group.
     |Priority|**110 (4)**|                                                
     |Name|**Allow-RDP-All (5)**|
 
+    ![image](../images/az500lab7-15.png)     
+
      > Result: You have deployed a virtual network, network security with inbound security rules, and two application security groups. 
 
 # Exercise 2: Deploy virtual machines and test network filters

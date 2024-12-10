@@ -144,9 +144,9 @@ In this task, you will first configure server level auditing and then configure 
 
      >**Note**: This is server level auditing. The default auditing settings include all the queries and stored procedures executed against the database, as well as successful and failed logins.
 
-1. Set the **Enable Azure SQL Auditing** switch to **ON (2)** to enable auditing. 
+1. Set the **Enable Azure SQL Auditing** switch to **ON (1)** to enable auditing. 
 
-    - Select the **Storage** checkbox and entry boxes for **Subscription** and **Storage Account** will display.	
+    - Select the **Storage (2)** checkbox and entry boxes for **Subscription** and **Storage Account** will display.	
 
     - Choose your **Subscription (3)** from the dropdown list.	
 
