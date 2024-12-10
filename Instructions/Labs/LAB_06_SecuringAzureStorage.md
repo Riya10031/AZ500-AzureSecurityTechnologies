@@ -572,7 +572,7 @@ In this task, you will connect to the myVMPrivate virtual machine via Remote Des
 
     >**Note**: This time, you will receive the **New-PSDrive : Access is denied** error. 
 
-    ![image](../images/az500lab12-47.png)       
+    ![image](../images/az500lab12-49.png)       
 
      >**Note**: Access is denied because the *myVmPublic* virtual machine is deployed in the Public subnet. The Public subnet does not have a service endpoint enabled for the Azure Storage. The storage account only allows network access from the Private subnet.
 
