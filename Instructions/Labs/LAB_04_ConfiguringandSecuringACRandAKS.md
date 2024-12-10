@@ -314,10 +314,10 @@ In this task, you will download the Manifest files, edit the YAML file, and appl
 
 1. Review the output of the command you run in the previous task to verify that the deployment and the corresponding service have been created. The resulting output will be displayed like this
 
-    `
-    deployment.apps/nginxexternal created
-    service/nginxexternal created
-    `
+    `deployment.apps/nginxexternal created`
+   
+    `service/nginxexternal created`
+    
 
 ### Task 6: Verify you can access an external AKS-hosted service
 
@@ -371,11 +371,10 @@ In this task, you will deploy the internal facing service on the AKS.
 
 1.  In the Bash session within the Cloud Shell pane, review the output to verify your deployment and the service have been created. The resulting output will be displayed like this.
 
-    `
-    deployment.apps/nginxinternal created
-    service/nginxinternal created
-    `
-
+    `deployment.apps/nginxinternal created`
+    
+    `service/nginxinternal created`
+    
     ![image](../images/az500lab9-31.png)     
     
 1. In the Bash session within the Cloud Shell pane, run the following to retrieve information about the nginxinternal service including name, type, IP addresses, and ports. 
