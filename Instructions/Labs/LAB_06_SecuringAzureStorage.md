@@ -54,6 +54,8 @@ In this task, you will create a virtual network.
 
     >**Note**:If you are not able to edit the **default** first create the virtual network and go to subnets in created Virtual network and delete the Default Subnet and add **Public** Subnet 
 
+1. Click on **Go to resources**.    
+
 ### Task 2: Add a subnet to the virtual network and configure a storage endpoint
 
 In this task, you will create another subnet and enable a service endpoint on that subnet. Service endpoints are enabled per service, per subnet. 
@@ -76,7 +78,7 @@ In this task, you will create another subnet and enable a service endpoint on th
     |Subnet address range|**10.0.1.0/24**|
     |Service endpoints|**Leave the default of None**|
 
-1. On the **Add subnet** blade, click **Save** to add the new subnet.
+1. On the **Add subnet** blade, click **Add** to add the new subnet.
 
     >**Note**: The virtual network now has two subnets: Public and Private. 
 	
@@ -103,7 +105,7 @@ In this task, you will create a network security group with two outbound securit
 
     >**Note**: In the next steps, you will create an outbound security rule that allows communication to the Azure Storage service. 
 
-1. In the Azure portal, navigate back to the **Network security groups** blade and click the **myNsgPrivate** entry.
+1. Click on **Go to resources**.    
 
 1. On the **myNsgPrivate** blade, in the **Settings** section, click **Outbound security rules**.
 
@@ -186,11 +188,11 @@ In this task, you will create a network security group with one inbound security
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Network security groups** and press the **Enter** key.
 
-2. On the **Network security groups** blade, click **+ Create**.
+1. On the **Network security groups** blade, click **+ Create**.
 	
 	![image](../images/New_NSG.png)
 	
-3. On the **Basics** tab of the **Create network security group** blade, specify the following settings: 
+1. On the **Basics** tab of the **Create network security group** blade, specify the following settings: 
 
     |Setting|Value|
     |---|---|
@@ -199,15 +201,15 @@ In this task, you will create a network security group with one inbound security
     |Name|**myNsgPublic**|
     |Region|**East US**|
 
-4. Click **Review + create** and then click **Create**.
+1. Click **Review + create** and then click **Create**.
 
     >**Note**: In the next steps, you will create an outbound security rule that allows communication to the Azure Storage service. 
 
-5. In the Azure portal, navigate back to the **Network security groups** blade and click the **myNsgPublic** entry.
+1. Click on **Go to resources.**
 
-6. On the **myNsgPublic** blade, in the **Settings** section, click **Inbound security rules** and then click **+ Add**.
+1. On the **myNsgPublic** blade, in the **Settings** section, click **Inbound security rules** and then click **+ Add**.
 
-7. On the **Add inbound security rule** blade, specify the following settings (leave all other values with their default values): 
+1. On the **Add inbound security rule** blade, specify the following settings (leave all other values with their default values): 
 
     |Setting|Value|
     |---|---|
@@ -221,11 +223,11 @@ In this task, you will create a network security group with one inbound security
     |Priority|**1200**|                                                    
     |Name|**Allow-RDP-All**|
 
-8. On the **Add inbound security rule** blade, click **Add** to create the new inbound rule. 
+1. On the **Add inbound security rule** blade, click **Add** to create the new inbound rule. 
 
     >**Note**: Now you will associate the network security group with the Public subnet.
 
-9. On the **Subnets** blade, select **+ Associate** and specify the following settings in the **Associate subnet** section and then click **OK**:
+1. On the **Subnets** blade, select **+ Associate** and specify the following settings in the **Associate subnet** section and then click **OK**:
 
     |Setting|Value|
     |---|---|
