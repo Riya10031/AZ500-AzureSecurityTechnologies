@@ -29,39 +29,45 @@ In this exercise, you will complete the following tasks:
 
 In this task, you will use a template to deploy the lab infrastructure. 
 
-1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Deploy a custom template** and hit **Enter** key.
+1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Deploy a custom template (1)** and select **Deploy a custom template (2)** from the services.
    
-    ![image](../images/az-500-5a1.png)
+    ![image](../images/az500lab8-1.png)
 
 1. On the **Custom deployment** blade, click the **Build your own template in the editor** option.
     
     ![image](../images/Custom_Template.png)
     
-1. On the **Edit template** blade, click **Load file**, locate the **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\\11\\azuredeploy.json** file and click **Open**.
+1. On the **Edit template** blade, click **Load file**.
+
+    ![image](../images/az-500-5a2.png)
+
+ 1. Navigate to the **C:\AllFiles\AZ500-AzureSecurityTechnologies-lab-files\Allfiles\Labs\\11** folder, then select **azuredeploy.json (1)** file and click **Open (2)**.
 
     >**Note**: Review the content of the template and note that it deploys an Azure SQL database.
     
-    ![image](../images/az-500-5a2.png)
+    ![image](../images/az500lab11-5.png)
    
 1. On the **Edit template** blade, click **Save**.
 
-1. On the **Custom deployment** blade, ensure that the following settings are configured (leave rest with the default values):
+1. On the **Custom deployment** blade, ensure that the following settings are configured (leave rest with the default values) and then click on **Review+create (4)**.
 
    |Setting|Value|
    |---|---|
-   |Subscription|the name of the Azure subscription you will be using in this lab **(1)**|
-   |Resource group|click **Create new** and type the name **AZ500LAB05**  **(2)**|
+   |Subscription|**Leave the default Subscription (1)**|
+   |Resource group|click **Create new** and type the name **AZ500LAB05** then click **OK**. **(2)**|
    |Location|**(US) East US (3)**|
 
-1. Click **Review + Create (4)** and then click **Create**.
+    ![image](../images/az-500-5a3.png)  
 
-    ![image](../images/az-500-5a3.png)   
+1. Then click **Create**.     
 
     >**Note**: Wait for the deployment to complete. It might take up to 5 minutes.
 
 ### Task 2: Configure Advanced Data Protection
 
-1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Resource groups** and press the **Enter** key.
+1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Resource groups (1)** and select **Resource groups (2)** from the service.
+
+    ![image](../images/az500lab11-6.png)
 
 1. On the **Resource groups** blade, in the list of resource group, click the **AZ500LAB05** entry.
 
@@ -91,24 +97,22 @@ In this task, you will use a template to deploy the lab infrastructure.
 
 In this task, you will discover and classify information in SQL database for GPDR and data protection compliance.
 
-1. On the SQL server blade, in the **Settings** section, click **SQL Databases (1)**.
-
-1. In the list of databases, select the **AZ500LabDb (2)** entry.
+1. On the SQL server blade, in the **Settings** section, click **SQL Databases (1)**. In the list of databases, select the **AZ500LabDb (2)** entry.
    
     ![image](../images/az-500-5a6.png)
    
 1. On the **AZ500LabDb** SQL database blade, in the **Security** section, click **Data Discovery & Classification (1)**.
 
-1. On the **Data Discovery & Classification** blade, click the **Classification (2)** tab.
+    - On the **Data Discovery & Classification** blade, click the **Classification (2)** tab.
 
-    >**Note**: The classification engine scans your database for columns containing potentially sensitive data and provides a list of recommended column classifications.
+      >**Note**: The classification engine scans your database for columns containing potentially sensitive data and provides a list of recommended column classifications.
 
-1. Click the text message **We have found 15 columns with classification recommendations (3)** displayed on blue bar at the top of the blade.
+    - Click the text message **We have found 15 columns with classification recommendations (3)** displayed on blue bar at the top of the blade.
     
    
-1. Review the listed columns and the recommended sensitivity label.
+    - Review the listed columns and the recommended sensitivity label.
    
-    ![image](../images/az-500-5a7.png)
+      ![image](../images/az-500-5a7.png)
    
 1. Enable the **Select all (1)** checkbox and then click **Accept Selected Recommendations (2)**.
 
@@ -120,7 +124,9 @@ In this task, you will discover and classify information in SQL database for GPD
    
 1. Once you have completed your review click **Save**. 
 
-    >**Note**: This will complete the classification and persistently label the database columns with the new classification metadata. 
+    ![image](../images/az500lab11-1.png)
+
+     >**Note**: This will complete the classification and persistently label the database columns with the new classification metadata. 
 
 1. Back on the **Data Discovery & Classification (1)** blade **Overview (2)** tab, note that it has been updated to account for the latest classification information.
 
@@ -134,31 +140,35 @@ In this task, you will first configure server level auditing and then configure 
 
 1. On the SQL Server blade, in the **Security** section, click **Auditing (1)**.
 
-    >**Note**: This is server level auditing. The default auditing settings include all the queries and stored procedures executed against the database, as well as successful and failed logins.
+    ![image](../images/az500lab11-2.png)
+
+     >**Note**: This is server level auditing. The default auditing settings include all the queries and stored procedures executed against the database, as well as successful and failed logins.
 
 1. Set the **Enable Azure SQL Auditing** switch to **ON (2)** to enable auditing. 
 
-1. Select the **Storage** checkbox and entry boxes for **Subscription** and **Storage Account** will display.	
+    - Select the **Storage** checkbox and entry boxes for **Subscription** and **Storage Account** will display.	
 
-1. Choose your **Subscription (3)** from the dropdown list.	
+    - Choose your **Subscription (3)** from the dropdown list.	
 
-1. Click **Storage account (4)** and choose **Create new**.	
+    - Click **Storage account** and choose **Create new** **(4)**.	
+
+      ![image](../images/az500lab11-3.png)    
     
-1. On the **Create storage account** blade, in the **Name (1)** box, type a globally unique name consisting of between 3 and 24 lower case letters and digits, click **OK (2)**.
+    - On the **Create storage account** blade, in the **Name (1)** box, type a globally unique name consisting of between 3 and 24 lower case letters and digits, click **OK (2)**.
    
-    ![image](../images/az-500-5a10.png)
+      ![image](../images/az-500-5a10.png)
 
-    >**Note**: You may need to refresh the browser before the storage account becomes available.
+       >**Note**: You may need to refresh the browser before the storage account becomes available.
 
-1. Back on the **Auditing** blade, under **Advanced properties** set **Retention (days)** to **5 (5)** and click **save (6)**.
+1. Back on the **Auditing** blade, under **Advanced properties** set **Retention (days)** to **5 (5)** and click **Save (6)**.
     
     ![image](../images/az-500-5a11.png)
    
-    >**Note**: If you receive an error message regarding invalid storage container path then the storage account may not have have been provisioned yet. Wait a few minutes, click **Storage account**, on the **Choose storage account** blade, select the newly created storage account and back on the Auditing blade, click **Save**.
+     >**Note**: If you receive an error message regarding invalid storage container path then the storage account may not have have been provisioned yet. Wait a few minutes, click **Storage account**, on the **Choose storage account** blade, select the newly created storage account and back on the Auditing blade, click **Save**.
 
-1. On the server blade, in the **Settings** section, click **SQL Databases**.
+1. On the server blade, in the **Settings** section, click **SQL Databases (1)**. In the list of databases, select the **AZ500LabDb (2)** entry. 
 
-1. In the list of databases, select the **AZ500LabDb** entry. 
+    ![image](../images/az500lab11-4.png)
 
 1. On the **AZ500LabDb** SQL database blade, in the **Security** section, click **Auditing (1)**.
     
