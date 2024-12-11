@@ -35,29 +35,19 @@ In this task, you will on-board and configure Microsoft Defender for Cloud.
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Microsoft Defender for Cloud** and press the **Enter** key.
 
-1. On the **Microsoft Defender for Cloud \| Getting started** blade, click **Upgrade** and then click **Install agents tab** scroll down and click **Install agents**.
-
-   >**Note**: If you see any pop-up like **Only upgrade plans with existing resources** then click on **Enable** and then perform the previous step.
-
-   >**Note**: Review all the features that are available as part of Microsoft Defender plans. 
-   
-     ![image](../images/Az-500lab14-upgrade.png) 
-     
-1. On the **Microsoft Defender for Cloud \| Getting started** blade, in the vertical menu on the left side, in the **Management** section, click **Environment Settings**.
+1. On the **Microsoft Defender for Cloud | Overview** blade, in the vertical menu on the left side, in the **Management** section, click **Environment Settings**. 
  
    >**Note**: If you get any pop-up you can click on **Maybe Later**
 
-1. On the **Microsoft Defender for Cloud \| Environment Settings** blade, expand the dropdown and click the entry representing under your subscription and, on the **Settings \| Defender plans** blade, ensure that **Azure Defender** is enabled for all listed down resources. 
+   ![image](../images/L8T1S2.png) 
 
-    >**Note**: Review all the features that are available as part of Azure Defender tier and ensure that Azure Defender turned on for each resource type. 
+1. Expand the environment settings folders until the subscription section is displayed, then click the subscription to view details.
 
-1. On the **Settings \| Azure Defender plans** blade, select **Enable all plans** and click **Save** to save any changes.
+1. On the **Settings | Azure Defender plans** blade, under Defender plans, expand **Cloud Workload Protection (CWP)**.
 
-1. Navigate back to the **Microsoft Defender for Cloud \| Environment settings** blade, expand until your subscription appears, and click the entry representing the Log Analytics workspace you created in the previous lab.
-
-1. On the **Settings \| Defender plans** blade, ensure that all options are "On". If needed, click **Enable all plans** and then click **Save**.
-
-1. Select **Data collection** from the **Settings \| Defender plans** blade. Click **All Events** and **Save**.
+1. From the **Cloud Workload Protection (CWP)** Plan list, select **Servers**. On the right side of the page, change the Status from Off to On, then click Save.
+   
+    ![image](../images/L8T1S4.png) 
 
 ## Task 2: Review the Microsoft Defender for Cloud recommendation
 
