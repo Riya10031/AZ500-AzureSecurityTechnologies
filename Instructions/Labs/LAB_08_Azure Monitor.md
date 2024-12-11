@@ -26,7 +26,6 @@ In this exercise, you will complete the following tasks:
 - Task 2: Create a Log Analytics workspace
 - Task 3: Enable the Log Analytics virtual machine extension
 - Task 4: Collect virtual machine event and performance data
-- Task 5: View and query collected data 
 
 ## Task 1: Deploy an Azure virtual machine
 

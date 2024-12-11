@@ -1,0 +1,10 @@
+[ {
+  "Name": "Azure Security Center",
+  "Language": "English",
+  "Files": [
+    {
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/tree/prodInstructions/CloudLabs.AI/LAB_14_Security%20Center.md",
+      "Order": 1
+    }
+  ]
+} ]

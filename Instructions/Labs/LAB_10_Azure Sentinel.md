@@ -88,13 +88,13 @@ In this task, you will configure Sentinel to use the Azure Activity data connect
 
 In this task, you will review and create a rule that uses the Azure Activity data connector. 
 
-1. On the **Microsoft Sentinel \| Configuration** blade, click **Analytics**. 
+1. On the **Microsoft Sentinel \| Configuration** blade, click **Analytics (1)**. 
 
-1. On the **Microsoft Sentinel \| Analytics** blade, click the **Rule templates** tab. 
+1. On the **Microsoft Sentinel \| Analytics** blade, click the **Rule templates (2)** tab. 
 
     >**Note**: Review the types of rules you can create. Each rule is associated with a specific Data Source.
 
-1. In the listing of rule templates, type **Suspicious** into the search bar form and click the **Suspicious number of resource creation or deployment** entry associated with the **Azure Activity** data source. And then, in the pane displaying the rule template properties(click the >> symbol to view the pane), click **Create rule** (scroll to the right of the page if needed).
+1. In the listing of rule templates, type **Suspicious** into the search bar form and click the **Suspicious number of resource creation or deployment (3)** entry associated with the **Azure Activity** data source. And then, in the pane displaying the rule template properties(click the >> symbol (4) to view the pane), click **Create rule (5)** (you may need to zoom out a little to see the Create rule button)(scroll to the right of the page if needed).
 
      ![image](../images/AZ-500-lab15-steps.png)
 
@@ -164,7 +164,7 @@ In this task, you will create a playbook. A security playbook is a collection of
 
 1. When prompted, sign in with the user account that has the Owner or Contributor role in the Azure subscription you are using for this lab.
 		
-1. Click the second **Connection** step and, in the list of connections, select the second entry, representing the connection you created in the previous step.	
+1. Click the second **Connection** step and, click on change connection. In the list of connections, select the second entry, representing the connection you created in the previous step.	
 
 1. Repeat the previous steps in for the remaining two **Connection** steps.
 
@@ -177,12 +177,6 @@ In this task, you will create a playbook. A security playbook is a collection of
 1. We need to assign two roles to perform this task i.e. **Microsoft Sentinel Contributor** on Resource group **AZ500LAB080910** and **Logic App Contributor** on Logic app **Change-Incident-Severity**.
 
 1. Go to the resource group from the portal and select Resource group **AZ500LAB080910**. Select **Access control (IAM)** from the left pan and select **+ Add** and choose **Add role assignment** from the dropdown list.
-
-1. On the **Resource groups** blade, click the **AZ500LAB080910** resource group entry.
-
-1. On the **AZ500LAB080910** blade, click **Access control (IAM)** from the left pan.
-
-1. On the **AZ500LAB080910 | Access control (IAM)** blade, click **+ Add** and then, in the drop-down menu, click **Add role assignment**.
 
 1. On the **Add role assignment** blade under Role tab search and select **Microsoft Sentinel Contributor** role and select **Next**.
 
@@ -231,7 +225,7 @@ In this task, you will create a playbook. A security playbook is a collection of
 
     >**Note**: If you receive a parse error, intellisense may have added values to your query. Ensure the query matches otherwise paste the query into notepad and then from notepad to the rule query. 
 
-7. On the **Set rule logic** tab of the **Analytic rule wizard - Create a new Scheduled rule** blade, in the **Query scheduling** section, set the **Run query every** and **Lookup data from the last**to **5 Minutes**.
+7. On the **Set rule logic** tab of the **Analytic rule wizard - Create a new Scheduled rule** blade, in the **Query scheduling** section, set the **Run query every** and **Lookup data from the last** to **5 Minutes**.
 
 8. On the **Set rule logic** tab of the **Analytic rule wizard - Create a new Scheduled rule** blade, accept the default values of the remaining settings and click **Next: Incident settings >**.
 
@@ -243,15 +237,9 @@ In this task, you will create a playbook. A security playbook is a collection of
 
 1. In the **Create new automation rule** window, enter **Run Change-Severity Playbook** for the **Automation rule name** under the **Trigger** field, click the drop-down menu and select **When alert is created**.
 
+1. In the **Create new automation rule** window, under Actions, read the note and then click **Manage playbook permissions**. On the **Manage permissions** window, select the checkbox next to the resource group **AZ500LAB080910** and then click Apply.
+
 1. In the **Create new automation rule** window, under **Actions**, click the second drop-down menu and select the **Change-Incident-Severity** logic app. On the **Create new automation rule** window, click **Apply**.
-
-1. Navigate to the **Microsoft Sentinel | Analytics** blade, select **PlayBook Demo** rule. Select **(...) ellipses** from the end of the row and select **Edit** option.
-
-1. You will be navigated to Analytics rule wizard window, select **Autommated response** tab then select **+ Add new** under Automation rules.
-
-1. In the **Create new automation rule** window, enter **Run Change-Severity Playbook** for the Automation rule name under the Trigger field, click the drop-down menu and select **When alert is created.**
-
-1. In the **Create new automation rule** window, under Actions, click the second drop-down menu and select the **Change-Incident-Severity** logic app. On the Create new automation rule window, click **Apply**. Click **Next: Review and create >** and click **Save**
 
 >**Note**: You now have a new active rule called **Playbook Demo**. If an event identified by the rue logic occurs, it will result in a medium severity alert, which will generate a corresponding incident.
 
@@ -273,7 +261,7 @@ In this task, you will create a playbook. A security playbook is a collection of
 
 1. On the **Activity log** blade, note an **Delete JIT Network Access Policies** entry. 
 
-    >**Note**: This may take a few minutes to appear. **Refresh** the page if it does not appear.
+    >**Note**: This may take a few minutes to appear. **Refresh** the page if it does not appear. You can also try to search for the entry in Activity logs. 
     
 1. In the Azure portal, navigate back to the **Microsoft Sentinel \| Overview** blade.
 
@@ -285,6 +273,8 @@ In this task, you will create a playbook. A security playbook is a collection of
 
 1. Verify that the blade displays an incident with either medium or high severity level.
 
+   ![image](../images/L10T6S10-1112.png)
+   
     >**Note**: It can take up to 5 minutes for the incident to appear on the **Microsoft Sentinel \| Incidents** blade. 
 
     >**Note**: Review the **Microsoft Sentinel \| Playbooks** blade. You will find there the count of successful and failed runs.

@@ -1,0 +1,10 @@
+[ {
+  "Name": "Azure Sentinel",
+  "Language": "English",
+  "Files": [
+    {
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/tree/prodInstructions/CloudLabs.AI/LAB_15_Azure%20Sentinel.md",
+      "Order": 1
+    }
+  ]
+} ]

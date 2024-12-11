@@ -1,0 +1,10 @@
+[ {
+  "Name": "Service Endpoints and Securing Storage",
+  "Language": "English",
+  "Files": [
+    {
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/tree/prodInstructions/CloudLabs.AI/LAB_12_SecuringAzureStorage.MD.md",
+      "Order": 1
+    }
+  ]
+} ]

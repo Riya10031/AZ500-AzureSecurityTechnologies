@@ -1,0 +1,10 @@
+[ {
+  "Name": "Azure AD Privileged Identity Management",
+  "Language": "English",
+  "Files": [
+    {
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/tree/prodInstructions/CloudLabs.AI/LAB_05_PIM.md",
+      "Order": 1
+    }
+  ]
+} ]
