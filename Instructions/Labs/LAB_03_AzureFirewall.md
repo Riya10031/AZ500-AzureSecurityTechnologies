@@ -120,7 +120,7 @@ In this task you will deploy the Azure firewall into the virtual network.
 
     ![image](../images/az500lab8-10.png)  
 
-     >**Note**: You might need to scroll up to see the **Review + create**, Wait for the deployment to complete. This should take about 5 minutes. 
+     >**Note**: You might need to scroll up to see the **Review + create**, Wait for the deployment to complete. This should take about 5 -10 minutes. 
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type/search for **Resource groups (1)** and select **Resource groups (2)**.
 
