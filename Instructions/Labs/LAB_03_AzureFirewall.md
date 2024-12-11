@@ -367,7 +367,9 @@ In this task, you will test the firewall to confirm that it works as expected.
    ![image](../images/az500lab8-31.png)  
 
     >**Note**: Wait for the Remote Desktop session to be established and the Server Manager interface to load.
-
+    
+1. Click on **Yes**, If you recieve any pop up.
+   
 1. Within the Remote Desktop session to **Srv-Work**, in **Server Manager**, click **Local Server (1)** and then click on **On (2)** corresponding to **IE Enhanced Security Configuration**.
 
     ![image](../images/az500lab8-40.png)  
