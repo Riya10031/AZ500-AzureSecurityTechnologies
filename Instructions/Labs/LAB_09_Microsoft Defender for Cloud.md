@@ -39,7 +39,7 @@ In this task, you will on-board and configure Microsoft Defender for Cloud.
  
    >**Note**: If you get any pop-up you can click on **Maybe Later**
 
-   ![image](../images/L8T1S2.png) 
+   ![image](../images/az500-8-1.png) 
 
 1. Expand the environment settings folders until the subscription section is displayed, then click the subscription to view details.
 
@@ -47,7 +47,7 @@ In this task, you will on-board and configure Microsoft Defender for Cloud.
 
 1. From the **Cloud Workload Protection (CWP)** Plan list, select **Servers**. On the right side of the page, change the Status from Off to On, then click Save.
    
-    ![image](../images/L8T1S4.png) 
+    ![image](../images/az500-8-2.png) 
 
 ## Task 2: Review the Microsoft Defender for Cloud recommendation
 

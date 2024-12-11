@@ -120,7 +120,7 @@ In this task you will deploy the Azure firewall into the virtual network.
 
     ![image](../images/az500lab8-10.png)  
 
-     >**Note**: You might need to scroll up to see the **Review + create**, Wait for the deployment to complete. This should take about 5 minutes. 
+     >**Note**: You might need to scroll up to see the **Review + create**, Wait for the deployment to complete. This should take about 5 -10 minutes. 
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type/search for **Resource groups (1)** and select **Resource groups (2)**.
 
@@ -367,7 +367,9 @@ In this task, you will test the firewall to confirm that it works as expected.
    ![image](../images/az500lab8-31.png)  
 
     >**Note**: Wait for the Remote Desktop session to be established and the Server Manager interface to load.
-
+    
+1. Click on **Yes**, If you recieve any pop up.
+   
 1. Within the Remote Desktop session to **Srv-Work**, in **Server Manager**, click **Local Server (1)** and then click on **On (2)** corresponding to **IE Enhanced Security Configuration**.
 
     ![image](../images/az500lab8-40.png)  
@@ -378,7 +380,9 @@ In this task, you will test the firewall to confirm that it works as expected.
 
 1. Within the Remote Desktop session to **Srv-Work**, start Internet Explorer and browse to **`https://www.bing.com`**. 
 
-    ![image](../images/az500lab8-42.png)  
+    ![image](../images/az500lab8-42.png)
+
+    >**Note**: Click on **Ask me later**, If you recieve any pop up.   
 
     >**Note**: The website should successfully display. The firewall allows you access.
 

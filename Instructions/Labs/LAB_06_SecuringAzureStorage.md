@@ -475,6 +475,8 @@ In this task, you will connect to the myVMPrivate virtual machine via Remote Des
     >**Note**: Wait for the Remote Desktop session to open and Server Manager to load.
 
     >**Note**: You will now map drive Z to an Azure File share within the Remote Desktop session to a Windows Server 2022 computer
+    
+1. Click on **Yes** to connect to the RDP.    
 
 1. Within the Remote Desktop session to **myVMPrivate**, click **Start** and then click **Windows PowerShell ISE**.
 
@@ -561,6 +563,8 @@ In this task, you will connect to the myVMPrivate virtual machine via Remote Des
     >**Note**: Wait for the Remote Desktop session to open and Server Manager to load.
 
     >**Note**: You will now map drive Z to an Azure File share within the Remote Desktop session to a Windows Server 2022 computer
+
+1. Click on **Yes** to connect to the RDP.    
 
 1. Within the Remote Desktop session to **myVMPublic**, click **Start** and then click **Windows PowerShell ISE**.
 
