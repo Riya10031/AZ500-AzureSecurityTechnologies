@@ -1,0 +1,10 @@
+[ {
+  "Name": "Role Based Access Control",
+  "Language": "English",
+  "Files": [
+    {
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/tree/prodInstructions/CloudLabs.AI/LAB_01_RBAC.md",
+      "Order": 1
+    }
+  ]
+} ]

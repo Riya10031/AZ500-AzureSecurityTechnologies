@@ -1,0 +1,10 @@
+[ {
+  "Name": "Configuring and Securing ACR and AKS",
+  "Language": "English",
+  "Files": [
+    {
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/tree/prodInstructions/CloudLabs.AI/LAB_09_ConfiguringandSecuringACRandAKS.MD.md",
+      "Order": 1
+    }
+  ]
+} ]

@@ -1,0 +1,10 @@
+[ {
+  "Name": "Network Security Groups and Application Security Groups",
+  "Language": "English",
+  "Files": [
+    {
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/tree/prodInstructions/CloudLabs.AI/LAB_07_NSGs.md",
+      "Order": 1
+    }
+  ]
+} ]

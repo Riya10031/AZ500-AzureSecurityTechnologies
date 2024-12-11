@@ -1,0 +1,10 @@
+[ {
+  "Name": "Azure Policy",
+  "Language": "English",
+  "Files": [
+    {
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/tree/prodInstructions/CloudLabs.AI/LAB_02_AzurePolicy.md",
+      "Order": 1
+    }
+  ]
+} ]

@@ -1,0 +1,10 @@
+[ {
+  "Name": "Key Vault",
+  "Language": "English",
+  "Files": [
+    {
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/tree/prodInstructions/CloudLabs.AI/LAB_10_KeyVaultImplementingSecureDatabysettingupAlwaysEncrypted.md",
+      "Order": 1
+    }
+  ]
+} ]

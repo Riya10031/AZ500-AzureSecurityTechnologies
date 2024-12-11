@@ -1,0 +1,10 @@
+[ {
+  "Name": "Azure Locks",
+  "Language": "English",
+  "Files": [
+    {
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/tree/prodInstructions/CloudLabs.AI/LAB_03_AzureLocks.md",
+      "Order": 1
+    }
+  ]
+} ]
