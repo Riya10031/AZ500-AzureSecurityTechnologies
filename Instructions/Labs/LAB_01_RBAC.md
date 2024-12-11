@@ -221,7 +221,7 @@ In this task, you will create the Junior Admins group and add the user account o
 1. In the PowerShell session within the Cloud Shell pane, run the following to **obtain a reference** to the user account of Isabel Garcia:
 
     ```powershell
-    $user = Get-AzureADUser -Filter "UserPrincipalName eq 'Isabel<UserPrincipalName>'"
+    $user = Get-AzureADUser -Filter "UserPrincipalName eq '< UserPrincipalName>'"
     ```
 
      >**Note:** Replace the **< UserPrincipalName>** with the name you have copied for Isabel in Task1->12th step.
