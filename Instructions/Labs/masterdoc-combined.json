@@ -1,0 +1,73 @@
+[
+    {
+      "Name": "AZ500-AzureSecurityTechnologies",
+      "Language": "English",
+      "BaseURL": "https://github.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies",
+      "Files": [
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/prod/Instructions/Labs/LabIntro.md",
+          "Order": 1
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/prod/Instructions/Labs/LAB_01_RBAC.md",
+          "Order": 2
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/prod/Instructions/Labs/LAB_02_AzurePolicy.md",
+          "Order": 3
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/prod/Instructions/Labs/LAB_03_AzureLocks.md",
+            "Order": 4
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/prod/Instructions/Labs/LAB_04_MFAConditionalAccessandAADIdentityProtection.md",
+            "Order": 5
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/prod/Instructions/Labs/LAB_05_PIM.md",
+            "Order": 6
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/prod/Instructions/Labs/LAB_06_ImplementDirectorySynchronization.md",
+            "Order": 7
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/prod/Instructions/Labs/LAB_07_NSGs.md",
+            "Order": 8
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/prod/Instructions/Labs/LAB_08_AzureFirewall.md",
+            "Order": 9
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/prod/Instructions/Labs/LAB_09_ConfiguringandSecuringACRandAKS.md",
+            "Order": 10
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/prod/Instructions/Labs/LAB_10_KeyVaultImplementingSecureDatabysettingupAlwaysEncrypted.md",
+            "Order": 11
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/prod/Instructions/Labs/LAB_11_SecuringAzureSQLDatabase.md",
+            "Order": 12
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/prod/Instructions/Labs/LAB_12_SecuringAzureStorage.md",
+            "Order": 13
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/prod/Instructions/Labs/LAB_13_Azure%20Monitor.md",
+            "Order": 14
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/prod/Instructions/Labs/LAB_14_Security%20Center.md",
+            "Order": 15
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/prod/Instructions/Labs/LAB_15_Azure%20Sentinel.md",
+            "Order": 16
+        }
+      ]
+    }
+  ]

@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "Configure and manage Azure Monitor",
+    "Language": "English",
+    "BaseURL": "https://github.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/prod/Instructions/Labs/LabIntro.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/prod/Instructions/Labs/LAB_13_Azure%20Monitor.md",
+        "Order": 2
+      }
+    ]
+  }
+]
