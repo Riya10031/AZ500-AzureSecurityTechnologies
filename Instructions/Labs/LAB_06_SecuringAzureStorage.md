@@ -32,14 +32,14 @@ In this task, you will create a virtual network.
 
 1. On the **Virtual Networks** blade, click **+ Create**.
 
-1. On the **Basics** tab of the **Create virtual network** blade, specify the following settings (leave others with their default values) and click on **IP Addresses (4)** tab.
+1. On the **Basics** tab of the **Create virtual network** blade, specify the following settings (leave others with their default values) and click on **IP Addresses (5)** tab.
 
     |Setting|Value|
     |---|---|
     |Subscription|**Leave the default subscription (1)**|
-    |Resource group|click **Create new** and type the name **AZ500LAB06** then click **OK** (2)|
-    |Name|**myVirtualNetwork (2)**|
-    |Region|**(US) East US (3)**|
+    |Resource group|click **Create new** and type the name **AZ500LAB06** then click **OK** **(2)**|
+    |Name|**myVirtualNetwork (3)**|
+    |Region|**(US) East US (4)**|
 
    ![image](../images/az500lab12-2.png)    
 
@@ -61,10 +61,6 @@ In this task, you will create a virtual network.
 ### Task 2: Add a subnet to the virtual network and configure a storage endpoint
 
 In this task, you will create another subnet and enable a service endpoint on that subnet. Service endpoints are enabled per service, per subnet. 
-
-1. In the Azure portal, navigate back to the **Virtual Networks** blade.
-
-1. On the **Virtual networks** blade, click the **myVirtualNetwork** entry.
 
 1. On the **myVirtualNetwork** blade, in the **Settings** section, click **Subnets**.
 
