@@ -380,7 +380,9 @@ In this task, you will test the firewall to confirm that it works as expected.
 
 1. Within the Remote Desktop session to **Srv-Work**, start Internet Explorer and browse to **`https://www.bing.com`**. 
 
-    ![image](../images/az500lab8-42.png)  
+    ![image](../images/az500lab8-42.png)
+
+    >**Note**: Click on **Ask me later**, If you recieve any pop up.   
 
     >**Note**: The website should successfully display. The firewall allows you access.
 
