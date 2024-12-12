@@ -76,24 +76,22 @@ In this exercise, you will complete the following tasks:
 
 In this task, you will create a Log Analytics workspace. 
 
-1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Log Analytics workspaces** and press the **Enter** key.
+1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Log Analytics workspaces (1)** and select **Log Analytics workspaces (2)** from the services.
 
    ![](../images/New-image111.png)
 
 1. On the **Log Analytics workspaces** blade, click **+ Create**.
 
-1. On the **Basics** tab of the **Create Log Analytics workspace** blade, specify the following settings (leave others with their default values):
+1. On the **Basics** tab of the **Create Log Analytics workspace** blade, specify the following settings (leave others with their default values) and then click on **Review+create (5)**.
 
     |Setting|Value|
     |---|---|
-    |Subscription|the name of the Azure subscription you are using in this lab|
-    |Resource group|**AZ500LAB080910**|
-    |Name|any valid, globally unique name|
-    |Region|**(US) East US**|
+    |Subscription|**Leave the default Subscription (1)**|
+    |Resource group|Select **AZ500LAB080910 (2)**|
+    |Name| Enter **LogAnalytics<inject key="DeploymentID" enableCopy="false"/> (3)**|
+    |Region|**(US) East US (4)**|
 
-1. Click **Review + create**.
-
-   ![](../images/New-image112.png)
+    ![](../images/New-image112.png)
    
 1. On the **Review + create** tab of the **Create Log Analytics workspace** blade, click **Create**.
 
@@ -101,7 +99,7 @@ In this task, you will create a Log Analytics workspace.
 
 In this task, you will create a storage account.
 
-1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Storage accounts** and press the **Enter** key.
+1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Storage accounts (1)** and select **Storage accounts (2)** from the services.
 
    ![](../images/New-image113.png)
 
@@ -109,20 +107,20 @@ In this task, you will create a storage account.
 
     ![](../images/New-image114.png)
 
-3. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values):
+3. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values) and then click on **Review+create (7)**.
 
     |Setting|Value|
     |---|---|
-    |Subscription|the name of the Azure subscription you are using in this lab|
-    |Resource group|**AZ500LAB080910**|
-    |Storage account name|any globally unique name between 3 and 24 in length consisting of letters and digits|
-    |Location|**(US) EastUS**|
-    |Performance|**Standard (general-purpose v2 account)**|
-    |Redundency|**Locally redundant storage (LRS)**|
+    |Subscription|**Leave the default Subscription (1)**|
+    |Resource group|Select **AZ500LAB080910 (2)**|
+    |Storage account name|Enter **storage<inject key="DeploymentID" enableCopy="false"/> (3)**|
+    |Location|**(US) EastUS (4)**|
+    |Performance|**Standard (general-purpose v2 account) (5)**|
+    |Redundency|**Locally redundant storage (LRS) (6)**|
 
     ![](../images/New-image(115).png)
    
-4. On the **Basics** tab of the **Create storage account** blade, click **Review**, wait for the validation process to complete, and click **Create**.
+4. Wait for the validation process to complete, and click **Create**.
 
     >**Note**: Wait for the Storage account to be created. This should take about 2 minutes.
 
@@ -130,37 +128,35 @@ In this task, you will create a storage account.
 
 In this task, you will create a data collection rule.
 
-1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Monitor** and press the **Enter** key.
+1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Monitor (1)** and select **Monitor (2)** from the services.
 
       ![](../images/New-image116.png)
    
-2. On the **Monitor Settings** blade, click **Data Collection Rules > Create**
+1. On the **Monitor Settings** blade, click **Data Collection Rules (1) > Create (2)**.
 
    ![](../images/New-image117.png)
 
-3. On the **Basics** tab of the **Create Data Collection Rule** blade, specify the following settings:
+1. On the **Basics** tab of the **Create Data Collection Rule** blade, specify the following settings and then click on **Next: Resources > (6)**.
   
     |Setting|Value|
     |---|---|
     |**Rule details**|
-    |Rule Name|**DCR1**|
-    |Subscription|the name of the Azure subscription you are using in this lab|
-    |Resource Group|**AZ500LAB080910**|
-    |Region|**East US**|
-    |Platform Type|**Windows**|
+    |Rule Name|**DCR1 (1)**|
+    |Subscription|**Leave the default Subscription (2)**|
+    |Resource Group|Select **AZ500LAB080910 (3)**|
+    |Region|**East US (4)**|
+    |Platform Type|**Windows (5)**|
     |Data Collection Endpoint|*Leave Blank*|
 
     ![](../images/New-image118.png)
+  
+1. On the Resources tab,check the box for **Enable Data Collection Endpoints (1)**. Select **+ Add resources (2)**  In the Select a scope template, check **AZ500LAB080910 (3)** and click **Apply (4)**.
 
-4. Click on the button labeled **Next: Resources >** to proceed.
-   
-6. On the Resources tab, select **+ Add resources,** check **Enable Data Collection Endpoints.** In the Select a scope template, check **AZ500LAB080910,** and click **Apply.**
+    ![](../images/az500lab13-1.png)
 
-    ![](../images/New-image119.png)
+1. Click on the button labeled **Next: Collect and deliver >** to proceed.
 
-10. Click on the button labeled **Next: Collect and deliver >** to proceed.
-
-11. Click **+ Add data source**, then on the **Add data source** page, change the **Data source type** drop-down menu to display **Performance Counters.** Leave the following default settings:
+1. Click **+ Add data source (1)**, then on the **Add data source** page, change the **Data source type** drop-down menu to display **Performance Counters.** Leave the following default settings:
 
     |Setting|Value|
     |---|---|
@@ -170,17 +166,17 @@ In this task, you will create a data collection rule.
     |Disk|60|
     |Network|60|
 
-11. Click on the button labeled **Next: Destination >** to proceed.
+1. Click on the button labeled **Next: Destination >** to proceed.
   
-12. Change the **Destination type** drop-down menu to display **Azure Monitor Logs.** In the **Subscription** window, ensure that your *Subscription* is displayed, then change the **Account or namespace** drop-down menu to reflect your previously created Log Analytics Workspace. Click on **Add data source**. 
+1. Click on **+Add destination (2)**, change the **Destination type** drop-down menu to display **Azure Monitor Logs.** In the **Subscription** window, ensure that your *Subscription* is displayed, then change the **Destination details** drop-down menu to reflect your previously created Log Analytics Workspace **(3)**. Click on **Add data source (4)**. 
 
      ![](../images/New-image120.png)
 
-13. Click **Review + create.**
+1. Click **Review + create.**
 
      ![](../images/New-image121.png)
 
-14. Click **Create.**
+1. Click **Create.**
 
 > Results: You deployed an Azure virtual machine, Log Analytics workspace, Azure storage account, and a data collection rule to collect events and performance counters from virtual machines with Azure Monitor Agent.
 
