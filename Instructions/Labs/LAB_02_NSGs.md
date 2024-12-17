@@ -24,8 +24,6 @@ In this lab, you will complete the following exercises:
 
 # Exercise 1: Create the Virtual networking infrastructure
 
-## Estimated timing: 20 minutes
-
 In this exercise, you will complete the following tasks:
 
 - Task 1: Create a Virtual network with one subnet.
@@ -193,8 +191,6 @@ In this task, you will create a network security group.
      > Result: You have deployed a virtual network, network security with inbound security rules, and two application security groups. 
 
 # Exercise 2: Deploy virtual machines and test network filters
-
-### Estimated timing: 25 minutes
 
 In this exercise, you will complete the following tasks:
 
