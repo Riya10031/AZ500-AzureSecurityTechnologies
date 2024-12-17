@@ -6,7 +6,7 @@ Welcome to your AZ-500: Microsoft Azure Security Technologies workshop! We've pr
  
 Once you're ready to dive in, your virtual machine and **Lab guide** will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../images/az500-1.png)
+![Access Your VM and Lab Guide](../images/AZ500(1).png)
 
 ### Virtual Machine & Lab Guide
  
@@ -16,25 +16,31 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../images/az--1.png)
+![Explore Lab Resources](../images/AZ500(2).png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
  
-![Use the Split Window Feature](../images/az--2.png)
+![Use the Split Window Feature](../images/AZ500(3).png)
+
+## Utilizing the Zoom In/Out Feature
+
+Utilize **Zoom In/Out** feature to customize your screen size for optimal viewing. 
+
+![Use the Split Window Feature](../images/AZ500(5).png)
  
 ## Managing Your Virtual Machine
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../images/res.png)
+![Manage Your Virtual Machine](../images/AZ500(4).png)
 
 ## **Lab Duration Extension**
 
 1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
 
-    ![Manage Your Virtual Machine](../images/gext.png)
+    ![Manage Your Virtual Machine](../images/AZ500(6).png)
 
     >**Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
 
@@ -71,8 +77,19 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
     ![](../images/AZ-500-staysignedin.png)
  
 5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
+
+## Support Contact
+
+The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
+
+Learner Support Contacts:
+
+   - Email Support: labs-support@spektrasystems.com
+
+   - Live Chat Support: https://cloudlabs.ai/labs-support
+
  
-6. Click **Next** from the bottom right corner to embark on your Lab journey!
+Click **Next** from the bottom right corner to embark on your Lab journey!
 
    ![Start Your Azure Journey](../images/numbering.png)
 
