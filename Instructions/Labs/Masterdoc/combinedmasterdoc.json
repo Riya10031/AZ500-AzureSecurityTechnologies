@@ -1,0 +1,53 @@
+[
+  {
+    "Name": "AZ500-AzureSecurityTechnologies",
+    "Language": "English",
+    "BaseURL": "https://github.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/prod/Instructions/Labs/LabIntroV2.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/stage/Instructions/Labs/LAB_01_RBAC.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/stage/Instructions/Labs/LAB_02_NSGs.md",
+        "Order": 3
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/stage/Instructions/Labs/LAB_03_AzureFirewall.md",
+        "Order": 4
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/stage/Instructions/Labs/LAB_04_ConfiguringandSecuringACRandAKS.md",
+        "Order": 5
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/stage/Instructions/Labs/LAB_05_SecuringAzureSQLDatabase.md",
+        "Order": 6
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/stage/Instructions/Labs/LAB_06_SecuringAzureStorage.md",
+        "Order": 7
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/stage/Instructions/Labs/LAB_07_KeyVaultImplementingSecureDatabysettingupAlwaysEncrypted.md",
+        "Order": 8
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/stage/Instructions/Labs/LAB_08_Azure%20Monitor.md",
+        "Order": 9
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/stage/Instructions/Labs/LAB_09_Microsoft Defender for Cloud.md",
+        "Order": 10
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/stage/Instructions/Labs/LAB_10_Azure%20Sentinel.md",
+        "Order": 11
+      }
+    ]
+  }
+]
