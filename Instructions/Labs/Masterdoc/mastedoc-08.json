@@ -9,16 +9,8 @@
               "Order": 1
           },
           {
-              "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/stage/Instructions/Labs/LAB_08_Azure%20Monitor.md",
+              "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/Cambrian-College/Instructions/Labs/LAB_08_Azure%20Monitor.md",
               "Order": 2
-          },
-          {
-              "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/stage/Instructions/Labs/LAB_09_Microsoft Defender for Cloud.md",
-              "Order": 3
-          },
-          {
-              "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ500-AzureSecurityTechnologies/stage/Instructions/Labs/LAB_10_Azure%20Sentinel.md",
-              "Order": 4
           }
       ]
   }
