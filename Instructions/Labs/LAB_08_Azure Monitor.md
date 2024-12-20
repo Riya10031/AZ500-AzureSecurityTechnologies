@@ -185,7 +185,7 @@ In this task, you will create a data collection rule.
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="2438c3db-e10e-4895-88cd-b6f1ffa433ca" />
+   <validation step="74de2cd6-634c-4b3a-bcb4-095e6a7c54df" />
 
 ### You have successfully completed the lab, click on Next to start the next lab
 
