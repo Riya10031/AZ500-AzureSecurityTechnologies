@@ -16,8 +16,6 @@ In this lab, you will complete the following exercises:
 - Exercise 1: Create the Virtual networking infrastructure
 - Exercise 2: Deploy Virtual machines and test the network filters
 
-## Estimated timing: 45 minutes
-
 ## Architecture Diagram
 
    ![image](../images/az500lab2arc.png)
