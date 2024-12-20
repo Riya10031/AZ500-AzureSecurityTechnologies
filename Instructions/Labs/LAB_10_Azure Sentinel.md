@@ -15,8 +15,6 @@ In this lab, you will complete the following exercise:
 
 - Exercise 1: Implement Microsoft Sentinel
 
-## Estimated timing: 30 minutes
-
 ## Architecture Diagram
 
 ![image](../images/archtech8.png)
