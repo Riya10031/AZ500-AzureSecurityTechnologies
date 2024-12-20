@@ -10,8 +10,6 @@ You have been asked to review security features for Azure SQL database. Specific
 In this lab, you will complete the following exercise:
 - Exercise 1: Implement SQL Database security features
 
-## Estimated timing: 30 minutes
-
 ## Architecture Diagram
 
 ![Architecture diagram](../images/az500lab5arc.png)
