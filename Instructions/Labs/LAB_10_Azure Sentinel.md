@@ -286,6 +286,6 @@ In this task, you will create a playbook. A security playbook is a collection of
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="61d471a2-0512-4d07-9e23-7393e56ef937" />
+   <validation step="9c832e80-4ff3-4c7e-811c-befd444f8631" />
  
 ### You have successfully completed the lab
