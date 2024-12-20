@@ -16,8 +16,6 @@ In this lab, you will complete the following tasks:
 - Task 7: Deploy an internal service to AKS
 - Task 8: Verify you can access an internal AKS-hosted service
 
-## Estimated timing: 45 minutes
-
 ## Architecture Diagram
 
 ![Architecture diagram](../images/arch-az-500-lab4.png)
