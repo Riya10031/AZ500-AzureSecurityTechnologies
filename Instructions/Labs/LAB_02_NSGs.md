@@ -341,7 +341,7 @@ In this task, you will associate each virtual machine's network interface with t
 
    ![image](../images/az500lab7-33.png)  
 
-1. On the **Add Application security groups** select **myAsgWebServers (1)**, and then click **Add (2)**.
+1. On the **Add Application security groups** select **myAsgMgmtServers (1)**, and then click **Add (2)**.
 
    ![image](../images/az500lab7-34.png)  
 
