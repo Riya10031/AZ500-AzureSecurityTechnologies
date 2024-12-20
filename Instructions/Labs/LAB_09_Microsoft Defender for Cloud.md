@@ -174,6 +174,6 @@ In this task, you will implement the Microsoft Defender for Cloud recommendation
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="b6cace8a-4562-4975-863b-5feceb7b1a70" />
+   <validation step="0f458655-d9e7-46b8-a667-f110dceb559d" />
  
 ### You have successfully completed the lab, click on Next to start the next lab
