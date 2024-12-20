@@ -18,8 +18,6 @@ In this lab, you will complete the following exercise:
 
 - Exercise 1: Deploy and test an Azure Firewall
 
-## Estimated timing: 40 minutes
-
 ## Architecture Diagram
 
    ![image](../images/az500lab3arc.png)
