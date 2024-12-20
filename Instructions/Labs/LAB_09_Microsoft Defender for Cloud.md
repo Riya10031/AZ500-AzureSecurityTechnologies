@@ -25,11 +25,81 @@ In this lab, you will complete the following exercise:
 
 In this exercise, you will complete the following tasks:
 
-- Task 1: Configure Microsoft Defender for Cloud
-- Task 2: Review the Microsoft Defender for Cloud recommendations
-- Task 3: Implement the Microsoft Defender for Cloud recommendation to enable Just in time VM Access
+- Task 1: Deploy an Azure virtual machine
+- Task 2: Create a Log Analytics workspace
+- Task 3: Configure Microsoft Defender for Cloud
+- Task 4: Review the Microsoft Defender for Cloud recommendations
+- Task 5: Implement the Microsoft Defender for Cloud recommendation to enable Just in time VM Access
 
-## Task 1: Configure Microsoft Defender for Cloud
+## Task 1: Deploy an Azure virtual machine
+
+1. From the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
+
+    ![](../images/unit6-image1.png)
+
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). If so, select **Powershell**.
+
+    ![](../images/pwershell1.png)
+   
+1. On the Getting started, select **No storage account required (1)** and select your **Subscription (2)** under storage account subscription. Click on **Apply (3)**.
+
+     ![](../images/New-image110.png)
+
+1. In the upper-left menu of the Cloud Shell pane, make sure you are using **Powershell**. If not selected select **Switch to Powershell**. In **Switch to Powershell in Cloud Shell** pop-up select **Confirm**.
+
+1. In the PowerShell session within the Cloud Shell pane, run the following to create a resource group that will be used in this lab:
+  
+    ```powershell
+    New-AzResourceGroup -Name AZ500LAB080910 -Location 'EastUS'
+    ```
+
+1. In the PowerShell session within the Cloud Shell pane, run the following to create a new Azure virtual machine. 
+
+    ```powershell
+    New-AzVm -ResourceGroupName "AZ500LAB080910" -Name "myVM" -Location 'EastUS' -VirtualNetworkName "myVnet" -SubnetName "mySubnet" -SecurityGroupName   "myNetworkSecurityGroup" -PublicIpAddressName "myPublicIpAddress" -OpenPorts 80,3389
+    ```
+
+1.  When prompted for credentials:
+
+    |Setting|Value|
+    |---|---|
+    |User name|**localadmin**|
+    |Password|**Pa55w.rd1234**|
+
+    >**Note**: Wait for the deployment to complete. 
+
+1. In the PowerShell session within the Cloud Shell pane, run the following to confirm that the virtual machine named **myVM** was created and its **ProvisioningState** is **Succeeded**.
+
+    ```powershell
+    Get-AzVM -Name 'myVM' -ResourceGroupName 'AZ500LAB080910' | Format-Table
+    ```
+
+1. Close the Cloud Shell pane. 
+
+## Task 2: Create a Log Analytics workspace
+
+In this task, you will create a Log Analytics workspace. 
+
+1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Log Analytics workspaces (1)** and select **Log Analytics workspaces (2)** from the services.
+
+   ![](../images/New-image111.png)
+
+1. On the **Log Analytics workspaces** blade, click **+ Create**.
+
+1. On the **Basics** tab of the **Create Log Analytics workspace** blade, specify the following settings (leave others with their default values) and then click on **Review+create (5)**.
+
+    |Setting|Value|
+    |---|---|
+    |Subscription|**Leave the default Subscription (1)**|
+    |Resource group|Select **AZ500LAB080910 (2)**|
+    |Name| Enter **LogAnalytics<inject key="DeploymentID" enableCopy="false"/> (3)**|
+    |Region|**(US) East US (4)**|
+
+    ![](../images/New-image112.png)
+   
+1. On the **Review + create** tab of the **Create Log Analytics workspace** blade, click **Create**.
+
+## Task 3: Configure Microsoft Defender for Cloud
 
 In this task, you will on-board and configure Microsoft Defender for Cloud.
 
@@ -49,7 +119,7 @@ In this task, you will on-board and configure Microsoft Defender for Cloud.
    
     ![image](../images/az500-8-2.png) 
 
-## Task 2: Review the Microsoft Defender for Cloud recommendation
+## Task 4: Review the Microsoft Defender for Cloud recommendation
 
 In this task, you will review the Microsoft Defender for Cloud recommendations. 
 
@@ -69,7 +139,7 @@ In this task, you will review the Microsoft Defender for Cloud recommendations.
     
 1. On the **Resource health** blade, on the **Recommendations** tab, review the list of recommendations for **myVM**.
 
-## Task 3: Implement the Microsoft Defender for Cloud recommendation to enable Just in time VM Access
+## Task 5: Implement the Microsoft Defender for Cloud recommendation to enable Just in time VM Access
 
 In this task, you will implement the Microsoft Defender for Cloud recommendation to enable Just in time VM Access on the virtual machine. 
 
