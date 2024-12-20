@@ -12,8 +12,6 @@ In this lab, you will complete the following exercise:
 
 - Exercise 1: Service endpoints and security storage
 
-## Estimated timing: 45 minutes
-
 ## Architecture Diagram
 
 ![Architecture diagram](../images/arch-az-500-lab6.png)
