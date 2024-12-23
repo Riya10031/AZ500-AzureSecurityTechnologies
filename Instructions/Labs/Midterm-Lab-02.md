@@ -249,6 +249,6 @@ In this task, you will test the network traffic filters. You should be able to R
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="63a375cc-ae94-418b-a78c-4561f35ff40d" />
+   <validation step="37ac9cd5-b1fd-45cf-943f-f6952ccd77f3" />
 
 ### You have successfully completed the lab
