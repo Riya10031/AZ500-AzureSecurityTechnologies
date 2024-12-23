@@ -263,6 +263,6 @@ In this exercise, you will complete the following task:
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="b8b0d15c-4752-41bc-86ee-10bb1220b83e" />
+   <validation step="4a08f27a-7db0-40c5-99e3-ed655f3e1f6b" />
 
 ### You have successfully completed the lab
