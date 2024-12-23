@@ -265,4 +265,4 @@ In this exercise, you will complete the following task:
  
    <validation step="4a08f27a-7db0-40c5-99e3-ed655f3e1f6b" />
 
-### You have successfully completed the lab
+### You have successfully completed the lab, click on Next to start the next lab.
