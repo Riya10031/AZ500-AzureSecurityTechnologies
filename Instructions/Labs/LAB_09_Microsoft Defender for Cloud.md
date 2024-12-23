@@ -113,7 +113,7 @@ In this task, you will on-board and configure Microsoft Defender for Cloud.
 
 1. Expand the environment settings folders until the subscription section is displayed, then click the subscription to view details.
 
-1. On the **Settings | Azure Defender plans** blade, under Defender plans, expand **Cloud Workload Protection (CWP)**.
+1. On the **Settings | Defender plans** blade, under Defender plans, expand **Cloud Workload Protection (CWP)**.
 
 1. From the **Cloud Workload Protection (CWP)** Plan list, select **Servers**. On the right side of the page, change the Status from Off to On, then click Save.
    
