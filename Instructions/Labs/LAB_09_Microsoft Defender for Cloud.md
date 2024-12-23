@@ -155,7 +155,7 @@ In this task, you will implement the Microsoft Defender for Cloud recommendation
 
 4. Select **Enable JIT on 1 VM**. option on the far right of the **Virtual machines** section.
 
-5. On the **JIT VM access configuration** blade, on the far right of the row referencing the port **22**, click the ellipsis button and then click **Delete**.
+5. On the **JIT VM access configuration** blade, on the far right of the row referencing the port **3389**, click the ellipsis button and then click **Delete**.
 
    ![image](../images/22.png)
 
