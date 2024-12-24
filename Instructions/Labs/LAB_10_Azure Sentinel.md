@@ -269,7 +269,7 @@ In this task, you will create a playbook. A security playbook is a collection of
 
 1. On the **Microsoft Sentinel \| Overview** blade, in the **Threat Management** section, click **Incidents**.
 
-1. Verify that the blade displays an incident with either medium or high severity level.
+1. The blade should display an incident with a severity level of either medium or high as shown in the below image.
 
    ![image](../images/L10T6S10-1112.png)
    
