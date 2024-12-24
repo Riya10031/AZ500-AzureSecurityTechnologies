@@ -33,10 +33,10 @@ In this task, you will create a virtual network to use with the network and appl
 
     |Setting|Value|
     |---|---|
-    |Subscription|**Leave the default subscription (1)**|
+    |Subscription|**Leave the default subscription**|
     |Resource group|**AZ500LAB02**|
-    |Name|**myVirtualNetwork (3)**|
-    |Region|**East US (4)**|
+    |Name|**myVirtualNetwork**|
+    |Region|**East US**|
 
 1. On the **IP addresses** tab, set the **IPv4 address space** to **10.0.0.0/16** and name **default** as the **Subnet name** with the following settings and click **Save**:
 
@@ -55,10 +55,10 @@ In this task, you will create an application security group.
 
     |Setting|Value|
     |---|---|
-    |Subscription|**Leave the default subscription (1)**|    
-    |Resource group|**AZ500LAB02 (2)**|
-    |Name|**myAsgWebServers (3)**|
-    |Region|**East US (4)**|
+    |Subscription|**Leave the default subscription**|    
+    |Resource group|**AZ500LAB02**|
+    |Name|**myAsgWebServers**|
+    |Region|**East US**|
    
      >**Note**: This group will be for the web servers.
 
@@ -66,10 +66,10 @@ In this task, you will create an application security group.
 
     |Setting|Value|
     |---|---|
-    |Subscription|**Leave the default subscription (1)**|       
-    |Resource group|**AZ500LAB02 (2)**|
-    |Name|**myAsgMgmtServers (3)**|
-    |Region|**East US (4)**|
+    |Subscription|**Leave the default subscription**|       
+    |Resource group|**AZ500LAB02**|
+    |Name|**myAsgMgmtServers**|
+    |Region|**East US**|
 
      >**Note**: This group will be for the management servers.
 
@@ -81,17 +81,17 @@ In this task, you will create a network security group.
 
     |Setting|Value|
     |---|---|
-    |Subscription|**Leave the default subscription (1)**|
-    |Resource group|**AZ500LAB02 (2)**|
-    |Name|**myNsg (3)**|
-    |Region|**East US (4)**|
+    |Subscription|**Leave the default subscription**|
+    |Resource group|**AZ500LAB02**|
+    |Name|**myNsg**|
+    |Region|**East US**|
 
 1. On the **myNsg** blade, **Associate** a new **Subnets** with the following settings
 
     |Setting|Value|
     |---|---|
-    |Virtual network|**myVirtualNetwork (1)**|
-    |Subnet|**default (2)**|
+    |Virtual network|**myVirtualNetwork**|
+    |Subnet|**default**|
 
 ## Task 4: Create inbound NSG security rules to all traffic to web servers and RDP to the servers. 
 
@@ -99,24 +99,24 @@ In this task, you will create a network security group.
 
     |Setting|Value|
     |---|---|
-    |Destination|select **Application security group (1)** from the drop down|
-    |Destination application security groups| select **myAsgWebServers (2)** from the drop down |
-    |Destination port ranges|**80,443 (3)**|
-    |Protocol|**TCP (4)**|
-    |Priority|**100 (5)**|                                                    
-    |Name|**Allow-Web-All (6)**|     
+    |Destination|select **Application security group** from the drop down|
+    |Destination application security groups| select **myAsgWebServers** from the drop down |
+    |Destination port ranges|**80,443**|
+    |Protocol|**TCP**|
+    |Priority|**100**|                                                    
+    |Name|**Allow-Web-All**|     
 
 1. On the **myNsg** blade, **Add** new **Inbound security rules** to allow the RDP port (TCP 3389) to the **myAsgMgmtServers** application security group, use the following settings 
 
     |Setting|Value|
     |---|---|
-    |Destination|select **Application security group (1)** from the drop down|
-    |Destination application security groups |**myAsgMgmtServers (2)** from the drop down|    
-    |Service|Choose **RDP (3)**|      
+    |Destination|select **Application security group** from the drop down|
+    |Destination application security groups |**myAsgMgmtServers** from the drop down|    
+    |Service|Choose **RDP**|      
     |Destination port ranges|Ensure **3389**|
     |Protocol|Ensure **TCP**|
-    |Priority|**110 (4)**|                                                
-    |Name|**Allow-RDP-All (5)**|
+    |Priority|**110**|                                                
+    |Name|**Allow-RDP-All**|
 
      > Result: You have deployed a virtual network, network security with inbound security rules, and two application security groups. 
 
@@ -137,20 +137,20 @@ In this task, you will create a virtual machine to use as a web server.
 
    |Setting|Value|
    |---|---|
-   |Subscription|**Leave the default subscription (1)**|
-   |Resource group|**AZ500LAB02 (2)**|
-   |Virtual machine name|**myVmWeb (3)**|
-   |Region|**(US)East US (4)**|
-   |Availability options|**No infrastructure redundancy required (5)**|
-   |Security type|**Standard (6)**|
-   |Image|**Windows Server 2022 Datacenter: Azure Edition- x64 Gen2 (7)**|
-   |Size|**Standard D2s v3 (8)**|
-   |Username|**Student (9)**|
-   |Password|**Pa55w.rd1234 (10)**|
-   |Confirm password|**Pa55w.rd1234 (11)**|
-   |Public inbound ports|**None (12)**| 
-   |Would you like to use an existing Windows Server License |**check the box (13)**|
-   |I confirm I have an eligible Windows Server license with Software Assurance or Windows Server subscription to apply this Azure Hybrid Benefit| **Check the box (14)**|   
+   |Subscription|**Leave the default subscription**|
+   |Resource group|**AZ500LAB02**|
+   |Virtual machine name|**myVmWeb**|
+   |Region|**(US)East US**|
+   |Availability options|**No infrastructure redundancy required**|
+   |Security type|**Standard**|
+   |Image|**Windows Server 2022 Datacenter: Azure Edition- x64 Gen2**|
+   |Size|**Standard D2s v3**|
+   |Username|**Student**|
+   |Password|**Pa55w.rd1234**|
+   |Confirm password|**Pa55w.rd1234**|
+   |Public inbound ports|**None**| 
+   |Would you like to use an existing Windows Server License |**check the box**|
+   |I confirm I have an eligible Windows Server license with Software Assurance or Windows Server subscription to apply this Azure Hybrid Benefit| **Check the box**|   
 
      >**Note**: For public inbound ports, we will rely on the precreated NSG. 
 
@@ -162,7 +162,7 @@ In this task, you will create a virtual machine to use as a web server.
 
    |Setting|Value|
    |---|---|
-   |Boot diagnostics|**Enabled with managed storage account (recommended) (1)**|
+   |Boot diagnostics|**Enabled with managed storage account (recommended)**|
 
 
 ## Task 2: Create a virtual machine to use as a management server. 
@@ -173,20 +173,20 @@ In this task, you will create a virtual machine to use as a management server.
 
    |Setting|Value|
    |---|---|
-   |Subscription|**Leave the deafult subscription (1)**|
-   |Resource group|**AZ500LAB02 (2)**|
-   |Virtual machine name|**myVMMgmt (3)**|
-   |Region|**(US)East US (4)**|
-   |Availability options|**No infrastructure redundancy required (5)**|
-   |Security type|**Standard (6)**|   
-   |Image|**Windows Server 2022 Datacenter: Azure Edition- Gen2 (7)**|
-   |Size|**Standard D2s v3 (8)**|
-   |Username|**Student (9)**|
-   |Password|**Pa55w.rd1234 (10)**|
-   |Confirm password|**Pa55w.rd1234 (11)**|
-   |Public inbound ports|**None (12)**| 
-   |Would you like to use an existing Windows Server License |**check the box (13)**|
-   |I confirm I have an eligible Windows Server license with Software Assurance or Windows Server subscription to apply this Azure Hybrid Benefit| **Check the box (14)**|    
+   |Subscription|**Leave the deafult subscription**|
+   |Resource group|**AZ500LAB02**|
+   |Virtual machine name|**myVMMgmt**|
+   |Region|**(US)East US**|
+   |Availability options|**No infrastructure redundancy required**|
+   |Security type|**Standard**|   
+   |Image|**Windows Server 2022 Datacenter: Azure Edition- Gen2**|
+   |Size|**Standard D2s v3**|
+   |Username|**Student**|
+   |Password|**Pa55w.rd1234**|
+   |Confirm password|**Pa55w.rd1234**|
+   |Public inbound ports|**None**| 
+   |Would you like to use an existing Windows Server License |**check the box**|
+   |I confirm I have an eligible Windows Server license with Software Assurance or Windows Server subscription to apply this Azure Hybrid Benefit| **Check the box**|    
 
     >**Note**: For public inbound ports, we will rely on the precreated NSG. 
 
@@ -198,7 +198,7 @@ In this task, you will create a virtual machine to use as a management server.
 
    |Setting|Value|
    |---|---|
-   |Boot diagnostics|**Enabled with managed storage account (recommended) (1)**|
+   |Boot diagnostics|**Enabled with managed storage account (recommended)**|
 
     >**Note**: Wait for both virtual machines to be provisioned before continuing. 
 
@@ -221,8 +221,8 @@ In this task, you will test the network traffic filters. You should be able to R
 
    |Setting|Value|
    |---|---|
-   |User name|**Student (1)**|
-   |Password|**Pa55w.rd1234 (2)**|
+   |User name|**Student**|
+   |Password|**Pa55w.rd1234**|
 
     >**Note**: Verify that the Remote Desktop connection was successful. At this point you have confirmed you can connect via Remote Desktop to myVMMgmt.
 
