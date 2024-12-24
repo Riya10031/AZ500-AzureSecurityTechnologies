@@ -33,10 +33,10 @@ In this task, you will create a user account for Joseph Price.
 
    |Setting|Value|
    |---|---|
-   |User principal name|**Joseph (1)**|
-   |Display Name|**Joseph Price (2)**|
+   |User principal name|**Joseph**|
+   |Display Name|**Joseph Price**|
 
-    - Copy the **User principal name** and pasted it somewhere.
+    - Copy the **User principal name** and **Temporary Password** and pasted it somewhere.
 
 1. Verify the new user created in your Entra ID tenant.
 
@@ -49,9 +49,9 @@ In this task, you will create the *Senior Admins* group, add the user account of
 
    |Setting|Value|
    |---|---|
-   |Group type|**Security (1)**|
-   |Group name|**Senior Admins (2)**|
-   |Membership type|**Assigned (3)**|
+   |Group type|**Security**|
+   |Group name|**Senior Admins**|
+   |Membership type|**Assigned**|
 
 > **Result:** You used the Azure Portal to create a user and a group, and assigned the user to the group. 
 
@@ -172,7 +172,7 @@ In this exercise, you will complete the following tasks:
 
 In this task, you will create a user account for Dylan Williams.
 
-1. In the drop-down menu in the upper-left corner of the Cloud Shell pane, select **Switch to Bash**, and, when prompted.
+1. In the drop-down menu in the upper-left corner of the Cloud Shell pane, select **Switch to Bash**, and select **Confirm** when prompted.
 
 1. In the Bash session within the Cloud Shell pane, run the following commands to identify the name of your Microsoft Entra tenant:
 
@@ -253,7 +253,7 @@ In this exercise, you will complete the following task:
 
 1. Add a new **Role assignment** and assign **Virtual Machine Contributor** role to the member **Service Desk** 
 
-1. From the **Access control (IAM)** blade, on the **Check access** tab, verify that the users **Dylan Williams** and **Joseph Price** are assinged with **Virtual Machine Contributor** role.
+1. From the **Access control (IAM)** blade, on the **Check access** tab, verify that the user **Dylan Williams** is assinged with **Virtual Machine Contributor** role.
 
 > **Result:** You have assigned and checked RBAC permissions. 
  
