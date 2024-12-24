@@ -34,7 +34,7 @@ In this task, you will create a virtual network to use with the network and appl
     |Setting|Value|
     |---|---|
     |Subscription|**Leave the default subscription (1)**|
-    |Resource group|click **Create new** and type the name **AZ500LAB02** then click **OK** **(2)**|
+    |Resource group|**AZ500LAB02**|
     |Name|**myVirtualNetwork (3)**|
     |Region|**East US (4)**|
 
