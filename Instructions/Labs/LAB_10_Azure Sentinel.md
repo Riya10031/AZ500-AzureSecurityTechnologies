@@ -265,19 +265,15 @@ In this task, you will create a playbook. A security playbook is a collection of
 
 1. On the **Microsoft Sentinel \| Overview** blade, review the dashboard and verify that it displays an alert corresponding to the deletion of the Just in time VM access policy.
 
-    >**Note**: It can take up to 5 minutes for alerts to appear on the **Microsoft Sentinel \| Overview** blade. If you are not seeing an alert at that point, run the query rule referenced in the previous task to verify that the Just In Time access policy deletion activity has been propagated to the Log Analytics workspace associated with your Microsoft Sentinel instance. If that is not the case, re-create the Just in time VM access policy and delete it again.
-
-1. On the **Microsoft Sentinel \| Overview** blade, in the **Threat Management** section, click **Incidents**.
-
-1. The blade should display an incident with a severity level of either medium or high as shown in the below image.
+   >**Note**: It can take up to 5 minutes for alerts to appear on the **Microsoft Sentinel \| Overview** blade. If you are not seeing an alert at that point, run the query rule referenced in the previous task to verify that the Just In Time access policy deletion activity has been propagated to the Log Analytics workspace associated with your Microsoft Sentinel instance. If that is not the case, re-create the Just in time VM access policy and delete it again.
+    
+   >**Note**: On the **Microsoft Sentinel \| Overview** blade, in the **Threat Management** section, click **Incidents**. The blade should display an incident with a severity level of either medium or high as shown in the below image.
 
    ![image](../images/L10T6S10-1112.png)
-   
-    >**Note**: It can take up to 2 hours for the incident to appear on the **Microsoft Sentinel \| Incidents** blade. 
 
-    >**Note**: Review the **Microsoft Sentinel \| Playbooks** blade. You will find there the count of successful and failed runs.
+   >**Note**: Review the **Microsoft Sentinel \| Playbooks** blade. You will find there the count of successful and failed runs.
 
-    >**Note**: You have the option of assigning a different severity level and status to an incident.
+   >**Note**: You have the option of assigning a different severity level and status to an incident.
 
 > **Results:** You have created an Microsoft Sentinel workspace, connected it to Azure Activity logs, created a playbook and custom alerts that are triggered in response to the removal of Just in time VM access policies, and verified that the configuration is valid.
 
