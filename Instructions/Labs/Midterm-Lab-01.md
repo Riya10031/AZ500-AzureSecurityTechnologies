@@ -68,15 +68,15 @@ In this task, you will create a user account for Isabel Garcia by using PowerShe
 
 1. Use **Cloud Shell** (select **PowerShell**) to mount and create a storage account. Specify the following settings to configure the Cloud Shell.
 
-   - **Subscription**: **Leave the default (1)** 
+   - **Subscription**: **Leave the default** 
     
-   - **Resource group:** **AZ500LAB01(2)**
+   - **Resource group:** **AZ500LAB01**
     
-   - **Storage account:** Enter **str<inject key="DeploymentID" enableCopy="false" /> (3)** 
+   - **Storage account:** Enter **str<inject key="DeploymentID" enableCopy="false" />** 
     
-   - **File share:** Enter **fileshare<inject key="DeploymentID" enableCopy="false" /> (4)**
+   - **File share:** Enter **fileshare<inject key="DeploymentID" enableCopy="false" />**
     
-   - **Region:** **<inject key="Region" enableCopy="false"/> (5)**.
+   - **Region:** **<inject key="Region" enableCopy="false"/>**.
 
 1. Once the Cloud Shell console opens, verify that the upper left corner of the Cloud Shell screen shows **PowerShell**.
 
