@@ -384,8 +384,6 @@ In this exercise, you will complete the following task:
 
 1. Close the **Dylan Williams assignments - AZ500Lab01** blade.
 
-1. Repeat the same last two steps to check access for **Joseph Price**. 
-
 > **Result:** You have assigned and checked RBAC permissions. 
  
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
