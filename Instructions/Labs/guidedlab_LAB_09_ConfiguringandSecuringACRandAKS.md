@@ -1,6 +1,6 @@
 # Lab 01 - Configuring and Securing ACR and AKS
 
-## Lab scenario
+## Overview
 
 You have been asked to deploy a proof of concept with Azure Container Registry and Azure Kubernetes Service. Specifically, the proof of concept should demonstrate:
 
@@ -11,23 +11,7 @@ You have been asked to deploy a proof of concept with Azure Container Registry a
 
    > For all the resources in this lab, we are using the **East US** region. Verify with your instructor this is the region to use for class. 
 
-## Lab objectives
-
-In this lab, you will complete the following exercise:
-
-- Exercise 1: Configuring and Securing ACR and AKS.
-
-## Estimated timing: 45 minutes
-
-## Architecture diagram
-
-![](../Labs/Lab-Scenario-Preview/media/AZ-500-LSP-Mod-2-3-1.png)
-
-## Exercise 1: Configuring and Securing ACR and AKS
-
-   > For all the resources in this lab, we are using the **East (US)** region. Verify with your instructor this is region to use for you class. 
-
-In this exercise, you will complete the following tasks:
+## Lab Objectives
 
 - Task 1: Create an Azure Container Registry.
 - Task 2: Create a Dockerfile, build a container and push it to Azure Container Registry.
@@ -114,13 +98,17 @@ In this task, you will create a Dockerfile, build a container image from it, and
 
 1. Close the Cloud Shell pane.
 
-1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Resource Group** and select it.
+1. In the Azure portal, scroll down and select **Resource groups**.
+
+   ![](./kubeimg1.png)
 
 1. navigate to the **AZ500LAB09** resource group and, in the list of resources, click the entry representing the Azure Container Registry instance you provisioned in the previous task.
 
-1. On the Container registry blade, in the **Services** section, click **Repositories**. 
+   ![](./kubeimg2.png)
 
-1. Verify that the list of repositories includes the new container image named **sample/nginx**.
+1. On the Container registry blade, in the **Services** section, click **Repositories**. Verify that the list of repositories includes the new container image named **sample/nginx**.
+
+   ![](./kubeimg3.png)
 
 1. Click the **sample/nginx** entry and verify presence of the **v1** tag that identifies the image version.
 
@@ -134,7 +122,11 @@ In this task, you will create an Azure Kubernetes Service (AKS) cluster and revi
 
 1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, type **Kubernetes services** and press the **Enter** key.
 
+   ![](./kubeimg4.png)
+
 1. On the **Kubernetes services** blade, click **+ Create** and, in the drop-down menu, click **+ Create Kubernetes cluster**
+
+   ![](./kubeimg5.png)
 
 1. On the **Basics** tab of the **Create Kubernetes cluster** blade, for **Cluster preset configuration**, select **Dev/Test**. Now specify the following settings (leave others with their default values):
 
@@ -151,6 +143,8 @@ In this task, you will create an Azure Kubernetes Service (AKS) cluster and revi
     |Setting|Value|
     |----|----|
     |Enable virtual nodes|cleared checkbox|
+
+    ![](./kubeimg6.png)
 	
 1. Click **Next: Networking >**, on the **Networking** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 
@@ -174,6 +168,8 @@ In this task, you will create an Azure Kubernetes Service (AKS) cluster and revi
 1. On the **Resource groups** blade, in the listing of resource groups, note a new resource group named **MC_AZ500LAB09_MyKubernetesCluster_eastus** that holds components of the AKS Nodes. Review resources in this resource group. 
 	
 1. Navigate back to the **Resource groups** blade and click the **AZ500LAB09** entry. 
+
+   ![](./kubeimg2.png)
 
     >**Note**: In the list of resources, note the AKS Cluster.
 
@@ -332,13 +328,11 @@ In this task, you'll deploy a service within the AKS cluster that is only access
     kubectl get service nginxinternal
     ```
 
-1. In the Bash session within the Cloud Shell pane, review the output. The External-IP is, in this case, a private IP address. If it is in a **Pending** state then run the previous command again.
+1. In the Bash session within the Cloud Shell pane, review the output. The External-IP is, in this case, a private IP address. It will be in **Pending** state, so you could use the **CLUSTER-IP** address.
 
     >**Note**: Record this IP address. You will need it in the next task. 
 
     >**Note**: To access the internal service endpoint, you will connect interactively to one of the pods running in the cluster. 
-
-    >**Note**: Alternatively you could use the CLUSTER-IP address.
 
 ### Task 8: Verify the you can access an internal AKS-hosted service
 
