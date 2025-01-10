@@ -131,7 +131,7 @@ In this task, you will create a user account for Isabel Garcia by using PowerShe
 
     - **Subscription**: **Leave the default (1)** 
     
-    - **Resource group:** **AZ500LAB01(2)**
+    - **Resource group:** **ODL-AZ-500-L1-<inject key="DeploymentID" enableCopy="false" />-AZ500LAB01(2)**
     
     - **Storage account:** Enter **str<inject key="DeploymentID" enableCopy="false" /> (3)** 
     
