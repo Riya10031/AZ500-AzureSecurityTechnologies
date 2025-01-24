@@ -12,7 +12,7 @@ In this lab, you will complete the following exercise:
 
 ## Architecture Diagram
 
-![Architecture diagram](../images/az500lab5arc.png)
+![Architecture diagram](../images/new-az500lab5arc.png)
 
 ## Exercise 1: Implement SQL Database security features
 
